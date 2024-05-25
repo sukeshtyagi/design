@@ -24,7 +24,7 @@ function Searches() {
               Best Cardiologist Doctors
             </p>
 
-            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] p-2 rounded-xl">
+            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] left-[105px] p-2 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -52,7 +52,7 @@ function Searches() {
               Best Cardiologist Doctors
             </p>
 
-            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] p-2 rounded-xl">
+            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] left-[105px] p-2 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -80,7 +80,7 @@ function Searches() {
               Best Cardiologist Doctors
             </p>
 
-            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] p-2 rounded-xl">
+            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] left-[105px] p-2 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -108,7 +108,7 @@ function Searches() {
               Best Cardiologist Doctors
             </p>
 
-            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] p-2 rounded-xl">
+            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] left-[105px] p-2 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -136,7 +136,7 @@ function Searches() {
               Best Cardiologist Doctors
             </p>
 
-            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] p-2 rounded-xl">
+            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] left-[105px] p-2 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -164,7 +164,7 @@ function Searches() {
               Best Cardiologist Doctors
             </p>
 
-            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] p-2 rounded-xl">
+            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] left-[105px] p-2 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -192,7 +192,7 @@ function Searches() {
               Best Cardiologist Doctors
             </p>
 
-            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] p-2 rounded-xl">
+            <div className="icon box-border w-fit bg-appGreen relative bottom-[122px] left-[105px] p-2 rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
