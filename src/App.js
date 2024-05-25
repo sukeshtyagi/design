@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Services />
       <Professions />
-      <Searches />  
+      <Searches />
     </div>
   );
 }

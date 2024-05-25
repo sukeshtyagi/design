@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import CarouselComp from "./CarouselComp";
 
 function Services() {
   return (
@@ -64,7 +65,8 @@ function Services() {
         </div>
         <div className="midDiv box-border overflow-x-hidden w-full bg-inherit flex  flex-col bp2:flex-row justify-between items-center gap-4">
           <div className="leftMid box-border w-fit bg-inherit">
-            <img src="/images/carousal.svg" alt="" />
+            {/*<img src="/images/carousal.svg" alt="" />*/}
+            <CarouselComp />
           </div>
 
           <div className="rightMid box-border w-fit flex flex-col justify-center bg-inherit">
