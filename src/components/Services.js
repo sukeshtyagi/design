@@ -1,13 +1,16 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 function Services() {
   return (
     <div className="outermostSectionContainer box-border w-full xl1:w-[1440px] bg-gradient-to-b from-slate-200 from-10% to-white to-50% mx-auto shadow-gray">
       <div className="sectionContainer box-border w-10/12 mx-auto mt-12 mx-auto py-8 flex flex-col gap-12">
         <div className="topDiv box-border w-4/5 flex flex-col items-start gap-4">
-          <p className="para text-2xl font-medium">
+          <p className="para text-lg sm:text-2xl  font-medium">
             Lorem Ipsum Dolor Sit Amet,
-            <span className="text-2xl text-appGreen font-bold">
+            <span className="text-lg sm:text-2xl text-appGreen font-bold">
               {" "}
               Consectetur Adipiscing Elit
             </span>
@@ -15,47 +18,21 @@ function Services() {
 
           <div className="lwrDiv box-border w-full bg-white border rounded-lg border-gray-500  flex justify-start items-center">
             <div className="leftDiv box-border w-[250px] py-1 rounde-lg flex justify-evenly items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 cursor-pointer rounded hover:bg-appGreen"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
-                />
-              </svg>
-
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className="hover:bg-appGreen p-1  rounded-xl"
+              />
               <input
                 type="text"
                 name=""
                 id=""
                 placeholder="Location"
-                className="box-border w-3/5 text-center text-lg text-white placeholder-gray-500 rounded-lg cursor-pointer hover:ring-2 ring-red-500 focus:bg-zinc-200"
+                className="box-border w-3/5 text-ellipsis text-center text-base sm:text-lg text-black placeholder-gray-500 rounded-lg cursor-pointer hover:ring-2 ring-red-500 focus:bg-zinc-200"
               />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 cursor-pointer rounded hover:bg-appGreen"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                />
-              </svg>
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                className="hover:bg-appGreen p-1 rounded-xl"
+              />
             </div>
 
             <div className="centerDiv box-border px-2 py-1 border-x-2 border-gray-500 w-full bg-white">
@@ -63,7 +40,7 @@ function Services() {
                 type="text"
                 name=""
                 id=""
-                className="box-border w-full px-4 text-left text-lg text-white placeholder-gray-500 rounded-lg cursor-pointer hover:ring-2 ring-red-500 focus:bg-zinc-200"
+                className="box-border w-full text-ellipsis px-4 text-left text-base sm:text-lg text-black placeholder-gray-500 rounded-lg cursor-pointer hover:ring-2 ring-red-500 focus:bg-zinc-200"
                 placeholder="Search advocates, doctors, teachers and may more ..."
               />
             </div>

@@ -22,7 +22,10 @@ function Header() {
     };
   }, []);
   return (
-    <div className="headerContainer  box-border w-10/12 mx-auto" ref={headerRef}>
+    <div
+      className="headerContainer  box-border w-10/12 mx-auto"
+      ref={headerRef}
+    >
       <div className="headerContainer box-border w-full h-[50px] mt-6 py-[26px] flex justify-between items-center">
         <div className="logoDiv box-border ">
           <img
