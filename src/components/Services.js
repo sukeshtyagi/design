@@ -64,74 +64,72 @@ function Services() {
           </div>
         </div>
         <div className="midDiv box-border overflow-x-hidden w-full bg-inherit flex  flex-col bp2:flex-row justify-between items-center gap-4">
-          <div className="leftMid box-border w-fit bg-inherit">
-            {/*<img src="/images/carousal.svg" alt="" />*/}
+          <div className="leftMid box-border w-fit bg-appGreen rounded-xl p-1">
             <CarouselComp />
           </div>
 
-          <div className="rightMid box-border w-fit flex flex-col justify-center bg-inherit">
-            <div className="topRight box-border w-full flex flex-wrap justify-start items-center gap-2 bg-inherit">
+          <div className="rightMid box-border w-fit xl1:h-[470px] flex flex-col justify-center bg-inherit gap-4">
+            <div className="topRight box-border w-full bp5:max-bp4:w-[340px] bp4:w-[660px] mx-auto flex flex-wrap justify-center items-center gap-2 bg-inherit">
               <img
                 src="/images/doc.svg"
                 alt="doctors"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
               />
               <img
                 src="/images/engg.svg"
                 alt="engineers"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125 z-50"
               />
               <img
                 src="/images/ca.svg"
                 alt="CA"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
               />
               <img
                 src="/images/adv.svg"
                 alt="advocates"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
               />
             </div>
-
-            <div className="btmRight box-border w-full h-fit flex flex-wrap justify-start items-center gap-2 bg-inherit">
+            <div className="btmRight box-border w-full bp5:max-bp4:w-[340px] bp4:w-[660px] mx-auto flex flex-wrap justify-center items-center gap-2 bg-inherit">
               <img
                 src="/images/teacher.svg"
                 alt="teacher"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-x-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
               />
               <img
                 src="/images/lab.svg"
                 alt="laboureres"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-x-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
               />
               <img
                 src="/images/off.svg"
                 alt="officeres"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-x-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
               />
               <img
                 src="/images/govt off.svg"
                 alt="government officers"
-                class="box-border w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-x-125"
+                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
               />
             </div>
           </div>
         </div>
-        <div className="btmDiv w-full flex flex-wrap justify-between items-center gap-2">
+        <div className="btmDiv w-full flex flex-wrap justify-center bp2:justify-between items-center gap-2">
           <img
             src="/images/fund raise.svg"
             alt=""
-            className="hover:animate-bounce cursor-pointer"
+            className="hover:animate-bounce cursor-pointer w-[200px] bp2:w-fit"
           />
           <img
             src="/images/donate.svg"
             alt=""
-            className="hover:animate-bounce cursor-pointer"
+            className="hover:animate-bounce cursor-pointer w-[200px] bp2:w-fit"
           />
           <img
             src="/images/complaint.svg"
             alt=""
-            className="hover:animate-bounce cursor-pointer"
+            className="hover:animate-bounce cursor-pointer w-[200px] bp2:w-fit"
           />
         </div>
       </div>

@@ -10,6 +10,8 @@ module.exports = {
         150: "1.5",
       },
       screens: {
+        bp5: "340px",
+        bp4: "660px",
         bp3: "950px",
         bp1: "1180px",
         bp2: "1350px",
