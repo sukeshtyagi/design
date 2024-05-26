@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import Miss from "./Miss";
 import Header from "./components/Header";
+import Locations from "./components/Locations";
 import NeedHelp from "./components/NeedHelp";
 import Professions from "./components/Professions";
 import Searches from "./components/Searches";
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <Professions />
       {/*<Searches />*/}
+      <Locations />
       <NeedHelp />
       <Miss />
       <Footer />
