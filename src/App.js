@@ -1,3 +1,5 @@
+import Footer from "./Footer";
+import Miss from "./Miss";
 import Header from "./components/Header";
 import Professions from "./components/Professions";
 import Searches from "./components/Searches";
@@ -9,7 +11,12 @@ function App() {
       <Header />
       <Services />
       <Professions />
-      <Searches />
+      {/*<Searches />*/}
+      <Miss />
+      <Footer />
+      <h1 className="box-border w-full bg-appGreen py-[16px] h-[48px] text-center text-sm text-footerColor font-normal	">
+        copyright 2008-24. All Rights Reserved.
+      </h1>
     </div>
   );
 }

@@ -10,7 +10,7 @@ module.exports = {
         150: "1.5",
       },
       screens: {
-        bp5: "340px", 
+        bp5: "340px",
         bp4: "660px",
         bp3: "950px",
         bp1: "1180px",
@@ -18,6 +18,8 @@ module.exports = {
         xl1: "1440px",
       },
       colors: {
+        footerColor: "#222222",
+        footerChild: "#7D7D7D",
         appGreen: "#47e0c9",
         bluish: "#eafbee",
         grayish: "#86949c",
