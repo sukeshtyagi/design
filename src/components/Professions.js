@@ -1,4 +1,5 @@
 import React from "react";
+import ProfessionCard from "./ProfessionCard";
 
 function Professions() {
   return (
@@ -14,104 +15,67 @@ function Professions() {
             </p>
           </div>
           <div className="topRight box-border w-[110px] ">
-            <button className="view box-border w-full text-lg px-1 border  border-appGreen hover:border-black cursor-pointer rounded-none transition duration-300 hover:rounded-full hover:ring-2 hover:ring-offset-4 ring-appGreen">
+            <button className="view box-border w-full text-lg px-2 pt-1 border border-black	hover:border-black cursor-pointer rounded-sm transition duration-300 hover:rounded-full hover:ring-2 hover:ring-offset-4 ring-appGreen">
               VIEW ALL
             </button>
           </div>
         </div>
 
-        <div className="btmDiv box-border w-full flex flex-col gap-4 ">
-          <div className="btm1 box-border w-full flex justify-between items-center gap-6">
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/ayurvedic1.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/civil1.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/chemistry1.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/criminal1.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
+        <div className="btmDiv box-border w-full mx-auto flex flex-col gap-4">
+          <div className="btm1 box-border w-full bp4:max-xl1:w-[660px] mx-auto flex flex-wrap justify-between items-center gap-6">
+            <ProfessionCard
+              img={"/images/profession/ayurvedic1.svg"}
+              title={"Ayurvedic Doctors"}
+            />
+            <ProfessionCard
+              img={"/images/profession/civil1.svg"}
+              title={"Civil Engineers"}
+            />
+            <ProfessionCard
+              img={"/images/profession/chemistry1.svg"}
+              title={"Chemistry Teachers"}
+            />
+
+            <ProfessionCard
+              img={"/images/profession/lawyer1.svg"}
+              title={"Criminal Lawyers"}
+            />
+          </div>
+          <div className="btm2 box-border w-full bp4:max-xl1:w-[660px] mx-auto flex flex-wrap justify-between items-center gap-6">
+            <ProfessionCard
+              img={"/images/profession/soft.svg"}
+              title={"Software Engineers"}
+            />
+            <ProfessionCard
+              img={"/images/profession/child.svg"}
+              title={"Child Specialists"}
+            />
+            <ProfessionCard
+              img={"/images/profession/auditor.svg"}
+              title={"Auditors"}
+            />
+
+            <ProfessionCard
+              img={"/images/profession/neuro.svg"}
+              title={"Neurologists"}
+            />
           </div>
 
-          <div className="btm2 box-border w-full  flex justify-between items-center gap-6">
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/software.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/child.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/auditor.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/neuro.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-          </div>
+          <div className="btm3 box-border w-full bp4:max-xl1:w-[660px] mx-auto flex flex-wrap justify-between items-center gap-6">
+            <ProfessionCard
+              img={"/images/profession/english.svg"}
+              title={"English Teachers"}
+            />
+            <ProfessionCard img={"/images/profession/dcp.svg"} title={"DCP"} />
+            <ProfessionCard
+              img={"/images/profession/dentists.svg"}
+              title={"Dentists"}
+            />
 
-          <div className="btm3 box-border w-full  flex justify-between items-center gap-6">
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/english.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/dcp.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/dentist.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
-            <div className="imgContainer box-border w-1/4 bg-white border rounded p-2 hover:bg-gray-100">
-              <img
-                src="/images/profession/physics.svg"
-                alt=""
-                className="box-border cursor-pointer hover:scale-125"
-              />
-            </div>
+            <ProfessionCard
+              img={"/images/profession/physics.svg"}
+              title={"Physics Teachers"}
+            />
           </div>
         </div>
       </div>
