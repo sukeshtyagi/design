@@ -13,7 +13,7 @@ import FooterChild from "./components/FooterChild";
 
 function Footer() {
   return (
-    <div className="outermostSectionContainer box-border w-full xl1:w-[1440px] mt-16">
+    <div className="outermostSectionContainer box-border w-full xl1:w-[1440px] mt-8">
       <div className="sectionContainer box-border py-16 w-10/12 mx-auto flex flex-col md:flex-row justify-between gap-12">
         <div className="leftDiv box-border w-2/3 md:w-1/4 mx-auto text-footerChild flex flex-col gap-4">
           <img
@@ -77,8 +77,8 @@ function Footer() {
             />
           </div>
         </div>
-        <div className="rightDiv box-border  w-11/12 md:w-3/5 mx-auto flex flex-col gap-12">
-          <div className="topDiv box-border w-[200px] px-3 border border-orange-300	rounded flex justify-between items-center cursor-pointer hover:bg-gradient-to-r from-pink-900 to-purple-900 hover:ring-1 hover:ring-offset-4 hover:ring-appGreen">
+        <div className="rightDiv box-border w-full md:w-3/5 mx-auto flex flex-col gap-12">
+          <div className="topDiv box-border w-[200px] px-3 mx-auto md:mx-0 border border-orange-300	rounded flex justify-between items-center cursor-pointer hover:bg-gradient-to-r from-pink-900 to-purple-900 hover:ring-1 hover:ring-offset-4 hover:ring-appGreen">
             <p className="para box-border font-semibold relative top-2 text-xl text-appGreen">
               Locations
             </p>

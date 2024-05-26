@@ -8,7 +8,7 @@ function Miss() {
           <h1 className="heading box-border text-center xl1:text-left py-2 text-appGreen text-4xl font-extrabold    ">
             DOWNLOAD OUR APP
           </h1>
-          <p className="para box-border w-3/5 mx-auto text-center xl1:text-left text-2xl">
+          <p className="para box-border w-full sm:w-3/5 mx-auto text-center xl1:text-left text-lg md:text-2xl">
             Download the app from apple or google store and get the best
             services.
           </p>

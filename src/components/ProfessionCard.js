@@ -2,7 +2,7 @@ import React from "react";
 
 function ProfessionCard({ img, title }) {
   return (
-    <div className="imgContainer box-border w-[270px] h-[72px] mx-auto flex justify-between items-center bg-white border rounded px-2 hover:bg-gray-100 group">
+    <div className="imgContainer box-border w-[270px] h-[72px] mx-auto flex justify-between items-center bg-white border rounded px-2 hover:bg-gray-100 group hover:h-[95px]">
       <div className="leftDiv box-border">
         <img src={img} alt="" />
       </div>
