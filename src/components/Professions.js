@@ -7,10 +7,10 @@ function Professions() {
       <div className="sectionContainer box-border w-10/12 mx-auto mt-8 mx-auto flex flex-col gap-10">
         <div className="topDiv box-border w-full flex flex-col md:flex-row gap-4 justify-end items-center">
           <div className="topLeft box-border w-full">
-            <h1 className="heading box-border text-black text-center text-3xl bp3:text-4xl font-medium">
+            <h1 className="heading box-border text-footerColor text-center text-3xl bp3:text-4xl font-semibold">
               EXPLORE DIVERSE <span className="text-appGreen">PROFESSIONS</span>
             </h1>
-            <p className="para box-border text-grayish text-center text-lg">
+            <p className="para box-border text-grayish text-center text-sm font-normal">
               Discover the Range of Expertise Available at Your Fingertips
             </p>
           </div>

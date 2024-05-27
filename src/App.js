@@ -3,6 +3,7 @@ import Miss from "./Miss";
 import Header from "./components/Header";
 import Locations from "./components/Locations";
 import NeedHelp from "./components/NeedHelp";
+import PreviousEngagements from "./components/PreviousEngagements";
 import Professions from "./components/Professions";
 import Searches from "./components/Searches";
 import Services from "./components/Services";
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Services />
       <Professions />
+      <PreviousEngagements />
       {/*<Searches />*/}
       <Locations />
       <NeedHelp />
