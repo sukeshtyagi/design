@@ -1,69 +1,152 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import style from "../styles/Services.module.css";
 import CarouselComp from "./CarouselComp";
+import ServicesCard from "./ServicesCard";
 
 function Services() {
   return (
-    <div className="outermostSectionContainer box-border w-full xl1:w-[1440px] bg-gradient-to-b from-slate-200 from-10% to-white to-50% mx-auto shadow-gray">
-      <div className="sectionContainer box-border w-10/12 mx-auto mt-12 mx-auto py-8 flex flex-col gap-12">
-        <div className="topDiv box-border w-4/5 flex flex-col items-start gap-4">
-          <p className="para text-lg sm:text-2xl  font-medium">
-            Lorem Ipsum Dolor Sit Amet,
-            <span className="text-lg sm:text-2xl text-appGreen font-bold">
-              {" "}
-              Consectetur Adipiscing Elit
-            </span>
-          </p>
+    <div className="outermostSectionContainer box-border w-full xl1:w-[1440px] mx-auto">
+      <div className="sectionContainer box-border w-[1128px] pt-10 mx-auto bg-white">
+        <div
+          className={`${style.upperDiv} flex flex-col gap-[14px] justify-start items-start bg-white`}
+        >
+          <div className={style.topUpper}>
+            <h1 className={style.paraTopUpper}>
+              Lorem Ipsum Dolor Sit Amet,
+              <span className={style.paraSpanTopUpper}>
+                {" "}
+                Consectetur Adipiscing Elit
+              </span>
+            </h1>
+          </div>
 
-          <div className="lwrDiv box-border w-full bg-white border rounded-lg border-gray-500  flex justify-start items-center">
-            <div className="leftDiv box-border w-[250px] py-1 rounde-lg flex justify-evenly items-center">
-              <FontAwesomeIcon
-                icon={faLocationDot}
-                className="hover:bg-appGreen p-1  rounded-xl"
-              />
+          <div
+            className={`${style.btmUpper} flex justify-start items-center gap-0`}
+          >
+            <div className={`${style.leftBtmUpper} flex gap-0 bg-white`}>
+              <div className={style.iconDiv}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className={`${style.iconLocation} box-border hover:ring-2 ring-red-500`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                  />
+                </svg>
+              </div>
+
+              <div className={`${style.inputIconDiv} flex gap-2`}>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Location"
+                  className={`${style.inputBtm} box-border cursor-pointer hover:ring-2 ring-red-500`}
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.0}
+                  stroke="currentColor"
+                  className={`${style.downIcon} cursor-pointer hover:ring-2 ring-red-500`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className={style.midBtmUpper}>
               <input
                 type="text"
                 name=""
                 id=""
-                placeholder="Location"
-                className="box-border w-3/5 text-ellipsis text-center text-base sm:text-lg text-black placeholder-gray-500 rounded-lg cursor-pointer hover:ring-2 ring-red-500 focus:bg-zinc-200"
-              />
-              <FontAwesomeIcon
-                icon={faAngleDown}
-                className="hover:bg-appGreen p-1 rounded-xl"
+                className={`${style.input2} cursor-pointer hover:ring-2 ring-red-500`}
+                placeholder="Search doctors, advocates, teachers and many more....."
               />
             </div>
 
-            <div className="centerDiv box-border px-2 py-1 border-x-2 border-gray-500 w-full bg-white">
-              <input
-                type="text"
-                name=""
-                id=""
-                className="box-border w-full text-ellipsis px-4 text-left text-base sm:text-lg text-black placeholder-gray-500 rounded-lg cursor-pointer hover:ring-2 ring-red-500 focus:bg-zinc-200"
-                placeholder="Search advocates, doctors, teachers and may more ..."
-              />
-            </div>
-            <div className="rightDiv box-border w-fit px-1 py-[6px] rounded-e-lg bg-appGreen hover:bg-white">
+            <div className={style.rightBtmUpper}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth={2.5}
                 stroke="currentColor"
-                class="size-6 text-xl text-black hover:text-appGreen font-bold  cursor-pointer "
+                className={`${style.lensIcon} cursor-pointer hover:ring-2 ring-red-500`}
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
                 />
               </svg>
             </div>
           </div>
         </div>
-        <div className="midDiv box-border overflow-x-hidden w-full bg-inherit flex  flex-col bp2:flex-row justify-between items-center gap-4">
+      </div>
+      <ServicesCard
+        img="/images/services/doc.svg"
+        title="Doctors"
+        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, #D7E6F4 63.9%, #A7C7E7 100%)"
+      />
+      <ServicesCard
+        img="/images/services/engg.svg"
+        title="Engineers"
+        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(254, 152, 50, 0.4) 63.9%, rgba(255, 141, 34, 0.6) 100%)"
+      />
+      <ServicesCard
+        img="/images/services/ca.png"
+        title="CA's"
+        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(11, 219, 182, 0.36) 63.9%, rgba(11, 219, 182, 0.9) 100%) "
+      />
+      <ServicesCard
+        img="/images/services/adv.svg"
+        title="Advocates"
+        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(189, 178, 255, 0.5) 63.9%, rgba(189, 178, 255, 0.8) 100%)
+"
+      />
+      <ServicesCard
+        img="/images/services/teacher.svg"
+        title="Teachers"
+        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%,
+      rgba(253, 255, 182, 0.5) 63.9%, rgba(253, 255, 182, 0.8) 100%)"
+      />
+      <ServicesCard
+        img="/images/services/lab.svg"
+        title="Labours"
+        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 173, 173, 0.5) 63.9%, #FFADAD 100%)"
+      />
+      <ServicesCard
+        img="/images/services/off.svg"
+        title="Officers"
+        bcg="
+      radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 198, 255, 0.8) 63.9%, #FFC6FF 100%) 
+      "
+      />
+      <ServicesCard
+        img="/images/services/govt off.svg"
+        title="Govt. Officers"
+        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(155, 246, 255, 0.5) 63.9%, rgba(155, 246, 255, 0.8) 100%) 
+"
+      />
+
+      {/*
+   <div className="midDiv box-border overflow-x-hidden w-full bg-inherit flex  flex-col bp2:flex-row justify-between items-center gap-4">
           <div className="leftMid box-border w-fit bg-appGreen rounded-xl p-1">
             <CarouselComp />
           </div>
@@ -132,7 +215,7 @@ function Services() {
             className="hover:animate-bounce cursor-pointer w-[200px] bp2:w-fit"
           />
         </div>
-      </div>
+  */}
     </div>
   );
 }

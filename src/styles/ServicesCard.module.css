@@ -1,0 +1,54 @@
+.cardContainer {
+  box-sizing: border-box;
+  width: 150px;
+  height: 195px;
+  opacity: 0px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.cardBackground {
+  box-sizing: border-box;
+   width: 150px;
+  height: 142px;
+  gap: 0px;
+  border-radius: 8px;
+  opacity: 0px;
+}
+
+.imageHolder {
+  box-sizing: border-box;
+  width: 122px;
+  height: 163px;
+  margin: auto;
+  background-size: contain;
+  background-position: center; 
+  overflow: visible;
+}
+
+.serviceProvider {
+  box-sizing: border-box;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.titleContainer {
+  box-sizing: border-box;
+  width: 63px;
+  height: 24px;
+  margin: auto;
+}
+
+.category {
+  box-sizing: border-box;
+  width: 100%;
+  height: 24px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: center;
+  color: rgba(72, 70, 76, 1);
+}

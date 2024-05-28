@@ -4,11 +4,8 @@ function Searches() {
   return (
     <div className="outermostSectionContainer box-border w-full xl1:w-[1440px]">
       <div className="sectionContainer box-border w-10/12 mx-auto py-12 mt-8 mx-auto flex flex-col gap-10">
-        <h1 className="heading box-border text-center text-3xl bp3:text-4xl font-medium">
-          POPULAR{" "}
-          <span className="box-border inline-block text-appGreen">
-            SEARCHES
-          </span>
+        <h1 className="{style.popular}">
+          POPULAR <span className="{style.search}">SEARCHES</span>
         </h1>
         <p className="para box-border -mt-8 text-center text-lg">
           See what other people are looking for
