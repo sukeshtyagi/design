@@ -100,52 +100,61 @@ function Services() {
             </div>
           </div>
         </div>
+        <div className="midDiv box-border w-full mt-[35px] flex justify-start items-center gap-[16px]">
+          <div className="leftMid box-border w-[464px] h-[406px]">
+            <CarouselComp />
+          </div>
+          <div className="rightMid box-border w-[648px] h-[406px] flex flex-col ">
+            <div className="topRight box-border w-[648px] flex justify-start items-center gap-[16px]">
+              <ServicesCard
+                img="/images/services/doc.svg"
+                title="Doctors"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, #D7E6F4 63.9%, #A7C7E7 100%)"
+              />
+              <ServicesCard
+                img="/images/services/engg.svg"
+                title="Engineers"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(254, 152, 50, 0.4) 63.9%, rgba(255, 141, 34, 0.6) 100%)"
+              />
+              <ServicesCard
+                img="/images/services/ca.png"
+                title="CA's"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(11, 219, 182, 0.36) 63.9%, rgba(11, 219, 182, 0.9) 100%) "
+              />
+              <ServicesCard
+                img="/images/services/adv.svg"
+                title="Advocates"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(189, 178, 255, 0.5) 63.9%, rgba(189, 178, 255, 0.8) 100%)"
+              />
+            </div>
+            <div className="btmRight box-border w-[648px] flex justify-start items-center gap-[16px]">
+              <ServicesCard
+                img="/images/services/teacher.svg"
+                title="Teachers"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%,rgba(253, 255, 182, 0.5) 63.9%, rgba(253, 255, 182, 0.8) 100%)"
+              />
+              <ServicesCard
+                img="/images/services/lab.svg"
+                title="Labours"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 173, 173, 0.5) 63.9%, #FFADAD 100%)"
+              />
+              <ServicesCard
+                img="/images/services/off.svg"
+                title="Officers"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 198, 255, 0.8) 63.9%, #FFC6FF 100%)"
+              />
+              <ServicesCard
+                img="/images/services/govt off.svg"
+                title="Govt. Officers"
+                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(155, 246, 255, 0.5) 63.9%, rgba(155, 246, 255, 0.8) 100%)"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <ServicesCard
-        img="/images/services/doc.svg"
-        title="Doctors"
-        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, #D7E6F4 63.9%, #A7C7E7 100%)"
-      />
-      <ServicesCard
-        img="/images/services/engg.svg"
-        title="Engineers"
-        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(254, 152, 50, 0.4) 63.9%, rgba(255, 141, 34, 0.6) 100%)"
-      />
-      <ServicesCard
-        img="/images/services/ca.png"
-        title="CA's"
-        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(11, 219, 182, 0.36) 63.9%, rgba(11, 219, 182, 0.9) 100%) "
-      />
-      <ServicesCard
-        img="/images/services/adv.svg"
-        title="Advocates"
-        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(189, 178, 255, 0.5) 63.9%, rgba(189, 178, 255, 0.8) 100%)
-"
-      />
-      <ServicesCard
-        img="/images/services/teacher.svg"
-        title="Teachers"
-        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%,
-      rgba(253, 255, 182, 0.5) 63.9%, rgba(253, 255, 182, 0.8) 100%)"
-      />
-      <ServicesCard
-        img="/images/services/lab.svg"
-        title="Labours"
-        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 173, 173, 0.5) 63.9%, #FFADAD 100%)"
-      />
-      <ServicesCard
-        img="/images/services/off.svg"
-        title="Officers"
-        bcg="
-      radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 198, 255, 0.8) 63.9%, #FFC6FF 100%) 
-      "
-      />
-      <ServicesCard
-        img="/images/services/govt off.svg"
-        title="Govt. Officers"
-        bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(155, 246, 255, 0.5) 63.9%, rgba(155, 246, 255, 0.8) 100%) 
-"
-      />
+      {/*
+      
+     
       <ServiceCard2
         title1="START FUNDRAISING"
         img="/images/services/fund.svg"
@@ -157,77 +166,7 @@ function Services() {
         bcg="rgba(36, 54, 94, 1)"
       />
       <ServicesCard3 />
-      <CarouselComp />
-      {/*
-   <div className="midDiv box-border overflow-x-hidden w-full bg-inherit flex  flex-col bp2:flex-row justify-between items-center gap-4">
-          <div className="leftMid box-border w-fit bg-appGreen rounded-xl p-1">
-          </div>
-
-          <div className="rightMid box-border w-fit xl1:h-[470px] flex flex-col justify-center bg-inherit gap-4">
-            <div className="topRight box-border w-full bp5:max-bp4:w-[340px] bp4:w-[660px] mx-auto flex flex-wrap justify-center items-center gap-2 bg-inherit">
-              <img
-                src="/images/doc.svg"
-                alt="doctors"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
-              />
-              <img
-                src="/images/engg.svg"
-                alt="engineers"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125 z-50"
-              />
-              <img
-                src="/images/ca.svg"
-                alt="CA"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
-              />
-              <img
-                src="/images/adv.svg"
-                alt="advocates"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
-              />
-            </div>
-            <div className="btmRight box-border w-full bp5:max-bp4:w-[340px] bp4:w-[660px] mx-auto flex flex-wrap justify-center items-center gap-2 bg-inherit">
-              <img
-                src="/images/teacher.svg"
-                alt="teacher"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
-              />
-              <img
-                src="/images/lab.svg"
-                alt="laboureres"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
-              />
-              <img
-                src="/images/off.svg"
-                alt="officeres"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
-              />
-              <img
-                src="/images/govt off.svg"
-                alt="government officers"
-                class="box-border w-[130px] md:w-fit cursor-pointer transition-all ease-in-out delay-300 duration-300 hover:scale-125"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="btmDiv w-full flex flex-wrap justify-center bp2:justify-between items-center gap-2">
-          <img
-            src="/images/fund raise.svg"
-            alt=""
-            className="hover:animate-bounce cursor-pointer w-[200px] bp2:w-fit"
-          />
-          <img
-            src="/images/donate.svg"
-            alt=""
-            className="hover:animate-bounce cursor-pointer w-[200px] bp2:w-fit"
-          />
-          <img
-            src="/images/complaint.svg"
-            alt=""
-            className="hover:animate-bounce cursor-pointer w-[200px] bp2:w-fit"
-          />
-        </div>
-  */}
+      */}
     </div>
   );
 }
