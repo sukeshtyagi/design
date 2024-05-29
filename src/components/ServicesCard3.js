@@ -4,7 +4,7 @@ import style from "../styles/ServiceCard2.module.css";
 function ServicesCard3() {
   return (
     <div
-      className={`${style.outerContainer} ml-6 flex`}
+      className={`${style.outerContainer} flex`}
       style={{
         background: "rgba(143, 51, 51, 1)",
       }}

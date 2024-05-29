@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../styles/ServiceCard2.module.css";
 
-function ServiceCard2({ title1, img, bcg }) {
+function ServiceCard2A({ title1, img, bcg }) {
   return (
     <div
       className={`${style.outerContainer} flex`}
@@ -31,17 +31,11 @@ function ServiceCard2({ title1, img, bcg }) {
           <p className={`${style.para1} w-1/2`}>{title1}</p>
         </div>
       </div>
-      <div
-        className={`${style.right}`}
-      >
-        <img
-          src={img}
-          alt=""
-          className={`${style.image} rounded-[27px]`}
-        />
+      <div className={`${style.right2}`}>
+        <img src={img} alt="" className={`${style.image} rounded-[27px]`} />
       </div>
     </div>
   );
 }
 
-export default ServiceCard2;
+export default ServiceCard2A;

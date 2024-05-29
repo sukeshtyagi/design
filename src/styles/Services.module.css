@@ -1,3 +1,11 @@
+.outermostSectionContainer {
+  background-image: url("/public/images/Bcg.svg");
+  background-position: 0px -80px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 40px 40px -30px rgb(244, 244, 244);
+}
+
 .upperDiv {
   box-sizing: border-box;
   width: 937px;
