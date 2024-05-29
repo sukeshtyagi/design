@@ -5,10 +5,13 @@ import ServicesCard from "./ServicesCard";
 import ServiceCard2 from "./ServiceCard2";
 import ServicesCard3 from "./ServicesCard3";
 import ServiceCard2A from "./ServiceCard2A";
+import CarouselComp2 from "./CarouselComp2";
 
 function Services() {
   return (
-    <div className={`${style.outermostSectionContainer} box-border w-full xl1:w-[1440px] mx-auto`}>
+    <div
+      className={`${style.outermostSectionContainer} box-border w-full xl1:w-[1440px] mx-auto`}
+    >
       <div className="sectionContainer box-border w-[1128px] pt-10 mx-auto bg-transparent">
         <div
           className={`${style.upperDiv} flex flex-col gap-[14px] justify-start items-start bg-white`}
@@ -101,9 +104,10 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="midDiv box-border w-full mt-[35px] flex justify-start items-center gap-[16px]">
+        <div className="box-border w-[100px]"></div>
+        <div className="midDiv box-border w-full mt-[35px] flex flex-col xl:flex-row justify-start items-center gap-[16px]">
           <div className="leftMid box-border w-[464px] h-[406px] rounded-[16px]">
-            <CarouselComp />
+            <CarouselComp2 />
           </div>
           <div className="rightMid box-border w-[648px] h-[406px] flex flex-col ">
             <div className="topRight box-border w-[648px] flex justify-start items-center gap-[16px]">
@@ -152,7 +156,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="btmDiv box-border w-full h-[164px] mt-[42px] flex justify-start items-center gap-[24px]">
+        <div className="btmDiv box-border w-full h-fit mt-[42px] flex flex-wrap justify-start items-center gap-[24px]">
           <ServiceCard2
             title1="START FUNDRAISING"
             img="/images/services/fund.svg"

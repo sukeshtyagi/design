@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import style from "../styles/CarouselComp.module.css"; // Adjust the import according to your file structure
+import style from "../styles/CarouselComp.module.css";
 
 function CarouselComp() {
   const settings = {
@@ -42,6 +42,59 @@ function CarouselComp() {
             style={{ background: "url(/images/services/abc.svg)" }}
           ></div>
         </div>
+        <div className={`${style.outerDiv} ml-12`}>
+          <div className={`${style.childOne}`}>
+            <h1 className={`${style.heading}`}>
+              Lorem Ipsum{" "}
+              <span className={`${style.spanDolor}`}>Dolor Sit</span>
+            </h1>
+            <p className={`${style.para}`}>
+              Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum
+              Dolor Sit Amet Lorem Ipsum....
+            </p>
+            <button className={`${style.btn}`}>Subscribe Now</button>
+          </div>
+          <div
+            className={`${style.childTwo}`}
+            style={{ background: "url(/images/services/abc.svg)" }}
+          ></div>
+        </div>
+        <div className={`${style.outerDiv} ml-12`}>
+          <div className={`${style.childOne}`}>
+            <h1 className={`${style.heading}`}>
+              Lorem Ipsum{" "}
+              <span className={`${style.spanDolor}`}>Dolor Sit</span>
+            </h1>
+            <p className={`${style.para}`}>
+              Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum
+              Dolor Sit Amet Lorem Ipsum....
+            </p>
+            <button className={`${style.btn}`}>Subscribe Now</button>
+          </div>
+          <div
+            className={`${style.childTwo}`}
+            style={{ background: "url(/images/services/abc.svg)" }}
+          ></div>
+        </div>
+
+        <div className={`${style.outerDiv} ml-12`}>
+          <div className={`${style.childOne}`}>
+            <h1 className={`${style.heading}`}>
+              Lorem Ipsum{" "}
+              <span className={`${style.spanDolor}`}>Dolor Sit</span>
+            </h1>
+            <p className={`${style.para}`}>
+              Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum
+              Dolor Sit Amet Lorem Ipsum....
+            </p>
+            <button className={`${style.btn}`}>Subscribe Now</button>
+          </div>
+          <div
+            className={`${style.childTwo}`}
+            style={{ background: "url(/images/services/abc.svg)" }}
+          ></div>
+        </div>
+
         <div className={`${style.outerDiv} ml-12`}>
           <div className={`${style.childOne}`}>
             <h1 className={`${style.heading}`}>
