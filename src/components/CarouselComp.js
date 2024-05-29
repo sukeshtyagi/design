@@ -1,81 +1,26 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import style from "../styles/CarouselComp.module.css";
 
 function CarouselComp() {
   return (
-    <div style={{ maxWidth: "500px", margin: "auto" }}>
-      <Carousel indicators={true} controls={false} fade={true}>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book7.jpg"
-            alt="one slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100"
-            src="/images/searches/book4.jpg"
-            alt="Two slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100"
-            src="/images/searches/book.jpg"
-            alt="Third slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book7.jpg"
-            alt="four slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book4.jpg"
-            alt="five slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book.jpg"
-            alt="six slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book4.jpg"
-            alt="seven slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book4.jpg"
-            alt="eight slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book4.jpg"
-            alt="nine slide"
-          />
-        </Carousel.Item>
-        <Carousel.Item interval={1500}>
-          <img
-            className="d-block w-100 rounded-xl"
-            src="/images/searches/book7.jpg"
-            alt="ten slide"
-          />
-        </Carousel.Item>
-      </Carousel>
+    <div className={`${style.outerDiv} ml-12`}>
+      <div className={`${style.childOne}`}>
+        <h1 className={`${style.heading}`}>
+          Lorem Ipsum <span className={`${style.spanDolor}`}>Dolor Sit</span>
+        </h1>
+        <p className={`${style.para}`}>
+          Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum
+          Dolor Sit Amet Lorem Ipsum....
+        </p>
+        <button className={`${style.btn}`}>Subscribe Now</button>
+      </div>
+      <div
+        className={`${style.childTwo}`}
+        style={{
+          background: "url(/images/services/abc.svg)",
+        }}
+      ></div>
     </div>
   );
 }

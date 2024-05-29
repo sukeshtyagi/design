@@ -2,6 +2,8 @@ import React from "react";
 import style from "../styles/Services.module.css";
 import CarouselComp from "./CarouselComp";
 import ServicesCard from "./ServicesCard";
+import ServiceCard2 from "./ServiceCard2";
+import ServicesCard3 from "./ServicesCard3";
 
 function Services() {
   return (
@@ -144,11 +146,21 @@ function Services() {
         bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(155, 246, 255, 0.5) 63.9%, rgba(155, 246, 255, 0.8) 100%) 
 "
       />
-
+      <ServiceCard2
+        title1="START FUNDRAISING"
+        img="/images/services/fund.svg"
+        bcg="rgba(0, 134, 110, 1)"
+      />
+      <ServiceCard2
+        title1="DONATE NOW"
+        img="/images/services/donate.svg"
+        bcg="rgba(36, 54, 94, 1)"
+      />
+      <ServicesCard3 />
+      <CarouselComp />
       {/*
    <div className="midDiv box-border overflow-x-hidden w-full bg-inherit flex  flex-col bp2:flex-row justify-between items-center gap-4">
           <div className="leftMid box-border w-fit bg-appGreen rounded-xl p-1">
-            <CarouselComp />
           </div>
 
           <div className="rightMid box-border w-fit xl1:h-[470px] flex flex-col justify-center bg-inherit gap-4">

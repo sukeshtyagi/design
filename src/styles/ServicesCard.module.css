@@ -9,7 +9,7 @@
 
 .cardBackground {
   box-sizing: border-box;
-   width: 150px;
+  width: 150px;
   height: 142px;
   gap: 0px;
   border-radius: 8px;
@@ -21,9 +21,6 @@
   width: 122px;
   height: 163px;
   margin: auto;
-  background-size: contain;
-  background-position: center; 
-  overflow: visible;
 }
 
 .serviceProvider {
