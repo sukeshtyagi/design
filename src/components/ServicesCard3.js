@@ -4,7 +4,7 @@ import style from "../styles/ServiceCard2.module.css";
 function ServicesCard3() {
   return (
     <div
-      className={`${style.outerContainer} flex`}
+      className={`${style.outerContainer} flex hover:scale-y-125`}
       style={{
         background: "rgba(143, 51, 51, 1)",
       }}
