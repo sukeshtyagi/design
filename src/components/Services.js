@@ -104,13 +104,13 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="box-border w-[100px]"></div>
         <div className="midDiv box-border w-full mt-[35px] flex flex-col xl:flex-row justify-start items-center gap-[16px]">
           <div className="leftMid box-border w-[464px] h-[406px] rounded-[16px]">
             <CarouselComp2 />
           </div>
-          <div className="rightMid box-border w-[648px] h-[406px] flex flex-col ">
-            <div className="topRight bg-red-500 box-border w-[648px] flex justify-start items-center gap-[16px]">
+          <div className="rightMid box-border w-[648px] h-[406px] flex flex-col gap-[20px]">
+            <div className="topRight  box-border w-[648px] flex justify-start items-center gap-[16px]">
+              {" "}
               <ServicesCard
                 img="/images/services/doc.svg"
                 title="Doctors"
@@ -132,7 +132,7 @@ function Services() {
                 bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(189, 178, 255, 0.5) 63.9%, rgba(189, 178, 255, 0.8) 100%)"
               />
             </div>
-            <div className="btmRight bg-green-500 box-border w-[648px] flex justify-start items-center gap-[16px]">
+            <div className="btmRight box-border w-[648px] flex justify-start items-center gap-[16px]">
               <ServicesCard
                 img="/images/services/teacher.svg"
                 title="Teachers"
