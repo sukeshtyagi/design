@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHouse } from "@fortawesome/free-solid-svg-icons";
+import style from "../styles/Header.module.css";
 
 function Header() {
   const [showHeaderOption, setShowHeaderOption] = useState(false);
@@ -23,11 +24,13 @@ function Header() {
   }, []);
   return (
     <div
-      className="headerContainer  box-border w-10/12 mx-auto"
-      ref={headerRef}
+      className={`${style.outerContainer}  box-border w-screen h-[88px] xl1:w-[1440px] mx-auto pt-[24px]`}
     >
-      <div className="headerContainer box-border w-full h-[50px] mt-6 py-[26px] flex justify-between items-center">
-        <div className="logoDiv box-border ">
+      <div
+        className={`${style.headerContainer} w-[1128px] h-[40px] mx-auto`}
+        ref={headerRef}
+      >
+        <div className={`${style.leftDiv}`}>
           <img
             src="/images/logo.svg"
             alt="Logo of app"
@@ -35,6 +38,7 @@ function Header() {
           />
         </div>
 
+        {/*
         <div className="svgDiv box-border relative block bp1:hidden cursor-pointer">
           <FontAwesomeIcon
             icon={faHouse}
@@ -59,22 +63,28 @@ function Header() {
             </div>
           )}
         </div>
+ */}
 
-        <div className="optionsContainer box-border cursor-pointer hidden bp1:flex text-black text-base xl1:text-xl flex justify-start items-center gap-4">
-          <p className="navItemHome box-border px-2 hover:text-appGreen hover:border hover:border-appGreen hover:rounded-lg">
-            Home
-          </p>
-          <p className="navItemCategories box-border px-2 hover:text-appGreen hover:border hover:border-appGreen hover:rounded-lg">
-            Categories
-          </p>
-          <p className="navItemfunds box-border px-2 hover:text-appGreen hover:border hover:border-appGreen hover:rounded-lg">
-            Raise Startup Funds
-          </p>
-          <p className="navItemInvestors box-border  px-2 hover:text-appGreen hover:border hover:border-appGreen hover:rounded-lg">
-            Investors
-          </p>
+        <div className={style.rightDiv}>
+          <div className={`${style.optionsContainer} `}>
+            <p className={`${style.navItem1}  box-border`}>Home</p>
+
+            <p className={`${style.navItem2}  box-border`}>Categories</p>
+
+            <p className={`${style.navItem3}  box-border`}>
+              Raise Startup Funds
+            </p>
+
+            <p className={`${style.navItem4}  box-border`}>Investors</p>
+          </div>
+
+          <div className={`${style.btnDiv}`}>
+            <button className={`${style.loginBtn}`}>Login/Sign Up</button>
+            <button className={`${style.donateBtn}`}>Donate Now</button>
+          </div>
         </div>
 
+        {/*
         <div className="svgDiv2 box-border block sm:hidden">
           <FontAwesomeIcon
             icon={faBars}
@@ -95,15 +105,7 @@ function Header() {
             </div>
           )}
         </div>
-
-        <div className="btnDiv box-border hidden sm:flex text-black text-base font-normal xl1:text-xl flex justify-start items-cente gap-2">
-          <button className="loginBtn box-border text-appGreen border-2 border-appGreen hover:font-medium hover:text-white hover:bg-appGreen px-4 rounded-xl">
-            Login/Sign Up
-          </button>
-          <button className="donateBtn box-border text-black border-2 border-appGreen hover:text-white hover:bg-appGreen px-4 rounded-xl">
-            Donate Now
-          </button>
-        </div>
+ */}
       </div>
     </div>
   );

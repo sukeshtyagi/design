@@ -1,0 +1,130 @@
+.headerContainer {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 150px;
+}
+
+.leftDiv {
+  box-sizing: border-box;
+  width: 194px;
+  height: 30px;
+  padding: 0px 1.99px 0px 2.33px;
+  gap: 0px;
+  opacity: 0px;
+  cursor:not-allowed;
+}
+
+.rightDiv {
+  box-sizing: border-box;
+  width: 784px;
+  height: 40px;
+  padding: 0px 0px 0px 16px;
+  opacity: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+}
+
+.optionsContainer {
+  width: 377px;
+  height: 20px;
+  top: 10px;
+  opacity: 0px;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.navItem1,
+.navItem2,
+.navItem3,
+.navItem4 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  color: rgba(34, 34, 34, 1);
+}
+
+.navItem1 {
+  box-sizing: border-box;
+  width: 43px;
+  height: 20px;
+}
+
+.navItem2 {
+  box-sizing: border-box;
+  width: 79px;
+  height: 20px;
+}
+
+.navItem3 {
+  box-sizing: border-box;
+  width: 142px;
+  height: 20px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.navItem4 {
+  box-sizing: border-box;
+  width: 65px;
+  height: 20px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.navItem1:hover,
+.navItem2:hover,
+.navItem3:hover,
+.navItem4:hover {
+  color: rgba(11, 219, 182, 1);
+}
+
+.btnDiv {
+  box-sizing: border-box;
+  width: 291px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  opacity: 0px;
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  width: 148px;
+  height: 40px;
+  gap: 8px;
+  border-radius: 8px;
+  opacity: 0px;
+  border: 1.5px solid rgba(11, 219, 182, 1);
+  color: rgba(11, 219, 182, 1);
+  background-color: white;
+}
+
+.donateBtn {
+  width: 135px;
+  height: 40px;
+  gap: 8px;
+  border-radius: 8px;
+  opacity: 0px;
+  border: 1.5px solid rgba(11, 219, 182, 1);
+  color: rgba(11, 219, 182, 1);
+  background-color: white;
+}
+
+.loginBtn:hover,
+.donateBtn:hover {
+  color: white;
+  background-color: rgba(11, 219, 182, 1);
+}
