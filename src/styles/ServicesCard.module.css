@@ -2,7 +2,6 @@
   box-sizing: border-box;
   width: 150px;
   height: 195px;
-  opacity: 0px;
 }
 
 .cardBackground {
@@ -11,7 +10,6 @@
   height: 142px;
   gap: 0px;
   border-radius: 8px;
-  opacity: 0px;
 }
 
 .imageHolder {

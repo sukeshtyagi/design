@@ -36,7 +36,6 @@
   width: 464px;
   height: 406px;
   border-radius: 16px;
-  opacity: 0px;
   flex-shrink: 0;
   background: linear-gradient(90deg, #2d4760 24.07%, #275680 100%);
 }
@@ -50,7 +49,6 @@
   height: 200px;
   gap: 0px;
   border-radius: 8px;
-  opacity: 0px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -92,7 +90,6 @@
   padding: 8px;
   margin-top: 8px;
   border-radius: 8px;
-  opacity: 0px;
   background: rgba(251, 255, 127, 1);
   font-family: Poppins;
   font-size: 11px;
