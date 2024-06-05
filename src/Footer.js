@@ -2,92 +2,78 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebookF,
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
 import FooterChild from "./components/FooterChild";
+import style from "./styles/Footer.module.css";
 
 function Footer() {
   return (
-    <div className="outermostSectionContainer box-border w-full xl1:w-[1440px] mt-8">
-      <div className="sectionContainer box-border py-16 w-10/12 mx-auto flex flex-col md:flex-row justify-between gap-12">
-        <div className="leftDiv box-border w-2/3 md:w-1/4 mx-auto text-footerChild flex flex-col gap-4">
-          <img
-            src="/images/logo.svg"
-            alt=""
-            className="logo box-border block w-full"
-          />
-          <p className="para box-border w-full font-light text-base text-left">
-            Empowering communities through seamless access to professional
-            services and fund raising opportunities.
-          </p>
-          <div className="detailAddress box-border flex justify-start gap-3 items-start">
-            <FontAwesomeIcon
-              icon={faLocationDot}
-              className="box-border relative top-2"
-            />
-            <p className="detail box-border font-medium text-base">
-              70 Washington Square South, New York, NY 100012, US
+    <div className={style.outermostSectionContainer}>
+      <div className={style.topDiv}>
+        <div className={style.leftDiv}>
+          <div className={style.imgContainer}>
+            <img src="/images/logo.svg" alt="" className={style.logo} />
+            <p className={style.para}>
+              Empowering communities through seamless access to professional
+              services and fundraising opportunities
             </p>
           </div>
 
-          <div className="detailContact box-border -mt-6 flex justify-start gap-2 items-start">
-            <FontAwesomeIcon
-              icon={faPhone}
-              className="box-border relative top-2"
-            />
-            <p className="detail  box-border font-medium text-base">
-              +91-9876543214
-            </p>
+          <div className={style.infoContainer}>
+            <div className={style.detailAddress}>
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className={style.locationDot}
+              />
+              <p className="">
+                70 Washington Square South, New York, NY 10012, US
+              </p>
+            </div>
+
+            <div className={style.detailContact}>
+              <FontAwesomeIcon icon={faPhone} className={style.phoneIcon} />
+              <p className="">+91-9876543214</p>
+            </div>
+
+            <div className={style.detailEmail}>
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className={style.envelopeIcon}
+              />
+              <p className="">info@companyname.com</p>
+            </div>
           </div>
 
-          <div className="detailAddress box-border -mt-6 flex justify-start gap-2 items-start">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              className="box-border relative top-1"
+          <div className={style.allIcons}>
+            <img src="/images/fb.svg" alt="" className={style.facebookIcon} />
+            <img
+              src="/images/insta.svg"
+              alt=""
+              className={style.instagramIcon}
             />
-            <p className="detail box-border font-medium text-base">
-              info@companyname.com
-            </p>
-          </div>
-          <div className="allIcons box-border w-full flex justify-between items-center text-appGreen text-3xl">
-            <FontAwesomeIcon
-              icon={faFacebookF}
-              className="cursor-pointer hover:text-footerColor hover:scale-125 hover:ring hover:ring-offset-4 hover:ring-2 hover:ring-appGreen"
+            <img
+              src="/images/linkedin.svg"
+              alt=""
+              className={style.linkedInIcon}
             />
-            <FontAwesomeIcon
-              icon={faInstagram}
-              className="cursor-pointer hover:text-footerColor hover:scale-125 hover:ring hover:ring-offset-4 hover:ring-2 hover:ring-appGreen"
+            <img
+              src="/images/youtube.svg"
+              alt=""
+              className={style.youtubeIcon}
             />
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              className="cursor-pointer hover:text-footerColor hover:scale-125 hover:ring hover:ring-offset-4 hover:ring-2 hover:ring-appGreen"
-            />
-            <FontAwesomeIcon
-              icon={faTwitter}
-              className="cursor-pointer hover:text-footerColor hover:scale-125 hover:ring hover:ring-offset-4 hover:ring-2 hover:ring-appGreen"
-            />
-            <FontAwesomeIcon
-              icon={faYoutube}
-              className="cursor-pointer hover:text-footerColor hover:scale-125 hover:ring hover:ring-offset-4 hover:ring-2 hover:ring-appGreen"
+            <img
+              src="/images/twitter.svg"
+              alt=""
+              className={style.twitterIcon}
             />
           </div>
         </div>
-        <div className="rightDiv box-border w-full md:w-3/5 mx-auto flex flex-col gap-12">
-          <div className="topDiv box-border w-[200px] px-3 mx-auto md:mx-0 border border-orange-300	rounded flex justify-between items-center cursor-pointer hover:bg-gradient-to-r from-pink-900 to-purple-900 hover:ring-1 hover:ring-offset-4 hover:ring-appGreen">
-            <p className="para box-border font-semibold relative top-2 text-xl text-appGreen">
-              Locations
-            </p>
-            <FontAwesomeIcon
-              icon={faAngleDown}
-              className="box-border w-5 h-5 text-appGreen"
-            />
+
+        <div className={style.rightDiv}>
+          <div className={style.rightTopDiv}>
+            <p className="">Locations</p>
+            <FontAwesomeIcon icon={faAngleDown} className={style.arrowIcon} />
           </div>
-          <div className="footerChildContainer box-border w-full flex justify-between items-start">
+          <div className={style.footerChildContainer}>
             <FooterChild
               heading="Quick Links"
               link1="About Us"
@@ -124,8 +110,13 @@ function Footer() {
               link8="Srinagar"
             />
           </div>
-          {/**/}
         </div>
+      </div>
+
+      <div className={style.bottomDiv}>
+        <h1 className={style.headingFooter}>
+          Copyrights 2008-24. All Rights Reserved.
+        </h1>
       </div>
     </div>
   );

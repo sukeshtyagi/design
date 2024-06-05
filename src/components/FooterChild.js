@@ -1,4 +1,5 @@
 import React from "react";
+import style from "../styles/Footer.module.css";
 
 function FooterChild({
   heading,
@@ -12,34 +13,18 @@ function FooterChild({
   link8,
 }) {
   return (
-    <div className="outer box-border w-fit flex flex-col">
-      <h1 className="heading box-border font-semibold	text-xl text-appGreen">
-        {heading}
-      </h1>
-      <p className="para box-border mt-2 font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild  hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link1}
-      </p>
-      <p className="para box-border -mt-[3px] font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link2}
-      </p>
-      <p className="para box-border -mt-[3px] font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link3}
-      </p>
-      <p className="para box-border -mt-[3px] font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link4}
-      </p>
-      <p className="para box-border -mt-[3px] font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link5}
-      </p>
-      <p className="para box-border -mt-[3px] font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link6}
-      </p>
-      <p className="para box-border -mt-[3px] font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link7}
-      </p>
-      <p className="para box-border -mt-[3px] font-normal text-sm sm:text-sm text-footerChild cursor-pointer hover:underline hover:decoration-footerChild hover:underline-offset-4 hover:text-appGreen hover:scale-125">
-        {link8}
-      </p>
+    <div className={style.footerChildOuter}>
+      <h1 className={style.footerChildheading}>{heading}</h1>
+      <div className={style.footerChildParaContainer}>
+        <p className={style.footerChildPara}>{link1}</p>
+        <p className={style.footerChildPara}>{link2}</p>
+        <p className={style.footerChildPara}>{link3}</p>
+        <p className={style.footerChildPara}>{link4}</p>
+        <p className={style.footerChildPara}>{link5}</p>
+        <p className={style.footerChildPara}>{link6}</p>
+        <p className={style.footerChildPara}>{link7}</p>
+        <p className={style.footerChildPara}>{link8}</p>
+      </div>
     </div>
   );
 }
