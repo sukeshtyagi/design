@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PreviousEngagementCard from "./PreviousEngagementCard";
-
+import style from "../styles/PreviousEngagements.module.css";
 function PreviousEngagements() {
   const [activeCategory, setActiveCategory] = useState("Doctors");
 
@@ -16,42 +16,41 @@ function PreviousEngagements() {
   ];
 
   return (
-    <div className="outermostPreviousContainer box-border w-full xl1:w-[1440px] bg-bluish mx-auto mt-4 py-14">
-      <div className="previousContainer box-border w-10/12 mx-auto flex flex-col gap-4">
-        <div className="topDiv box-border w-full flex flex-col md:flex-row gap-4 justify-end items-center">
-          <div className="topLeft box-border w-full">
-            <h1 className="heading box-border text-footerColor text-center text-3xl bp3:text-4xl font-semibold">
-              Previous <span className="text-appGreen">Engagements</span>
-            </h1>
-            <p className="para box-border text-grayish text-center text-sm font-normal">
-              Review your previous interactions
-            </p>
-          </div>
-          <div className="topRight box-border w-[110px]">
-            <button className="view box-border w-full text-lg px-2 pt-1 border border-black hover:border-black cursor-pointer rounded-sm transition duration-300 hover:rounded-full hover:ring-2 hover:ring-offset-4 ring-appGreen">
-              VIEW ALL
-            </button>
-          </div>
+    <div className={style.outermostPreviousContainer}>
+      <div className={style.topDiv}>
+        <div className={style.upperDiv}>
+          <h1 className={style.heading}>
+            Previous <span className={style.headingSpan}>Engagements</span>
+            <p className={style.para}>Review your previous interactions</p>
+          </h1>
         </div>
+        <div className={style.rightDiv}>
+          <button className={style.viewBtn}>VIEW ALL</button>
+        </div>
+      </div>
 
-        <div className="midDiv box-border w-full px-4 py-0 flex justify-between items-center border-b-[3px]">
-          {categories.map((category) => (
+      <div className={`${style.midDiv} border-b border-grayish`}>
+        {categories.map((category) => (
+          <div
+            key={category}
+            className={`${style.midDivPara} cursor-pointer`}
+            onClick={() => setActiveCategory(category)}
+          >
             <p
-              key={category}
-              className={`para box-border -mb-[1px] border-b-4 ${
+              className={`${style.midDivPara2} border-b-[3px] ${
                 activeCategory === category
                   ? "border-b-footerColor"
                   : "border-transparent"
               } cursor-pointer`}
-              onClick={() => setActiveCategory(category)}
             >
               {category}
             </p>
-          ))}
-        </div>
-
-        <div className="btmDiv box-border w-full mx-auto flex flex-col bp1:flex-row justify-start gap-8">
-          <div className="topOfBtm box-border w-fit mx-auto bp1:w-full flex justify-between gap-6">
+          </div>
+        ))}
+      </div>
+      <div className={style.btmDiv}>
+        <div className={style.uprDiv}>
+          <div className={style.leftTopBtm}>
             <PreviousEngagementCard
               img={"/images/prev.svg"}
               name="Dr. John Smith"
@@ -73,7 +72,7 @@ function PreviousEngagements() {
             />
           </div>
 
-          <div className="btmOfBtm box-border w-fit mx-auto bp1:w-full flex justify-between gap-6">
+          <div className={style.rightTopBtm}>
             <PreviousEngagementCard
               img={"/images/prev.svg"}
               name="Dr. John Smith"
@@ -95,9 +94,8 @@ function PreviousEngagements() {
             />
           </div>
         </div>
-
-        <div className="btmDiv box-border w-full mx-auto flex flex-col bp1:flex-row justify-start gap-8">
-          <div className="topOfBtm box-border w-fit mx-auto bp1:w-full flex justify-between gap-6">
+        <div className={style.lwrDiv}>
+          <div className={style.leftLwrBtm}>
             <PreviousEngagementCard
               img={"/images/prev.svg"}
               name="Dr. John Smith"
@@ -118,8 +116,7 @@ function PreviousEngagements() {
               rating="5"
             />
           </div>
-
-          <div className="btmOfBtm box-border w-fit mx-auto bp1:w-full flex justify-between gap-6">
+          <div className={style.rightLwrBtm}>
             <PreviousEngagementCard
               img={"/images/prev.svg"}
               name="Dr. John Smith"
