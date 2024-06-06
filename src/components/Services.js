@@ -1,6 +1,5 @@
 import React from "react";
 import style from "../styles/Services.module.css";
-import CarouselComp from "./CarouselComp";
 import ServicesCard from "./ServicesCard";
 import ServiceCard2 from "./ServiceCard2";
 import ServicesCard3 from "./ServicesCard3";
@@ -58,7 +57,7 @@ function Services() {
                   name=""
                   id=""
                   placeholder="Location"
-                  className={`${style.inputBtm} box-border cursor-pointer hover:ring-2 ring-red-500`}
+                  className={`${style.inputBtm} box-border cursor-pointer hover:ring-2 ring-red-500 outline-none`}
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +80,7 @@ function Services() {
                 type="text"
                 name=""
                 id=""
-                className={`${style.input2} cursor-pointer hover:ring-2 ring-red-500`}
+                className={`${style.input2} cursor-pointer hover:ring-2 ring-red-500 outline-none`}
                 placeholder="Search doctors, advocates, teachers and many more....."
               />
             </div>

@@ -66,6 +66,9 @@
   width: 172.14px;
   height: 52.37px;
 }
+.image:hover {
+  transform: scale(1.2);
+}
 
 .rightDiv {
   box-sizing: border-box;
