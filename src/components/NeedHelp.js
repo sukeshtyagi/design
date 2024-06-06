@@ -77,7 +77,7 @@ function NeedHelp() {
             />
           </div>
 
-          <button className={style.btn}>Submit</button>
+          <button className={`${style.btn} hover:ring-2 hover:ring-offset-4 hover:ring-appGreen`}>Submit</button>
         </div>
       </div>
     </div>

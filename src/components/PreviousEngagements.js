@@ -25,7 +25,7 @@ function PreviousEngagements() {
           </h1>
         </div>
         <div className={style.rightDiv}>
-          <button className={style.viewBtn}>VIEW ALL</button>
+          <button className={`${style.viewBtn} hover:bg-appGreen`}>VIEW ALL</button>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ function PreviousEngagements() {
             onClick={() => setActiveCategory(category)}
           >
             <p
-              className={`${style.midDivPara2} border-b-[3px] ${
+              className={`${style.midDivPara2} border-b-[3px] hover:text-appGreen ${
                 activeCategory === category
                   ? "border-b-footerColor"
                   : "border-transparent"

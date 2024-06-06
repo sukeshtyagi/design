@@ -3,7 +3,7 @@ import style from "../styles/Professions.module.css";
 
 function ProfessionCard({ img, title }) {
   return (
-    <div className={style.outerContainer}>
+    <div className={`${style.outerContainer} hover:scale-125 cursor-pointer`}>
       <div className={style.innerContainer}>
         <div className={style.leftDiv}>
           <img src={img} alt="" className={style.image} />
