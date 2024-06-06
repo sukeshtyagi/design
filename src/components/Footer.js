@@ -2,8 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import FooterChild from "./components/FooterChild";
-import style from "./styles/Footer.module.css";
+import FooterChild from "./FooterChild";
+import style from "../styles/Footer.module.css";
 
 function Footer() {
   return (

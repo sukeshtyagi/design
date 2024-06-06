@@ -1,5 +1,5 @@
-import Footer from "./Footer";
-import Miss from "./Miss";
+import Footer from "./components/Footer";
+import Miss from "./components/Miss";
 import Header from "./components/Header";
 import Locations from "./components/Locations";
 import NeedHelp from "./components/NeedHelp";
@@ -21,7 +21,6 @@ function App() {
       <NeedHelp />
       <Miss />
       <Footer />
-     
     </div>
   );
 }
