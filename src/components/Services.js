@@ -155,7 +155,7 @@ function Services() {
             </div>
           </div>
         </div>
-        <div className="btmDiv box-border w-full h-fit mt-[42px] flex flex-wrap justify-start items-center gap-[24px]">
+        <div className="btmDiv box-border w-full h-fit mt-[42px] mb-[50px] flex flex-wrap justify-start items-center gap-[24px]">
           <ServiceCard2
             title1="START FUNDRAISING"
             img="/images/services/fund.svg"
