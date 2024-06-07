@@ -4,7 +4,13 @@ import SearchCard from "./SearchCard";
 import SearchCard2 from "./SearchCard2";
 function Searches() {
   return (
-    <div className={style.outermostSearchContainer}>
+    <div
+      className={style.outermostSearchContainer}
+      style={{
+        backgroundImage: "url(/images/Bcg.svg)",
+        backgroundPosition:"0px 70px"
+        }}
+    >
       <div className={style.searchContainer}>
         <div className={style.topDiv}>
           <h1 className={style.popular}>
@@ -40,7 +46,6 @@ function Searches() {
             img="/images/searches/delhi.svg"
             title="Best Lawyers in Delhi"
           />
-
 
           <SearchCard2
             img="/images/searches/teacher.svg"
