@@ -8,6 +8,7 @@ import Professions from "./homePageComponents/Professions";
 import Searches from "./homePageComponents/Searches";
 import Services from "./homePageComponents/Services";
 import Campaigns from "./homePageComponents/Campaigns";
+import LatestBlogs from "./homePageComponents/LatestBlogs";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <PreviousEngagements />
       {/*<Searches />*/}
       <Locations />
+      <LatestBlogs />
       <NeedHelp />
       <Miss />
       <Footer />
