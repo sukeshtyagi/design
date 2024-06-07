@@ -1,13 +1,13 @@
-import Footer from "./components/Footer";
-import Miss from "./components/Miss";
-import Header from "./components/Header";
-import Locations from "./components/Locations";
-import NeedHelp from "./components/NeedHelp";
-import PreviousEngagements from "./components/PreviousEngagements";
-import Professions from "./components/Professions";
-import Searches from "./components/Searches";
-import Services from "./components/Services";
-import style from "./styles/Header.module.css";
+import Footer from "./homePageComponents/Footer";
+import Miss from "./homePageComponents/Miss";
+import Header from "./homePageComponents/Header";
+import Locations from "./homePageComponents/Locations";
+import NeedHelp from "./homePageComponents/NeedHelp";
+import PreviousEngagements from "./homePageComponents/PreviousEngagements";
+import Professions from "./homePageComponents/Professions";
+import Searches from "./homePageComponents/Searches";
+import Services from "./homePageComponents/Services";
+import Campaigns from "./homePageComponents/Campaigns";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
       <Header />
       <Services />
       <Professions />
+      <Campaigns />
       <PreviousEngagements />
       {/*<Searches />*/}
       <Locations />
