@@ -18,7 +18,7 @@ function App() {
       <Professions />
       <Campaigns />
       <PreviousEngagements />
-      {/*<Searches />*/}
+      <Searches />
       <Locations />
       <NeedHelp />
       <LatestBlogs />

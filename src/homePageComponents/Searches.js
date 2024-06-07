@@ -1,17 +1,51 @@
 import React from "react";
-
+import style from "../styles/Searches.module.css";
+import SearchCard from "./SearchCard";
+import SearchCard2 from "./SearchCard2";
 function Searches() {
   return (
-    <div className="outermostSectionContainer box-border w-full xl1:w-[1440px]">
-      <div className="sectionContainer box-border w-10/12 mx-auto py-12 mt-8 mx-auto flex flex-col gap-10">
-        <h1 className="{style.popular}">
-          POPULAR <span className="{style.search}">SEARCHES</span>
-        </h1>
-        <p className="para box-border -mt-8 text-center text-lg">
-          See what other people are looking for
-        </p>
-        <div className="btmDiv box-border w-full mt-4 flex justify-between items-start gap-6">
-          <div className="chdDiv box-border bg-red-100 p-1 w-[200px] h-[200px] relative flex flex-col gap-0 hover:scale-150"></div>
+    <div className={style.outermostSearchContainer}>
+      <div className={style.searchContainer}>
+        <div className={style.topDiv}>
+          <h1 className={style.popular}>
+            POPULAR <span className={style.popularSpan}>SEARCHES</span>
+          </h1>
+          <p className={style.searchPara}>
+            See what other people are looking for
+          </p>
+        </div>
+
+        <div className={style.btmDiv}>
+          <SearchCard
+            img="/images/searches/cardio.svg"
+            title="Best Cardiologist Doctors"
+          />
+          <SearchCard
+            img="/images/searches/engg.svg"
+            title="Electrical Engineers"
+          />
+          <SearchCard
+            img="/images/searches/civil.svg"
+            title="Top Govt.Officers in Pune"
+          />
+          <SearchCard
+            img="/images/searches/lawyer.svg"
+            title="Best Lawyers consultant"
+          />
+          <SearchCard
+            img="/images/searches/govt.svg"
+            title="Top 5 Civil Officers"
+          />
+          <SearchCard
+            img="/images/searches/delhi.svg"
+            title="Best Lawyers in Delhi"
+          />
+
+
+          <SearchCard2
+            img="/images/searches/teacher.svg"
+            title="Top 10 Teachers"
+          />
         </div>
       </div>
     </div>
