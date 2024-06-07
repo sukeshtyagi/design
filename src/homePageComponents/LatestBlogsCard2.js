@@ -2,7 +2,9 @@ import React from "react";
 import style from "../styles/LatestBlogs.module.css";
 function LatestBlogsCard2({ img }) {
   return (
-    <div className={style.cardOuterDiv2}>
+    <div
+      className={`${style.cardOuterDiv2} hover:scale-125 hover:bg-slate-100`}
+    >
       <div className={style.cardTopDiv2}>
         <img src={img} alt="" className={style.image} />
       </div>

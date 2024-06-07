@@ -20,8 +20,8 @@ function App() {
       <PreviousEngagements />
       {/*<Searches />*/}
       <Locations />
-      <LatestBlogs />
       <NeedHelp />
+      <LatestBlogs />
       <Miss />
       <Footer />
     </div>

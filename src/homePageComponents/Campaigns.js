@@ -3,7 +3,13 @@ import style from "../styles/Campaigns.module.css";
 import CampaignCard from "./CampaignCard";
 function Campaigns() {
   return (
-    <div className={style.campaignOutermostContainer}>
+    <div
+      className={style.campaignOutermostContainer}
+      style={{
+        background: "url(/images/Backgrounds.svg)",
+        backgroundPosition: "30% 10%",
+      }}
+    >
       <div className={style.campaignInnerContainer}>
         <div className={style.campaingTopDiv}>
           <div className={style.topLeft}>
