@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faHouse } from "@fortawesome/free-solid-svg-icons";
 import style from "../styles/Header.module.css";
 
-function Header() {
+function Header({ dekstopLogin }) {
   const [showHeaderOption, setShowHeaderOption] = useState(false);
   const [showButtonOption, setShowButtonOption] = useState(false);
 
@@ -79,7 +79,13 @@ function Header() {
           </div>
 
           <div className={`${style.btnDiv}`}>
-            <button className={`${style.loginBtn}`}>Login/Sign Up</button>
+            {dekstopLogin && (
+              <p className={`${style.noAccountPara}`}>Don't have an account</p>
+            )}
+
+            {!dekstopLogin && (
+              <button className={`${style.loginBtn}`}>Login/Sign Up</button>
+            )}
             <button className={`${style.donateBtn}`}>Donate Now</button>
           </div>
         </div>
