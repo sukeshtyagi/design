@@ -11,6 +11,7 @@ import Services from "./Services";
 import Campaigns from "./Campaigns";
 import LatestBlogs from "./LatestBlogs";
 import FAQ from "./FAQ";
+import CustomerStories from "./CustomerStories";
 function HomePage() {
   return (
     <div className="appContainer box-border w-screen xl1:w-[1440px] mx-auto">
@@ -20,7 +21,7 @@ function HomePage() {
       <Campaigns />
       <PreviousEngagements />
       <Searches />
-      
+      <CustomerStories/>
       <FAQ />
       <Locations />
       <NeedHelp />
