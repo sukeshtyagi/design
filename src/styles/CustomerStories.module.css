@@ -116,11 +116,9 @@
   box-sizing: border-box;
   width: 540px;
   height: 688px;
-  padding-left: 4px;
   display: flex;
   flex-direction: column;
-  gap: 0;
-  background-color: orangered;
+  gap: 15px;
 }
 
 .btmChild3 {
@@ -130,7 +128,6 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background-color: orangered;
 }
 /*card1 styles*/
 .outerDivCard1 {
@@ -150,7 +147,8 @@
   margin-top: 18.24px;
 }
 
-.paraMidDivCard1 {
+.paraMidDivCard1,
+.paraMidDivCard4 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -174,7 +172,8 @@
   gap: 0px;
 }
 
-.nameBtmDivCard1 {
+.nameBtmDivCard1,
+.nameBtmDivCard3 {
   box-sizing: border-box;
   width: 94px;
   margin: 0;
@@ -209,29 +208,60 @@
   padding: 0;
   display: flex;
 }
-/*card2 styles*/
-.outerDivCard2 {
+
+/*card3 styles*/
+.outerDivCard3 {
   box-sizing: border-box;
-  width: 263px;
-  height: 243px;
-  border-radius: 14.58px;
-  padding-left: 9.67px;
-  padding-top: 18.23px;
+  width: 540px;
+  height: 254.46px;
+  margin-bottom: 3.54px;
+  display: flex;
+  gap: 21.37px;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 1);
-  border: 0.91px solid rgba(202, 196, 208, 1);
+  border: 1px solid rgba(202, 196, 208, 1);
 }
 
-.innerDivCard2 {
+.leftDivCard3 {
   box-sizing: border-box;
-  width: 183px;
-  height: 202.38px;
-  top: 463.23px;
+  width: 271.63px;
+  height: 254.46px;
+}
+
+.rightDivCard3 {
+  box-sizing: border-box;
+  width: 225px;
+  height: 200px;
+  padding-top: 19px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0px;
 }
 
-.topDivCard2 {
+.btmDivCard3 {
+  box-sizing: border-box;
+  margin-top: 6px;
+}
+
+.nameBtmDivCard3 {
+  width: 100px;
+}
+/*card4 styles*/
+.outerDivCard4 {
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(202, 196, 208, 1);
+}
+
+.btmDivCard4 {
+  box-sizing: border-box;
+  width: 438.81px;
+  height: 60.49px;
+  margin-top: 8px;
+}
+
+.topDivCard4 {
   box-sizing: border-box;
   display: flex;
   gap: 13px;
@@ -240,7 +270,7 @@
   gap: 13px;
 }
 
-.ratingBtmDivCardDiv2 {
+.ratingBtmDivCardDiv4 {
   box-sizing: border-box;
   display: flex;
   margin-top: 7px;
