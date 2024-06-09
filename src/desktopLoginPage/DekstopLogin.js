@@ -6,7 +6,13 @@ function DekstopLogin() {
   return (
     <div className="appContainer box-border w-screen xl1:w-[1440px] mx-auto">
       <Header dekstopLogin="true" />
-      <div className={style.container}>
+      <div
+        className={style.container}
+        style={{
+          backgroundImage: "url(/images/miss/background.svg)",
+          backgroundPosition: "10px -90px",
+        }}
+      >
         <div className={style.innerDiv}>
           <div className={style.leftDiv}>
             <img

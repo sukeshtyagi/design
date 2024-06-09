@@ -10,6 +10,7 @@ import Searches from "./Searches";
 import Services from "./Services";
 import Campaigns from "./Campaigns";
 import LatestBlogs from "./LatestBlogs";
+import FAQ from "./FAQ";
 function HomePage() {
   return (
     <div className="appContainer box-border w-screen xl1:w-[1440px] mx-auto">
@@ -19,6 +20,8 @@ function HomePage() {
       <Campaigns />
       <PreviousEngagements />
       <Searches />
+      
+      <FAQ />
       <Locations />
       <NeedHelp />
       <LatestBlogs />
