@@ -9,7 +9,7 @@ import CarouselComp2 from "./CarouselComp2";
 function Services() {
   return (
     <div
-      className={`${style.outermostSectionContainer} box-border w-full xl1:w-[1440px] mx-auto`}
+      className={`${style.outermostSectionContainer} box-border w-screen xl1:w-[1440px] mx-auto`}
     >
       <div className="sectionContainer box-border w-[1128px] pt-10 mx-auto bg-transparent">
         <div

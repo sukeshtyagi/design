@@ -82,7 +82,7 @@
   letter-spacing: -0.02em;
   text-align: left;
   color: rgba(140, 140, 140, 1);
-  background-color: transparent;
+  background: transparent;
 }
 
 .para {
