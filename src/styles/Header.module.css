@@ -4,6 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 150px;
+  margin: auto;
 }
 
 .leftDiv {

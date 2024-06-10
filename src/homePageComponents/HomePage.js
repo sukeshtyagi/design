@@ -14,14 +14,14 @@ import FAQ from "./FAQ";
 import CustomerStories from "./CustomerStories";
 function HomePage() {
   return (
-    <div className="appContainer box-border w-screen xl1:w-[1440px] mx-auto">
+    <div className="appContainer box-border w-fit xl1:w-[1440px] mx-auto ">
       <Header />
       <Services />
       <Professions />
       <Campaigns />
       <PreviousEngagements />
       <Searches />
-      <CustomerStories/>
+      <CustomerStories />
       <FAQ />
       <Locations />
       <NeedHelp />

@@ -5,7 +5,7 @@ import style from "./DesktopLogin.module.css";
 function DekstopLogin() {
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <div className="appContainer box-border w-screen xl1:w-[1440px] mx-auto">
+    <div className="desktopLoginContainer box-border w-fit xl1:w-[1440px] mx-auto">
       <Header dekstopLogin="true" />
       <div
         className={style.container}
