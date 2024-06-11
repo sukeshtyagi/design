@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 .container {
   box-sizing: border-box;
   width: 1440px;
@@ -11,104 +9,100 @@
   background: rgba(246, 253, 248, 1);
 }
 
-.innerDiv {
+.signupInnerContainer {
   box-sizing: border-box;
-  width: 1126px;
-  height: 668.26px;
+  width: 1128px;
+  height: 724px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 118px;
+  justify-content: space-between;
 }
 
-.leftDiv {
+.signupLeft {
   box-sizing: border-box;
-  width: 494px;
-  height: 668.26px;
-  padding: 1px 0px 0.26px 0px;
-  border-radius: 33.45px;
+  width: 519.5px;
+  height: 724px;
 }
 
-.leftDivImage {
-  box-sizing: border-box;
-  border-radius: 33.45px;
-}
-
-.rightDiv {
+.signupLeftTop {
   box-sizing: border-box;
   width: 514px;
-  height: 495.28px;
+  height: 625.37px;
   display: flex;
   flex-direction: column;
-  gap: 0px;
 }
 
-.rightTop {
+.signUpHeadingDiv {
   box-sizing: border-box;
-  width: 514px;
-  height: 348.69px;
+  width: 501.19px;
+  height: 119.43px;
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 7.43px;
+  opacity: 0px;
 }
 
-.heading {
+.signUpHeading {
   box-sizing: border-box;
-  width: 406px;
+  width: 432px;
   height: 56px;
-  padding: 0px;
   margin: 0 auto;
-  margin-bottom: 3px;
-  font-family: "Poppins";
+  padding: 0;
+  font-family: Poppins;
   font-size: 37.13px;
   font-weight: 500;
   line-height: 55.69px;
   text-align: left;
+  color: rgba(0, 0, 0, 1);
 }
 
-.inputEmail,
-.inputPassword {
+.signUpHeadingSpan {
+  box-sizing: border-box;
+  color: rgba(11, 219, 182, 1);
+  font-weight: 600;
+}
+
+.signUpPara {
+  box-sizing: border-box;
+  width: 501.19px;
+  height: 56px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 18.56px;
+  font-weight: 400;
+  line-height: 27.84px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.signupInputDiv {
+  box-sizing: border-box;
+  width: 514px;
+  height: 303.53px;
+  margin-top: 55.69px;
+  display: flex;
+  flex-direction: column;
+  gap: 27.84px;
+}
+
+.inputNameSignup,
+.inputEmailSignup,
+.inputPasswordSignup {
   box-sizing: border-box;
   width: 513.25px;
   height: 55px;
-  padding: 17.35px 25px 15.65px 15.78px;
-  margin-top: 27px;
+  padding: 17.35px 17.35px 15.65px 15.78px;
   border-radius: 8px;
   border: 1px solid rgba(147, 143, 150, 1);
-  font-family: "Poppins";
-  font-size: 14.85px;
-  font-weight: 400;
-  line-height: 22.28px;
-  letter-spacing: -0.02em;
-  text-align: left;
-  color: rgba(140, 140, 140, 1);
-  background: transparent;
+  background-color: transparent;
 }
 
-.para {
-  box-sizing: border-box;
-  width: 143px;
-  height: 24px;
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-  font-family: "Poppins";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: left;
-  color: rgba(11, 219, 182, 1);
-}
-
-.button {
+.buttonSignup {
   box-sizing: border-box;
   width: 514px;
-  height: 60.84px;
-  margin-top: 30px;
-  padding: 13.92px 94.67px 13.92px 94.67px;
-  gap: 9.28px;
-  border-radius: 9.28px;
-  font-family: "Poppins";
+  height: 55px;
+  border-radius: 8px;
+  font-family: Poppins;
   font-size: 22.27px;
   font-weight: 500;
   line-height: 33.41px;
@@ -118,12 +112,12 @@
   background: rgba(11, 219, 182, 1);
 }
 
-.rightBtm {
+.leftBtmSignup {
   box-sizing: border-box;
   width: 269.15px;
   height: 87.59px;
-  margin-top: 24px;
   margin: auto;
+  margin-top: 24.13px;
   display: flex;
   flex-direction: column;
   gap: 18.56px;
@@ -142,8 +136,7 @@
 .segRight {
   box-sizing: border-box;
   width: 111.38px;
-  height: 1px;
-  gap: 0px;
+  height: 0.93px;
   border: 0.93px solid rgba(230, 237, 254, 1);
   background-color: rgba(230, 237, 254, 1);
 }
@@ -162,13 +155,13 @@
   color: rgba(170, 177, 194, 1);
 }
 
-.iconDiv {
+.iconDivSignup {
   box-sizing: border-box;
   width: 185.86px;
   height: 48.03px;
   margin: auto;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 20.88px;
 }
@@ -238,4 +231,50 @@
   letter-spacing: -0.02em;
   text-align: left;
   color: rgba(170, 170, 170, 1);
+}
+
+.signupLeftBtm {
+  box-sizing: border-box;
+  width: 483px;
+  height: 70px;
+  margin-top: 10px;
+  margin-left: 36.5px;
+  position: relative;
+}
+
+.signupLeftBtmPara {
+  box-sizing: border-box;
+  width: 446px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: rgb(2, 1, 1);
+}
+
+.signupLeftBtmParaSpan {
+  color: rgba(11, 219, 182, 1);
+}
+
+.sparkle {
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.signupRightImage {
+  box-sizing: border-box;
+  border-radius: 33.45px;
+  box-shadow: 0px 0px 77.8px 0px rgba(0, 0, 0, 0.15);
+  background: rgba(215, 215, 215, 1);
 }

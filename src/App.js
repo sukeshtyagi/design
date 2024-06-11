@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/dekstopLogin" element={<DekstopLogin login="login" />} />
+        <Route path="/dekstopLogin" element={<DekstopLogin />} />
         <Route path="/dekstopSignup" element={<DesktopSignup />} />
       </Routes>
     </BrowserRouter>

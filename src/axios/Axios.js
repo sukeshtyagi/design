@@ -17,8 +17,9 @@ export async function userLogin(userData) {
   }
 }
 
-export async function checkServer() {
+export async function checkServer(values) {
   try {
+    console.log(values)
     const response = await instance.get("/status");
     console.log("Server Status:", response.data);
   } catch (error) {

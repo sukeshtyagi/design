@@ -1,7 +1,6 @@
 import React from "react";
 import style from "../styles/CustomerStories.module.css";
 import CustomerCard1 from "./CustomerCard1";
-import CustomerCard2 from "./CustomerCard2";
 import CustomerCard3 from "./CustomerCard3";
 import CustomerCard4 from "./CustomerCard4";
 

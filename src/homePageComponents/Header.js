@@ -4,18 +4,14 @@ import { faBars, faHouse } from "@fortawesome/free-solid-svg-icons";
 import style from "../styles/Header.module.css";
 import { useNavigate } from "react-router-dom";
 
-function Header({ dekstopLogin, dekstopSignup }) {
+function Header({ dekstopLogin, signup }) {
   const [showHeaderOption, setShowHeaderOption] = useState(false);
   const [showButtonOption, setShowButtonOption] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <div
-      className={`${style.outerContainer} box-border w-full h-[88px] mx-auto pt-[24px]`}
-    >
-      <div
-        className={`${style.headerContainer} w-[1128px] h-[40px] mx-auto`}
-      >
+    <div className={`${style.outerContainer} w-[1440px]`}>
+      <div className={`${style.headerContainer} w-[1128px] h-[40px] mx-auto`}>
         <div className={`${style.leftDiv}`}>
           <img
             src="/images/logo.svg"
@@ -45,11 +41,11 @@ function Header({ dekstopLogin, dekstopSignup }) {
           </div>
 
           <div className={`${style.btnDiv}`}>
-            {(dekstopLogin || dekstopSignup) && (
+            {(dekstopLogin || signup) && (
               <p className={`${style.noAccountPara}`}>Don't have an account</p>
             )}
 
-            {!dekstopLogin && !dekstopSignup && (
+            {!dekstopLogin && !signup && (
               <button
                 className={`${style.loginBtn}`}
                 onClick={() => {
@@ -60,11 +56,11 @@ function Header({ dekstopLogin, dekstopSignup }) {
               </button>
             )}
 
-            {!dekstopLogin && !dekstopSignup && (
+            {!dekstopLogin && !signup && (
               <button className={`${style.donateBtn}`}>Donate Now</button>
             )}
 
-            {dekstopLogin && (
+            {dekstopLogin &&  (
               <button
                 className={`${style.donateBtn}`}
                 onClick={() => {
@@ -75,7 +71,7 @@ function Header({ dekstopLogin, dekstopSignup }) {
               </button>
             )}
 
-            {dekstopSignup && (
+            {signup && (
               <button
                 className={`${style.donateBtn}`}
                 onClick={() => {

@@ -4,7 +4,9 @@
   height: 970px;
   background: rgba(246, 253, 248, 1);
   padding: 85px 156px;
+  margin: auto;
 }
+
 
 .innerContainer {
   box-sizing: border-box;
