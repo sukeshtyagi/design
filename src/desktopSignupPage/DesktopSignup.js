@@ -47,7 +47,7 @@ function DesktopSignup() {
                 // onSubmit={}
               >
                 <Form>
-                  <div className={style.signupInputDiv}>
+                  <div className={`${style.signupInputDiv} relative`}>
                     <Field
                       type="text"
                       name="fullName"
@@ -57,7 +57,7 @@ function DesktopSignup() {
                     <ErrorMessage
                       name="fullName"
                       component="div"
-                      className="error absolute text-center w-full text-red-500"
+                      className="error absolute top-[55px] text-center w-full text-red-500"
                     />
 
                     <Field
@@ -69,7 +69,7 @@ function DesktopSignup() {
                     <ErrorMessage
                       name="email"
                       component="div"
-                      className="error absolute text-center w-full text-red-500"
+                      className="error absolute top-[140px] text-center w-full text-red-500"
                     />
 
                     <div
@@ -112,8 +112,9 @@ function DesktopSignup() {
                     <ErrorMessage
                       name="password"
                       component="div"
-                      className="error absolute text-center w-full text-red-500"
+                      className="error absolute top-[220px] text-center w-full text-red-500"
                     />
+
                     <button
                       type="submit"
                       className={`${style.buttonSignup} hover:ring ring-offset-4 hover:ring-appGreen`}
