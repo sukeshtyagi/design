@@ -11,7 +11,7 @@ function Header({ dekstopLogin, signup }) {
 
   return (
     <div className={`${style.outerContainer} w-[1440px]`}>
-      <div className={`${style.headerContainer} w-[1128px] h-[40px] mx-auto`}>
+      <div className={`${style.headerContainer}`}>
         <div className={`${style.leftDiv}`}>
           <img
             src="/images/logo.svg"

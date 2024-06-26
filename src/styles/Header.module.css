@@ -1,17 +1,19 @@
 .outerContainer {
   box-sizing: border-box;
+  width: 100vw;
   height: 88px;
   padding-top: 24px;
-  margin: 0 auto;
 }
 
 .headerContainer {
   box-sizing: border-box;
+  width: 1128px;
+  height: 40px;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 150px;
-  margin: auto;
 }
 
 .leftDiv {
@@ -20,7 +22,6 @@
   height: 30px;
   padding: 0px 1.99px 0px 2.33px;
   gap: 0px;
-  cursor: not-allowed;
 }
 
 .rightDiv {
@@ -37,7 +38,6 @@
 .optionsContainer {
   width: 377px;
   height: 20px;
-  top: 10px;
   display: flex;
   align-items: baseline;
   justify-content: flex-start;
@@ -49,6 +49,8 @@
 .navItem3,
 .navItem4 {
   box-sizing: border-box;
+  width: fit-content;
+  height: 20px;
   cursor: pointer;
   font-family: poppins;
   font-size: 14px;
@@ -57,32 +59,6 @@
   letter-spacing: 0.10000000149011612px;
   text-align: left;
   color: rgba(34, 34, 34, 1);
-}
-
-.navItem1 {
-  box-sizing: border-box;
-  width: 43px;
-  height: 20px;
-}
-
-.navItem2 {
-  box-sizing: border-box;
-  width: 79px;
-  height: 20px;
-}
-
-.navItem3 {
-  box-sizing: border-box;
-  width: 142px;
-  height: 20px;
-  gap: 0px;
-}
-
-.navItem4 {
-  box-sizing: border-box;
-  width: 65px;
-  height: 20px;
-  gap: 0px;
 }
 
 .navItem1:hover,
@@ -102,25 +78,25 @@
   gap: 8px;
 }
 
-.loginBtn {
+.loginBtn,
+.donateBtn {
   box-sizing: border-box;
   width: 148px;
   height: 40px;
-  gap: 8px;
   border-radius: 8px;
   border: 1.5px solid rgba(11, 219, 182, 1);
   color: rgba(11, 219, 182, 1);
   background-color: white;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: center;
 }
 
 .donateBtn {
   width: 135px;
-  height: 40px;
-  gap: 8px;
-  border-radius: 8px;
-  border: 1.5px solid rgba(11, 219, 182, 1);
-  color: rgba(11, 219, 182, 1);
-  background-color: white;
 }
 
 .loginBtn:hover,
