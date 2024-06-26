@@ -1,6 +1,5 @@
 .outermostSectionContainer {
   box-sizing: border-box;
-  width: 1440px;
   height: 500px;
   margin: auto;
   margin-top: 50px; /**/
@@ -11,9 +10,9 @@
 
 .topDiv {
   box-sizing: border-box;
-  width: 1121.99px;
+  width: 1128px;
   height: 369.16px;
-  margin: 65.35px 159px;
+  margin: 65.35px auto;
   display: flex;
   justify-content: start;
   gap: 140px;
@@ -30,7 +29,6 @@
 
 .imgContainer {
   box-sizing: border-box;
-  width: 284px;
   height: 135px;
   display: flex;
   flex-direction: column;
@@ -195,7 +193,7 @@
 
 .rightDiv {
   box-sizing: border-box;
-  width: 697.99px;
+  width: 697px;
   height: 369.16px;
   display: flex;
   flex-direction: column;
@@ -238,17 +236,17 @@
 
 .footerChildContainer {
   box-sizing: border-box;
-  width: 697.99px;
+  width: fit-content;
   height: 286px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 100px;
+  gap: 0px; /*100*/
 }
 
 .footerChildOuter {
   box-sizing: border-box;
-  width: 150.99px;
+  width: fit-content;
   height: 286px;
   display: flex;
   flex-direction: column;
@@ -297,7 +295,8 @@
 
 .headingFooter {
   box-sizing: border-box;
-  width: 1440px;
+  margin: 0;
+  padding: 0;
   height: 48px;
   padding-top: 14px;
   background: rgba(11, 219, 182, 1);

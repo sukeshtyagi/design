@@ -26,9 +26,9 @@ function HomePage() {
       <Locations />
       <NeedHelp />
       <LatestBlogs />
-      {/*
       <Miss />
       <Footer />
+      {/*
        */}
     </>
   );
