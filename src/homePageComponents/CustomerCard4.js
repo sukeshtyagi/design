@@ -15,7 +15,7 @@ function CustomerCard4({
 }) {
   return (
     <div
-      className={`${style.outerDivCard4} hover:scale-110`}
+      className={`${style.outerDivCard4}`}
       style={{ height, width, paddingLeft, paddingTop }}
     >
       <div className={style.topDivCard4}>

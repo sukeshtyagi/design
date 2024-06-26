@@ -3,7 +3,7 @@ import style from "../styles/CustomerStories.module.css";
 
 function CustomerCard1() {
   return (
-    <div className={`${style.outerDivCard1} hover:scale-110`}>
+    <div className={`${style.outerDivCard1}`}>
       <div className={style.topDivCard1}>
         <img src="/images/miss/card1.svg" alt="" />
       </div>

@@ -1,17 +1,15 @@
 .outerContainer {
   box-sizing: border-box;
-  width: 1440px;
   height: 970px;
   background: rgba(246, 253, 248, 1);
-  padding: 85px 156px;
-  margin: auto;
+  padding: 85px 0px;
 }
-
 
 .innerContainer {
   box-sizing: border-box;
   width: 1128px;
   height: 800px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -80,6 +78,9 @@
   width: 75px;
   height: 26px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid rgba(11, 219, 182, 1);
 }
 
@@ -108,7 +109,7 @@
   box-sizing: border-box;
   width: 267px;
   height: 688px;
-  padding-left: 4px;
+  padding-left: 0px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -254,11 +255,19 @@
   border-radius: 16px;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(202, 196, 208, 1);
+  cursor: pointer;
+}
+
+.outerDivCard1:hover,
+.outerDivCard3:hover,
+.outerDivCard4:hover {
+  transform: scale(1.04);
+  transition: transform 0.8s ease-in-out;
 }
 
 .btmDivCard4 {
   box-sizing: border-box;
-  width: 438.81px;
+  width: fit-content;
   height: 60.49px;
   margin-top: 8px;
 }

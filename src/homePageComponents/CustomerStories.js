@@ -17,13 +17,10 @@ function CustomerStories() {
               Read What Our Users Have to Say About Their Experiences
             </p>
           </div>
-          <div className={style.rightDiv}>
-            <button className={`${style.viewBtn} hover:bg-appGreen`}>
-              VIEW ALL
-            </button>
+          <div className={`${style.rightDiv} hover:bg-appGreen`}>
+            <button className={`${style.viewBtn}`}>VIEW ALL</button>
           </div>
         </div>
-
         <div className={style.btmDiv}>
           <div className={style.btmChild1}>
             <CustomerCard1 />
@@ -40,6 +37,7 @@ function CustomerStories() {
               paraHeight="137px"
             />
           </div>
+
           <div className={style.btmChild2}>
             <CustomerCard3 />
             <CustomerCard4
@@ -95,6 +93,8 @@ function CustomerStories() {
               paraHeight="295px"
             />
           </div>
+          {/*
+           */}
         </div>
       </div>
     </div>
