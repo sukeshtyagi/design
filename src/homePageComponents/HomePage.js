@@ -22,11 +22,11 @@ function HomePage() {
       <PreviousEngagements />
       <Searches />
       <CustomerStories />
-      {/*
       <FAQ />
       <Locations />
       <NeedHelp />
       <LatestBlogs />
+      {/*
       <Miss />
       <Footer />
        */}

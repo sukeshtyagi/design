@@ -11,7 +11,7 @@ function LatestBlogs() {
         <div className={style.blogsTopDiv}>
           <div className={style.topLeft}>
             <h1 className={style.heading}>
-              LATEST<span className={style.headingSpan}>BLOGS</span>
+              LATEST<span className={style.headingSpan}> BLOGS</span>
             </h1>
             <p className={style.paraCard}>
               Stay Informed: Explore Our Latest Insights and Updates

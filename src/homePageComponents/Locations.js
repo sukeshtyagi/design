@@ -16,9 +16,10 @@ function Locations() {
           </h1>
 
           <p className={style.para}>
-            Our company is proud to offer comprehensive services across a wide
-            range of locations to ensure that our clients receive the support
-            they need, wherever they are.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere
+            condimentum lectus. Etiam dignissim nisl sem, eu laoreet ex
+            vestibulum ac.Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Sed posuere condimentum lectus.
           </p>
 
           <div className={style.divContainer}>

@@ -13,7 +13,7 @@ function FaqCard({ isExpanded, onClick }) {
         <div
           className={style.topDiv}
           style={{
-            alignItems: `${isExpanded ? "center" : ""}`,
+            alignItems: `${isExpanded ? "center" : "center"}`,
           }}
         >
           <h1 className={style.heading}>Lorem Ipsum Dolor Sit Amet?</h1>

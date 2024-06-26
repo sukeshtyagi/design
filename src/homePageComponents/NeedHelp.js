@@ -1,6 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import style from "../styles/NeedHelp.module.css";
 function NeedHelp() {
   return (
@@ -16,17 +14,14 @@ function NeedHelp() {
           </p>
           <div className={style.detailContainer}>
             <div className={style.envelopIconDiv}>
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                className={style.envelopIcon}
-              />
+              <img src="images/services/mail.svg" alt="" />
             </div>
             <p className={style.emailPara}>info@companyname.com</p>
           </div>
 
           <div className={style.detailContainer}>
             <div className={style.phoneIconDiv}>
-              <FontAwesomeIcon icon={faPhone} className={style.phoneIcon} />
+              <img src="images/services/phone.svg" alt="" />
             </div>
             <p className={style.phonePara}>+ 91 1234567891</p>
           </div>
@@ -77,7 +72,11 @@ function NeedHelp() {
             />
           </div>
 
-          <button className={`${style.btn} hover:ring-2 hover:ring-offset-4 hover:ring-appGreen`}>Submit</button>
+          <button
+            className={`${style.btn}`}
+          >
+            Submit
+          </button>
         </div>
       </div>
     </div>

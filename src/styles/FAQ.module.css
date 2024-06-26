@@ -3,17 +3,21 @@
   width: 552px;
   height: 88px;
   border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(248, 248, 248, 1);
-  padding: 16.99px 24px 47.23px 24px;
 }
 
 .cardInnerContainer {
   box-sizing: border-box;
   width: 504px;
-  height: 127.78px;
+  height: fit-content;
   border-radius: 8px; /*confirm on final layout for removal*/
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 15.97px;
 }
 
@@ -70,9 +74,8 @@
 
 .faqOuter {
   box-sizing: border-box;
-  width: 1440px;
-  height: 648px;
-  padding: 85px 156px;
+  height: 548px;
+  padding: 85px 0px;
   background: rgba(255, 255, 255, 1);
   margin: auto;
 }
@@ -81,6 +84,7 @@
   box-sizing: border-box;
   width: 1128px;
   height: 478px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 50px;

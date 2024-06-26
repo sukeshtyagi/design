@@ -2,9 +2,7 @@ import React from "react";
 import style from "../styles/LatestBlogs.module.css";
 function LatestBlogsCard3({ img }) {
   return (
-    <div
-      className={`${style.cardOuterDiv3} hover:scale-125 hover:bg-slate-100`}
-    >
+    <div className={`${style.cardOuterDiv3}`}>
       <div className={style.cardTopDiv3}>
         <img src={img} alt="" className={style.image} />
       </div>
@@ -17,7 +15,10 @@ function LatestBlogsCard3({ img }) {
           finibus arcu ut nibh porta, ac porta diam vehicula. Quisque dignissim
           ullamcorper mauris sit amet egestas. Pellentesque sed magna ac nisl
           dapibus
-          <br /> <span className="text-appGreen">Read More...</span>
+          <br />{" "}
+          <span className="text-appGreen hover:text-black cursor-pointer">
+            Read More...
+          </span>
         </p>
       </div>
     </div>

@@ -15,6 +15,11 @@
   border-radius: 10px;
 }
 
+.image:hover{
+  transform: scale(1.04);
+  transition: transform 0.8s ease-in-out;
+}
+
 .cardLowerDiv1 {
   box-sizing: border-box;
   width: 355.26px;
@@ -111,17 +116,17 @@
 /**/
 .blogsOutermostContainer {
   box-sizing: border-box;
-  width: 1440px;
   height: 671 px;
-  padding: 85px 155px 85px 156px;
+  padding: 85px 0;
   background: rgba(246, 253, 248, 1);
   margin: auto;
 }
 
 .blogsInnerContainer {
   box-sizing: border-box;
-  width: 1129px;
+  width: 1122px;
   height: 501px;
+  margin: auto;
 }
 
 .blogsTopDiv {
@@ -157,7 +162,7 @@
   color: rgba(0, 0, 0, 1);
 }
 
-.heading {
+.headingSpan {
   color: rgba(11, 219, 182, 1);
 }
 
@@ -177,6 +182,7 @@
   box-sizing: border-box;
   width: 75px;
   height: 26px;
+  border-radius: 5px;
   border: 1px solid rgba(11, 219, 182, 1);
   display: flex;
   justify-content: center;

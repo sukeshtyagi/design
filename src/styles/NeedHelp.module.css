@@ -1,15 +1,15 @@
 .needHelpOuterContainer {
   box-sizing: border-box;
   background-color: white;
-  width: 1440px;
   height: 563px;
-  padding: 85px 148.5px;
+  padding: 85px 0px;
   margin: auto;
 }
 
 .needHelpContainer {
   box-sizing: border-box;
-  width: 1143px;
+  width: 1128px;
+  margin: auto;
   height: 393px;
   display: flex;
   justify-content: flex-start;
@@ -84,7 +84,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 3px 0px rgba(125, 125, 125, 0.1);
+  box-shadow: 4.06px 4.06px 4.88px 0px rgba(68, 68, 68, 0.06);
 }
 
 .envelopIcon,
@@ -152,6 +152,14 @@
   border: 1px solid rgba(231, 224, 236, 1);
 }
 
+.topLeft:hover,
+.topRight:hover,
+.midLeft:hover,
+.midRight:hover,
+.btmDiv:hover {
+  border-color: #47e0c9;
+}
+
 .firstNameLabel,
 .lastNameLabel,
 .emailLabel,
@@ -181,13 +189,6 @@
   cursor: pointer;
 }
 
-.firstNameInput:hover,
-.lastNameInput:hover,
-.emailInput:hover,
-.numberInput:hover {
-  border: 1px solid brown;
-}
-
 .btmDiv {
   box-sizing: border-box;
   width: 456px;
@@ -208,10 +209,7 @@
   height: auto;
   outline: none;
   resize: none;
-}
-
-.messageInput:hover {
-  border: 1px solid brown;
+  cursor: pointer;
 }
 
 .btn {

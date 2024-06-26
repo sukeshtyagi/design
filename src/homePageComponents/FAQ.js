@@ -10,7 +10,10 @@ function FAQ() {
   };
 
   return (
-    <div className={style.faqOuter}>
+    <div
+      className={style.faqOuter}
+      style={{ height: expandedIndex !== null ? "648px" : "" }}
+    >
       <div className={style.faqInner}>
         <h1 className={style.faqHeading}>
           FREQUENTLY ASKED QUESTIONS{" "}
