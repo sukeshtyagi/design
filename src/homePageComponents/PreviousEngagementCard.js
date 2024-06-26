@@ -15,7 +15,7 @@ function PreviousEngagementCard({
   console.log(typeof newStars);
 
   return (
-    <div className={`${style.outer} hover:scale-125 cursor-pointer`}>
+    <div className={`${style.outer} cursor-pointer`}>
       <div className={style.innerContainer}>
         <div className={style.left}>
           <div className={style.imgContainer}>

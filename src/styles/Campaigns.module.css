@@ -1,6 +1,6 @@
 .cardOuterContainer {
   box-sizing: border-box;
-  width: 275px;
+  width: 260px;
   height: 440px;
   padding: 15px 10px 27px 10px;
   border-radius: 5px;
@@ -11,16 +11,20 @@
     0px -2px 14.6px 0px rgba(0, 0, 0, 0.1);
 }
 
+.cardOuterContainer:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}
+
 .cardInnerContainer {
   box-sizing: border-box;
   width: 255px;
   height: 398px;
 }
 
-.topDiv,
-.topDivImg {
+.topDiv {
   box-sizing: border-box;
-  width: 255px;
+  width: 240px;
   height: 120px;
   border-radius: 2px;
 }
@@ -191,25 +195,24 @@
   background: rgba(11, 219, 182, 1);
 }
 
-/**/
+/*comp styles below*/
 .campaignOutermostContainer {
   box-sizing: border-box;
-  width: 1440px;
   height: 740px;
-  padding: 85px 100px;
+  padding: 85px 0px;
   margin: auto;
 }
 
 .campaignInnerContainer {
   box-sizing: border-box;
-  width: 1240px;
+  width: 1128px;
+  margin: 0 auto;
   height: 570px;
 }
 
 .campaingTopDiv {
   box-sizing: border-box;
-  margin-left: 411px;
-  width: 773px;
+  margin-left: 351px;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -269,25 +272,23 @@
   border: 1px solid rgba(11, 219, 182, 1);
   display: flex;
   justify-content: center;
+  justify-content: center;
 }
 
 .view {
   box-sizing: border-box;
-  margin: auto;
   padding: 0;
   font-family: Poppins;
   font-size: 12px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.5px;
-  text-align: center;
   color: rgba(0, 0, 0, 1);
 }
 
 .campaignBtmDiv {
   box-sizing: border-box;
   margin-top: 50px;
-  width: 1240px;
   height: 440px;
 }
 
@@ -297,5 +298,5 @@
   display: flex;
   justify-self: flex-start;
   align-items: flex-start;
-  gap: 40px;
+  gap: 30px;
 }

@@ -52,7 +52,7 @@ function CampaignCard() {
             </div>
           </div>
           <button
-            className={`${style.donate} hover:ring-2 ring-offset-4 hover:ring-appGreen`}
+            className={`${style.donate}`}
           >
             Donate Now
           </button>
