@@ -21,10 +21,7 @@ function DesktopLogin() {
 
   return (
     <>
-      {/*
       <Header dekstopLogin="true" />
-       <Footer />
-       */}
       <div
         className={style.outerContainer}
         style={{
@@ -172,6 +169,7 @@ function DesktopLogin() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
