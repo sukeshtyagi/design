@@ -64,6 +64,7 @@
   box-sizing: border-box;
   width: 172.14px;
   height: 52.37px;
+  cursor: pointer;
 }
 .image:hover {
   transform: scale(1.05);

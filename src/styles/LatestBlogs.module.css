@@ -18,6 +18,8 @@
 .image:hover{
   transform: scale(1.04);
   transition: transform 0.8s ease-in-out;
+  cursor: pointer;
+
 }
 
 .cardLowerDiv1 {

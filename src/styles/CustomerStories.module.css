@@ -261,7 +261,7 @@
 .outerDivCard1:hover,
 .outerDivCard3:hover,
 .outerDivCard4:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
   transition: transform 0.8s ease-in-out;
 }
 

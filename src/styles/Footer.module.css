@@ -191,6 +191,16 @@
   height: 19.04px;
 }
 
+.facebookIcon:hover,
+.instagramIcon:hover,
+.linkedInIcon:hover,
+.youtubeIcon:hover,
+.twitterIcon:hover {
+  transform: scale(1.08);
+  transition: transform 0.8s ease-in-out;
+  cursor: pointer;
+}
+
 .rightDiv {
   box-sizing: border-box;
   width: 697px;

@@ -20,10 +20,13 @@ function DesktopLogin() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="desktopLoginContainer box-border w-screen xl1:w-[1440px] mx-auto">
+    <>
+      {/*
       <Header dekstopLogin="true" />
+       <Footer />
+       */}
       <div
-        className={style.container}
+        className={style.outerContainer}
         style={{
           backgroundImage: "url(/images/miss/background.svg)",
           backgroundPosition: "10px -90px",
@@ -77,10 +80,10 @@ function DesktopLogin() {
                           src="/images/miss/password.svg"
                           alt=""
                           onClick={() => setShowPassword(!showPassword)}
-                          className="hover:ring-2 ring-offset-4 hover:ring-appGreen"
+                          className=""
                         />
                       )}
-
+                      {/*
                       {showPassword && (
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +101,7 @@ function DesktopLogin() {
                           />
                         </svg>
                       )}
+ */}
                     </div>
                     <ErrorMessage
                       name="password"
@@ -112,7 +116,7 @@ function DesktopLogin() {
 
                     <button
                       type="submit"
-                      className={`${style.button} hover:ring ring-offset-4 hover:ring-appGreen`}
+                      className={`${style.button}`}
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Logging in..." : "Login"}
@@ -168,8 +172,7 @@ function DesktopLogin() {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }
 

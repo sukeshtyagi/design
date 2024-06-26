@@ -32,8 +32,8 @@ function Campaigns() {
             <CampaignCard />
             <CampaignCard />
           </div>
-          {/* 
-          */}
+          {/*
+           */}
         </div>
       </div>
     </div>

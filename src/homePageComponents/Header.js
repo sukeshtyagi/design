@@ -49,7 +49,7 @@ function Header({ dekstopLogin, signup }) {
               <button
                 className={`${style.loginBtn}`}
                 onClick={() => {
-                  navigate("/dekstopLogin");
+                  navigate("/login");
                 }}
               >
                 Login/Sign Up
@@ -60,11 +60,11 @@ function Header({ dekstopLogin, signup }) {
               <button className={`${style.donateBtn}`}>Donate Now</button>
             )}
 
-            {dekstopLogin &&  (
+            {dekstopLogin && (
               <button
                 className={`${style.donateBtn}`}
                 onClick={() => {
-                  navigate("/dekstopSignup");
+                  navigate("/register");
                 }}
               >
                 SignUp Now
@@ -75,7 +75,7 @@ function Header({ dekstopLogin, signup }) {
               <button
                 className={`${style.donateBtn}`}
                 onClick={() => {
-                  navigate("/dekstopLogin");
+                  navigate("/login");
                 }}
               >
                 Login
