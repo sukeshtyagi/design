@@ -18,6 +18,7 @@ function HomePage() {
       <Header />
       <Services />
       <Professions />
+      {/*
       <Campaigns />
       <PreviousEngagements />
       <Searches />
@@ -28,6 +29,7 @@ function HomePage() {
       <LatestBlogs />
       <Miss />
       <Footer />
+       */}
     </>
   );
 }

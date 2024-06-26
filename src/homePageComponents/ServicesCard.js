@@ -6,7 +6,7 @@ function ServicesCard({ img, title, bcg }) {
 
   return (
     <div
-      className={`${style.cardContainer} flex flex-col justify-end gap-[8px] hover:scale-125 hover:z-50`}
+      className={`${style.cardContainer} flex flex-col justify-end gap-[8px] `}
     >
       <div
         className={`${style.cardBackground}`}

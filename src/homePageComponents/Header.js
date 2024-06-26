@@ -10,7 +10,7 @@ function Header({ dekstopLogin, signup }) {
   const navigate = useNavigate();
 
   return (
-    <div className={`${style.outerContainer} w-[1440px]`}>
+    <div className={`${style.outerContainer}`}>
       <div className={`${style.headerContainer}`}>
         <div className={`${style.leftDiv}`}>
           <img

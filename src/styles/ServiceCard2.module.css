@@ -5,6 +5,12 @@
   border-radius: 16px;
   gap: 0px;
   position: relative;
+  cursor: pointer;
+}
+
+.outerContainer:hover {
+  transform: scale(1.05);
+  transition: transform 1s ease-in-out;
 }
 
 .left {
@@ -58,7 +64,7 @@
 .right {
   box-sizing: border-box;
   padding: 1px;
-  width:189px;
+  width: 189px;
   height: 164px;
   overflow: hidden;
   position: absolute;
@@ -70,7 +76,7 @@
 .right2 {
   box-sizing: border-box;
   padding: 1px;
-  width:215px;
+  width: 215px;
   height: 164px;
   overflow: hidden;
   position: absolute;

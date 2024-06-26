@@ -1,10 +1,4 @@
-.carouselContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-}
-
+/*slider*/
 .customDots {
   position: absolute;
   bottom: 50px;
@@ -17,27 +11,31 @@
   list-style: none;
 }
 
-.customDot {
-  width: 10px;
-  height: 10px;
-  background-color: pink;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
+.customDots>li {
+  background-color: gray !important;
+  width: 8px;
+  height: 8px;
+  margin-top: -20px;
+  margin-right: 8px;
+  border-radius: 100%;
+
 }
 
-.customDot.slick-active {
-  background-color: purple;
+.customDots >li.slick-active  {
+  background-color: rgb(187, 31, 57) !important;
 }
 
+/*main comp styles*/
 .outerDiv {
   box-sizing: border-box;
   position: relative;
-  width: 464px;
+  width: 454px !important;
   height: 406px;
+  margin-right: 10px;
   border-radius: 16px;
   flex-shrink: 0;
   background: linear-gradient(90deg, #2d4760 24.07%, #275680 100%);
+  background-color: orange;
 }
 
 .childOne {

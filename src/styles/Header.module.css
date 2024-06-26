@@ -1,6 +1,5 @@
 .outerContainer {
   box-sizing: border-box;
-  width: 100vw;
   height: 88px;
   padding-top: 24px;
 }
@@ -20,7 +19,7 @@
   box-sizing: border-box;
   width: 194px;
   height: 30px;
-  padding: 0px 1.99px 0px 2.33px;
+  padding: 0px 1.99px 0px 2.33px; /*due to this left padding its little offset*/
   gap: 0px;
 }
 
