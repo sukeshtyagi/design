@@ -3,6 +3,7 @@ import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import style from "./UserDashboard.module.css";
+import PersonalInfo from "./PersonalInfo";
 
 function UserDashboard() {
   return (
@@ -78,7 +79,9 @@ function UserDashboard() {
                 </div>
               </div>
             </div>
-            <div className="right"></div>
+            <div className={style.right}>
+              <PersonalInfo />
+            </div>
           </div>
         </div>
       </div>

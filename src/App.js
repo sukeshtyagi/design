@@ -7,6 +7,7 @@ import Services from "./homePageComponents/Services";
 import Trial from "./commonComponents/Trial";
 import EnterOtp from "./desktopSignupPage/EnterOtp";
 import UserDashboard from "./userDashboard/UserDashboard";
+import PersonalInfo from "./userDashboard/PersonalInfo";
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<DekstopLogin />} />
         <Route path="/register" element={<DesktopSignup />} />
-        <Route path="/abc" element={<Trial />} />
         <Route path="/enter-otp" element={<EnterOtp />} />
         <Route path="/profile" element={<UserDashboard />} />
+        <Route path="/abc" element={<PersonalInfo />} />
       </Routes>
     </BrowserRouter>
   );

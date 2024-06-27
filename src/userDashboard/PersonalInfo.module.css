@@ -1,0 +1,94 @@
+.personalInfoOuter {
+  box-sizing: border-box;
+  width: 557px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.commonDiv {
+  box-sizing: border-box;
+  width: auto;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topDiv {
+  box-sizing: border-box;
+  width: fit-content;
+  height: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 30px;
+}
+
+.para,
+.paraGender,
+.edit {
+  box-sizing: border-box;
+  width: fit-content;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.edit {
+  height: 17px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(42, 118, 240, 1);
+}
+
+.genderDiv {
+  box-sizing: border-box;
+  width: 152px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 05px;
+}
+
+.paraGender {
+  width: 88px;
+  height: 25px;
+  font-size: 14px;
+}
+
+.btmDiv {
+  box-sizing: border-box;
+  width: 557px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.input1 {
+  box-sizing: border-box;
+  width: 261px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(252, 252, 252, 1);
+  border: 1px solid rgba(240, 240, 240, 1);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.02),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.02), 0px 5px 3px 0px rgba(0, 0, 0, 0.01),
+    0px 8px 3px 0px rgba(0, 0, 0, 0), 0px 13px 4px 0px rgba(0, 0, 0, 0);
+  outline: none;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+}
