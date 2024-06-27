@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Desktopsignup.module.css";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
@@ -21,6 +21,12 @@ const validationSchema = Yup.object().shape({
 
 function EnterOtp() {
   const navigate = useNavigate();
+
+  // Function to check if a string contains only digits
+  const containsOnlyDigits = (value) => {
+    return /^\d+$/.test(value);
+  };
+
   return (
     <div className={style.otpOverlay}>
       <Formik
@@ -32,7 +38,7 @@ function EnterOtp() {
           navigate("/profile");
         }}
       >
-        {() => (
+        {({ errors, touched, values }) => (
           <Form className={style.otpOuter}>
             <h1 className={style.otpHeading}>Verify Code</h1>
             <p className={style.enterOtpPara}>
@@ -43,51 +49,49 @@ function EnterOtp() {
               <Field
                 type="text"
                 name="digit1"
-                placeholder="2"
-                className={`${style.digit1} placeholder-black`}
+                placeholder="-"
+                className={`${style.digit1} placeholder-black ${
+                  touched.digit1 && errors.digit1 ? style.errorBorder : ""
+                } ${
+                  containsOnlyDigits(values.digit1) ? style.greenBorder : ""
+                }`}
                 maxLength="1"
               />
 
-              <ErrorMessage
-                name="digit1"
-                component="div"
-                className="error absolute top-[40px] text-red-500 text-xs"
-              />
               <Field
                 type="text"
                 name="digit2"
-                placeholder="2"
-                className={`${style.digit1} placeholder-black`}
+                placeholder="-"
+                className={`${style.digit1} placeholder-black ${
+                  touched.digit2 && errors.digit2 ? style.errorBorder : ""
+                } ${
+                  containsOnlyDigits(values.digit2) ? style.greenBorder : ""
+                }`}
                 maxLength="1"
               />
-              <ErrorMessage
-                name="digit2"
-                component="div"
-                className="error absolute top-[40px] left-[83px] text-red-500 text-xs"
-              />
+
               <Field
                 type="text"
                 name="digit3"
                 placeholder="-"
-                className={`${style.digit1} placeholder-black`}
+                className={`${style.digit1} placeholder-black ${
+                  touched.digit3 && errors.digit3 ? style.errorBorder : ""
+                } ${
+                  containsOnlyDigits(values.digit3) ? style.greenBorder : ""
+                }`}
                 maxLength="1"
               />
-              <ErrorMessage
-                name="digit3"
-                component="div"
-                className="error absolute top-[40px] left-[172px] text-red-500 text-xs"
-              />
+
               <Field
                 type="text"
                 name="digit4"
                 placeholder="-"
-                className={`${style.digit1} placeholder-black relative`}
+                className={`${style.digit1} placeholder-black relative ${
+                  touched.digit4 && errors.digit4 ? style.errorBorder : ""
+                } ${
+                  containsOnlyDigits(values.digit4) ? style.greenBorder : ""
+                }`}
                 maxLength="1"
-              />
-              <ErrorMessage
-                name="digit4"
-                component="div"
-                className="error absolute top-[40px] left-[255px] text-red-500 text-xs"
               />
             </div>
             <p className={style.noOtpPara}>Didn’t receive OTP?</p>

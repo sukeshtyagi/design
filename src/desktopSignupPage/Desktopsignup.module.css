@@ -383,6 +383,7 @@
   background: rgba(255, 255, 255, 1);
   color: rgba(0, 0, 0, 1);
   outline: none;
+  cursor: pointer;
 }
 
 .noOtpPara,
@@ -401,7 +402,7 @@
 .resendPara {
   font-weight: 500;
   margin-top: 5.5px;
-  color: rgba(11, 219, 182, 1);
+  color: #0bdbb6;
   text-decoration: underline;
 }
 
@@ -413,7 +414,6 @@
   margin-top: 33px;
   padding: 5.5px 77px 5.5px 77px;
   border-radius: 8.8px;
-  background: rgba(11, 219, 182, 1);
   font-family: Poppins;
   font-size: 17.6px;
   font-weight: 500;
@@ -421,4 +421,18 @@
   letter-spacing: -0.02em;
   text-align: left;
   color: rgba(255, 255, 255, 1);
+  background: rgba(11, 219, 182, 1);
+
+  /*disabled state below*/
+
+  background: rgba(212, 212, 212, 1);
+  color: rgba(150, 150, 150, 1);
+}
+
+.errorBorder {
+  border: 0.5px solid #D75050 ;
+}
+
+.greenBorder {
+  border: 1px solid green; /* Green border for valid input */
 }
