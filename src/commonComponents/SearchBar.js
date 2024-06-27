@@ -1,17 +1,22 @@
 import React from "react";
 import style from "./SearchBar.module.css";
-function SearchBar() {
+function SearchBar({ userDashboard }) {
   return (
-    <div className={`${style.upperDiv} `}>
-      <div className={style.topUpper}>
-        <h1 className={style.paraTopUpper}>
-          Lorem Ipsum Dolor Sit Amet,
-          <span className={style.paraSpanTopUpper}>
-            {" "}
-            Consectetur Adipiscing Elit
-          </span>
-        </h1>
-      </div>
+    <div
+      className={`${style.upperDiv} `}
+      style={userDashboard ? { height: "fit-content" } : {}}
+    >
+      {!userDashboard && (
+        <div className={style.topUpper}>
+          <h1 className={style.paraTopUpper}>
+            Lorem Ipsum Dolor Sit Amet,
+            <span className={style.paraSpanTopUpper}>
+              {" "}
+              Consectetur Adipiscing Elit
+            </span>
+          </h1>
+        </div>
+      )}
 
       <div className={`${style.btmUpper}`}>
         <div className={`${style.leftBtmUpper}`}>

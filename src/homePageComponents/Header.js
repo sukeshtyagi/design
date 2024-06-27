@@ -1,16 +1,22 @@
-import React, { useState, useEffect, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faHouse } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 import style from "../styles/Header.module.css";
 import { useNavigate } from "react-router-dom";
 
-function Header({ dekstopLogin, signup }) {
-  const [showHeaderOption, setShowHeaderOption] = useState(false);
-  const [showButtonOption, setShowButtonOption] = useState(false);
+function Header({ dekstopLogin, signup, userDashboard }) {
+  console.log(userDashboard);
   const navigate = useNavigate();
 
   return (
-    <div className={`${style.outerContainer}`}>
+    <div
+      className={`${style.outerContainer}`}
+      style={
+        userDashboard
+          ? {
+              boxShadow: "0px 0px 42px 0px rgba(0, 0, 0, 0.06)",
+            }
+          : {}
+      }
+    >
       <div className={`${style.headerContainer}`}>
         <div className={`${style.leftDiv}`}>
           <img
@@ -40,12 +46,23 @@ function Header({ dekstopLogin, signup }) {
             <p className={`${style.navItem4}  box-border`}>Investors</p>
           </div>
 
-          <div className={`${style.btnDiv}`}>
+          <div
+            className={`${style.btnDiv}`}
+            style={
+              userDashboard
+                ? {
+                    width: "205px",
+                    marginLeft: "86px",
+                    gap: "30px",
+                  }
+                : {}
+            }
+          >
             {(dekstopLogin || signup) && (
               <p className={`${style.noAccountPara}`}>Don't have an account</p>
             )}
 
-            {!dekstopLogin && !signup && (
+            {!dekstopLogin && !signup && !userDashboard && (
               <button
                 className={`${style.loginBtn}`}
                 onClick={() => {
@@ -80,6 +97,16 @@ function Header({ dekstopLogin, signup }) {
               >
                 Login
               </button>
+            )}
+
+            {userDashboard && (
+              <div>
+                <img
+                  src="/images/blogs/user.svg"
+                  alt=""
+                  className={style.userImage}
+                />
+              </div>
             )}
           </div>
         </div>

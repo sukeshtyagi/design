@@ -12,7 +12,6 @@ function PreviousEngagementCard({
 }) {
   let newStars = parseInt(stars);
   const starEmojis = Array(newStars).fill("⭐");
-  console.log(typeof newStars);
 
   return (
     <div className={`${style.outer} cursor-pointer`}>

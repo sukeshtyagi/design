@@ -2,7 +2,6 @@ import React from "react";
 import style from "../styles/ServicesCard.module.css";
 
 function ServicesCard({ img, title, bcg }) {
-  console.log(img, title);
 
   return (
     <div

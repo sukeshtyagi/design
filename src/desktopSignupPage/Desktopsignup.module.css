@@ -382,6 +382,7 @@
   border: 1.27px solid rgba(232, 232, 232, 1);
   background: rgba(255, 255, 255, 1);
   color: rgba(0, 0, 0, 1);
+  outline: none;
 }
 
 .noOtpPara,
@@ -401,6 +402,7 @@
   font-weight: 500;
   margin-top: 5.5px;
   color: rgba(11, 219, 182, 1);
+  text-decoration: underline;
 }
 
 .verify {

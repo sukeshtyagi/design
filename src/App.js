@@ -6,6 +6,7 @@ import Header from "./homePageComponents/Header";
 import Services from "./homePageComponents/Services";
 import Trial from "./commonComponents/Trial";
 import EnterOtp from "./desktopSignupPage/EnterOtp";
+import UserDashboard from "./userDashboard/UserDashboard";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/register" element={<DesktopSignup />} />
         <Route path="/abc" element={<Trial />} />
         <Route path="/enter-otp" element={<EnterOtp />} />
+        <Route path="/profile" element={<UserDashboard />} />
       </Routes>
     </BrowserRouter>
   );

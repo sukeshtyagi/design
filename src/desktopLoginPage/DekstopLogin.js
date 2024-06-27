@@ -5,8 +5,10 @@ import style from "./DesktopLogin.module.css";
 import { userLogin, checkServer } from "../axios/Axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 function DesktopLogin() {
+  const navigate = useNavigate();
   const initialValues = {
     email: "",
     password: "",
@@ -45,6 +47,7 @@ function DesktopLogin() {
                 initialValues={initialValues}
                 validationSchema={validationSchema1}
                 onSubmit={(values) => {
+                  navigate("/profile");
                   checkServer(values);
                 }}
               >

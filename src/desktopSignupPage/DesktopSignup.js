@@ -4,7 +4,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
+import { useNavigate } from "react-router-dom";
 function DesktopSignup() {
+  const navigate = useNavigate();
   const initialValues = {
     fullName: "",
     email: "",
@@ -45,7 +47,11 @@ function DesktopSignup() {
               <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                // onSubmit={}
+                onSubmit={(values) => {
+                  // Handle form submission
+                  console.log(values);
+                  navigate("/enter-otp");
+                }}
               >
                 <Form>
                   <div className={`${style.signupInputDiv} relative`}>
