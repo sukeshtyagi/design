@@ -58,7 +58,7 @@ function DesktopSignup() {
                     <ErrorMessage
                       name="fullName"
                       component="div"
-                      className="error absolute top-[55px] text-center w-full text-red-500"
+                      className="error absolute top-[47px] text-center w-full text-red-500"
                     />
 
                     <Field
@@ -70,7 +70,7 @@ function DesktopSignup() {
                     <ErrorMessage
                       name="email"
                       component="div"
-                      className="error absolute top-[140px] text-center w-full text-red-500"
+                      className="error absolute top-[122px] text-center w-full text-red-500"
                     />
 
                     <div
@@ -95,7 +95,7 @@ function DesktopSignup() {
                     <ErrorMessage
                       name="password"
                       component="div"
-                      className="error absolute top-[220px] text-center w-full text-red-500"
+                      className="error absolute top-[200px] text-center  w-full text-red-500"
                     />
 
                     <button type="submit" className={`${style.buttonSignup}`}>
