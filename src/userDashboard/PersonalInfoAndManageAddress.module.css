@@ -140,7 +140,8 @@
   color: rgba(11, 219, 182, 1);
 }
 
-.midDivAdd,.btmDivAdd {
+.midDivAdd,
+.btmDivAdd {
   box-sizing: border-box;
   width: 704px;
   height: 236px;
@@ -220,4 +221,211 @@
 .removeBtn {
   border-right: 0;
 }
+/*reviews styles below*/
+.reviewOuter {
+  box-sizing: border-box;
+  width: 744px;
+  height: 1056px;
+  margin-top: -30px;
+  padding: 20px;
+}
 
+.topDivReview {
+  box-sizing: border-box;
+  width: 704px;
+  height: 33.5px;
+  margin-top: 05px;
+  margin-bottom: 16.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviewHeading,
+.sort,
+.nameHeadingReview {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.reviewHeading {
+  text-decoration: underline;
+}
+
+.reviewHeadingSpan {
+  display: inline-block;
+  position: relative;
+  top: 6px;
+  color: rgba(170, 170, 170, 1);
+  font-size: 20px;
+  overflow: hidden;
+  text-decoration-color: white;
+}
+
+.sortDiv {
+  box-sizing: border-box;
+  width: 96px;
+  height: 33.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 03px;
+  border-radius: 3px;
+  background: rgba(235, 235, 235, 1);
+}
+
+.sort {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  text-decoration: none;
+}
+
+.cardDivReview {
+  box-sizing: border-box;
+  width: 704px;
+  height: 307px;
+  padding: 25px 20px 25px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 3px;
+  border: 1px solid rgba(240, 240, 240, 1);
+  background: rgba(252, 252, 252, 1);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.02),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.02), 0px 5px 3px 0px rgba(0, 0, 0, 0.01),
+    0px 8px 3px 0px rgba(0, 0, 0, 0), 0px 13px 4px 0px rgba(0, 0, 0, 0);
+}
+
+.reviewImage {
+  box-sizing: border-box;
+  width: 104px;
+  height: 104px;
+}
+
+.reviewDetails {
+  box-sizing: border-box;
+  width: 544px;
+  height: 257px;
+}
+
+.nameHeadingReview {
+  font-size: 18px;
+  line-height: 26.94px;
+}
+
+.ratingContainer {
+  box-sizing: border-box;
+  width: fit-content;
+  height: 29px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.ratingStarDiv {
+  box-sizing: border-box;
+  width: 45.13px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  border-radius: 4.5px;
+  background: rgba(35, 146, 80, 1);
+}
+
+.ratingNumber,
+.recommendation,
+.detailedReview,
+.reviewedBy,
+.time {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+
+.recommendation {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23.94px;
+  color: rgba(1, 22, 18, 1);
+}
+
+.detailedReview {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.94px;
+  text-align: left;
+  color: rgba(1, 22, 18, 1);
+}
+
+.reviewedByDiv {
+  box-sizing: border-box;
+  width: 206px;
+  height: 25px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.reviewedBy {
+  line-height: 25px;
+  color: rgba(110, 110, 110, 1);
+}
+
+.time {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.96px;
+  line-height: 25px;
+  color: rgba(110, 110, 110, 1);
+}
+
+.reviewBtnDiv {
+  box-sizing: border-box;
+  width: 155px;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.editReview,
+.deleteReview,
+.shareReview {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: left;
+  color: rgba(42, 118, 240, 1);
+}
+
+.reviewCardContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

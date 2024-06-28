@@ -5,6 +5,7 @@ import SearchBar from "../commonComponents/SearchBar";
 import style from "./UserDashboard.module.css";
 import PersonalInfo from "./PersonalInfo";
 import ManageAddress from "./ManageAddress";
+import Reviews from "./Reviews";
 
 function UserDashboard() {
   const [selectedOption, setSelectedOption] = useState("");
@@ -131,6 +132,7 @@ function UserDashboard() {
             <div className={style.right}>
               {rightDivOption === "personalInfo" && <PersonalInfo />}
               {rightDivOption === "manageAddresses" && <ManageAddress />}
+              {rightDivOption === "reviews" && <Reviews />}
             </div>
           </div>
         </div>
