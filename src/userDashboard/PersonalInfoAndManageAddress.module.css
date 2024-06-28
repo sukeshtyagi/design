@@ -279,6 +279,7 @@
   gap: 03px;
   border-radius: 3px;
   background: rgba(235, 235, 235, 1);
+  cursor: pointer;
 }
 
 .sort {

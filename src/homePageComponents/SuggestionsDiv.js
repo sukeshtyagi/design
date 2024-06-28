@@ -1,6 +1,6 @@
 import React from "react";
 import style from "../styles/SuggestionDiv.module.css";
-function Trial() {
+function SuggestionsDiv() {
   const searches = [
     { title: "Criminal Lawyer" },
     { title: "Criminal Lawyer" },
@@ -57,4 +57,4 @@ function Trial() {
   );
 }
 
-export default Trial;
+export default SuggestionsDiv;

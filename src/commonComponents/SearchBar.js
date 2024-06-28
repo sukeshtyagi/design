@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import style from "./SearchBar.module.css";
+import SuggestionsDiv from "../homePageComponents/SuggestionsDiv";
+
 function SearchBar({ userDashboard }) {
+  const [showSuggestion, setShowSuggestion] = useState(false);
+  const searchBarRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
+      setShowSuggestion(false);
+    }
+  };
+
+  const handleSearchIconClick = () => {
+    setShowSuggestion(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div
-      className={`${style.upperDiv} `}
+      ref={searchBarRef}
+      className={`${style.upperDiv} relative`}
       style={userDashboard ? { height: "fit-content" } : {}}
     >
       {!userDashboard && (
@@ -19,7 +42,10 @@ function SearchBar({ userDashboard }) {
       )}
 
       <div className={`${style.btmUpper}`}>
-        <div className={`${style.leftBtmUpper}`}>
+        <div
+          className={`${style.leftBtmUpper}`}
+          onClick={handleSearchIconClick}
+        >
           <div className={style.iconDiv}>
             <img src="/images/services/locationIcon.svg" alt="" />
           </div>
@@ -39,7 +65,12 @@ function SearchBar({ userDashboard }) {
             />
           </div>
         </div>
-        <div className={style.midBtmUpper}>
+        <div
+          className={`${style.midBtmUpper} relative`}
+          onClick={() => {
+            setShowSuggestion(!showSuggestion);
+          }}
+        >
           <input
             type="text"
             name=""
@@ -49,10 +80,11 @@ function SearchBar({ userDashboard }) {
           />
         </div>
 
-        <div className={style.rightBtmUpper}>
+        <div className={style.rightBtmUpper} onClick={handleSearchIconClick}>
           <img src="/images/services/Search.svg" alt="" />
         </div>
       </div>
+      {showSuggestion && <SuggestionsDiv />}
     </div>
   );
 }

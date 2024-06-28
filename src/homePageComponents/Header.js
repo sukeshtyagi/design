@@ -23,6 +23,9 @@ function Header({ dekstopLogin, signup, userDashboard }) {
             src="/images/logo.svg"
             alt="Logo of app"
             className="box-border w-[194px] h-[30px]"
+            onClick={() => {
+              navigate("/");
+            }}
           />
         </div>
 
