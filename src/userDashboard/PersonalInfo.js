@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./PersonalInfo.module.css";
+import style from "./PersonalInfoAndManageAddress.module.css";
 
 function PersonalInfo() {
   const [isEditable, setIsEditable] = useState({

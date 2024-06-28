@@ -134,6 +134,14 @@
   font-weight: 500;
   line-height: 25px;
   text-align: left;
+  cursor: pointer;
+}
+
+.para1:hover,
+.para2:hover,
+.para3:hover,
+.paraDelete:hover {
+  color: #0bdbb6;
 }
 
 .para2,
@@ -175,9 +183,12 @@
 .right {
   box-sizing: border-box;
   width: 600px;
-  height: 460px;
-  top: 207px;
-  left: 540px;
+  height: fit-content;
   padding: 30px 0px 30px 20px;
   padding-right: auto;
+}
+
+.selected {
+  background: rgba(11, 219, 182, 0.06);
+  color: #0bdbb6;
 }

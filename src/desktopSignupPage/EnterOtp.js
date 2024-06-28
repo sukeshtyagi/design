@@ -22,9 +22,17 @@ const validationSchema = Yup.object().shape({
 function EnterOtp() {
   const navigate = useNavigate();
 
-  // Function to check if a string contains only digits
   const containsOnlyDigits = (value) => {
     return /^\d+$/.test(value);
+  };
+
+  const allDigitsEntered = (values) => {
+    return (
+      containsOnlyDigits(values.digit1) &&
+      containsOnlyDigits(values.digit2) &&
+      containsOnlyDigits(values.digit3) &&
+      containsOnlyDigits(values.digit4)
+    );
   };
 
   return (
@@ -96,7 +104,13 @@ function EnterOtp() {
             </div>
             <p className={style.noOtpPara}>Didn’t receive OTP?</p>
             <p className={style.resendPara}>Resend OTP</p>
-            <button type="submit" className={style.verify}>
+            <button
+              type="submit"
+              className={`${style.verify} ${
+                allDigitsEntered(values) ? style.activeButton : ""
+              }`}
+              disabled={!allDigitsEntered(values)}
+            >
               Verify
             </button>
           </Form>

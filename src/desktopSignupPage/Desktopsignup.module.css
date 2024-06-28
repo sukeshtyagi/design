@@ -420,19 +420,21 @@
   line-height: 26.4px;
   letter-spacing: -0.02em;
   text-align: left;
-  color: rgba(255, 255, 255, 1);
-  background: rgba(11, 219, 182, 1);
-
-  /*disabled state below*/
-
   background: rgba(212, 212, 212, 1);
   color: rgba(150, 150, 150, 1);
+  cursor: not-allowed !important;
+}
+
+.activeButton {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(11, 219, 182, 1);
+  cursor: pointer !important;
 }
 
 .errorBorder {
-  border: 0.5px solid #D75050 ;
+  border: 0.5px solid #d75050;
 }
 
 .greenBorder {
-  border: 1px solid green; /* Green border for valid input */
+  border: 1px solid #0bdbb6;
 }
