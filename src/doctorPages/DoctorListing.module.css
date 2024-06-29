@@ -79,7 +79,6 @@
 
 .listingInner2 {
   height: fit-content;
-  border: 1px solid green;
   margin-bottom: 85.5px;
 }
 
@@ -166,7 +165,6 @@
 
 .btmContainer {
   margin-top: 20px;
-  border: 1px solid green;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -180,7 +178,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid green;
 }
 
 .btmRight {

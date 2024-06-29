@@ -5,6 +5,7 @@ import SearchBar from "../commonComponents/SearchBar";
 import style from "./DoctorListing.module.css";
 import DoctorCard from "./DoctorCard";
 import Faq from "../commonComponents/Faq";
+import Appointment from "./Appointment";
 function DoctorLisiting() {
   const specialityArray = [
     "Dentist",
@@ -102,7 +103,9 @@ function DoctorLisiting() {
               <DoctorCard />
               <DoctorCard />
             </div>
-            <div className={style.btmRight}></div>
+            <div className={style.btmRight}>
+              <Appointment />
+            </div>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import EnterOtp from "./desktopSignupPage/EnterOtp";
 import UserDashboard from "./userDashboard/UserDashboard";
 import Trial from "./commonComponents/Trial";
 import DoctorLisiting from "./doctorPages/DoctorLisiting";
-import Faq from "./commonComponents/Faq";
+import Appointment from "./doctorPages/Appointment";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Route path="/enter-otp" element={<EnterOtp />} />
         <Route path="/profile" element={<UserDashboard />} />
         <Route path="/doctors" element={<DoctorLisiting />} />
-        <Route path="/abc" element={<Faq />} />
+        <Route path="/abc" element={<Appointment />} />
       </Routes>
     </BrowserRouter>
   );
