@@ -113,11 +113,9 @@ function Footer() {
         </div>
       </div>
 
-      <div className={style.bottomDiv}>
         <h1 className={style.headingFooter}>
           Copyrights 2008-24. All Rights Reserved.
         </h1>
-      </div>
     </div>
   );
 }

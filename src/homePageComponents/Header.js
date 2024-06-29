@@ -3,8 +3,16 @@ import style from "../styles/Header.module.css";
 import { useNavigate } from "react-router-dom";
 
 function Header({ dekstopLogin, signup, userDashboard }) {
-  console.log(userDashboard);
   const navigate = useNavigate();
+  const handleNavigation = () => {
+    const userDetails = localStorage.getItem("userDetails");
+    console.log(userDetails);
+    if (userDetails) {
+      navigate("/homepage");
+    } else {
+      navigate("/");
+    }
+  };
 
   return (
     <div
@@ -24,7 +32,7 @@ function Header({ dekstopLogin, signup, userDashboard }) {
             alt="Logo of app"
             className="box-border w-[194px] h-[30px]"
             onClick={() => {
-              navigate("/");
+              handleNavigation();
             }}
           />
         </div>
@@ -34,7 +42,7 @@ function Header({ dekstopLogin, signup, userDashboard }) {
             <p
               className={`${style.navItem1}  box-border`}
               onClick={() => {
-                navigate("/");
+                handleNavigation();
               }}
             >
               Home

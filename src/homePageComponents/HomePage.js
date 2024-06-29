@@ -12,10 +12,10 @@ import Campaigns from "./Campaigns";
 import LatestBlogs from "./LatestBlogs";
 import FAQ from "./FAQ";
 import CustomerStories from "./CustomerStories";
-function HomePage() {
+function HomePage({ userDashboard }) {
   return (
     <>
-      <Header />
+      <Header userDashboard={userDashboard} />
       <Services />
       <Professions />
       <Campaigns />

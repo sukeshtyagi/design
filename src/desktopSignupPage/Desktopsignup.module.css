@@ -285,16 +285,16 @@
 .signupRight {
   box-sizing: border-box;
   width: 494px;
+  /*height: 740px; */
   height: 668.26px;
-  height: 740px; /***/
   border-radius: 33.45px;
 }
 
 .signupRightImage {
   box-sizing: border-box;
   width: 494px;
+  /*height: 740px; */
   height: 668.26px;
-  height: 740px; /***/
   border-radius: 33.45px;
   box-shadow: 0px 0px 77.8px 0px rgba(0, 0, 0, 0.15);
   background: rgba(215, 215, 215, 1);

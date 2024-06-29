@@ -48,7 +48,9 @@ function DesktopLogin() {
                 validationSchema={validationSchema1}
                 onSubmit={(values) => {
                   navigate("/profile");
+                  console.log(values);
                   checkServer(values);
+                  localStorage.setItem("userDetails", JSON.stringify(values));
                 }}
               >
                 {({ isSubmitting }) => (
