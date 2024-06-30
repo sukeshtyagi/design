@@ -6,6 +6,7 @@ import style from "./DoctorListing.module.css";
 import DoctorCard from "./DoctorCard";
 import Faq from "../commonComponents/Faq";
 import Appointment from "./Appointment";
+import { AppointCard, Query } from "./LeftDocComp";
 function DoctorLisiting() {
   const specialityArray = [
     "Dentist",
@@ -34,7 +35,10 @@ function DoctorLisiting() {
   return (
     <>
       <Header userDashboard="true" />
-      <div className={style.listingOuter}>
+      <div
+        className={style.listingOuter}
+        style={{ background: "url(/images/Backgrounds.svg)" }}
+      >
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
             <SearchBar userDashboard="true" />
@@ -105,6 +109,8 @@ function DoctorLisiting() {
             </div>
             <div className={style.btmRight}>
               <Appointment />
+              <Query />
+              <AppointCard />
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import UserDashboard from "./userDashboard/UserDashboard";
 import Trial from "./commonComponents/Trial";
 import DoctorLisiting from "./doctorPages/DoctorLisiting";
 import Appointment from "./doctorPages/Appointment";
+import DoctorDetail from "./doctorPages/DoctorDetail";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/enter-otp" element={<EnterOtp />} />
         <Route path="/profile" element={<UserDashboard />} />
         <Route path="/doctors" element={<DoctorLisiting />} />
+        <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/abc" element={<Appointment />} />
       </Routes>
     </BrowserRouter>

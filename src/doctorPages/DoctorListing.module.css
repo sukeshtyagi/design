@@ -184,3 +184,427 @@
   width: 332px;
   height: 1040px;
 }
+
+/*doctor detail page styles below*/
+
+.detailBtm {
+  display: flex;
+  gap: 30px;
+}
+
+.leftDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.navOptionDetail {
+  width: 771px;
+  height: 58.5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.option {
+  margin: 0;
+  padding: 0;
+  height: 58px;
+  padding: 11px 50px 11px 50px;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.selected {
+  border-radius: 5px;
+  background: rgba(245, 245, 245, 1);
+  border-bottom: 5px solid rgba(11, 219, 182, 1);
+}
+
+.about {
+  width: 766px;
+  height: 305px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.information1,
+.eduHeading,
+.information2,
+.eduHeading2,
+.information3 {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32.4px;
+  text-align: left;
+}
+
+.info1Span {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.info1Span2 {
+  font-size: 13px;
+  line-height: 23.4px;
+  color: rgba(11, 219, 182, 1);
+  margin-left: 572px;
+}
+
+.eduDiv,
+.eduDiv2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.eduDiv2 {
+  gap: 20px;
+}
+
+.eduHeading,
+.eduHeading2 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.information2,
+.information3 {
+  line-height: 28.8px;
+  list-style-type: disc;
+  margin-left: 0px;
+}
+
+.information3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.eduHeading2 {
+  line-height: 32px;
+}
+
+.eduInner {
+  display: flex;
+  gap: 50px;
+}
+
+.eduLeft {
+  width: fit-content;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  gap: 08px;
+}
+
+/*Patient reviews*/
+.patientOuter {
+  width: 771px;
+  height: 787px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.upr {
+  width: 771px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.reviewheading,
+.view,
+.name,
+.time,
+.review {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.view {
+  width: 71px;
+  height: auto;
+  padding: 1px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(11, 219, 182, 1);
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 19.2px;
+}
+
+.cardContainer {
+  width: 769px;
+  height: 735px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardOuter {
+  width: 769px;
+  height: 176.25px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(230, 230, 230, 1);
+}
+
+.top {
+  width: 724.25px;
+  height: 56.25px;
+  display: flex;
+  gap: 440px;
+}
+
+.details {
+  width: 165.25px;
+  height: 56.25px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.nameDiv {
+  width: 84px;
+  height: 48px;
+}
+
+.name {
+  width: 84px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29.93px;
+}
+
+.time {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17.96px;
+  color: rgba(110, 110, 110, 1);
+}
+
+.stars {
+  width: 110px;
+  height: 22px;
+  display: flex;
+}
+
+.review {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: rgba(1, 22, 18, 1);
+}
+
+/*submit feedback styles*/
+.outerSubmit {
+  width: 768px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.submitheading,
+.feedback,
+.feedback2 {
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.lwer {
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  border-radius: 10px;
+  border: 1px solid rgba(230, 230, 230, 1);
+}
+
+.leftDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25.6px;
+}
+
+.feedback2 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  color: rgba(150, 150, 150, 1);
+}
+
+.submit {
+  width: 180px;
+  height: 44px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 8px;
+  background: rgba(11, 219, 182, 1);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+/*address styles*/
+.addHeading,
+.addDetail {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.addDetail {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.94px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.imgAdd {
+  width: 768px;
+  height: 276px;
+  border-radius: 16px;
+}
+
+/*most viewed*/
+.viewedOuter {
+  width: 1128px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.viewedHeading,
+.detail1,
+.detail,
+.detail2 {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.allCardContainer {
+  width: 1128px !important;
+  height: 148px;
+  padding: 10px 0px;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.viewedCardContainer {
+  width: 399.75px;
+  flex-shrink: 0;
+  height: 128px;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 33px;
+  border-radius: 10px;
+  border: 1px solid rgba(230, 230, 230, 1);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+.viewedImg {
+  width: 78.75px;
+  height: 78.75px;
+}
+
+.detailsContainer {
+  width: 246px;
+}
+
+.detail1 {
+  line-height: 30px;
+  color: rgba(11, 219, 182, 1);
+  margin-bottom: 0px;
+}
+.detail,
+.detail2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.detail2 {
+  line-height: 16.8px;
+}
+
+.imgContainerView {
+  position: absolute;
+  top: 55px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 28.2px 0px rgba(0, 0, 0, 0.08);
+}
+
+.imageView {
+  position: relative;
+  left: 2px;
+  width: 7.4px;
+  height: 12px;
+}

@@ -1,9 +1,35 @@
 import React from "react";
 import style from "./DoctorCard.module.css";
-function DoctorCard() {
+import { useNavigate } from "react-router-dom";
+function DoctorCard({ doctorDetail }) {
+  const navigate = useNavigate();
   return (
-    <div className={style.cardOuter}>
-      <div className={style.cardLeft}>
+    <div
+      className={style.cardOuter}
+      style={
+        doctorDetail
+          ? {
+              width: "1128px",
+              gap: "436px",
+            }
+          : {}
+      }
+      onClick={() => {
+        navigate("/doctor-detail");
+      }}
+    >
+      <div
+        className={style.cardLeft}
+        style={
+          doctorDetail
+            ? {
+                width: "606px",
+                height: "215px",
+                gap: "30px",
+              }
+            : {}
+        }
+      >
         <div className={style.imgDiv}>
           <img
             src="/images/reviews/reviewImg.svg"
@@ -17,7 +43,19 @@ function DoctorCard() {
           <p className={style.reviews}>300 Reviews</p>
         </div>
         <div className={style.details}>
-          <h1 className={style.name}>Dr. Ronald Richards</h1>
+          <h1
+            className={style.name}
+            style={
+              doctorDetail
+                ? {
+                    fontSize: "30px",
+                    lineHeight: "45px",
+                  }
+                : {}
+            }
+          >
+            Dr. Ronald Richards
+          </h1>
           <p className={style.title}>Dental Surgeon</p>
           <p className={style.qual}>
             BDS, PhD - Orthodontics & Dentofacial Orthopaedics

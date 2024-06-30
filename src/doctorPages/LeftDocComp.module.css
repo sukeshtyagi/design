@@ -1,0 +1,230 @@
+.queryOuter {
+  width: 332px;
+  height: 315px;
+  padding: 24.5px 24.9px 24.5px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(11, 219, 182, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.topDiv {
+  width: 283.1px;
+  height: 82px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.topRight {
+  width: 235px;
+  height: 82px;
+}
+
+.heading,
+.subHeading,
+.paraBtm {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.subHeading {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+}
+
+.subHeadingSpan {
+  font-weight: 500;
+}
+
+.fieldContainer {
+  position: relative;
+}
+
+.inputField {
+  width: 270px;
+  height: 110px;
+  margin: 0 auto;
+  padding: 12px 61px 83px 13px;
+  gap: 0px;
+  border-radius: 5px;
+  border: 1px solid rgba(220, 220, 220, 1);
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: left;
+  color: rgba(190, 190, 190, 1);
+  outline: none;
+  cursor: pointer;
+}
+
+.errorMessage {
+  position: absolute;
+  top: 45px;
+  left: 90px;
+  font-family: poppins;
+color: tomato;
+}
+
+/**/
+
+.btmDiv {
+  width: 283px;
+  height: 44px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paraBtm {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(150, 150, 150, 1);
+}
+
+.query {
+  width: 119px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(11, 219, 182, 1);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+}
+
+/*appointment card*/
+.appointOuter {
+  width: 330px;
+  height: 165px;
+  border-radius: 10px;
+  background: linear-gradient(76.05deg, #337f8c 1.21%, #6ab1a5 99.58%);
+  position: relative;
+}
+
+.appointLeft {
+  width: 165.5px;
+  height: 146.5px;
+  position: absolute;
+  top: 1px;
+  left: 7px;
+}
+
+.appointRight {
+  width: fit-content;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.rightImage {
+  border-radius: 10px;
+}
+
+.topLeft {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+  padding-top: 7px;
+}
+
+.teethImage {
+  width: 15.75px;
+  height: 18px;
+}
+
+.heading1,
+.heading2,
+.about {
+  margin: 0;
+  padding: 0;
+  font-family: Archivo Black;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26.04px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+
+.heading2 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13.02px;
+  letter-spacing: 0.13em;
+}
+
+.about {
+  width: fit-content;
+  font-family: Archivo;
+  font-size: 5px;
+  margin-left: 22.5px;
+  font-weight: 400;
+  line-height: 5.43px;
+  text-align: left;
+}
+
+.services {
+  width: 75px;
+  height: 45.42px;
+  margin-top: 6.75px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.42px;
+}
+
+.servicesHeading,
+.service {
+  margin: 0;
+  padding: 0;
+  font-family: Archivo;
+  font-size: 9.68px;
+  font-weight: 400;
+  line-height: 10.53px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
+
+.listContainer {
+  margin-left: -21px;
+  list-style-type: disc;
+}
+
+.service {
+  width: 75px;
+  font-size: 7.26px;
+  font-weight: 400;
+  line-height: 8.45px;
+}
+
+.btmDivAppoint {
+  margin-top: 20.79px;
+}
+
+.detail {
+  margin: 0;
+  padding: 0;
+  font-family: Archivo;
+  font-size: 5px;
+  font-weight: 400;
+  line-height: 6.65px;
+  text-align: left;
+  color: rgba(255, 255, 255, 1);
+}
