@@ -8,6 +8,7 @@ import Trial from "./commonComponents/Trial";
 import DoctorLisiting from "./doctorPages/DoctorLisiting";
 import Appointment from "./doctorPages/Appointment";
 import DoctorDetail from "./doctorPages/DoctorDetail";
+import TeacherListing from "./teacherPages/TeacherListing";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
         <Route path="/enter-otp" element={<EnterOtp />} />
         <Route path="/profile" element={<UserDashboard />} />
         <Route path="/doctors" element={<DoctorLisiting />} />
+        <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/doctor-detail" element={<DoctorDetail />} />
-        <Route path="/abc" element={<Appointment />} />
+        <Route path="/abc" element={<Trial />} />
       </Routes>
     </BrowserRouter>
   );

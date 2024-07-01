@@ -1,7 +1,18 @@
 import React from "react";
 import style from "./DoctorCard.module.css";
 import { useNavigate } from "react-router-dom";
-function DoctorCard({ doctorDetail }) {
+function DoctorCard({
+  doctorDetail,
+  teacherListing,
+  img,
+  name,
+  title,
+  qual1,
+  qual2,
+  qual3,
+  qual4,
+  address,
+}) {
   const navigate = useNavigate();
   return (
     <div
@@ -15,7 +26,9 @@ function DoctorCard({ doctorDetail }) {
           : {}
       }
       onClick={() => {
-        navigate("/doctor-detail");
+        navigate("/doctor-detail", {
+          state: { img, name, title, qual1, qual2, address },
+        });
       }}
     >
       <div
@@ -31,11 +44,7 @@ function DoctorCard({ doctorDetail }) {
         }
       >
         <div className={style.imgDiv}>
-          <img
-            src="/images/reviews/reviewImg.svg"
-            alt=""
-            className={style.image}
-          />
+          <img src={img} alt="" className={style.image} />
           <div className={style.ratingContainer}>
             <p className={style.rating}>4.5</p>
             <img src="/images/doctor/whiteStar.svg" alt="" />
@@ -54,14 +63,14 @@ function DoctorCard({ doctorDetail }) {
                 : {}
             }
           >
-            Dr. Ronald Richards
+            {name}
           </h1>
-          <p className={style.title}>Dental Surgeon</p>
-          <p className={style.qual}>
-            BDS, PhD - Orthodontics & Dentofacial Orthopaedics
-          </p>
-          <p className={style.qual}>34 years of experience in speciality</p>
-          <p className={style.address}>Sweet Smile Dental Clinic</p>
+          <p className={style.title}>{title}</p>
+          <p className={style.qual}>{qual1}</p>
+          <p className={style.qual}>{qual2}</p>
+          {qual3 && <p className={style.qual}>{qual3}</p>}
+          {qual4 && <p className={style.qual}>{qual4}</p>}
+          {address && <p className={style.address}>{address}</p>}
           <div className={style.btnContainer}>
             <div className={style.call1}>
               <img
@@ -85,9 +94,28 @@ function DoctorCard({ doctorDetail }) {
           </div>
         </div>
       </div>
-      <div className={style.cardRight}>
-        <img src="/images/doctor/shareIcon.svg" alt="" />
-        <img src="/images/doctor/heartIcon.svg" alt="" />
+      <div
+        className={style.cardRight}
+        style={
+          teacherListing ? { marginLeft: "-50px", marginRight: "15px" } : {}
+        }
+      >
+        <img
+          src="/images/doctor/shareIcon.svg"
+          alt=""
+          className={style.cardRightImg1}
+        />
+        <img
+          src="/images/doctor/heartIcon.svg"
+          alt=""
+          className={style.cardRightImg2}
+        />
+        {teacherListing && (
+          <div className="teacherDiv">
+            <h1 className={style.rate}>$22/hr</h1>
+            <p className={style.lessons}>50 -min lesson</p>
+          </div>
+        )}
       </div>
     </div>
   );

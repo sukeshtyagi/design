@@ -76,6 +76,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+
 }
 
 .name,
@@ -172,10 +173,44 @@
 }
 
 .cardRight {
-  width: 19.23px;
-  height: 58px;
+  width: fit-content;
+  width: 96px;
+  height: fit-content;
   margin-top: 36px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+  /*
+  */
+}
+
+.cardRightImg1 {
+  width: 19.23px;
+  height: 20px;
+}
+
+.cardRightImg2 {
+  width: 19px;
+  height: 18px;
+}
+
+.rate,
+.lessons {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.lessons {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 19.5px;
+  color: rgba(110, 110, 110, 1);
+  text-align:left;
 }

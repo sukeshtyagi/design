@@ -3,7 +3,7 @@ import style from "./LeftDocComp.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-export function Query() {
+export function Query({ forWhom }) {
   const initialValues = {
     question: "",
   };
@@ -29,7 +29,7 @@ export function Query() {
           <h1 className={style.heading}>Ask a free question</h1>
           <p className={style.subHeading}>
             Get <span className={style.subHeadingSpan}>FREE</span> multiple
-            opinions from Dentists
+            opinions from {forWhom}
           </p>
         </div>
       </div>
@@ -71,31 +71,50 @@ export function Query() {
   );
 }
 
-export function AppointCard() {
+export function AppointCard({
+  rightImg,
+  teethImage,
+  heading1a,
+  heading2a,
+  heading3a,
+  service1,
+  service2,
+  service3,
+  service4,
+  background,
+}) {
   return (
-    <div className={style.appointOuter}>
+    <div
+      className={style.appointOuter}
+      style={{
+        background: background,
+      }}
+    >
       <div
         className={style.appointLeft}
         style={{ background: "url(/images/doctor/starBcg.svg)" }}
       >
         <div className={style.topLeft}>
-          <img
-            src="/images/doctor/teeth.svg"
-            alt=""
-            className={style.teethImage}
-          />
-          <h1 className={style.heading1}>DENTAL</h1>
-          <p className={style.heading2}>Health Clinic</p>
-          <p className={style.about}>Treat your teeth with us</p>
+          {teethImage && (
+            <img src={teethImage} alt="" className={style.teethImageS} />
+          )}
+          <h1
+            className={style.heading1}
+            style={teethImage ? {} : { marginTop: "18px" }}
+          >
+            {heading1a}
+          </h1>
+          <p className={style.heading2}>{heading2a}</p>
+          {heading3a && <p className={style.about}>{heading3a}</p>}
         </div>
 
         <div className={style.services}>
           <h1 className={style.servicesHeading}>Our Services:</h1>
           <ul className={style.listContainer}>
-            <li className={style.service}>Dental Surgeries </li>
-            <li className={style.service}>Dental Radiography</li>
-            <li className={style.service}>Implant Dentistry</li>
-            <li className={style.service}>Cavity Protection</li>
+            <li className={style.service}>{service1}</li>
+            <li className={style.service}>{service2}</li>
+            <li className={style.service}>{service3}</li>
+            {service4 && <li className={style.service}>{service4}</li>}
           </ul>
         </div>
 
@@ -108,11 +127,7 @@ export function AppointCard() {
         </div>
       </div>
       <div className={style.appointRight}>
-        <img
-          src="/images/doctor/appointImg.svg"
-          alt=""
-          className={style.rightImage}
-        />
+        <img src={rightImg} alt="" className={style.rightImage} />
       </div>
     </div>
   );

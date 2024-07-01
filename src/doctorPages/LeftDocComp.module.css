@@ -73,7 +73,7 @@
   top: 45px;
   left: 90px;
   font-family: poppins;
-color: tomato;
+  color: tomato;
 }
 
 /**/
@@ -115,7 +115,6 @@ color: tomato;
   width: 330px;
   height: 165px;
   border-radius: 10px;
-  background: linear-gradient(76.05deg, #337f8c 1.21%, #6ab1a5 99.58%);
   position: relative;
 }
 
@@ -145,7 +144,7 @@ color: tomato;
   padding-top: 7px;
 }
 
-.teethImage {
+.teethImageS {
   width: 15.75px;
   height: 18px;
 }
@@ -162,6 +161,7 @@ color: tomato;
   letter-spacing: -0.02em;
   text-align: left;
   color: rgba(255, 255, 255, 1);
+  z-index: 16;
 }
 
 .heading2 {
@@ -185,6 +185,7 @@ color: tomato;
   width: 75px;
   height: 45.42px;
   margin-top: 6.75px;
+  padding-left: 8px;
   display: flex;
   flex-direction: column;
   gap: 2.42px;
@@ -216,6 +217,7 @@ color: tomato;
 
 .btmDivAppoint {
   margin-top: 20.79px;
+  padding-left: 8px;
 }
 
 .detail {
@@ -227,4 +229,45 @@ color: tomato;
   line-height: 6.65px;
   text-align: left;
   color: rgba(255, 255, 255, 1);
+}
+
+/*pagination styles*/
+.paginationOuter {
+  width: 557.25px;
+  height: 37.5px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 11.25px;
+}
+
+.page {
+  width: 37.5px;
+  height: 37.5px;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: rgba(0, 0, 0, 1);
+  border-radius: 1.13px;
+  background: rgba(240, 240, 240, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.arrow1 {
+  width: 12px;
+  height: 12px;
+}
+
+.arrow2 {
+  width: 15px;
+  height: 12px;
+}
+
+.activePage {
+  background-color: rgba(11, 219, 182, 1);
 }

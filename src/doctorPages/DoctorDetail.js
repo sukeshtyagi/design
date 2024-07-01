@@ -4,6 +4,8 @@ import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import style from "./DoctorListing.module.css";
 import DoctorCard from "./DoctorCard";
+import { useLocation } from "react-router-dom";
+
 import {
   Address,
   MostViewed,
@@ -12,6 +14,9 @@ import {
 } from "./PatientReviews";
 import { AppointCard } from "./LeftDocComp";
 function DoctorDetail() {
+  const location = useLocation();
+  const { img, name, title, qual1, qual2, address } = location.state || {};
+
   const [select, setSelect] = useState("about");
   const handleSelect = (value) => {
     setSelect(value);
@@ -39,7 +44,15 @@ function DoctorDetail() {
             <p className={style.para}>Dr. Ronald Richards</p>
           </div>
 
-          <DoctorCard doctorDetail="true" />
+          <DoctorCard
+            doctorDetail="true"
+            img={img}
+            name={name}
+            title={title}
+            qual1={qual1}
+            qual2={qual2}
+            address={address}
+          />
           <div className={style.detailBtm}>
             <div className={style.leftDetail}>
               <div className={style.navOptionDetail}>

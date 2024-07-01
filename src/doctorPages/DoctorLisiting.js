@@ -1,12 +1,13 @@
 import React from "react";
+import style from "./DoctorListing.module.css";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
-import style from "./DoctorListing.module.css";
 import DoctorCard from "./DoctorCard";
 import Faq from "../commonComponents/Faq";
 import Appointment from "./Appointment";
 import { AppointCard, Query } from "./LeftDocComp";
+import Pagination from "./Pagination";
 function DoctorLisiting() {
   const specialityArray = [
     "Dentist",
@@ -32,6 +33,48 @@ function DoctorLisiting() {
     "Liked",
   ];
 
+  const docCardData = [
+    {
+      img: "/images/reviews/reviewImg.svg",
+      name: "Dr. Ronald Richards",
+      title: "Dental Surgeon",
+      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
+      qual2: "34 years of experience in speciality",
+      address: "Sweet Smile Dental Clinic",
+    },
+    {
+      img: "/images/reviews/reviewImg.svg",
+      name: "Dr. Ronald Richards",
+      title: "Dental Surgeon",
+      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
+      qual2: "34 years of experience in speciality",
+      address: "Sweet Smile Dental Clinic",
+    },
+    {
+      img: "/images/reviews/reviewImg.svg",
+      name: "Dr. Ronald Richards",
+      title: "Dental Surgeon",
+      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
+      qual2: "34 years of experience in speciality",
+      address: "Sweet Smile Dental Clinic",
+    },
+    {
+      img: "/images/reviews/reviewImg.svg",
+      name: "Dr. Ronald Richards",
+      title: "Dental Surgeon",
+      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
+      qual2: "34 years of experience in speciality",
+      address: "Sweet Smile Dental Clinic",
+    },
+    {
+      img: "/images/reviews/reviewImg.svg",
+      name: "Dr. Ronald Richards",
+      title: "Dental Surgeon",
+      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
+      qual2: "34 years of experience in speciality",
+      address: "Sweet Smile Dental Clinic",
+    },
+  ];
   return (
     <>
       <Header userDashboard="true" />
@@ -43,6 +86,7 @@ function DoctorLisiting() {
           <div className={style.searchContainer}>
             <SearchBar userDashboard="true" />
           </div>
+
           <div className={style.specCardWrapper}>
             <div className={style.specCardContainer}>
               {specialityArray.map((speciality) => (
@@ -69,6 +113,7 @@ function DoctorLisiting() {
             <img src="/images/doctor/rightArrow.svg" alt="" />
             <p className={style.para}>Dentists in Bangalore</p>
           </div>
+
           <h1 className={style.heading}>Best Dentists in HSR Layout</h1>
           <div className={style.filterCardContainer}>
             <div className={style.specOuter1}>
@@ -101,21 +146,38 @@ function DoctorLisiting() {
 
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
-              <DoctorCard />
-              <DoctorCard />
-              <DoctorCard />
-              <DoctorCard />
-              <DoctorCard />
+              {docCardData.map((data) => (
+                <DoctorCard
+                  img={data.img}
+                  name={data.name}
+                  title={data.title}
+                  qual1={data.qual1}
+                  qual2={data.qual2}
+                  address={data.address}
+                />
+              ))}
+              <Pagination />
             </div>
             <div className={style.btmRight}>
               <Appointment />
-              <Query />
-              <AppointCard />
+              <Query forWhom="Dentists" />
+              <AppointCard
+                background="linear-gradient(76.05deg, #337f8c 1.21%, #6ab1a5 99.58%)"
+                rightImg="/images/doctor/appointImg.svg"
+                teethImage="/images/doctor/teeth.svg"
+                heading1a="DENTAL"
+                heading2a="Health Clinic"
+                heading3a="Treat your teeth with us"
+                service1="Dental Surgeries"
+                service2="Dental Radiography"
+                service3="Implant Dentistry"
+                service4="Cavity Protection"
+              />
             </div>
           </div>
         </div>
       </div>
-      <Faq />
+      <Faq docListing="true" />
       <Footer />
     </>
   );

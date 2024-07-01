@@ -113,7 +113,10 @@
 
 .filterCardContainer {
   height: 33.5px;
+  gap: 0px;
   gap: 15px;
+  overflow: hidden;
+
 }
 
 .specOuter1,
@@ -132,6 +135,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
 }
 
 .specOuter1 {
