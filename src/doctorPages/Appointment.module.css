@@ -38,6 +38,7 @@
 
 .inputField,
 .cityDiv {
+  position: relative;
   width: 260px;
   height: 40px;
   margin: 0 auto;
@@ -56,8 +57,26 @@
   outline: none;
 }
 
+.inputField:hover,
+.cityDiv:hover {
+  border: 1px solid rgba(11, 219, 182, 1);
+}
+
 .inputField2 {
   width: 100%;
+}
+
+.error,.error2 {
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  color: tomato;
+  font-size: 17px;
+}
+
+.error2{
+  top: 10px;
+  font-size: 16px;
 }
 
 .submitButton {

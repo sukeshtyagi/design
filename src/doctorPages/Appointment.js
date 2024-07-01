@@ -11,9 +11,9 @@ const Appointment = () => {
   };
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
-    phone: Yup.string().required("Phone number is required"),
-    city: Yup.string().required("City is required"),
+    name: Yup.string().required("Required"),
+    phone: Yup.string().required(" Required"),
+    city: Yup.string().required("Required"),
   });
 
   const onSubmit = (values, { setSubmitting }) => {
@@ -35,7 +35,7 @@ const Appointment = () => {
         {({ isSubmitting }) => (
           <Form>
             <div className={style.formDiv}>
-              <div>
+              <div className="relative">
                 <Field
                   type="text"
                   name="name"
@@ -48,7 +48,7 @@ const Appointment = () => {
                   className={style.error}
                 />
               </div>
-              <div>
+              <div className="relative">
                 <Field
                   type="text"
                   name="phone"
@@ -71,9 +71,13 @@ const Appointment = () => {
                 <ErrorMessage
                   name="city"
                   component="div"
-                  className={style.error}
+                  className={style.error2}
                 />
-                <img src="/images/doctor/cityArrow.svg" alt="" className={style.cityIcon} />
+                <img
+                  src="/images/doctor/cityArrow.svg"
+                  alt=""
+                  className={style.cityIcon}
+                />
               </div>
               <button
                 type="submit"
