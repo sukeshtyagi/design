@@ -173,7 +173,10 @@ function DoctorDetail() {
               <Address />
             </div>
             <div className={style.rightDetail}>
-              <BookAppointment />
+              <BookAppointment
+                divHeading="Book appointment"
+                btnHeading="Book Now"
+              />
               <AppointCard
                 background="linear-gradient(76.05deg, #337f8c 1.21%, #6ab1a5 99.58%)"
                 rightImg="/images/doctor/appointImg.svg"

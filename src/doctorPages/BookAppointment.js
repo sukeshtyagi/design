@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./DoctorDetail.module.css";
 
-function BookAppointment() {
+function BookAppointment({divHeading, btnHeading}) {
   const [visibleSection, setVisibleSection] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
 
@@ -15,7 +15,7 @@ function BookAppointment() {
 
   return (
     <>
-      <h1 className={style.appointmentHeading}>Book appointment</h1>
+      <h1 className={style.appointmentHeading}>{divHeading}</h1>
       <div className={style.outer}>
         <div className={style.workingHours}>
           <div className={style.div1}>
@@ -199,7 +199,7 @@ function BookAppointment() {
             )}
           </div>
         </div>
-        <button className={style.book}>Book Now</button>
+        <button className={style.book}>{btnHeading}</button>
       </div>
     </>
   );

@@ -153,7 +153,10 @@ function TeacherDetail() {
             </div>
             <div className={style.rightDetail}>
               <TeacherFee />
-              <BookAppointment />
+              <BookAppointment
+                divHeading="Schedule a Lesson"
+                btnHeading="Schedule Now"
+              />
               <AppointCard
                 rightImg="/images/teacher/student.png"
                 heading1a="English"

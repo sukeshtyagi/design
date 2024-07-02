@@ -6,8 +6,12 @@ import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
 import { PatientReviews } from "../doctorPages/NewReviews";
-import { SubmitFeedback} from "../doctorPages/PatientReviews";
+import { SubmitFeedback } from "../doctorPages/PatientReviews";
 import MostViewed2 from "../doctorPages/MostViewed2";
+import { CaFee } from "../teacherPages/TeacherFee";
+import BookAppointment from "../doctorPages/BookAppointment";
+import { AppointCard } from "../doctorPages/LeftDocComp";
+
 function CaDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, qual3, qual4 } = location.state || {};
@@ -160,10 +164,27 @@ function CaDetail() {
               </div>
               <PatientReviews clientReview="true" />
               <SubmitFeedback forWhom="Mr. Wade Warren" />
-              {/* */}
             </div>
+            <div className={style.rightDetail}>
+              <BookAppointment
+                divHeading="Schedule a Consultation"
+                btnHeading="Schedule Now"
+              />
+              <AppointCard
+                background="linear-gradient(76.05deg, #6E49D6 1.21%, #E33227 99.58%)"
+                rightImg="/images/ca/appointImg.svg"
+                heading1a="Business"
+                heading2a="Accounting Services"
+                service1="Tax Returns"
+                service2="Tax Planning"
+                service3="Financial Reporting"
+                margin="true"
+              />
+            </div>
+            {/* */}
           </div>
           <MostViewed2 category="CAs" />
+          <CaFee />
         </div>
       </div>
       <Footer />

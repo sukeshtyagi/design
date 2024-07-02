@@ -82,6 +82,7 @@ export function AppointCard({
   service3,
   service4,
   background,
+  margin
 }) {
   return (
     <div
@@ -118,7 +119,8 @@ export function AppointCard({
           </ul>
         </div>
 
-        <div className={style.btmDivAppoint}>
+        <div className={style.btmDivAppoint}
+        style={margin?{marginTop:"10.79px"}:{}}>
           <p className={style.detail}>Contact Us:</p>
           <p className={style.detail}>+91-9876543213</p>
           <p className={style.detail}>
