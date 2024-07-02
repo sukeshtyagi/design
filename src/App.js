@@ -9,6 +9,7 @@ import DoctorLisiting from "./doctorPages/DoctorLisiting";
 import DoctorDetail from "./doctorPages/DoctorDetail";
 import TeacherListing from "./teacherPages/TeacherListing";
 import TeacherDetail from "./teacherPages/TeacherDetail";
+import CaListing from "./caPages/CaListing";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/profile" element={<UserDashboard />} />
         <Route path="/doctors" element={<DoctorLisiting />} />
         <Route path="/teachers" element={<TeacherListing />} />
+        <Route path="/ca's" element={<CaListing />} />
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/abc" element={<Trial />} />

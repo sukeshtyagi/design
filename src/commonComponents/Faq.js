@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Faq.module.css";
-function Faq({ docListing, teacherListing }) {
+function Faq({ docListing, teacherListing, caListing }) {
   const docFaqArray = [
     "Which dentist is best for emergency dental care in my area?",
     "What are the treatments available for common dental problems?",
@@ -19,6 +19,16 @@ function Faq({ docListing, teacherListing }) {
     "Which English Teacher is best in my area?",
     "Which English Teacher is best in my area?",
     "Which English Teacher is best in my area?",
+  ];
+
+  const caFaqArray = [
+    "Which Income Tax CA is best in my area?",
+    "Which Income Tax CA is best in my area?",
+    "Which Income Tax CA is best in my area?",
+    "Which Income Tax CA is best in my area?",
+    "Which Income Tax CA is best in my area?",
+    "Which Income Tax CA is best in my area?",
+    "Which Income Tax CA is best in my area?",
   ];
   return (
     <div className={style.faqOuter}>
@@ -39,6 +49,18 @@ function Faq({ docListing, teacherListing }) {
 
         {teacherListing &&
           teacherFaqArray.map((question) => (
+            <div className={style.cardOuter}>
+              <p className={style.ques}>{question}</p>
+              <img
+                src="/images/doctor/faqArrow.svg"
+                alt=""
+                className={style.image}
+              />
+            </div>
+          ))}
+
+        {caListing &&
+          caFaqArray.map((question) => (
             <div className={style.cardOuter}>
               <p className={style.ques}>{question}</p>
               <img

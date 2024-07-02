@@ -115,6 +115,7 @@ function DoctorLisiting() {
           </div>
 
           <h1 className={style.heading}>Best Dentists in HSR Layout</h1>
+          
           <div className={style.filterCardContainer}>
             <div className={style.specOuter1}>
               <img src="/images/doctor/filter.svg" alt="" />

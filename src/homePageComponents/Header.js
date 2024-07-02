@@ -26,7 +26,10 @@ function Header({ dekstopLogin, signup, userDashboard }) {
       }
     >
       <div className={`${style.headerContainer}`}>
-        <div className={`${style.leftDiv}`}>
+        <div
+          className={`${style.leftDiv}`}
+          style={userDashboard ? { cursor: "pointer" } : {}}
+        >
           <img
             src="/images/logo.svg"
             alt="Logo of app"

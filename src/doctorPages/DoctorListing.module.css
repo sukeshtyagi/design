@@ -32,6 +32,7 @@
 
 .specOuter {
   width: fit-content;
+  flex-shrink: 0;
   height: 36px;
   padding: 8px 15px;
   gap: 10px;

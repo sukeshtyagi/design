@@ -1,82 +1,83 @@
 import React from "react";
 import style from "../doctorPages/DoctorListing.module.css";
 import Header from "../homePageComponents/Header";
+import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
-import { Query, AppointCard } from "../doctorPages/LeftDocComp";
-import Footer from "../homePageComponents/Footer";
-import Faq from "../commonComponents/Faq";
 import Pagination from "../doctorPages/Pagination";
-function TeacherListing() {
+import Faq from "../commonComponents/Faq";
+import { AppointCard, Query } from "../doctorPages/LeftDocComp";
+
+function CaListing() {
   const specialityArray = [
-    "English",
-    "Maths",
-    "Physics",
-    "Hindi",
-    "History",
-    "Biology",
-    "Chemistry",
-    "Geography",
-    "Economics",
-    "Political Science",
+    "Income Tax",
+    "Service Tax",
+    "Property Tax",
+    "Capital Gains Tax",
+    "Corporate Tax",
+    "Professional Tax",
+    "GST",
+    "VAT",
+    "Audit",
   ];
 
   const filterArray = [
     "Sort By",
-    "Level",
+    "Practice Area",
     "Gender",
-    "Price per lesson",
-    "Specialities",
+    "Experience",
+    "State",
+    "City",
+    "Court",
     "Languages Known",
-    "Mode of Teaching",
     "Top Rated",
   ];
 
   const docCardData = [
     {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
+      img: "/images/ca/reviewImg.svg",
+      name: "Wade Warren",
+      title: "CA, Bangalore",
+      qual1: "BCom, CA",
+      qual2: "Fluent in Hindi, English",
+      qual3: "911 Consultations",
+      qual4: "Licensed for 10 Years",
     },
     {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
+      img: "/images/ca/reviewImg.svg",
+      name: "Wade Warren",
+      title: "CA, Bangalore",
+      qual1: "BCom, CA",
+      qual2: "Fluent in Hindi, English",
+      qual3: "911 Consultations",
+      qual4: "Licensed for 10 Years",
     },
     {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
+      img: "/images/ca/reviewImg.svg",
+      name: "Wade Warren",
+      title: "CA, Bangalore",
+      qual1: "BCom, CA",
+      qual2: "Fluent in Hindi, English",
+      qual3: "911 Consultations",
+      qual4: "Licensed for 10 Years",
     },
     {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
+      img: "/images/ca/reviewImg.svg",
+      name: "Wade Warren",
+      title: "CA, Bangalore",
+      qual1: "BCom, CA",
+      qual2: "Fluent in Hindi, English",
+      qual3: "911 Consultations",
+      qual4: "Licensed for 10 Years",
     },
     {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
+      img: "/images/ca/reviewImg.svg",
+      name: "Wade Warren",
+      title: "CA, Bangalore",
+      qual1: "BCom, CA",
+      qual2: "Fluent in Hindi, English",
+      qual3: "911 Consultations",
+      qual4: "Licensed for 10 Years",
     },
   ];
   return (
@@ -88,34 +89,36 @@ function TeacherListing() {
             <SearchBar userDashboard="true" />
           </div>
           <div className={style.specCardWrapper}>
-            <div className={style.specCardContainer}>
+            <div
+              className={style.specCardContainer}
+              style={{ overflow: "visible" }}
+            >
               {specialityArray.map((speciality) => (
                 <div className={style.specOuter}>
                   <p className={style.title}>{speciality}</p>
                 </div>
               ))}
             </div>
+            {/*
             <div className={style.arrowContainer}>
               <img src="/images/doctor/specArrow.svg" alt="" />
             </div>
+                */}
           </div>
         </div>
-
         <div className={style.bannerContainer}>
-          <img src="/images/teacher/Banner.png" alt="" />
+          <img src="/images/ca/Banner.png" alt="" />
         </div>
-
         <div className={style.listingInner2}>
           <div className={style.locationFilterPara}>
             <p className={style.para}>Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>Teachers in Bangalore</p>
+            <p className={style.para}>CAs in Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>English Teachers in Bangalore</p>
+            <p className={style.para}>Income Tax CAs in Bangalore</p>
           </div>
+          <h1 className={style.heading}>Best Income Tax CAs in HSR Layout</h1>
 
-          <h1 className={style.heading}>Best English Teachers in HSR Layout</h1>
-         
           <div className={style.filterCardContainer}>
             <div className={style.specOuter1}>
               <img src="/images/doctor/filter.svg" alt="" />
@@ -131,7 +134,6 @@ function TeacherListing() {
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
                 <DoctorCard
-                  teacherListing="true"
                   img={data.img}
                   name={data.name}
                   title={data.title}
@@ -143,25 +145,26 @@ function TeacherListing() {
               ))}
               <Pagination />
             </div>
+
             <div className={style.btmRight}>
-              <Query forWhom="English Teachers" />
+              <Query forWhom="Income Tax CAs" />
               <AppointCard
-                background="linear-gradient(76.05deg, #D67849 1.21%, #E3CD27 99.58%)"
-                rightImg="/images/teacher/student.png"
-                heading1a="English"
-                heading2a="Speaking Clases"
-                service1="One-to-One Tutoring"
-                service2="Exam Preparation"
-                service3="Advanced Learning"
+                background="linear-gradient(76.05deg, #6E49D6 1.21%, #E33227 99.58%)"
+                rightImg="/images/ca/appointImg.svg"
+                heading1a="Business"
+                heading2a="Accounting Services"
+                service1="Tax Returns"
+                service2="Tax Planning"
+                service3="Financial Reporting"
               />
             </div>
           </div>
         </div>
       </div>
-      <Faq teacherListing="true" />
+      <Faq caListing="true" />
       <Footer />
     </>
   );
 }
 
-export default TeacherListing;
+export default CaListing;
