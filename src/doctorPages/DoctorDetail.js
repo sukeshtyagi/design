@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import style from "./DoctorListing.module.css";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
-import style from "./DoctorListing.module.css";
 import DoctorCard from "./DoctorCard";
 import { useLocation } from "react-router-dom";
 
@@ -125,6 +125,7 @@ function DoctorDetail() {
                   </ul>
                 </div>
               </div>
+
               <div className={style.eduDiv2}>
                 <h1 className={style.eduHeading2}>
                   Dr. Richards Specializes in the following Services and
@@ -170,14 +171,25 @@ function DoctorDetail() {
                 </div>
               </div>
               <PatientReviews />
-              <SubmitFeedback />
+              <SubmitFeedback forWhom="Dr Ronald Richard" />
               <Address />
             </div>
             <div className={style.rightDetail}>
-              <AppointCard />
+              <AppointCard
+                background="linear-gradient(76.05deg, #337f8c 1.21%, #6ab1a5 99.58%)"
+                rightImg="/images/doctor/appointImg.svg"
+                teethImage="/images/doctor/teeth.svg"
+                heading1a="DENTAL"
+                heading2a="Health Clinic"
+                heading3a="Treat your teeth with us"
+                service1="Dental Surgeries"
+                service2="Dental Radiography"
+                service3="Implant Dentistry"
+                service4="Cavity Protection"
+              />
             </div>
           </div>
-          <MostViewed />
+          <MostViewed category="Dentist"/>
         </div>
       </div>
       <Footer />

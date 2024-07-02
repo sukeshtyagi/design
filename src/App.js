@@ -9,6 +9,7 @@ import DoctorLisiting from "./doctorPages/DoctorLisiting";
 import Appointment from "./doctorPages/Appointment";
 import DoctorDetail from "./doctorPages/DoctorDetail";
 import TeacherListing from "./teacherPages/TeacherListing";
+import TeacherDetail from "./teacherPages/TeacherDetail";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/doctors" element={<DoctorLisiting />} />
         <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/doctor-detail" element={<DoctorDetail />} />
+        <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/abc" element={<Trial />} />
       </Routes>
     </BrowserRouter>

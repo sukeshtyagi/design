@@ -26,9 +26,27 @@ function DoctorCard({
           : {}
       }
       onClick={() => {
-        navigate("/doctor-detail", {
-          state: { img, name, title, qual1, qual2, address },
-        });
+        if (!teacherListing) {
+          navigate("/doctor-detail", {
+            state: { img, name, title, qual1, qual2, address },
+          });
+        }
+
+        if (teacherListing) {
+          console.log(qual1, qual2, qual3, qual4, teacherListing);
+          navigate("/teacher-detail", {
+            state: {
+              teacherListing,
+              img,
+              name,
+              title,
+              qual1,
+              qual2,
+              qual3,
+              qual4,
+            },
+          });
+        }
       }}
     >
       <div
@@ -97,7 +115,12 @@ function DoctorCard({
       <div
         className={style.cardRight}
         style={
-          teacherListing ? { marginLeft: "-50px", marginRight: "15px" } : {}
+          teacherListing
+            ? {
+                marginLeft: "-50px",
+                marginRight: "15px",
+              }
+            : {}
         }
       >
         <img

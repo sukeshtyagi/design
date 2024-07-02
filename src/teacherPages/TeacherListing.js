@@ -138,7 +138,6 @@ function TeacherListing() {
                   qual2={data.qual2}
                   qual3={data.qual3}
                   qual4={data.qual4}
-                  address={data.address}
                 />
               ))}
               <Pagination />
