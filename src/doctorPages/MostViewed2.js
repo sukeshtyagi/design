@@ -1,0 +1,125 @@
+import React from "react";
+import style from "./DoctorListing.module.css";
+
+function MostViewed2({ category }) {
+  const mostViewedData = {
+    dentist: [
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Dental Surgeon",
+        qualification: "BDS, PhD",
+        experience: "34 years of experience in speciality",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Dental Surgeon",
+        qualification: "BDS, PhD",
+        experience: "34 years of experience in speciality",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Dental Surgeon",
+        qualification: "BDS, PhD",
+        experience: "34 years of experience in speciality",
+      },
+    ],
+    "english teachers": [
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Dental Surgeon",
+        qualification: "BA, BEd",
+        experience: "34 years of experience in speciality",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Dental Surgeon",
+        qualification: "BA, BEd",
+        experience: "34 years of experience in speciality",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Dental Surgeon",
+        qualification: "BA, BEd",
+        experience: "34 years of experience in speciality",
+      },
+    ],
+    cas: [
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "CA",
+        qualification: "BCom, CA",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "CA",
+        qualification: "BCom, CA",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "CA",
+        qualification: "BCom, CA",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "CA",
+        qualification: "BCom, CA",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+    ],
+    // Add other categories as needed
+  };
+
+  const selectedCategoryData = mostViewedData[category.toLowerCase()] || [];
+
+  return (
+    <div className={style.viewedOuter}>
+      <h1 className={style.viewedHeading}>
+        Most viewed {category} in Bangalore
+      </h1>
+      <div className={style.imgContainer}>
+        <div className={style.allCardContainer}>
+          {selectedCategoryData.map((item, index) => (
+            <div key={index} className={style.viewedCardContainer}
+            style={category==="CAs"?{width:"301.75px"}:{}}
+            >
+              <img src={item.img} alt="" className={style.viewedImg} />
+              <div className={style.detailsContainer}>
+                <h1 className={style.detail1}>{item.name}</h1>
+                <p className={style.detail}>{item.speciality}</p>
+                <p className={style.detail2}>{item.qualification}</p>
+                <p className={style.detail2}>{item.Consultations}</p>
+                <p className={style.detail2}>{item.experience}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className={style.imgContainerView}>
+          <img
+            src="/images/doctor/specArrow.svg"
+            alt=""
+            className={style.imageView}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default MostViewed2;

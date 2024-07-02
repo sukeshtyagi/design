@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 function DoctorCard({
   doctorDetail,
   teacherListing,
+  caListing,
   img,
   name,
   title,
@@ -33,10 +34,24 @@ function DoctorCard({
         }
 
         if (teacherListing) {
-          console.log(qual1, qual2, qual3, qual4, teacherListing);
           navigate("/teacher-detail", {
             state: {
               teacherListing,
+              img,
+              name,
+              title,
+              qual1,
+              qual2,
+              qual3,
+              qual4,
+            },
+          });
+        }
+
+        if (caListing) {
+          navigate("/ca-detail", {
+            state: {
+              caListing,
               img,
               name,
               title,

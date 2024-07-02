@@ -4,12 +4,12 @@ import DekstopLogin from "./desktopLoginPage/DekstopLogin";
 import DesktopSignup from "./desktopSignupPage/DesktopSignup";
 import EnterOtp from "./desktopSignupPage/EnterOtp";
 import UserDashboard from "./userDashboard/UserDashboard";
-import Trial from "./commonComponents/Trial";
 import DoctorLisiting from "./doctorPages/DoctorLisiting";
 import DoctorDetail from "./doctorPages/DoctorDetail";
 import TeacherListing from "./teacherPages/TeacherListing";
 import TeacherDetail from "./teacherPages/TeacherDetail";
 import CaListing from "./caPages/CaListing";
+import CaDetail from "./caPages/CaDetail";
 
 function App() {
   return (
@@ -26,7 +26,8 @@ function App() {
         <Route path="/ca's" element={<CaListing />} />
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
-        <Route path="/abc" element={<Trial />} />
+        <Route path="/ca-detail" element={<CaDetail />} />
+        <Route path="/abc" element={<CaDetail />} />
       </Routes>
     </BrowserRouter>
   );

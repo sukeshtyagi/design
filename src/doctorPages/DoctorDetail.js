@@ -6,14 +6,11 @@ import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "./DoctorCard";
 import { useLocation } from "react-router-dom";
 
-import {
-  Address,
-  MostViewed,
-  PatientReviews,
-  SubmitFeedback,
-} from "./PatientReviews";
+import { Address, SubmitFeedback } from "./PatientReviews";
 import { AppointCard } from "./LeftDocComp";
 import BookAppointment from "./BookAppointment";
+import { PatientReviews } from "./NewReviews";
+import MostViewed2 from "./MostViewed2";
 function DoctorDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, address } = location.state || {};
@@ -171,7 +168,7 @@ function DoctorDetail() {
                   </div>
                 </div>
               </div>
-              <PatientReviews />
+              <PatientReviews patientReview="true" />
               <SubmitFeedback forWhom="Dr Ronald Richard" />
               <Address />
             </div>
@@ -191,7 +188,7 @@ function DoctorDetail() {
               />
             </div>
           </div>
-          <MostViewed category="Dentist" />
+          <MostViewed2 category="Dentist" />
         </div>
       </div>
       <Footer />

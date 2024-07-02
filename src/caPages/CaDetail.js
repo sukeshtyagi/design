@@ -5,14 +5,10 @@ import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
-import { SubmitFeedback} from "../doctorPages/PatientReviews";
-import { AppointCard } from "../doctorPages/LeftDocComp";
-import TeacherFee from "./TeacherFee";
-import BookAppointment from "../doctorPages/BookAppointment";
 import { PatientReviews } from "../doctorPages/NewReviews";
+import { SubmitFeedback} from "../doctorPages/PatientReviews";
 import MostViewed2 from "../doctorPages/MostViewed2";
-
-function TeacherDetail() {
+function CaDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, qual3, qual4 } = location.state || {};
 
@@ -20,6 +16,7 @@ function TeacherDetail() {
   const handleSelect = (value) => {
     setSelect(value);
   };
+
   return (
     <>
       <Header userDashboard="true" />
@@ -34,15 +31,14 @@ function TeacherDetail() {
           <div className={style.locationFilterPara}>
             <p className={style.para}>Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>Teachers in Bangalore</p>
+            <p className={style.para}>CAs in Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>English Teachers in Bangalore</p>
+            <p className={style.para}>Income Tax CAs in Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>Jenny Wilson</p>
+            <p className={style.para}>Wade Warren</p>
           </div>
           <DoctorCard
             doctorDetail="true"
-            teacherListing="true"
             img={img}
             name={name}
             title={title}
@@ -66,10 +62,10 @@ function TeacherDetail() {
                 </p>
                 <p
                   className={`${style.option} ${
-                    select === "specialities" ? style.selected : ""
+                    select === "services" ? style.selected : ""
                   }`}
                   onClick={() => {
-                    handleSelect("specialities");
+                    handleSelect("services");
                   }}
                 >
                   Specialities
@@ -84,30 +80,53 @@ function TeacherDetail() {
                 >
                   Reviews
                 </p>
-              </div>
-              <div className={style.about} style={{ height: "369px" }}>
-                <p className={style.information1}>
-                  Hello! My name is Jenny, and I was born in Manhattan, New York
-                  City. I moved to North Carolina when I was seven years old. I
-                  like learning about different cultures, dancing and watching
-                  movies. I don't have a specific hobby as I am open to trying
-                  something new. <br />
-                  <br />
-                  I’ve been working in early childhood education for eight
-                  years. While teaching in the field....
-                  <span className={style.info1Span2}>Read More</span>
+                <p
+                  className={`${style.option} ${
+                    select === "address" ? style.selected : ""
+                  }`}
+                  onClick={() => {
+                    handleSelect("address");
+                  }}
+                >
+                  Fees
                 </p>
-
+              </div>
+              <div className={style.about} style={{ height: "517px" }}>
+                <p className={style.information1}>
+                  Mr. Warren is a seasoned Chartered Accountant with a proven
+                  track record of delivering exceptional financial guidance and
+                  support. With over 10 years of experience in financial
+                  management, taxation, and auditing, he brings a wealth of
+                  expertise to every client interaction. <br />
+                  <br />
+                  Specializing in providing tailored financial solutions to
+                  individuals and businesses, Mr. Warren is committed to
+                  fostering long-term relationships built on trust, integrity,
+                  and professionalism.
+                  <span
+                    className={style.info1Span2}
+                    style={{ marginLeft: "550px" }}
+                  >
+                    Read More
+                  </span>
+                </p>
                 <div className={style.eduDiv}>
                   <h1 className={style.eduHeading}>Education</h1>
                   <ul>
                     <li className={style.information2}>
-                      Bachelor of Arts (BA) in English Literature - University
-                      of XYZ, North Carolina, USA, 2016
+                      Bachelor's Degree in Accounting, Finance, or Business
+                      Administration - University of XYZ, London, UK, 2014
                     </li>
+
                     <li className={style.information2}>
-                      Bachelor of Education (BEd) - ABC University, Chicago,
-                      USA, 2018{" "}
+                      Completion of the Association of Chartered Certified
+                      Accountants (ACCA) Program
+                    </li>
+
+                    <li className={style.information2}>
+                      Successful Completion of the Chartered Accountant (CA)
+                      Examination - Institute of Chartered Accountants in
+                      England and Wales (ICAEW), London, UK, 2016
                     </li>
                   </ul>
                 </div>
@@ -115,57 +134,36 @@ function TeacherDetail() {
               <div
                 className={style.eduDiv2}
                 style={{
-                  height: "172px",
+                  height: "204px",
                 }}
               >
                 <h1 className={style.eduHeading2}>Specialization</h1>
-                <div className={style.eduInner}>
+                <div className={style.eduInner} style={{ gap: "97px" }}>
                   <div>
                     <ul className={style.eduLeft}>
-                      <li className={style.information3}>
-                        Conversational English
-                      </li>
-                      <li className={style.information3}>English for work</li>
-                      <li className={style.information3}>British English</li>
-                      <li className={style.information3}>
-                        English job interview prep
-                      </li>
+                      <li className={style.information3}>Income Tax</li>
+                      <li className={style.information3}>GST</li>
+                      <li className={style.information3}>VAT</li>
+                      <li className={style.information3}>Property Tax</li>
+                      <li className={style.information3}>Audit</li>
                     </ul>
                   </div>
                   <div>
                     <ul className={style.eduLeft}>
-                      <li className={style.information3}>Business English</li>
-                      <li className={style.information3}>
-                        English for beginners
-                      </li>
-                      <li className={style.information3}>
-                        English for traveling
-                      </li>
-                      <li className={style.information3}>
-                        English as a subject
-                      </li>
+                      <li className={style.information3}>Capital Gains Tax</li>
+                      <li className={style.information3}>Service Tax</li>
+                      <li className={style.information3}>Corporate Tax</li>
+                      <li className={style.information3}>Professional Tax</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <PatientReviews studentReview="true" />
-              <SubmitFeedback forWhom="Ms. Jenny Wilson" />
-            </div>
-            <div className={style.rightDetail}>
-              <TeacherFee />
-              <BookAppointment />
-              <AppointCard
-                rightImg="/images/teacher/student.png"
-                heading1a="English"
-                heading2a="Speaking Clases"
-                background="linear-gradient(76.05deg, #D67849 1.21%, #E3CD27 99.58%)"
-                service1="One-to-One Tutoring"
-                service2="Exam Preparation"
-                service3="Advanced Learning"
-              />
+              <PatientReviews clientReview="true" />
+              <SubmitFeedback forWhom="Mr. Wade Warren" />
+              {/* */}
             </div>
           </div>
-          <MostViewed2 category="English Teachers" />
+          <MostViewed2 category="CAs" />
         </div>
       </div>
       <Footer />
@@ -173,4 +171,4 @@ function TeacherDetail() {
   );
 }
 
-export default TeacherDetail;
+export default CaDetail;

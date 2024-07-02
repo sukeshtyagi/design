@@ -110,6 +110,7 @@ function CaListing() {
           <img src="/images/ca/Banner.png" alt="" />
         </div>
         <div className={style.listingInner2}>
+          
           <div className={style.locationFilterPara}>
             <p className={style.para}>Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
@@ -134,6 +135,7 @@ function CaListing() {
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
                 <DoctorCard
+                  caListing="true"
                   img={data.img}
                   name={data.name}
                   title={data.title}
