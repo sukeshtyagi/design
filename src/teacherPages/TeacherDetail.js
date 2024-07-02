@@ -11,7 +11,8 @@ import {
   MostViewed,
 } from "../doctorPages/PatientReviews";
 import { AppointCard } from "../doctorPages/LeftDocComp";
-import TeacherFee from "./TeacherFee"
+      import TeacherFee from "./TeacherFee";
+import BookAppointment from "../doctorPages/BookAppointment";
 
 function TeacherDetail() {
   const location = useLocation();
@@ -154,7 +155,8 @@ function TeacherDetail() {
               <SubmitFeedback forWhom="Ms. Jenny Wilson" />
             </div>
             <div className={style.rightDetail}>
-              <TeacherFee/>
+              <TeacherFee />
+              <BookAppointment />
               <AppointCard
                 rightImg="/images/teacher/student.png"
                 heading1a="English"
@@ -166,7 +168,7 @@ function TeacherDetail() {
               />
             </div>
           </div>
-          <MostViewed category="English Teachers"/>
+          <MostViewed category="English Teachers" />
         </div>
       </div>
       <Footer />

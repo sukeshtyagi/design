@@ -6,7 +6,6 @@ import EnterOtp from "./desktopSignupPage/EnterOtp";
 import UserDashboard from "./userDashboard/UserDashboard";
 import Trial from "./commonComponents/Trial";
 import DoctorLisiting from "./doctorPages/DoctorLisiting";
-import Appointment from "./doctorPages/Appointment";
 import DoctorDetail from "./doctorPages/DoctorDetail";
 import TeacherListing from "./teacherPages/TeacherListing";
 import TeacherDetail from "./teacherPages/TeacherDetail";

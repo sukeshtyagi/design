@@ -13,6 +13,7 @@ import {
   SubmitFeedback,
 } from "./PatientReviews";
 import { AppointCard } from "./LeftDocComp";
+import BookAppointment from "./BookAppointment";
 function DoctorDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, address } = location.state || {};
@@ -175,6 +176,7 @@ function DoctorDetail() {
               <Address />
             </div>
             <div className={style.rightDetail}>
+              <BookAppointment />
               <AppointCard
                 background="linear-gradient(76.05deg, #337f8c 1.21%, #6ab1a5 99.58%)"
                 rightImg="/images/doctor/appointImg.svg"
@@ -189,7 +191,7 @@ function DoctorDetail() {
               />
             </div>
           </div>
-          <MostViewed category="Dentist"/>
+          <MostViewed category="Dentist" />
         </div>
       </div>
       <Footer />

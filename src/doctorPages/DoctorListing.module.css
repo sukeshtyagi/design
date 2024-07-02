@@ -312,6 +312,12 @@
   gap: 08px;
 }
 
+.rightDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /*Patient reviews*/
 .patientOuter {
   width: 771px;
