@@ -24,9 +24,9 @@ function App() {
         <Route path="/profile" element={<UserDashboard />} />
         <Route path="/doctors" element={<DoctorLisiting />} />
         
+        <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/ca's" element={<CaListing />} />
-        <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />
         <Route path="/abc" element={<SpecCards />} />

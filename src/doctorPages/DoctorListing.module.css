@@ -44,7 +44,6 @@
   cursor: pointer;
   color: rgba(0, 0, 0, 1);
   user-select: none;
-
 }
 
 .activeSpec {
@@ -370,7 +369,7 @@
   height: 32px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .reviewheading,
@@ -400,6 +399,12 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 19.2px;
+}
+
+.view:hover {
+  border: 1px solid rgba(31, 239, 202, 1);
+  box-shadow: 0px 2px 4.7px 0px rgba(90, 90, 90, 0.1);
+  color: rgba(31, 239, 202, 1);
 }
 
 .cardContainer {
@@ -531,6 +536,11 @@
   line-height: 24px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
+}
+
+.submit:hover {
+  background: rgba(31, 239, 202, 1);
+  box-shadow: 0px 2px 4.7px 0px rgba(90, 90, 90, 0.1);
 }
 
 /*address styles*/
