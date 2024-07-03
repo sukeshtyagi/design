@@ -17,7 +17,7 @@ function CustomerStories() {
               Read What Our Users Have to Say About Their Experiences
             </p>
           </div>
-          <div className={`${style.rightDiv} hover:bg-appGreen`}>
+          <div className={`${style.rightDiv}`}>
             <button className={`${style.viewBtn}`}>VIEW ALL</button>
           </div>
         </div>

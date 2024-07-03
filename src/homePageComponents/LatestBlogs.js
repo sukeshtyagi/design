@@ -17,7 +17,7 @@ function LatestBlogs() {
               Stay Informed: Explore Our Latest Insights and Updates
             </p>
           </div>
-          <div className={`${style.topRight} hover:bg-appGreen`}>
+          <div className={`${style.topRight}`}>
             <button className={style.view}>VIEW ALL</button>
           </div>
         </div>

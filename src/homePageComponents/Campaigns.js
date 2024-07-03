@@ -20,7 +20,7 @@ function Campaigns() {
               Join us in making a difference. Your support fuels change.
             </p>
           </div>
-          <div className={`${style.topRight} hover:bg-appGreen`}>
+          <div className={`${style.topRight}`}>
             <button className={style.view}>VIEW ALL</button>
           </div>
         </div>

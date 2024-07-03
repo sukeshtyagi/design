@@ -227,3 +227,7 @@
   color: rgba(255, 255, 255, 1);
   background: rgba(11, 219, 182, 1);
 }
+
+.btn:hover {
+  background: rgba(31, 239, 202, 1);
+}

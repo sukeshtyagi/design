@@ -196,7 +196,7 @@
 .linkedInIcon:hover,
 .youtubeIcon:hover,
 .twitterIcon:hover {
-  transform: scale(1.08);
+  transform: scale(1.1);
   transition: transform 0.8s ease-in-out;
   cursor: pointer;
 }

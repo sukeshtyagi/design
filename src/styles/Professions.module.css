@@ -144,6 +144,10 @@
   border: 1px solid rgba(11, 219, 182, 1);
 }
 
+.topRight:hover {
+  border: 1px solid rgba(31, 239, 202, 1);
+}
+
 .view {
   box-sizing: border-box;
   font-family: Poppins;

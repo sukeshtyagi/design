@@ -103,8 +103,8 @@
 
 .loginBtn:hover,
 .donateBtn:hover {
-  color: white;
-  background-color: rgba(11, 219, 182, 1);
+  border: 1.5px solid rgba(31, 239, 202, 1);
+  color: rgba(31, 239, 202, 1);
 }
 
 .noAccountPara {

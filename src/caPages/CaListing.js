@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../doctorPages/DoctorListing.module.css";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
@@ -9,6 +9,12 @@ import Faq from "../commonComponents/Faq";
 import { AppointCard, Query } from "../doctorPages/LeftDocComp";
 
 function CaListing() {
+  const [activeSpec, setActiveSpec] = useState("Income Tax");
+
+  const handleClick = (index) => {
+    setActiveSpec(index);
+  };
+
   const specialityArray = [
     "Income Tax",
     "Service Tax",
@@ -93,8 +99,14 @@ function CaListing() {
               className={style.specCardContainer}
               style={{ overflow: "visible" }}
             >
-              {specialityArray.map((speciality) => (
-                <div className={style.specOuter}>
+              {specialityArray.map((speciality, index) => (
+                <div
+                  key={index}
+                  className={`${style.specOuter} ${
+                    activeSpec === index ? style.activeSpec : ""
+                  }`}
+                  onClick={() => handleClick(index)}
+                >
                   <p className={style.title}>{speciality}</p>
                 </div>
               ))}
@@ -110,7 +122,6 @@ function CaListing() {
           <img src="/images/ca/Banner.png" alt="" />
         </div>
         <div className={style.listingInner2}>
-          
           <div className={style.locationFilterPara}>
             <p className={style.para}>Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
@@ -124,9 +135,9 @@ function CaListing() {
             <div className={style.specOuter1}>
               <img src="/images/doctor/filter.svg" alt="" />
             </div>
-            {filterArray.map((criterion) => (
+            {filterArray.map((criterion1) => (
               <div className={style.specOuter2}>
-                <p className={style.criterion}>{criterion}</p>
+                <p className={style.criterion}>{criterion1}</p>
                 <img src="/images/doctor/downArrow.svg" alt="" />
               </div>
             ))}

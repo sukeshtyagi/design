@@ -26,7 +26,7 @@ function PreviousEngagements() {
             </h1>
           </div>
           <div className={style.rightDiv}>
-            <button className={`${style.viewBtn} hover:bg-appGreen`}>
+            <button className={`${style.viewBtn}`}>
               VIEW ALL
             </button>
           </div>

@@ -16,7 +16,7 @@ function Professions() {
               Discover the Range of Expertise Available at Your Fingertips
             </p>
           </div>
-          <div className={`${style.topRight} hover:bg-appGreen`}>
+          <div className={`${style.topRight}`}>
             <button className={style.view}>VIEW ALL</button>
           </div>
         </div>

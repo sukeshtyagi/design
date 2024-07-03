@@ -195,6 +195,10 @@
   background: rgba(11, 219, 182, 1);
 }
 
+.donate:hover{
+  background: rgba(31, 239, 202, 1);
+}
+
 /*comp styles below*/
 .campaignOutermostContainer {
   box-sizing: border-box;
@@ -273,6 +277,10 @@
   display: flex;
   justify-content: center;
   justify-content: center;
+}
+
+.topRight:hover {
+  border: 1px solid rgba(31, 239, 202, 1);
 }
 
 .view {

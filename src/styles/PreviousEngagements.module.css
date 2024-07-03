@@ -229,6 +229,10 @@
   border: 1px solid rgba(11, 219, 182, 1);
 }
 
+.rightDiv:hover {
+  border: 1px solid rgba(31, 239, 202, 1);
+}
+
 .viewBtn {
   box-sizing: border-box;
   width: 75px;
