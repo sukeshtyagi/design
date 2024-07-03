@@ -113,6 +113,8 @@
 
 .button:hover {
   background: rgba(31, 239, 202, 1);
+  box-shadow: 0px 2px 4.7px 0px rgba(90, 90, 90, 0.1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .rightBtm {

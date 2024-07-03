@@ -46,13 +46,21 @@ function CampaignCard() {
                 </p>
               </div>
               <div className={style.midLwr}>
-                <img src="/images/progress.svg" alt="" />
+                <img
+                  src="/images/progress.svg"
+                  alt=""
+                  className={style.raisedByImage}
+                />
               </div>
               <p className={style.raisedBy}>Raised by 84 people in 12 days</p>
             </div>
           </div>
+
           <button
             className={`${style.donate}`}
+            onMouseEnter={(e) => {
+              e.stopPropagation();
+            }}
           >
             Donate Now
           </button>

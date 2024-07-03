@@ -82,10 +82,13 @@
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(11, 219, 182, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
 .rightDiv:hover {
   border: 1px solid rgba(31, 239, 202, 1);
+  box-shadow: 0px 2px 4.7px 0px rgba(90, 90, 90, 0.1);
+  color: rgba(31, 239, 202, 1);
 }
 
 .viewBtn {
@@ -98,7 +101,6 @@
   line-height: 24px;
   letter-spacing: 0.5px;
   text-align: center;
-  color: rgba(0, 0, 0, 1);
 }
 
 .btmDiv {
