@@ -139,10 +139,11 @@
 
 .para1:hover,
 .para2:hover,
-.para3:hover,
-.paraDelete:hover {
+.para3:hover {
   color: #0bdbb6;
 }
+
+
 
 .para2,
 .para3 {
@@ -178,6 +179,10 @@
 
 .paraDelete {
   color: rgba(215, 80, 80, 1);
+}
+
+.paraDelete:hover {
+  color:rgba(208, 0, 0, 1);
 }
 
 .right {

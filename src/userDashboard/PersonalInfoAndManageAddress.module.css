@@ -218,6 +218,11 @@
   align-items: center;
 }
 
+.editBtn:hover,
+.removeBtn:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
 .removeBtn {
   border-right: 0;
 }

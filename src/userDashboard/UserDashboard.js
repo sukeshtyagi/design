@@ -8,8 +8,9 @@ import ManageAddress from "./ManageAddress";
 import Reviews from "./Reviews";
 
 function UserDashboard() {
-  const [selectedOption, setSelectedOption] = useState("");
+  const [selectedOption, setSelectedOption] = useState("personalInfo");
   const [rightDivOption, setRightDivOption] = useState("personalInfo");
+  const [deleteIcon, setDeleteIcon] = useState("/images/blogs/delete.svg");
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -124,8 +125,11 @@ function UserDashboard() {
                   }`}
                   onClick={() => handleOptionClick("delete")}
                 >
-                  <img src="/images/blogs/delete.svg" alt="" />
-                  <p className={style.paraDelete}>Delete Account</p>
+                  <img src={deleteIcon} alt="" />
+                  <p className={style.paraDelete}
+                  onMouseEnter={()=>{setDeleteIcon("/images/blogs/hoverDelete.svg");}}
+                  onMouseLeave={()=>{setDeleteIcon("/images/blogs/delete.svg");}}
+                  >Delete Account</p>
                 </div>
               </div>
             </div>

@@ -22,8 +22,8 @@ function App() {
         <Route path="/register" element={<DesktopSignup />} />
         <Route path="/enter-otp" element={<EnterOtp />} />
         <Route path="/profile" element={<UserDashboard />} />
-        
         <Route path="/doctors" element={<DoctorLisiting />} />
+        
         <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/ca's" element={<CaListing />} />
         <Route path="/doctor-detail" element={<DoctorDetail />} />
