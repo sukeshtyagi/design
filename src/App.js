@@ -10,6 +10,7 @@ import TeacherListing from "./teacherPages/TeacherListing";
 import TeacherDetail from "./teacherPages/TeacherDetail";
 import CaListing from "./caPages/CaListing";
 import CaDetail from "./caPages/CaDetail";
+import {SpecCards} from "./doctorPages/DocSpecCards";
 
 function App() {
   return (
@@ -21,13 +22,14 @@ function App() {
         <Route path="/register" element={<DesktopSignup />} />
         <Route path="/enter-otp" element={<EnterOtp />} />
         <Route path="/profile" element={<UserDashboard />} />
+        
         <Route path="/doctors" element={<DoctorLisiting />} />
         <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/ca's" element={<CaListing />} />
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />
-        <Route path="/abc" element={<CaDetail />} />
+        <Route path="/abc" element={<SpecCards />} />
       </Routes>
     </BrowserRouter>
   );

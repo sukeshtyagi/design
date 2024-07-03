@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import style from "./DesktopLogin.module.css";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
-import style from "./DesktopLogin.module.css";
 import { userLogin, checkServer } from "../axios/Axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -137,7 +137,7 @@ function DesktopLogin() {
 
               <div className={style.iconDiv}>
                 <div
-                  className={`${style.icon1} hover:ring-2 ring-offset-4 hover:ring-appGreen`}
+                  className={`${style.icon1}`}
                 >
                   <img
                     src="/images/miss/google.svg"
@@ -147,7 +147,7 @@ function DesktopLogin() {
                 </div>
 
                 <div
-                  className={`${style.icon2} hover:ring-2 ring-offset-4 hover:ring-appGreen`}
+                  className={`${style.icon2}`}
                 >
                   <img
                     src="/images/miss/fb.svg"
@@ -157,7 +157,7 @@ function DesktopLogin() {
                 </div>
 
                 <div
-                  className={`${style.icon3} hover:ring-2 ring-offset-4 hover:ring-appGreen`}
+                  className={`${style.icon3}`}
                 >
                   <img
                     src="/images/miss/apple.svg"

@@ -45,6 +45,7 @@
 }
 
 .image {
+  cursor: pointer;
   width: 24px;
   height: 12px;
 }

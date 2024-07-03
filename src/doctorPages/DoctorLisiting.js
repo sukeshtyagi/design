@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./DoctorListing.module.css";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
@@ -8,31 +8,8 @@ import Faq from "../commonComponents/Faq";
 import Appointment from "./Appointment";
 import { AppointCard, Query } from "./LeftDocComp";
 import Pagination from "./Pagination";
+import { DocFilterCards, SpecCards } from "./DocSpecCards";
 function DoctorLisiting() {
-  const specialityArray = [
-    "Dentist",
-    "Pediatrician",
-    "Cardiologist",
-    "Psychiatrist",
-    "Dermatologist",
-    "Endocrinologist",
-    "Gynecologist",
-    "Neurologist",
-    "chiropractor",
-  ];
-
-  const filterArray = [
-    "Sort By",
-    "Available Now",
-    "Top Rated",
-    "Popular",
-    "Ratings",
-    "Distance",
-    "Quick Response",
-    "Relevance",
-    "Liked",
-  ];
-
   const docCardData = [
     {
       img: "/images/reviews/reviewImg.svg",
@@ -87,18 +64,7 @@ function DoctorLisiting() {
             <SearchBar userDashboard="true" />
           </div>
 
-          <div className={style.specCardWrapper}>
-            <div className={style.specCardContainer}>
-              {specialityArray.map((speciality) => (
-                <div className={style.specOuter}>
-                  <p className={style.title}>{speciality}</p>
-                </div>
-              ))}
-            </div>
-            <div className={style.arrowContainer}>
-              <img src="/images/doctor/specArrow.svg" alt="" />
-            </div>
-          </div>
+          <SpecCards />
         </div>
 
         <div className={style.bannerContainer}>
@@ -115,36 +81,7 @@ function DoctorLisiting() {
           </div>
 
           <h1 className={style.heading}>Best Dentists in HSR Layout</h1>
-          
-          <div className={style.filterCardContainer}>
-            <div className={style.specOuter1}>
-              <img src="/images/doctor/filter.svg" alt="" />
-            </div>
-            {filterArray.map((criterion) => (
-              <>
-                {criterion !== "Sort By" && criterion !== "Top Rated" && (
-                  <div className={style.specOuter2}>
-                    <p className={style.criterion}>{criterion}</p>
-                  </div>
-                )}
-
-                {criterion === "Sort By" && (
-                  <div className={style.specOuter3}>
-                    <p className={style.criterion}>{criterion}</p>
-                    <img src="/images/doctor/downArrow.svg" alt="" />
-                  </div>
-                )}
-
-                {criterion === "Top Rated" && (
-                  <div className={style.specOuter4}>
-                    <p className={style.criterion}>{criterion}</p>
-                    <img src="/images/doctor/star.svg" alt="" />
-                  </div>
-                )}
-              </>
-            ))}
-          </div>
-
+          <DocFilterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (

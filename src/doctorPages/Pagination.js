@@ -26,12 +26,12 @@ function Pagination() {
         );
       })}
       <div
-        className={style.page}
+        className={style.page2}
         onClick={() => handlePageClick(activePage + 1)}
       >
         <img src="/images/teacher/page1.svg" alt="" className={style.arrow1} />
       </div>
-      <div className={style.page} onClick={() => handlePageClick(totalPages)}>
+      <div className={style.page2} onClick={() => handlePageClick(totalPages)}>
         <img src="/images/teacher/page2.svg" alt="" className={style.arrow2} />
       </div>
     </div>

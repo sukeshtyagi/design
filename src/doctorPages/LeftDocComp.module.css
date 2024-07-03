@@ -68,6 +68,11 @@
   cursor: pointer;
 }
 
+.inputField:hover{
+  border: 1px solid rgba(31, 239, 202, 1);
+  
+}
+
 .errorMessage {
   position: absolute;
   top: 45px;
@@ -108,6 +113,10 @@
   line-height: 24px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
+}
+
+.query:hover{
+  background-color: rgba(31, 239, 202, 1);
 }
 
 /*appointment card*/
@@ -240,7 +249,7 @@
   gap: 11.25px;
 }
 
-.page {
+.page,.page1,.page2 {
   width: 37.5px;
   height: 37.5px;
   margin: 0;
@@ -256,6 +265,12 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+  cursor: pointer;
+}
+
+.page1,.page2{
+  background-color: transparent;
+  color: rgba(0, 0, 0, 1);
 }
 
 .arrow1 {
@@ -266,6 +281,7 @@
 .arrow2 {
   width: 15px;
   height: 12px;
+  margin-left: -30px;
 }
 
 .activePage {

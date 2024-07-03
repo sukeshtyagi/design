@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./DoctorCard.module.css";
 import { useNavigate } from "react-router-dom";
+
 function DoctorCard({
   doctorDetail,
   teacherListing,
@@ -14,7 +15,29 @@ function DoctorCard({
   qual4,
   address,
 }) {
+  const [clicked, setClicked] = useState("");
+  const [heartImage, setHeartImage] = useState("/images/doctor/heartIcon.svg");
+  const [isHeartClicked, setIsHeartClicked] = useState(false);
   const navigate = useNavigate();
+
+  const handleMouseEnter = () => {
+    if (!isHeartClicked) {
+      setHeartImage("/images/doctor/hoverHeartIcon2.svg");
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isHeartClicked) {
+      setHeartImage("/images/doctor/heartIcon.svg");
+    }
+  };
+
+  const handleClick = (e) => {
+    e.stopPropagation();
+    setHeartImage("/images/doctor/pressedHeartIcon.svg");
+    setIsHeartClicked(true);
+  };
+
   return (
     <div
       className={style.cardOuter}
@@ -113,10 +136,26 @@ function DoctorCard({
               />
               <p className={style.action1}>Call Now</p>
             </div>
-            <div className={style.call}>
+            <div
+              className={`${style.call} ${
+                clicked === "div2" ? style.clickedAppointment : ""
+              }`}
+              onClick={(e) => {
+                e.stopPropagation();
+                setClicked("div2");
+              }}
+            >
               <p className={style.action}>Book Appointment</p>
             </div>
-            <div className={style.call}>
+            <div
+              className={`${style.call} ${
+                clicked === "div3" ? style.clickedAppointment : ""
+              }`}
+              onClick={(e) => {
+                e.stopPropagation();
+                setClicked("div3");
+              }}
+            >
               <img
                 src="/images/doctor/waIcon.svg"
                 alt=""
@@ -137,6 +176,9 @@ function DoctorCard({
               }
             : {}
         }
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
       >
         <img
           src="/images/doctor/shareIcon.svg"
@@ -144,9 +186,11 @@ function DoctorCard({
           className={style.cardRightImg1}
         />
         <img
-          src="/images/doctor/heartIcon.svg"
+          src={heartImage}
           alt=""
-          className={style.cardRightImg2}
+          className={`${style.cardRightImg2} ${
+            isHeartClicked ? style.heartClicked : ""
+          }`}
         />
         {teacherListing && (
           <div className="teacherDiv">

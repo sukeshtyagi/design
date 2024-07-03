@@ -113,6 +113,10 @@
   background: rgba(11, 219, 182, 1);
 }
 
+.buttonSignup:hover{
+  background: rgba(31, 239, 202, 1);
+}
+
 .leftBtmSignup {
   box-sizing: border-box;
   width: 269.15px;

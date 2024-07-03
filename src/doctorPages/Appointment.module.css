@@ -55,6 +55,7 @@
   justify-content: flex-start;
   align-items: center;
   outline: none;
+  border: 1px solid transparent;
 }
 
 .inputField:hover,
@@ -66,7 +67,8 @@
   width: 100%;
 }
 
-.error,.error2 {
+.error,
+.error2 {
   position: absolute;
   top: 5px;
   left: 75px;
@@ -74,7 +76,7 @@
   font-size: 17px;
 }
 
-.error2{
+.error2 {
   top: 10px;
   font-size: 16px;
 }
@@ -91,4 +93,8 @@
   text-align: center;
   color: rgba(255, 255, 255, 1);
   margin-top: 5px;
+}
+
+.submitButton:hover {
+  background: rgba(31, 239, 202, 1);
 }
