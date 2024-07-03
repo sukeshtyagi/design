@@ -5,7 +5,7 @@ import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
-import { SubmitFeedback} from "../doctorPages/PatientReviews";
+import { SubmitFeedback } from "../doctorPages/PatientReviews";
 import { AppointCard } from "../doctorPages/LeftDocComp";
 import TeacherFee from "./TeacherFee";
 import BookAppointment from "../doctorPages/BookAppointment";
@@ -95,7 +95,12 @@ function TeacherDetail() {
                   <br />
                   I’ve been working in early childhood education for eight
                   years. While teaching in the field....
-                  <span className={style.info1Span2}>Read More</span>
+                  <span
+                    className={style.info1Span2}
+                    style={{ marginLeft: "630px"}}
+                  >
+                    Read More
+                  </span>
                 </p>
 
                 <div className={style.eduDiv}>

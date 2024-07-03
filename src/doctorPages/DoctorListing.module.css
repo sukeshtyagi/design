@@ -297,6 +297,11 @@
   line-height: 23.4px;
   color: rgba(11, 219, 182, 1);
   margin-left: 572px;
+  cursor: pointer;
+}
+
+.info1Span2:hover {
+color: rgba(0, 0, 0, 1);
 }
 
 .eduDiv,

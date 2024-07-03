@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "../doctorPages/DoctorListing.module.css";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
@@ -7,38 +7,9 @@ import DoctorCard from "../doctorPages/DoctorCard";
 import Pagination from "../doctorPages/Pagination";
 import Faq from "../commonComponents/Faq";
 import { AppointCard, Query } from "../doctorPages/LeftDocComp";
+import { CaFilterCards, SpecCards } from "./CaSpecCards";
 
 function CaListing() {
-  const [activeSpec, setActiveSpec] = useState("Income Tax");
-
-  const handleClick = (index) => {
-    setActiveSpec(index);
-  };
-
-  const specialityArray = [
-    "Income Tax",
-    "Service Tax",
-    "Property Tax",
-    "Capital Gains Tax",
-    "Corporate Tax",
-    "Professional Tax",
-    "GST",
-    "VAT",
-    "Audit",
-  ];
-
-  const filterArray = [
-    "Sort By",
-    "Practice Area",
-    "Gender",
-    "Experience",
-    "State",
-    "City",
-    "Court",
-    "Languages Known",
-    "Top Rated",
-  ];
-
   const docCardData = [
     {
       img: "/images/ca/reviewImg.svg",
@@ -94,29 +65,8 @@ function CaListing() {
           <div className={style.searchContainer}>
             <SearchBar userDashboard="true" />
           </div>
-          <div className={style.specCardWrapper}>
-            <div
-              className={style.specCardContainer}
-              style={{ overflow: "visible" }}
-            >
-              {specialityArray.map((speciality, index) => (
-                <div
-                  key={index}
-                  className={`${style.specOuter} ${
-                    activeSpec === index ? style.activeSpec : ""
-                  }`}
-                  onClick={() => handleClick(index)}
-                >
-                  <p className={style.title}>{speciality}</p>
-                </div>
-              ))}
-            </div>
-            {/*
-            <div className={style.arrowContainer}>
-              <img src="/images/doctor/specArrow.svg" alt="" />
-            </div>
-                */}
-          </div>
+
+          <SpecCards />
         </div>
         <div className={style.bannerContainer}>
           <img src="/images/ca/Banner.png" alt="" />
@@ -131,17 +81,7 @@ function CaListing() {
           </div>
           <h1 className={style.heading}>Best Income Tax CAs in HSR Layout</h1>
 
-          <div className={style.filterCardContainer}>
-            <div className={style.specOuter1}>
-              <img src="/images/doctor/filter.svg" alt="" />
-            </div>
-            {filterArray.map((criterion1) => (
-              <div className={style.specOuter2}>
-                <p className={style.criterion}>{criterion1}</p>
-                <img src="/images/doctor/downArrow.svg" alt="" />
-              </div>
-            ))}
-          </div>
+          <CaFilterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
