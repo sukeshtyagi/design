@@ -7,31 +7,8 @@ import { Query, AppointCard } from "../doctorPages/LeftDocComp";
 import Footer from "../homePageComponents/Footer";
 import Faq from "../commonComponents/Faq";
 import Pagination from "../doctorPages/Pagination";
+import { SpecCards, TeacherFilterCards } from "./TeacherSpecCards";
 function TeacherListing() {
-  const specialityArray = [
-    "English",
-    "Maths",
-    "Physics",
-    "Hindi",
-    "History",
-    "Biology",
-    "Chemistry",
-    "Geography",
-    "Economics",
-    "Political Science",
-  ];
-
-  const filterArray = [
-    "Sort By",
-    "Level",
-    "Gender",
-    "Price per lesson",
-    "Specialities",
-    "Languages Known",
-    "Mode of Teaching",
-    "Top Rated",
-  ];
-
   const docCardData = [
     {
       img: "/images/teacher/eng.svg",
@@ -87,18 +64,8 @@ function TeacherListing() {
           <div className={style.searchContainer}>
             <SearchBar userDashboard="true" />
           </div>
-          <div className={style.specCardWrapper}>
-            <div className={style.specCardContainer}>
-              {specialityArray.map((speciality) => (
-                <div className={style.specOuter}>
-                  <p className={style.title}>{speciality}</p>
-                </div>
-              ))}
-            </div>
-            <div className={style.arrowContainer}>
-              <img src="/images/doctor/specArrow.svg" alt="" />
-            </div>
-          </div>
+
+          <SpecCards />
         </div>
 
         <div className={style.bannerContainer}>
@@ -115,18 +82,7 @@ function TeacherListing() {
           </div>
 
           <h1 className={style.heading}>Best English Teachers in HSR Layout</h1>
-         
-          <div className={style.filterCardContainer}>
-            <div className={style.specOuter1}>
-              <img src="/images/doctor/filter.svg" alt="" />
-            </div>
-            {filterArray.map((criterion) => (
-              <div className={style.specOuter2}>
-                <p className={style.criterion}>{criterion}</p>
-                <img src="/images/doctor/downArrow.svg" alt="" />
-              </div>
-            ))}
-          </div>
+          <TeacherFilterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
