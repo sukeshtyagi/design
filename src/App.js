@@ -12,6 +12,7 @@ import CaListing from "./caPages/CaListing";
 import CaDetail from "./caPages/CaDetail";
 import PreviousEngagementsChild from "./commonComponents/PreviousEngagementsChild";
 import LabourListing from "./labourPages/LabourListing";
+import LabourDetail from "./labourPages/LabourDetail";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />
+        <Route path="/labour-detail" element={<LabourDetail />} />
+
         <Route path="/abc" element={<PreviousEngagementsChild />} />
       </Routes>
     </BrowserRouter>

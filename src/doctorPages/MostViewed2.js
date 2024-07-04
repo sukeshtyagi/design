@@ -83,6 +83,40 @@ function MostViewed2({ category }) {
         experience: "Licensed for 10 Years",
       },
     ],
+    maids: [
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Immediate Availability",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Immediate Availability",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Immediate Availability",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Immediate Availability",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+    ],
     // Add other categories as needed
   };
 
@@ -96,8 +130,16 @@ function MostViewed2({ category }) {
       <div className={style.imgContainer}>
         <div className={style.allCardContainer}>
           {selectedCategoryData.map((item, index) => (
-            <div key={index} className={style.viewedCardContainer}
-            style={category==="CAs"?{width:"301.75px"}:{}}
+            <div
+              key={index}
+              className={style.viewedCardContainer}
+              style={
+                category === "CAs"
+                  ? { width: "301.75px" }
+                  : category === "maids"
+                  ? { width: "311px" }
+                  : {}
+              }
             >
               <img src={item.img} alt="" className={style.viewedImg} />
               <div className={style.detailsContainer}>

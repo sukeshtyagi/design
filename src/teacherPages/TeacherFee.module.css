@@ -70,7 +70,7 @@
 .caFeeHeading,
 .criterion1,
 .criterion,
-.note {
+.note,.criterion2 {
   margin: 0;
   padding: 0;
   font-family: Poppins;
@@ -102,10 +102,14 @@
   line-height: 26.94px;
 }
 
-.criterion {
+.criterion,.criterion2 {
   font-size: 16px;
   font-weight: 400;
   line-height: 23.94px;
+}
+
+.criterion2{
+  line-height: 25.6px;
 }
 
 .note {

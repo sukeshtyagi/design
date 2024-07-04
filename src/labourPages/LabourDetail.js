@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import style from "../doctorPages/DoctorListing.module.css";
-import { useLocation } from "react-router-dom";
-import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
+import Header from "../homePageComponents/Header";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
-import { SubmitFeedback } from "../doctorPages/PatientReviews";
-import { AppointCard } from "../doctorPages/LeftDocComp";
-import TeacherFee from "./TeacherFee";
-import BookAppointment from "../doctorPages/BookAppointment";
+import { useLocation } from "react-router-dom";
 import { PatientReviews } from "../doctorPages/NewReviews";
+import { SubmitFeedback } from "../doctorPages/PatientReviews";
 import MostViewed2 from "../doctorPages/MostViewed2";
+import LabourOtherDetail from "./LabourOtherDetail";
+import { LabourAppointCard } from "../doctorPages/LeftDocComp";
+import BookAppointment from "../doctorPages/BookAppointment";
 
-function TeacherDetail() {
+function LabourDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, qual3, qual4 } = location.state || {};
 
@@ -31,7 +31,6 @@ function TeacherDetail() {
           <div className={style.searchContainer}>
             <SearchBar userDashboard="true" />
           </div>
-
           <div className={style.locationFilterPara}>
             <p className={style.para}>Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
@@ -39,12 +38,11 @@ function TeacherDetail() {
             <img src="/images/doctor/rightArrow.svg" alt="" />
             <p className={style.para}>English Teachers in Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>Jenny Wilson</p>
+            <p className={style.para}>Anna J.</p>
           </div>
-
           <DoctorCard
             doctorDetail="true"
-            teacherListing="true"
+            labourListing="true"
             img={img}
             name={name}
             title={title}
@@ -86,21 +84,30 @@ function TeacherDetail() {
                 >
                   Reviews
                 </p>
-               
+                <p
+                  className={`${style.option} ${
+                    select === "others" ? style.selected : ""
+                  }`}
+                  onClick={() => {
+                    handleSelect("others");
+                  }}
+                >
+                  Others
+                </p>
               </div>
-              <div className={style.about} style={{ height: "369px" }}>
+              <div className={style.about} style={{ height: "279px" }}>
                 <p className={style.information1}>
-                  Hello! My name is Jenny, and I was born in Manhattan, New York
-                  City. I moved to North Carolina when I was seven years old. I
-                  like learning about different cultures, dancing and watching
-                  movies. I don't have a specific hobby as I am open to trying
-                  something new. <br />
-                  <br />
-                  I’ve been working in early childhood education for eight
-                  years. While teaching in the field....
+                  My first job was on Saudi Arabia as domestic helper for two
+                  years and two months I served 5 members of the family two
+                  adults and three children ages. 13,7 and 4 and my second job
+                  was on Qatar as domestic helper for two years and one month i
+                  also served 5 members in the family 2 adults and 3 children.
+                  My job duties are general cleaning, cooking food for the
+                  children and taking care of them. I am trustworthy, patience,
+                  honest and loving children.{" "}
                   <span
                     className={style.info1Span2}
-                    style={{ marginLeft: "630px" }}
+                    style={{ marginLeft: "358px" }}
                   >
                     Read More
                   </span>
@@ -110,12 +117,7 @@ function TeacherDetail() {
                   <h1 className={style.eduHeading}>Education</h1>
                   <ul>
                     <li className={style.information2}>
-                      Bachelor of Arts (BA) in English Literature - University
-                      of XYZ, North Carolina, USA, 2016
-                    </li>
-                    <li className={style.information2}>
-                      Bachelor of Education (BEd) - ABC University, Chicago,
-                      USA, 2018{" "}
+                      2007 - High School Graduate (6 Months course)
                     </li>
                   </ul>
                 </div>
@@ -123,60 +125,40 @@ function TeacherDetail() {
               <div
                 className={style.eduDiv2}
                 style={{
-                  height: "172px",
+                  height: "140px",
                 }}
               >
                 <h1 className={style.eduHeading2}>Specialization</h1>
-                <div className={style.eduInner}>
+                <div className={style.eduInner} style={{ gap: "97px" }}>
                   <div>
                     <ul className={style.eduLeft}>
-                      <li className={style.information3}>
-                        Conversational English
-                      </li>
-                      <li className={style.information3}>English for work</li>
-                      <li className={style.information3}>British English</li>
-                      <li className={style.information3}>
-                        English job interview prep
-                      </li>
+                      <li className={style.information3}>Baby Care</li>
+                      <li className={style.information3}>Housekeeping</li>
+                      <li className={style.information3}>Groceries</li>
                     </ul>
                   </div>
                   <div>
                     <ul className={style.eduLeft}>
-                      <li className={style.information3}>Business English</li>
-                      <li className={style.information3}>
-                        English for beginners
-                      </li>
-                      <li className={style.information3}>
-                        English for traveling
-                      </li>
-                      <li className={style.information3}>
-                        English as a subject
-                      </li>
+                      <li className={style.information3}>Child Care</li>
+                      <li className={style.information3}>Cooking</li>
+                      <li className={style.information3}>Elderly Care</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <PatientReviews studentReview="true" />
-              <SubmitFeedback forWhom="Ms. Jenny Wilson" />
+              <PatientReviews labourReview="true" />
+              <SubmitFeedback forWhom="Ms. Anna J." />
             </div>
             <div className={style.rightDetail}>
-              <TeacherFee />
               <BookAppointment
-                divHeading="Schedule a Lesson"
-                btnHeading="Schedule Now"
+                divHeading="Hire Anna"
+                btnHeading="Hire Now"
               />
-              <AppointCard
-                rightImg="/images/teacher/student.png"
-                heading1a="English"
-                heading2a="Speaking Clases"
-                background="linear-gradient(76.05deg, #D67849 1.21%, #E3CD27 99.58%)"
-                service1="One-to-One Tutoring"
-                service2="Exam Preparation"
-                service3="Advanced Learning"
-              />
+              <LabourAppointCard/>
             </div>
           </div>
-          <MostViewed2 category="English Teachers" />
+          <MostViewed2 category="maids" />
+          <LabourOtherDetail />
         </div>
       </div>
       <Footer />
@@ -184,4 +166,4 @@ function TeacherDetail() {
   );
 }
 
-export default TeacherDetail;
+export default LabourDetail;

@@ -1,6 +1,11 @@
 import style from "../doctorPages/DoctorListing.module.css";
 
-export function PatientReviews({ patientReview, studentReview, clientReview }) {
+export function PatientReviews({
+  patientReview,
+  studentReview,
+  clientReview,
+  labourReview,
+}) {
   const reviews = {
     patient: [
       {
@@ -92,6 +97,36 @@ export function PatientReviews({ patientReview, studentReview, clientReview }) {
           "Working with Mr. Warren has been a game-changer for our business. Their expertise and personalized approach have helped us navigate complex financial challenges with confidence. We couldn't be happier with the results!",
       },
     ],
+    labour: [
+      {
+        img: "/images/doctor/patient.svg",
+        name: "Emily W.",
+        time: "2 Month ago",
+        review:
+          "Anna was amazing! We booked her with very short notice and she was kind, thorough, and detail oriented as she did a deep clean of our home. She did an excellent job cleaning our apartment and we will definitely be booking her again. Thank you, Anna!",
+      },
+      {
+        img: "/images/doctor/patient.svg",
+        name: "Emily W.",
+        time: "2 Month ago",
+        review:
+          "Anna was amazing! We booked her with very short notice and she was kind, thorough, and detail oriented as she did a deep clean of our home. She did an excellent job cleaning our apartment and we will definitely be booking her again. Thank you, Anna!",
+      },
+      {
+        img: "/images/doctor/patient.svg",
+        name: "Emily W.",
+        time: "2 Month ago",
+        review:
+          "Anna was amazing! We booked her with very short notice and she was kind, thorough, and detail oriented as she did a deep clean of our home. She did an excellent job cleaning our apartment and we will definitely be booking her again. Thank you, Anna!",
+      },
+      {
+        img: "/images/doctor/patient.svg",
+        name: "Emily W.",
+        time: "2 Month ago",
+        review:
+          "Anna was amazing! We booked her with very short notice and she was kind, thorough, and detail oriented as she did a deep clean of our home. She did an excellent job cleaning our apartment and we will definitely be booking her again. Thank you, Anna!",
+      },
+    ],
   };
 
   let selectedReviews = [];
@@ -105,6 +140,9 @@ export function PatientReviews({ patientReview, studentReview, clientReview }) {
     heading = "Student Reviews";
   } else if (clientReview) {
     selectedReviews = reviews.client;
+    heading = "Client Reviews";
+  } else if (labourReview) {
+    selectedReviews = reviews.labour;
     heading = "Client Reviews";
   }
 
