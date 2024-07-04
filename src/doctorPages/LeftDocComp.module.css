@@ -290,3 +290,21 @@
 .activePage {
   background-color: rgba(11, 219, 182, 1);
 }
+
+/**/
+.appointLabOuter {
+  width: 330px;
+  height: 165px;
+  border-radius: 10px;
+  position: relative;
+  background: rgba(254, 202, 165, 0.21);
+}
+
+.appointLabLeft {
+  width: 165.5px;
+  height: 146.5px;
+  position: absolute;
+  top: 1px;
+  left: 7px;
+  background: rgba(206, 107, 11, 1);
+}

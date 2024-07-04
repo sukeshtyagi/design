@@ -6,6 +6,7 @@ function DoctorCard({
   doctorDetail,
   teacherListing,
   caListing,
+  labourListing,
   img,
   name,
   title,
@@ -85,6 +86,20 @@ function DoctorCard({
             },
           });
         }
+        if (labourListing) {
+          navigate("/labour-detail", {
+            state: {
+              labourListing,
+              img,
+              name,
+              title,
+              qual1,
+              qual2,
+              qual3,
+              qual4,
+            },
+          });
+        }
       }}
     >
       <div
@@ -125,7 +140,14 @@ function DoctorCard({
           <p className={style.qual}>{qual1}</p>
           <p className={style.qual}>{qual2}</p>
           {qual3 && <p className={style.qual}>{qual3}</p>}
-          {qual4 && <p className={style.qual}>{qual4}</p>}
+          {qual4 && (
+            <p
+              className={`${style.qual}
+          ${labourListing ? style.customQual4 : ""}`}
+            >
+              {qual4}
+            </p>
+          )}
           {address && <p className={style.address}>{address}</p>}
           <div className={style.btnContainer}>
             <div className={style.call1}>

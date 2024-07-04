@@ -82,7 +82,7 @@ export function AppointCard({
   service3,
   service4,
   background,
-  margin
+  margin,
 }) {
   return (
     <div
@@ -119,8 +119,10 @@ export function AppointCard({
           </ul>
         </div>
 
-        <div className={style.btmDivAppoint}
-        style={margin?{marginTop:"10.79px"}:{}}>
+        <div
+          className={style.btmDivAppoint}
+          style={margin ? { marginTop: "10.79px" } : {}}
+        >
           <p className={style.detail}>Contact Us:</p>
           <p className={style.detail}>+91-9876543213</p>
           <p className={style.detail}>
@@ -131,6 +133,16 @@ export function AppointCard({
       <div className={style.appointRight}>
         <img src={rightImg} alt="" className={style.rightImage} />
       </div>
+    </div>
+  );
+}
+
+export function LabourAppointCard() {
+  return (
+    <div className={style.appointLabOuter}>
+      <div className={style.appointLabLeft}></div>
+      <div className={style.appointLabRight}></div>
+      <div className={style.appointLabContact}></div>
     </div>
   );
 }

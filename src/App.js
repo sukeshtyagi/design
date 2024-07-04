@@ -11,6 +11,7 @@ import TeacherDetail from "./teacherPages/TeacherDetail";
 import CaListing from "./caPages/CaListing";
 import CaDetail from "./caPages/CaDetail";
 import PreviousEngagementsChild from "./commonComponents/PreviousEngagementsChild";
+import LabourListing from "./labourPages/LabourListing";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
         <Route path="/doctors" element={<DoctorLisiting />} />
         <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/ca's" element={<CaListing />} />
+        <Route path="/labours" element={<LabourListing />} />
+
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />

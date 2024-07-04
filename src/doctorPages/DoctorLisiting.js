@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./DoctorListing.module.css";
 import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
