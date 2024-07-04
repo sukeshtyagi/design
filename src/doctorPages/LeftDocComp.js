@@ -140,9 +140,41 @@ export function AppointCard({
 export function LabourAppointCard() {
   return (
     <div className={style.appointLabOuter}>
-      <div className={style.appointLabLeft}></div>
-      <div className={style.appointLabRight}></div>
-      <div className={style.appointLabContact}></div>
+      <div className={style.appointLabLeft}>
+        <div className={style.needRoofing}>
+          <p className={style.company}>Salford Company</p>
+          <p className={style.service}>
+            Need <span className={style.serviceSpan}>Roofing?</span>
+          </p>
+        </div>
+
+        <p className={style.labNeed}>
+          Enhancing Your Home’s Protection & Aesthetics
+        </p>
+
+        <div className={style.appointLabContact}>
+          <div className={style.contactDiv}>
+            <div className={style.iconDiv}>
+              <img
+                src="/images/ca/call.svg"
+                alt=""
+                className={style.callIcon}
+              />
+            </div>
+            <p className={style.contactNo}>+91 9876543211</p>
+          </div>
+          <div className={style.contactDiv}>
+            <div className={style.iconDiv}>
+              <img src="/images/ca/web.svg" alt="" className={style.webIcon} />
+            </div>
+              <p className={style.webAddress}>www.englishclass.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div className={style.appointLabRight}>
+        <img src="/images/ca/labImage.svg" alt="" />
+      </div>
     </div>
   );
 }
