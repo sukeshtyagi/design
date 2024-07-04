@@ -140,6 +140,8 @@ export function AppointCard({
 export function LabourAppointCard() {
   return (
     <div className={style.appointLabOuter}>
+      <img src="/images/ca/Adv.png" alt="" />
+      {/*
       <div className={style.appointLabLeft}>
         <div className={style.needRoofing}>
           <p className={style.company}>Salford Company</p>
@@ -175,6 +177,7 @@ export function LabourAppointCard() {
       <div className={style.appointLabRight}>
         <img src="/images/ca/labImage.svg" alt="" />
       </div>
+      */}
     </div>
   );
 }
