@@ -5,22 +5,34 @@ import "slick-carousel/slick/slick-theme.css";
 import style from "../styles/CarouselComp.module.css";
 
 function CarouselComp2() {
-   const settings = {
-     dots: true,
-     infinite: true,
-     speed: 2000,
-     slidesToShow: 1,
-     slidesToScroll: 1,
-     autoplay: true,
-     autoplaySpeed: 2000,
-     arrows: false,
-     customPaging: (i) => <div className={style.customDot}></div>,
-     appendDots: (dots) => (
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    /*customPaging: (i) => <div className={style.customDot}></div>,*/
+    /*appendDots: (dots) => (
        <div>
          <ul className={style.customDots}>{dots}</ul>
        </div>
-     ),
-   };
+     ),*/
+    appendDots: (dots) => (
+      <div
+        style={{
+          borderRadius: "10px",
+          padding: "10px",
+          position: "relative",
+          bottom: "70px",
+        }}
+      >
+        <ul className={style.customDots}> {dots} </ul>
+      </div>
+    ),
+  };
 
   return (
     <Slider {...settings}>
