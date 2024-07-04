@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Faq.module.css";
 
-function Faq({ docListing, teacherListing, caListing, labourListing }) {
+function Faq({ docListing, teacherListing, caListing, labourListing ,enggListing}) {
   const faqData = {
     docListing: [
       "Which dentist is best for emergency dental care in my area?",
@@ -39,6 +39,15 @@ function Faq({ docListing, teacherListing, caListing, labourListing }) {
       "Which female maid is best in my area?",
       "Which female maid is best in my area?",
     ],
+    enggListing: [
+      "Which Engineer is best in my area?",
+      "Which Engineer is best in my area?",
+      "Which Engineer is best in my area?",
+      "Which Engineer is best in my area?",
+      "Which Engineer is best in my area?",
+      "Which Engineer is best in my area?",
+      "Which Engineer is best in my area?",
+    ],
   };
 
   const renderFaqItems = (faqArray) =>
@@ -57,6 +66,7 @@ function Faq({ docListing, teacherListing, caListing, labourListing }) {
         {teacherListing && renderFaqItems(faqData.teacherListing)}
         {caListing && renderFaqItems(faqData.caListing)}
         {labourListing && renderFaqItems(faqData.labourListing)}
+        {enggListing && renderFaqItems(faqData.enggListing)}
       </div>
     </div>
   );
