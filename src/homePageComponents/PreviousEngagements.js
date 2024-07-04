@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import PreviousEngagementCard from "./PreviousEngagementCard";
 import style from "../styles/PreviousEngagements.module.css";
+import PreviousEngagementsChild from "../commonComponents/PreviousEngagementsChild";
 function PreviousEngagements() {
   const [activeCategory, setActiveCategory] = useState("Doctors");
 
@@ -26,9 +26,7 @@ function PreviousEngagements() {
             </h1>
           </div>
           <div className={style.rightDiv}>
-            <button className={`${style.viewBtn}`}>
-              VIEW ALL
-            </button>
+            <button className={`${style.viewBtn}`}>VIEW ALL</button>
           </div>
         </div>
 
@@ -39,10 +37,10 @@ function PreviousEngagements() {
               className={`${style.midDivPara} ${
                 activeCategory === category ? style.active : ""
               } cursor-pointer`}
-              onClick={() => setActiveCategory(category)}
             >
               <p
                 className={`${style.midDivPara2} hover:text-appGreen cursor-pointer`}
+                onClick={() => setActiveCategory(category)}
                 style={
                   activeCategory === category
                     ? {
@@ -56,97 +54,7 @@ function PreviousEngagements() {
             </div>
           ))}
         </div>
-        <div className={style.btmDiv}>
-          <div className={style.uprDiv}>
-            <div className={style.leftTopBtm}>
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-            </div>
-
-            <div className={style.rightTopBtm}>
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-            </div>
-          </div>
-          <div className={style.lwrDiv}>
-            <div className={style.leftLwrBtm}>
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-            </div>
-            <div className={style.rightLwrBtm}>
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-
-              <PreviousEngagementCard
-                img={"/images/prev.svg"}
-                name="Dr. John Smith"
-                service="Medical Services"
-                about="Top Paediatrician in Delhi"
-                date="12/12/2022"
-                stars="5"
-                rating="4.5"
-              />
-            </div>
-          </div>
-        </div>
+        <PreviousEngagementsChild activeCategory={activeCategory}/>
       </div>
     </div>
   );

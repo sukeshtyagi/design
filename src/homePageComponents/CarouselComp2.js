@@ -14,12 +14,7 @@ function CarouselComp2() {
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
-    /*customPaging: (i) => <div className={style.customDot}></div>,*/
-    /*appendDots: (dots) => (
-       <div>
-         <ul className={style.customDots}>{dots}</ul>
-       </div>
-     ),*/
+    
     appendDots: (dots) => (
       <div
         style={{

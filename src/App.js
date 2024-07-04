@@ -10,7 +10,7 @@ import TeacherListing from "./teacherPages/TeacherListing";
 import TeacherDetail from "./teacherPages/TeacherDetail";
 import CaListing from "./caPages/CaListing";
 import CaDetail from "./caPages/CaDetail";
-import Trial from "./commonComponents/Trial";
+import PreviousEngagementsChild from "./commonComponents/PreviousEngagementsChild";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />
-        <Route path="/abc" element={<Trial />} />
+        <Route path="/abc" element={<PreviousEngagementsChild />} />
       </Routes>
     </BrowserRouter>
   );
