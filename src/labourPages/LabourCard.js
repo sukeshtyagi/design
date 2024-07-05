@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import style from "./EnggCard.module.css";
 import { useNavigate } from "react-router-dom";
+import style from "../doctorPages/DoctorCard.module.css";
 
-function EnggCard({
+function LabourCard({
   doctorDetail,
-  enggListing,
+  labourDetail,
+  labourListing,
   img,
   name,
   title,
@@ -37,22 +38,17 @@ function EnggCard({
     setIsHeartClicked(true);
   };
 
+  console.log(labourListing);
+
   return (
     <div
-      className={style.cardOuter}
-      style={
-        doctorDetail
-          ? {
-              width: "1128px",
-              gap: "436px",
-            } 
-          : {}
-      }
+      className={`${style.cardOuter} 
+      ${labourListing ? style.labourListingCardOuter : ""}
+      ${labourDetail ? style.labourDetailCardOuter : ""}`}
       onClick={() => {
-        if (enggListing) {
-          navigate("/teacher-detail", {
+        if (labourListing) {
+          navigate("/labour-detail", {
             state: {
-              enggListing,
               img,
               name,
               title,
@@ -66,49 +62,37 @@ function EnggCard({
       }}
     >
       <div
-        className={style.cardLeft}
-        style={
-          doctorDetail
-            ? {
-                width: "606px",
-                height: "215px",
-                gap: "30px",
-              }
-            : {}
-        }
+        className={`${style.cardLeft} ${
+          doctorDetail ? style.docDetailCardLeft : ""
+        }`}
       >
-        <div className={style.imgDiv}>
+        <div
+          className={style.imgDiv}
+          style={labourDetail ? { marginTop: "6px", marginBottom: "6px" } : {}}
+        >
           <img src={img} alt="" className={style.image} />
           <div className={style.ratingContainer}>
             <p className={style.rating}>4.5</p>
             <img src="/images/doctor/whiteStar.svg" alt="" />
           </div>
-          <p className={style.reviews}>10 Reviews</p>
+          <p className={style.reviews}>300 Reviews</p>
         </div>
         <div className={style.details}>
           <h1
-            className={style.name}
-            style={
-              doctorDetail
-                ? {
-                    fontSize: "30px",
-                    lineHeight: "45px",
-                  }
-                : {}
-            }
+            className={`${style.name} ${
+              doctorDetail ? style.docDetailName : ""
+            }`}
           >
             {name}
           </h1>
-          <p className={`${style.title} ${enggListing ? style.title2 : ""}`}>
-            {title}
-          </p>
+          <p className={style.title}>{title}</p>
           <p className={style.qual}>{qual1}</p>
           <p className={style.qual}>{qual2}</p>
           {qual3 && <p className={style.qual}>{qual3}</p>}
           {qual4 && (
             <p
               className={`${style.qual}
-          ${enggListing ? style.customQual4 : ""}`}
+          ${labourListing ? style.customQual4 : ""}`}
             >
               {qual4}
             </p>
@@ -126,13 +110,15 @@ function EnggCard({
             <div
               className={`${style.call} ${
                 clicked === "div2" ? style.clickedAppointment : ""
-              }`}
+              }
+              ${labourListing ? style.caBookConsultation : ""}
+              `}
               onClick={(e) => {
                 e.stopPropagation();
                 setClicked("div2");
               }}
             >
-              <p className={style.action}>Hire Now</p>
+              <p className={style.action}>{labourListing}</p>
             </div>
             <div
               className={`${style.call} ${
@@ -176,4 +162,4 @@ function EnggCard({
   );
 }
 
-export default EnggCard;
+export default LabourCard;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import style from "./DoctorCard.module.css";
 import { useNavigate } from "react-router-dom";
-import TeacherDetail from "../teacherPages/TeacherDetail";
 
 function DoctorCard({
   doctorListing,
@@ -20,7 +19,6 @@ function DoctorCard({
   qual4,
   address,
 }) {
-  console.log(doctorDetail);
   const [clicked, setClicked] = useState("");
   const [heartImage, setHeartImage] = useState("/images/doctor/heartIcon.svg");
   const [isHeartClicked, setIsHeartClicked] = useState(false);
@@ -150,10 +148,9 @@ function DoctorCard({
               <p className={style.action1}>Call Now</p>
             </div>
             <div
-              className={`${style.call} ${
-                clicked === "div2" ? style.clickedAppointment : ""
-              }
+              className={`${style.call} 
               ${caListing ? style.caBookConsultation : ""}
+              ${clicked === "div2" ? style.clickedAppointment : ""}
               `}
               onClick={(e) => {
                 e.stopPropagation();

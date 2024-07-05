@@ -4,7 +4,6 @@ import Header from "../homePageComponents/Header";
 import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import { LabourFilterCards, SpecCards } from "./LabourSpecCards";
-import DoctorCard from "../doctorPages/DoctorCard";
 import Pagination from "../doctorPages/Pagination";
 import {
   Query,
@@ -12,6 +11,7 @@ import {
   LabourAppointCard,
 } from "../doctorPages/LeftDocComp";
 import Faq from "../commonComponents/Faq";
+import LabourCard from "./LabourCard";
 
 function LabourListing() {
   const docCardData = [
@@ -93,8 +93,8 @@ function LabourListing() {
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
-                <DoctorCard
-                  labourListing="true"
+                <LabourCard
+                  labourListing="Hire Now"
                   img={data.img}
                   name={data.name}
                   title={data.title}

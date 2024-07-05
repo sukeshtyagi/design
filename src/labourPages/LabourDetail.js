@@ -11,15 +11,18 @@ import MostViewed2 from "../doctorPages/MostViewed2";
 import LabourOtherDetail from "./LabourOtherDetail";
 import { LabourAppointCard } from "../doctorPages/LeftDocComp";
 import BookAppointment from "../doctorPages/BookAppointment";
+import LabourCard from "./LabourCard";
 
 function LabourDetail() {
   const location = useLocation();
-  const { img, name, title, qual1, qual2, qual3, qual4 } = location.state || {};
+  const { img, name, title, qual1, qual2, qual3, qual4, labourListing } =
+    location.state || {};
 
   const [select, setSelect] = useState("about");
   const handleSelect = (value) => {
     setSelect(value);
   };
+  console.log(labourListing);
   return (
     <>
       <Header userDashboard="true" />
@@ -40,9 +43,10 @@ function LabourDetail() {
             <img src="/images/doctor/rightArrow.svg" alt="" />
             <p className={style.para}>Anna J.</p>
           </div>
-          <DoctorCard
-            doctorDetail="true"
-            labourListing="true"
+          <LabourCard
+            docDetail="true"
+            labourDetail="true"
+            labourListing="Hire Now"
             img={img}
             name={name}
             title={title}
@@ -150,11 +154,8 @@ function LabourDetail() {
               <SubmitFeedback forWhom="Ms. Anna J." />
             </div>
             <div className={style.rightDetail}>
-              <BookAppointment
-                divHeading="Hire Anna"
-                btnHeading="Hire Now"
-              />
-              <LabourAppointCard/>
+              <BookAppointment divHeading="Hire Anna" btnHeading="Hire Now" />
+              <LabourAppointCard />
             </div>
           </div>
           <MostViewed2 category="maids" />

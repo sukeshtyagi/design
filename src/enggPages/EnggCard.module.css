@@ -11,9 +11,7 @@
 }
 
 .cardLeft {
-  width: 526px;
   width: fit-content;
-  height: 212px;
   height: fit-content;
   display: flex;
   justify-content: flex-start;

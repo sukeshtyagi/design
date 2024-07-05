@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 091px;
+  gap: 91px;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 10px;
 }
@@ -17,7 +17,6 @@
   height: 280px;
   gap: 435px;
   padding: 32px 30px 33px 31px;
-  border: 1px solid red;
 }
 
 .teacherListingCardOuter {
@@ -34,7 +33,6 @@
 
 .caListingCardOuter {
   padding: 33px 31.27px;
-  border: 1px solid red;
   gap: 0px;
   justify-content: space-between;
 }
@@ -46,18 +44,28 @@
   gap: 0px;
 }
 
+.labourListingCardOuter {
+  padding: 34px 26.27px 34px 26.5px;
+  gap: 161px;
+  justify-content: flex-start;
+}
+
+.labourDetailCardOuter {
+  width: 1128px;
+  height: 280px;
+  padding: 28px 60px 31px 31px;/*padding right is changed from 78 to 60 to increase gap but kept what it is from figma*/
+  gap: 448px;
+}
+
 .cardLeft {
   width: 596px;
   width: fit-content;
-  /*height: 209px;
-  height: 214px;*/
   height: 223px;
   height: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
-  border: 1px solid green;
 }
 
 .docDetailCardLeft {
@@ -72,6 +80,8 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  
+
 }
 
 .image {
@@ -117,7 +127,6 @@
   display: flex;
   flex-direction: column;
   gap: 05px;
-  border: 1px solid pink;
 }
 
 .name,
@@ -174,7 +183,6 @@
   display: flex;
   gap: 30px;
   margin-top: 11px;
-  border: 1px solid green;
 }
 
 .call,
@@ -224,8 +232,7 @@
 
 .caBookConsultation {
   padding: 8px 20px;
-  background-color: orange;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .icon {

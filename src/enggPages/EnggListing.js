@@ -109,10 +109,8 @@ function EnggListing() {
               <LabourAppointCard img="images/ca/enggAdBanner.png" />
             </div>
           </div>
-          {/*lisitn inner closes below */}
         </div>
       </div>
-      {/*lisitn outer closes here */}
       <Faq enggListing="true" />
 
       <Footer />
