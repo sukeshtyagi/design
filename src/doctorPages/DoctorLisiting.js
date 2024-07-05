@@ -86,6 +86,7 @@ function DoctorLisiting() {
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
                 <DoctorCard
+                  doctorListing="Book Appointment"
                   img={data.img}
                   name={data.name}
                   title={data.title}

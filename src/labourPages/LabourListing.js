@@ -89,7 +89,7 @@ function LabourListing() {
           </div>
           <h1 className={style.heading}>Best Maid in HSR Layout</h1>
           <LabourFilterCards />
-          
+
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
@@ -108,7 +108,7 @@ function LabourListing() {
             </div>
             <div className={style.btmRight}>
               <Query forWhom="Maids" />
-              <LabourAppointCard />
+              <LabourAppointCard img="/images/ca/Adv.png" />
             </div>
           </div>
         </div>

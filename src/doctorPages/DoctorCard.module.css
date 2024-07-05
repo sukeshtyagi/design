@@ -1,6 +1,8 @@
 .cardOuter {
   width: 776px;
   height: 280px;
+  padding-top: 35.75px;
+  padding-bottom: 35.25px;
   padding-left: 22px;
   display: flex;
   justify-content: flex-start;
@@ -10,15 +12,30 @@
   border-radius: 10px;
 }
 
+.docDetailCardOuter {
+  width: 1128px;
+  height: 280px;
+  gap: 436px;
+  padding: 32px 30px 33px 31px;
+}
+
+.teacherListingCardOuter{
+  padding: 33px 15px;
+  gap: 55px;
+}
+
 .cardLeft {
   width: 596px;
-  height: 209px;
-  margin-top: 35.75px;
+  /*height: 209px;
+  height: 214px;*/
+  height: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
+}
 
+.docDetailCardLeft {
   width: 606px;
   height: 215px;
   gap: 30px;
@@ -70,8 +87,9 @@
 }
 
 .details {
-  width: Hug (436px) px;
-  height: Hug (206px) px;
+  width: 436px;
+  height: 206px;
+  height: 215px;
   gap: 16px;
   display: flex;
   flex-direction: column;
@@ -99,7 +117,14 @@
   height: 36px;
   color: rgba(11, 219, 182, 1);
 }
-
+/**/
+.docDetailName {
+  height: 45px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 45px;
+}
+/**/
 .title,
 .qual {
   height: 24px;
@@ -123,7 +148,7 @@
   width: 436px;
   height: 37px;
   display: flex;
-  gap: 27px;
+  gap: 30px;
   margin-top: 11px;
 }
 
@@ -184,12 +209,12 @@
 
 .cardRight {
   width: fit-content;
-  width: 96px;
   height: fit-content;
-  margin-top: 36px;
+  height: 128px ;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: 20px;
 }
 
@@ -200,13 +225,12 @@
 
 .cardRightImg2 {
   width: 19px !important;
-  height: 18px;
 }
 
 .heartClicked {
-  width: 30px !important;
+  width: 160px;
   height: 30px;
-  transition: width 0.5s ease, height 0s ease;
+  height: 18px;
 }
 
 .rate,

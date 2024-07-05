@@ -3,6 +3,7 @@ import style from "./DoctorCard.module.css";
 import { useNavigate } from "react-router-dom";
 
 function DoctorCard({
+  doctorListing,
   doctorDetail,
   teacherListing,
   caListing,
@@ -41,15 +42,10 @@ function DoctorCard({
 
   return (
     <div
-      className={style.cardOuter}
-      style={
-        doctorDetail
-          ? {
-              width: "1128px",
-              gap: "436px",
-            }
-          : {}
+      className={`${style.cardOuter} ${
+        doctorDetail ? style.docDetailCardOuter : ""
       }
+      ${teacherListing ? style.teacherListingCardOuter : ""}`}
       onClick={() => {
         if (!teacherListing) {
           navigate("/doctor-detail", {
@@ -103,16 +99,9 @@ function DoctorCard({
       }}
     >
       <div
-        className={style.cardLeft}
-        style={
-          doctorDetail
-            ? {
-                width: "606px",
-                height: "215px",
-                gap: "30px",
-              }
-            : {}
-        }
+        className={`${style.cardLeft} ${
+          doctorDetail ? style.docDetailCardLeft : ""
+        }`}
       >
         <div className={style.imgDiv}>
           <img src={img} alt="" className={style.image} />
@@ -124,15 +113,9 @@ function DoctorCard({
         </div>
         <div className={style.details}>
           <h1
-            className={style.name}
-            style={
-              doctorDetail
-                ? {
-                    fontSize: "30px",
-                    lineHeight: "45px",
-                  }
-                : {}
-            }
+            className={`${style.name} ${
+              doctorDetail ? style.docDetailName : ""
+            }`}
           >
             {name}
           </h1>
@@ -167,7 +150,7 @@ function DoctorCard({
                 setClicked("div2");
               }}
             >
-              <p className={style.action}>Book Appointment</p>
+              <p className={style.action}>{doctorListing} {teacherListing}</p>
             </div>
             <div
               className={`${style.call} ${
@@ -190,14 +173,6 @@ function DoctorCard({
       </div>
       <div
         className={style.cardRight}
-        style={
-          teacherListing
-            ? {
-                marginLeft: "-50px",
-                marginRight: "15px",
-              }
-            : {}
-        }
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}

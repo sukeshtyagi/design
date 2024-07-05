@@ -87,7 +87,7 @@ function TeacherListing() {
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
                 <DoctorCard
-                  teacherListing="true"
+                  teacherListing="Book Trial Lesson"
                   img={data.img}
                   name={data.name}
                   title={data.title}

@@ -137,10 +137,10 @@ export function AppointCard({
   );
 }
 
-export function LabourAppointCard() {
+export function LabourAppointCard({img}) {
   return (
     <div className={style.appointLabOuter}>
-      <img src="/images/ca/Adv.png" alt="" />
+      <img src={img} alt="" />
       {/*
       <div className={style.appointLabLeft}>
         <div className={style.needRoofing}>

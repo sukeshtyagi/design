@@ -83,7 +83,7 @@ function EnggCard({
             <p className={style.rating}>4.5</p>
             <img src="/images/doctor/whiteStar.svg" alt="" />
           </div>
-          <p className={style.reviews}>300 Reviews</p>
+          <p className={style.reviews}>10 Reviews</p>
         </div>
         <div className={style.details}>
           <h1

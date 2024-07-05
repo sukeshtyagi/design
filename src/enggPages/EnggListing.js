@@ -7,7 +7,7 @@ import { EnggFilterCards, SpecCards } from "./EnggSpecCards";
 import Pagination from "../doctorPages/Pagination";
 import EnggCard from "./EnggCards";
 import Faq from "../commonComponents/Faq";
-import { Query } from "../doctorPages/LeftDocComp";
+import { LabourAppointCard, Query } from "../doctorPages/LeftDocComp";
 
 function EnggListing() {
   const enggCardData = [
@@ -104,8 +104,9 @@ function EnggListing() {
               ))}
               <Pagination />
             </div>
-            <div className={style.btmRight}>
+            <div className={style.btmRight} style={{ marginLeft: "-8px" }}>
               <Query forWhom="Websites IT & Software Engineers" />
+              <LabourAppointCard img="images/ca/enggAdBanner.png" />
             </div>
           </div>
           {/*lisitn inner closes below */}
