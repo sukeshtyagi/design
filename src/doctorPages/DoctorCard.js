@@ -45,11 +45,12 @@ function DoctorCard({
       className={`${style.cardOuter} ${
         doctorDetail ? style.docDetailCardOuter : ""
       }
-      ${teacherListing ? style.teacherListingCardOuter : ""}`}
+      ${teacherListing ? style.teacherListingCardOuter : ""}
+       ${doctorDetail ? style.teacherDetailCardOuter : ""}`}
       onClick={() => {
-        if (!teacherListing) {
+        if (doctorListing) {
           navigate("/doctor-detail", {
-            state: { img, name, title, qual1, qual2, address },
+            state: { img, name, title, qual1, qual2, address, doctorListing },
           });
         }
 
@@ -150,7 +151,9 @@ function DoctorCard({
                 setClicked("div2");
               }}
             >
-              <p className={style.action}>{doctorListing} {teacherListing}</p>
+              <p className={style.action}>
+                {doctorListing} {teacherListing}
+              </p>
             </div>
             <div
               className={`${style.call} ${

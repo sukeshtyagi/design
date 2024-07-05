@@ -19,15 +19,24 @@
   padding: 32px 30px 33px 31px;
 }
 
-.teacherListingCardOuter{
+.teacherListingCardOuter {
   padding: 33px 15px;
   gap: 55px;
+}
+
+.teacherDetailCardOuter {
+  width: 1128px;
+  height: 280px;
+  gap: 365px;
+  padding: 28px 31px 29px;
+  border: 1px solid green;
 }
 
 .cardLeft {
   width: 596px;
   /*height: 209px;
   height: 214px;*/
+  height: 223px;
   height: fit-content;
   display: flex;
   justify-content: flex-start;
@@ -37,7 +46,7 @@
 
 .docDetailCardLeft {
   width: 606px;
-  height: 215px;
+  height: fit-content;
   gap: 30px;
 }
 
@@ -88,12 +97,10 @@
 
 .details {
   width: 436px;
-  height: 206px;
-  height: 215px;
-  gap: 16px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 05px;
 }
 
 .name,
@@ -210,7 +217,7 @@
 .cardRight {
   width: fit-content;
   height: fit-content;
-  height: 128px ;
+  height: 128px;
   display: flex;
   flex-direction: column;
   align-items: center;

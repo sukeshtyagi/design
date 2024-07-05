@@ -13,7 +13,8 @@ import { PatientReviews } from "./NewReviews";
 import MostViewed2 from "./MostViewed2";
 function DoctorDetail() {
   const location = useLocation();
-  const { img, name, title, qual1, qual2, address } = location.state || {};
+  const { img, name, title, qual1, qual2, address, doctorListing } =
+    location.state || {};
 
   const [select, setSelect] = useState("about");
   const handleSelect = (value) => {
@@ -44,6 +45,7 @@ function DoctorDetail() {
 
           <DoctorCard
             doctorDetail="true"
+            doctorListing={doctorListing}
             img={img}
             name={name}
             title={title}

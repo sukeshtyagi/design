@@ -14,7 +14,8 @@ import MostViewed2 from "../doctorPages/MostViewed2";
 
 function TeacherDetail() {
   const location = useLocation();
-  const { img, name, title, qual1, qual2, qual3, qual4 } = location.state || {};
+  const { img, name, title, qual1, qual2, qual3, qual4, teacherListing } =
+    location.state || {};
 
   const [select, setSelect] = useState("about");
   const handleSelect = (value) => {
@@ -44,7 +45,7 @@ function TeacherDetail() {
 
           <DoctorCard
             doctorDetail="true"
-            teacherListing="true"
+            teacherListing={teacherListing}
             img={img}
             name={name}
             title={title}
@@ -86,7 +87,6 @@ function TeacherDetail() {
                 >
                   Reviews
                 </p>
-               
               </div>
               <div className={style.about} style={{ height: "369px" }}>
                 <p className={style.information1}>

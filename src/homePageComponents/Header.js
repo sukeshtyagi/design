@@ -6,7 +6,6 @@ function Header({ dekstopLogin, signup, userDashboard }) {
   const navigate = useNavigate();
   const handleNavigation = () => {
     const userDetails = localStorage.getItem("userDetails");
-    console.log(userDetails);
     if (userDetails) {
       navigate("/homepage");
     } else {
