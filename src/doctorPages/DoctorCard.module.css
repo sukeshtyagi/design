@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 91px;
+  gap: 091px;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 10px;
 }
@@ -15,8 +15,9 @@
 .docDetailCardOuter {
   width: 1128px;
   height: 280px;
-  gap: 436px;
+  gap: 435px;
   padding: 32px 30px 33px 31px;
+  border: 1px solid red;
 }
 
 .teacherListingCardOuter {
@@ -27,13 +28,27 @@
 .teacherDetailCardOuter {
   width: 1128px;
   height: 280px;
-  gap: 365px;
-  padding: 28px 31px 29px;
-  border: 1px solid green;
+  gap: 387px;
+  padding: 28px 0 29px 31px;
+}
+
+.caListingCardOuter {
+  padding: 33px 31.27px;
+  border: 1px solid red;
+  gap: 0px;
+  justify-content: space-between;
+}
+
+.caDetailCardOuter {
+  width: 1128px;
+  height: 280px;
+  padding: 28px 80px 29px 31px;
+  gap: 0px;
 }
 
 .cardLeft {
   width: 596px;
+  width: fit-content;
   /*height: 209px;
   height: 214px;*/
   height: 223px;
@@ -42,10 +57,11 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
+  border: 1px solid green;
 }
 
 .docDetailCardLeft {
-  width: 606px;
+  width: fit-content;
   height: fit-content;
   gap: 30px;
 }
@@ -96,11 +112,12 @@
 }
 
 .details {
-  width: 436px;
+  width: fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 05px;
+  border: 1px solid pink;
 }
 
 .name,
@@ -152,11 +169,12 @@
 }
 
 .btnContainer {
-  width: 436px;
+  width: fit-content;
   height: 37px;
   display: flex;
   gap: 30px;
   margin-top: 11px;
+  border: 1px solid green;
 }
 
 .call,
@@ -202,6 +220,12 @@
 .action1 {
   font-size: 14px;
   line-height: 21px;
+}
+
+.caBookConsultation {
+  padding: 8px 20px;
+  background-color: orange;
+  font-size: 13px;
 }
 
 .icon {

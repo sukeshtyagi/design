@@ -14,7 +14,7 @@ import { AppointCard } from "../doctorPages/LeftDocComp";
 
 function CaDetail() {
   const location = useLocation();
-  const { img, name, title, qual1, qual2, qual3, qual4 } = location.state || {};
+  const { img, name, title, qual1, qual2, qual3, qual4,caListing } = location.state || {};
 
   const [select, setSelect] = useState("about");
   const handleSelect = (value) => {
@@ -42,7 +42,8 @@ function CaDetail() {
             <p className={style.para}>Wade Warren</p>
           </div>
           <DoctorCard
-            doctorDetail="true"
+            caDetail="true"
+            caListing={caListing}
             img={img}
             name={name}
             title={title}

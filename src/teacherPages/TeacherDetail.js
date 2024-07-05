@@ -44,7 +44,7 @@ function TeacherDetail() {
           </div>
 
           <DoctorCard
-            doctorDetail="true"
+            teacherDetail="true"
             teacherListing={teacherListing}
             img={img}
             name={name}

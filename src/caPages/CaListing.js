@@ -86,7 +86,7 @@ function CaListing() {
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
                 <DoctorCard
-                  caListing="true"
+                  caListing="Book a Consultation"
                   img={data.img}
                   name={data.name}
                   title={data.title}

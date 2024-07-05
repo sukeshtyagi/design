@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import style from "./DoctorCard.module.css";
 import { useNavigate } from "react-router-dom";
+import TeacherDetail from "../teacherPages/TeacherDetail";
 
 function DoctorCard({
   doctorListing,
   doctorDetail,
   teacherListing,
+  teacherDetail,
   caListing,
+  caDetail,
   labourListing,
   img,
   name,
@@ -17,6 +20,7 @@ function DoctorCard({
   qual4,
   address,
 }) {
+  console.log(doctorDetail);
   const [clicked, setClicked] = useState("");
   const [heartImage, setHeartImage] = useState("/images/doctor/heartIcon.svg");
   const [isHeartClicked, setIsHeartClicked] = useState(false);
@@ -46,7 +50,10 @@ function DoctorCard({
         doctorDetail ? style.docDetailCardOuter : ""
       }
       ${teacherListing ? style.teacherListingCardOuter : ""}
-       ${doctorDetail ? style.teacherDetailCardOuter : ""}`}
+       ${teacherDetail ? style.teacherDetailCardOuter : ""}
+       ${caListing ? style.caListingCardOuter : ""}
+        ${caDetail ? style.caDetailCardOuter : ""}
+       `}
       onClick={() => {
         if (doctorListing) {
           navigate("/doctor-detail", {
@@ -145,14 +152,16 @@ function DoctorCard({
             <div
               className={`${style.call} ${
                 clicked === "div2" ? style.clickedAppointment : ""
-              }`}
+              }
+              ${caListing ? style.caBookConsultation : ""}
+              `}
               onClick={(e) => {
                 e.stopPropagation();
                 setClicked("div2");
               }}
             >
               <p className={style.action}>
-                {doctorListing} {teacherListing}
+                {doctorListing || teacherListing || caListing}
               </p>
             </div>
             <div
