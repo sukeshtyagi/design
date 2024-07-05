@@ -1,5 +1,5 @@
 import React from "react";
-import PreviousEngagementCard from "../homePageComponents/PreviousEngagementCard";
+import PreviousEngagementCard from "./PreviousEngagementCard";
 import style from "../styles/PreviousEngagements.module.css";
 
 function PreviousEngagementsChild({ activeCategory }) {
