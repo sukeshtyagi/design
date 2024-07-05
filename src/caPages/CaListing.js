@@ -1,14 +1,13 @@
 import React from "react";
 import style from "../doctorPages/DoctorListing.module.css";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
 import Pagination from "../doctorPages/Pagination";
 import Faq from "../commonComponents/Faq";
 import { AppointCard, Query } from "../doctorPages/LeftDocComp";
 import { CaFilterCards, SpecCards } from "./CaSpecCards";
-
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 function CaListing() {
   const docCardData = [
     {

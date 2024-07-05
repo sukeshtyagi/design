@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import style from "./UserDashboard.module.css";
 import PersonalInfo from "./PersonalInfo";
 import ManageAddress from "./ManageAddress";
-import Reviews from "./Reviews";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
+import Reviews from "./ReviewsAndRating";
 
 function UserDashboard() {
   const [selectedOption, setSelectedOption] = useState("personalInfo");
@@ -126,10 +126,17 @@ function UserDashboard() {
                   onClick={() => handleOptionClick("delete")}
                 >
                   <img src={deleteIcon} alt="" />
-                  <p className={style.paraDelete}
-                  onMouseEnter={()=>{setDeleteIcon("/images/blogs/hoverDelete.svg");}}
-                  onMouseLeave={()=>{setDeleteIcon("/images/blogs/delete.svg");}}
-                  >Delete Account</p>
+                  <p
+                    className={style.paraDelete}
+                    onMouseEnter={() => {
+                      setDeleteIcon("/images/blogs/hoverDelete.svg");
+                    }}
+                    onMouseLeave={() => {
+                      setDeleteIcon("/images/blogs/delete.svg");
+                    }}
+                  >
+                    Delete Account
+                  </p>
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "../styles/PreviousEngagements.module.css";
-import PreviousEngagementsChild from "../commonComponents/PreviousEngagementsChild";
+import PreviousEngagementsChild from "./PreviousEngagementsChild";
 function PreviousEngagements() {
   const [activeCategory, setActiveCategory] = useState("Doctors");
 

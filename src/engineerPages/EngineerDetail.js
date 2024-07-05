@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import style from "../doctorPages/DoctorListing.module.css";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
-import EnggCard from "./EnggCards";
 import { useLocation } from "react-router-dom";
-import EnggReviews from "./EnggReviews";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
+import EngineerCards from "./EngineerCards";
+import EngineerReviews from "./EngineerReviews";
 
 function EnggDetail() {
   const location = useLocation();
@@ -40,7 +40,7 @@ function EnggDetail() {
             <img src="/images/doctor/rightArrow.svg" alt="" />
             <p className={style.para}>Jacob Jones</p>
           </div>
-          <EnggCard
+          <EngineerCards
             doctorDetail="true"
             enggListing="true"
             img={img}
@@ -155,7 +155,7 @@ function EnggDetail() {
                   </div>
                 </div>
               </div>
-              <EnggReviews enggReview="true" />
+              <EngineerReviews enggReview="true" />
             </div>
           </div>
         </div>

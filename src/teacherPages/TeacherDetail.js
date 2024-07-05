@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import style from "../doctorPages/DoctorListing.module.css";
 import { useLocation } from "react-router-dom";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
 import { SubmitFeedback } from "../doctorPages/PatientReviews";
@@ -11,6 +9,8 @@ import TeacherFee from "./TeacherFee";
 import BookAppointment from "../doctorPages/BookAppointment";
 import { PatientReviews } from "../doctorPages/NewReviews";
 import MostViewed2 from "../doctorPages/MostViewed2";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 
 function TeacherDetail() {
   const location = useLocation();

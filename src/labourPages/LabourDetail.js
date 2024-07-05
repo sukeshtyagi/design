@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import style from "../doctorPages/DoctorListing.module.css";
-import Footer from "../homePageComponents/Footer";
-import Header from "../homePageComponents/Header";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
 import { useLocation } from "react-router-dom";
@@ -12,6 +10,8 @@ import LabourOtherDetail from "./LabourOtherDetail";
 import { LabourAppointCard } from "../doctorPages/LeftDocComp";
 import BookAppointment from "../doctorPages/BookAppointment";
 import LabourCard from "./LabourCard";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 
 function LabourDetail() {
   const location = useLocation();

@@ -1,7 +1,5 @@
 import React from "react";
 import style from "../doctorPages/DoctorListing.module.css";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import { LabourFilterCards, SpecCards } from "./LabourSpecCards";
 import Pagination from "../doctorPages/Pagination";
@@ -12,6 +10,8 @@ import {
 } from "../doctorPages/LeftDocComp";
 import Faq from "../commonComponents/Faq";
 import LabourCard from "./LabourCard";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 
 function LabourListing() {
   const docCardData = [

@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import style from "./Desktopsignup.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import { useNavigate } from "react-router-dom";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 function DesktopSignup() {
   const navigate = useNavigate();
   const initialValues = {

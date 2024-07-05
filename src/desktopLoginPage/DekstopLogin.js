@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import style from "./DesktopLogin.module.css";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import { userLogin, checkServer } from "../axios/Axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 
 function DesktopLogin() {
   const navigate = useNavigate();
@@ -136,9 +136,7 @@ function DesktopLogin() {
               </div>
 
               <div className={style.iconDiv}>
-                <div
-                  className={`${style.icon1}`}
-                >
+                <div className={`${style.icon1}`}>
                   <img
                     src="/images/miss/google.svg"
                     alt=""
@@ -146,9 +144,7 @@ function DesktopLogin() {
                   />
                 </div>
 
-                <div
-                  className={`${style.icon2}`}
-                >
+                <div className={`${style.icon2}`}>
                   <img
                     src="/images/miss/fb.svg"
                     alt=""
@@ -156,9 +152,7 @@ function DesktopLogin() {
                   />
                 </div>
 
-                <div
-                  className={`${style.icon3}`}
-                >
+                <div className={`${style.icon3}`}>
                   <img
                     src="/images/miss/apple.svg"
                     alt=""

@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import style from "./DoctorListing.module.css";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "./DoctorCard";
 import { useLocation } from "react-router-dom";
-
 import { Address, SubmitFeedback } from "./PatientReviews";
 import { AppointCard } from "./LeftDocComp";
 import BookAppointment from "./BookAppointment";
 import { PatientReviews } from "./NewReviews";
 import MostViewed2 from "./MostViewed2";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 function DoctorDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, address, doctorListing } =

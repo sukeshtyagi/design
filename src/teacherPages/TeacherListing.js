@@ -1,13 +1,13 @@
 import React from "react";
 import style from "../doctorPages/DoctorListing.module.css";
-import Header from "../homePageComponents/Header";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
 import { Query, AppointCard } from "../doctorPages/LeftDocComp";
-import Footer from "../homePageComponents/Footer";
 import Faq from "../commonComponents/Faq";
 import Pagination from "../doctorPages/Pagination";
 import { SpecCards, TeacherFilterCards } from "./TeacherSpecCards";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 function TeacherListing() {
   const docCardData = [
     {

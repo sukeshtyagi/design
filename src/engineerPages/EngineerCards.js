@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./EnggCard.module.css";
+import style from "./EnginnerCard.module.css";
 import { useNavigate } from "react-router-dom";
 
 function EnggCard({

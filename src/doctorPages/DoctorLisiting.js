@@ -1,7 +1,5 @@
 import React from "react";
 import style from "./DoctorListing.module.css";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "./DoctorCard";
 import Faq from "../commonComponents/Faq";
@@ -9,6 +7,8 @@ import Appointment from "./Appointment";
 import { AppointCard, Query } from "./LeftDocComp";
 import Pagination from "./Pagination";
 import { DocFilterCards, SpecCards } from "./DocSpecCards";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 function DoctorLisiting() {
   const docCardData = [
     {

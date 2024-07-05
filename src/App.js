@@ -10,11 +10,10 @@ import TeacherListing from "./teacherPages/TeacherListing";
 import TeacherDetail from "./teacherPages/TeacherDetail";
 import CaListing from "./caPages/CaListing";
 import CaDetail from "./caPages/CaDetail";
-import PreviousEngagementsChild from "./commonComponents/PreviousEngagementsChild";
 import LabourListing from "./labourPages/LabourListing";
 import LabourDetail from "./labourPages/LabourDetail";
-import EnggListing from "./enggPages/EnggListing";
-import EnggDetail from "./enggPages/EnggDetail";
+import EngineerListing from "./engineerPages/EngineerListing";
+import EngineerDetail from "./engineerPages/EngineerDetail";
 
 function App() {
   return (
@@ -30,15 +29,13 @@ function App() {
         <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/ca's" element={<CaListing />} />
         <Route path="/labours" element={<LabourListing />} />
-        <Route path="/engineers" element={<EnggListing />} />
+        <Route path="/engineers" element={<EngineerListing />} />
 
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />
         <Route path="/labour-detail" element={<LabourDetail />} />
-        <Route path="/engineer-detail" element={<EnggDetail />} />
-
-        <Route path="/abc" element={<PreviousEngagementsChild />} />
+        <Route path="/engineer-detail" element={<EngineerDetail />} />
       </Routes>
     </BrowserRouter>
   );

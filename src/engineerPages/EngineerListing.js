@@ -1,13 +1,13 @@
 import React from "react";
 import style from "../doctorPages/DoctorListing.module.css";
-import Header from "../homePageComponents/Header";
-import Footer from "../homePageComponents/Footer";
 import SearchBar from "../commonComponents/SearchBar";
-import { EnggFilterCards, SpecCards } from "./EnggSpecCards";
+import { EnggFilterCards, SpecCards } from "./EngineerSpecCards";
 import Pagination from "../doctorPages/Pagination";
-import EnggCard from "./EnggCards";
 import Faq from "../commonComponents/Faq";
 import { LabourAppointCard, Query } from "../doctorPages/LeftDocComp";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
+import EnginnerCards from "./EngineerCards";
 
 function EnggListing() {
   const enggCardData = [
@@ -91,7 +91,7 @@ function EnggListing() {
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {enggCardData.map((data) => (
-                <EnggCard
+                <EnginnerCards
                   enggListing="true"
                   img={data.img}
                   name={data.name}

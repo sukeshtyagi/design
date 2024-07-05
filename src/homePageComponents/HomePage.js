@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
 import Miss from "./Miss";
 import Locations from "./Locations";
 import NeedHelp from "./NeedHelp";
@@ -12,6 +10,8 @@ import Campaigns from "./Campaigns";
 import LatestBlogs from "./LatestBlogs";
 import FAQ from "./FAQ";
 import CustomerStories from "./CustomerStories";
+import Header from "../commonComponents/Header";
+import Footer from "../commonComponents/Footer";
 function HomePage({ userDashboard }) {
   return (
     <>
