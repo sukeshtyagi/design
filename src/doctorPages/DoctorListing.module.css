@@ -316,6 +316,7 @@
 
 .eduDiv2 {
   gap: 20px;
+  
 }
 
 .eduHeading,
@@ -344,15 +345,18 @@
 
 .eduInner {
   display: flex;
+  margin: 0;
+  padding: 0;
   gap: 50px;
 }
 
 .eduLeft {
   width: fit-content;
-  height: 216px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 08px;
+
 }
 
 .rightDetail {

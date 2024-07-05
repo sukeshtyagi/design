@@ -66,8 +66,6 @@
 
 .details {
   width: fit-content;
-  width: 366px;
-  height: 212px;
   height: fit-content;
   display: flex;
   flex-direction: column;

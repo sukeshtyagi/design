@@ -44,13 +44,14 @@ function EnggCard({
         doctorDetail
           ? {
               width: "1128px",
-              gap: "436px",
-            } 
+              padding: "28px 77px 26px 31px",
+              gap: "0px",
+            }
           : {}
       }
       onClick={() => {
         if (enggListing) {
-          navigate("/teacher-detail", {
+          navigate("/engineer-detail", {
             state: {
               enggListing,
               img,
@@ -77,7 +78,10 @@ function EnggCard({
             : {}
         }
       >
-        <div className={style.imgDiv}>
+        <div
+          className={style.imgDiv}
+          style={{ marginTop: "8.5px", }}
+        >
           <img src={img} alt="" className={style.image} />
           <div className={style.ratingContainer}>
             <p className={style.rating}>4.5</p>

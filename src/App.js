@@ -14,6 +14,7 @@ import PreviousEngagementsChild from "./commonComponents/PreviousEngagementsChil
 import LabourListing from "./labourPages/LabourListing";
 import LabourDetail from "./labourPages/LabourDetail";
 import EnggListing from "./enggPages/EnggListing";
+import EnggDetail from "./enggPages/EnggDetail";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />
         <Route path="/labour-detail" element={<LabourDetail />} />
+        <Route path="/engineer-detail" element={<EnggDetail />} />
 
         <Route path="/abc" element={<PreviousEngagementsChild />} />
       </Routes>
