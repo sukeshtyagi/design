@@ -66,7 +66,10 @@ function EnggListing() {
       >
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" />
+            <SearchBar
+              userDashboard="true"
+              placeholderProp="Search Speciality, product, Website....."
+            />
           </div>
           <SpecCards />
         </div>
