@@ -6,8 +6,10 @@ import ManageAddress from "./ManageAddress";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import Reviews from "./ReviewsAndRating";
+import { useNavigate } from "react-router-dom";
 
 function UserDashboard() {
+  const navigate=useNavigate()
   const [selectedOption, setSelectedOption] = useState("personalInfo");
   const [rightDivOption, setRightDivOption] = useState("personalInfo");
   const [deleteIcon, setDeleteIcon] = useState("/images/blogs/delete.svg");
@@ -15,6 +17,9 @@ function UserDashboard() {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setRightDivOption(option);
+    if(option==="logout"){
+      navigate("/")
+    }
   };
 
   return (

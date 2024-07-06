@@ -127,8 +127,7 @@ function EnggDetail() {
                   Dr. Richards Specializes in the following Services and
                   Procedures
                 </h1>
-                <div className={style.eduInner}
-                style={{height:"153px"}}>
+                <div className={style.eduInner}>
                   <div>
                     <ul className={style.eduLeft}>
                       <li className={style.information3}>Angular</li>

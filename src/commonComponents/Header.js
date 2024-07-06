@@ -113,7 +113,9 @@ function Header({ dekstopLogin, signup, userDashboard }) {
             )}
 
             {userDashboard && (
-              <div>
+              <div
+              onClick={()=>{navigate("/profile")}}
+              >
                 <img
                   src="/images/blogs/user.svg"
                   alt=""
