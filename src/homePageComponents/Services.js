@@ -11,7 +11,7 @@ function Services() {
   return (
     <div className={`${style.outermostSectionContainer} `}>
       <div className={`${style.sectionContainer} `}>
-        <SearchBar />
+        <SearchBar teacherPlaceholder="Search doctors, advocates, teachers and many more....." />
         <div className={style.midDiv}>
           <div className={style.leftMid}>
             <CarouselComp2 />

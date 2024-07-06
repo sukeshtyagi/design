@@ -3,14 +3,15 @@ import style from "../doctorPages/DoctorListing.module.css";
 import { useLocation } from "react-router-dom";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
-import { SubmitFeedback } from "../doctorPages/PatientReviews";
 import { AppointCard } from "../doctorPages/LeftDocComp";
 import TeacherFee from "./TeacherFee";
 import BookAppointment from "../doctorPages/BookAppointment";
-import { PatientReviews } from "../doctorPages/NewReviews";
 import MostViewed2 from "../doctorPages/MostViewed2";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import TeacherDetailAboutSection from "./TeacherDetailAboutSection";
+import TeacherDetailReviewsSection from "./TeacherDetailReviewsSection";
+import TeacherDetailSpecialitiesSection from "./TeacherDetailSpecilitiesSection";
 
 function TeacherDetail() {
   const location = useLocation();
@@ -30,7 +31,10 @@ function TeacherDetail() {
       >
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" />
+            <SearchBar
+              userDashboard="true"
+              teacherPlaceholder="Search Speciality, English, Mathematics, Physics......."
+            />
           </div>
 
           <div className={style.locationFilterPara}>
@@ -88,76 +92,11 @@ function TeacherDetail() {
                   Reviews
                 </p>
               </div>
-              <div className={style.about} style={{ height: "369px" }}>
-                <p className={style.information1}>
-                  Hello! My name is Jenny, and I was born in Manhattan, New York
-                  City. I moved to North Carolina when I was seven years old. I
-                  like learning about different cultures, dancing and watching
-                  movies. I don't have a specific hobby as I am open to trying
-                  something new. <br />
-                  <br />
-                  I’ve been working in early childhood education for eight
-                  years. While teaching in the field....
-                  <span
-                    className={style.info1Span2}
-                    style={{ marginLeft: "630px" }}
-                  >
-                    Read More
-                  </span>
-                </p>
-
-                <div className={style.eduDiv}>
-                  <h1 className={style.eduHeading}>Education</h1>
-                  <ul>
-                    <li className={style.information2}>
-                      Bachelor of Arts (BA) in English Literature - University
-                      of XYZ, North Carolina, USA, 2016
-                    </li>
-                    <li className={style.information2}>
-                      Bachelor of Education (BEd) - ABC University, Chicago,
-                      USA, 2018{" "}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                className={style.eduDiv2}
-                style={{
-                  height: "172px",
-                }}
-              >
-                <h1 className={style.eduHeading2}>Specialization</h1>
-                <div className={style.eduInner}>
-                  <div>
-                    <ul className={style.eduLeft}>
-                      <li className={style.information3}>
-                        Conversational English
-                      </li>
-                      <li className={style.information3}>English for work</li>
-                      <li className={style.information3}>British English</li>
-                      <li className={style.information3}>
-                        English job interview prep
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul className={style.eduLeft}>
-                      <li className={style.information3}>Business English</li>
-                      <li className={style.information3}>
-                        English for beginners
-                      </li>
-                      <li className={style.information3}>
-                        English for traveling
-                      </li>
-                      <li className={style.information3}>
-                        English as a subject
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <PatientReviews studentReview="true" />
-              <SubmitFeedback forWhom="Ms. Jenny Wilson" />
+              {select === "about" && <TeacherDetailAboutSection />}
+              {select === "reviews" && <TeacherDetailReviewsSection />}
+              {select === "specialities" && (
+                <TeacherDetailSpecialitiesSection />
+              )}
             </div>
             <div className={style.rightDetail}>
               <TeacherFee />

@@ -61,7 +61,10 @@ function DoctorLisiting() {
       >
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" />
+            <SearchBar
+              userDashboard="true"
+              teacherPlaceholder="Search doctors, advocates, teachers and many more....."
+            />
           </div>
 
           <SpecCards />

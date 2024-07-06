@@ -62,7 +62,10 @@ function TeacherListing() {
       <div className={style.listingOuter}>
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" />
+            <SearchBar
+              userDashboard="true"
+              teacherPlaceholder="Search Speciality, English, Mathematics, Physics......."
+            />
           </div>
 
           <SpecCards />

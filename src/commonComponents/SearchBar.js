@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import style from "./SearchBar.module.css";
 import SuggestionsDiv from "../homePageComponents/SuggestionsDiv";
 
-function SearchBar({ userDashboard }) {
+function SearchBar({ userDashboard, teacherPlaceholder }) {
+  console.log(teacherPlaceholder)
   const [showSuggestion, setShowSuggestion] = useState(false);
   const searchBarRef = useRef(null);
 
@@ -76,7 +77,7 @@ function SearchBar({ userDashboard }) {
             name=""
             id=""
             className={`${style.input2} cursor-pointer outline-none`}
-            placeholder="Search doctors, advocates, teachers and many more....."
+            placeholder={teacherPlaceholder}
           />
         </div>
 
