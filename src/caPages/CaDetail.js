@@ -3,18 +3,21 @@ import style from "../doctorPages/DoctorListing.module.css";
 import { useLocation } from "react-router-dom";
 import SearchBar from "../commonComponents/SearchBar";
 import DoctorCard from "../doctorPages/DoctorCard";
-import { PatientReviews } from "../doctorPages/NewReviews";
-import { SubmitFeedback } from "../doctorPages/PatientReviews";
 import MostViewed2 from "../doctorPages/MostViewed2";
 import { CaFee } from "../teacherPages/TeacherFee";
 import BookAppointment from "../doctorPages/BookAppointment";
 import { AppointCard } from "../doctorPages/LeftDocComp";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import CaDetailAboutSection from "./CaDetailAboutSection";
+import CaDetailReviewsSection from "./CaDetailReviewsSection";
+import CaDetailFeesSection from "./CaDetailFeesSection";
+import CaDetailSpecialitiesSection from "./CaDetailSpecialitiesSection";
 
 function CaDetail() {
   const location = useLocation();
-  const { img, name, title, qual1, qual2, qual3, qual4,caListing } = location.state || {};
+  const { img, name, title, qual1, qual2, qual3, qual4, caListing } =
+    location.state || {};
 
   const [select, setSelect] = useState("about");
   const handleSelect = (value) => {
@@ -30,7 +33,10 @@ function CaDetail() {
       >
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" />
+            <SearchBar
+              userDashboard="true"
+              teacherPlaceholder="Search Speciality, Income Tax, GST, VAT....."
+            />
           </div>
           <div className={style.locationFilterPara}>
             <p className={style.para}>Bangalore</p>
@@ -67,10 +73,10 @@ function CaDetail() {
                 </p>
                 <p
                   className={`${style.option} ${
-                    select === "services" ? style.selected : ""
+                    select === "specialities" ? style.selected : ""
                   }`}
                   onClick={() => {
-                    handleSelect("services");
+                    handleSelect("specialities");
                   }}
                 >
                   Specialities
@@ -87,84 +93,19 @@ function CaDetail() {
                 </p>
                 <p
                   className={`${style.option} ${
-                    select === "address" ? style.selected : ""
+                    select === "fees" ? style.selected : ""
                   }`}
                   onClick={() => {
-                    handleSelect("address");
+                    handleSelect("fees");
                   }}
                 >
                   Fees
                 </p>
               </div>
-              <div className={style.about} style={{ height: "517px" }}>
-                <p className={style.information1}>
-                  Mr. Warren is a seasoned Chartered Accountant with a proven
-                  track record of delivering exceptional financial guidance and
-                  support. With over 10 years of experience in financial
-                  management, taxation, and auditing, he brings a wealth of
-                  expertise to every client interaction. <br />
-                  <br />
-                  Specializing in providing tailored financial solutions to
-                  individuals and businesses, Mr. Warren is committed to
-                  fostering long-term relationships built on trust, integrity,
-                  and professionalism.
-                  <span
-                    className={style.info1Span2}
-                    style={{ marginLeft: "550px" }}
-                  >
-                    Read More
-                  </span>
-                </p>
-                <div className={style.eduDiv}>
-                  <h1 className={style.eduHeading}>Education</h1>
-                  <ul>
-                    <li className={style.information2}>
-                      Bachelor's Degree in Accounting, Finance, or Business
-                      Administration - University of XYZ, London, UK, 2014
-                    </li>
-
-                    <li className={style.information2}>
-                      Completion of the Association of Chartered Certified
-                      Accountants (ACCA) Program
-                    </li>
-
-                    <li className={style.information2}>
-                      Successful Completion of the Chartered Accountant (CA)
-                      Examination - Institute of Chartered Accountants in
-                      England and Wales (ICAEW), London, UK, 2016
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                className={style.eduDiv2}
-                style={{
-                  height: "204px",
-                }}
-              >
-                <h1 className={style.eduHeading2}>Specialization</h1>
-                <div className={style.eduInner} style={{ gap: "97px" }}>
-                  <div>
-                    <ul className={style.eduLeft}>
-                      <li className={style.information3}>Income Tax</li>
-                      <li className={style.information3}>GST</li>
-                      <li className={style.information3}>VAT</li>
-                      <li className={style.information3}>Property Tax</li>
-                      <li className={style.information3}>Audit</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul className={style.eduLeft}>
-                      <li className={style.information3}>Capital Gains Tax</li>
-                      <li className={style.information3}>Service Tax</li>
-                      <li className={style.information3}>Corporate Tax</li>
-                      <li className={style.information3}>Professional Tax</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <PatientReviews clientReview="true" />
-              <SubmitFeedback forWhom="Mr. Wade Warren" />
+              {select === "about" && <CaDetailAboutSection />}
+              {select === "specialities" && <CaDetailSpecialitiesSection />}
+              {select === "reviews" && <CaDetailReviewsSection />}
+              {select === "fees" && <CaDetailFeesSection />}
             </div>
             <div className={style.rightDetail}>
               <BookAppointment
