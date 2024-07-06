@@ -33,7 +33,7 @@ function DoctorDetail() {
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
-              teacherPlaceholder="Search doctors, advocates, teachers and many more....."
+              placeholderProp="Search doctors, advocates, teachers and many more....."
             />
           </div>
 

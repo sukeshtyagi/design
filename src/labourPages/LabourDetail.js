@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import style from "../doctorPages/DoctorListing.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../doctorPages/DoctorCard";
 import { useLocation } from "react-router-dom";
-import { PatientReviews } from "../doctorPages/NewReviews";
-import { SubmitFeedback } from "../doctorPages/PatientReviews";
 import MostViewed2 from "../doctorPages/MostViewed2";
 import LabourOtherDetail from "./LabourOtherDetail";
 import { LabourAppointCard } from "../doctorPages/LeftDocComp";
@@ -12,6 +9,10 @@ import BookAppointment from "../doctorPages/BookAppointment";
 import LabourCard from "./LabourCard";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import LabourDetailAboutSection from "./LabourDetailAboutSection";
+import LabourDetailSpecialitiesSection from "./LabourDetailSpecialitiesSection";
+import LabourDetailReviewsSection from "./LabourDetailReviewsSection";
+import LabourDetailOthersSection from "./LabourDetailOthersSection";
 
 function LabourDetail() {
   const location = useLocation();
@@ -32,7 +33,10 @@ function LabourDetail() {
       >
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" />
+            <SearchBar
+              userDashboard="true"
+              placeholderProp="Search Speciality, maids, plumber, carpenter....."
+            />
           </div>
           <div className={style.locationFilterPara}>
             <p className={style.para}>Bangalore</p>
@@ -99,63 +103,15 @@ function LabourDetail() {
                   Others
                 </p>
               </div>
-              <div className={style.about} style={{ height: "279px" }}>
-                <p className={style.information1}>
-                  My first job was on Saudi Arabia as domestic helper for two
-                  years and two months I served 5 members of the family two
-                  adults and three children ages. 13,7 and 4 and my second job
-                  was on Qatar as domestic helper for two years and one month i
-                  also served 5 members in the family 2 adults and 3 children.
-                  My job duties are general cleaning, cooking food for the
-                  children and taking care of them. I am trustworthy, patience,
-                  honest and loving children.{" "}
-                  <span
-                    className={style.info1Span2}
-                    style={{ marginLeft: "358px" }}
-                  >
-                    Read More
-                  </span>
-                </p>
 
-                <div className={style.eduDiv}>
-                  <h1 className={style.eduHeading}>Education</h1>
-                  <ul>
-                    <li className={style.information2}>
-                      2007 - High School Graduate (6 Months course)
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                className={style.eduDiv2}
-                style={{
-                  height: "140px",
-                }}
-              >
-                <h1 className={style.eduHeading2}>Specialization</h1>
-                <div className={style.eduInner} style={{ gap: "97px" }}>
-                  <div>
-                    <ul className={style.eduLeft}>
-                      <li className={style.information3}>Baby Care</li>
-                      <li className={style.information3}>Housekeeping</li>
-                      <li className={style.information3}>Groceries</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <ul className={style.eduLeft}>
-                      <li className={style.information3}>Child Care</li>
-                      <li className={style.information3}>Cooking</li>
-                      <li className={style.information3}>Elderly Care</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <PatientReviews labourReview="true" />
-              <SubmitFeedback forWhom="Ms. Anna J." />
+              {select === "about" && <LabourDetailAboutSection />}
+              {select === "specialities" && <LabourDetailSpecialitiesSection />}
+              {select === "reviews" && <LabourDetailReviewsSection />}
+              {select === "others" && <LabourDetailOthersSection />}
             </div>
             <div className={style.rightDetail}>
               <BookAppointment divHeading="Hire Anna" btnHeading="Hire Now" />
-              <LabourAppointCard />
+              <LabourAppointCard img="/images/ca/Adv.png" />
             </div>
           </div>
           <MostViewed2 category="maids" />

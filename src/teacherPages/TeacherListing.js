@@ -64,7 +64,7 @@ function TeacherListing() {
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
-              teacherPlaceholder="Search Speciality, English, Mathematics, Physics......."
+              placeholderProp="Search Speciality, English, Mathematics, Physics......."
             />
           </div>
 

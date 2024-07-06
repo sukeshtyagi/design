@@ -53,8 +53,8 @@
 .labourDetailCardOuter {
   width: 1128px;
   height: 280px;
-  padding: 28px 60px 31px 31px;/*padding right is changed from 78 to 60 to increase gap but kept what it is from figma*/
-  gap: 448px;
+  padding: 28px 60px 31px 31px;/*padding right is changed from 78 to 60 to increase gap*/
+  gap: 460px;
 }
 
 .cardLeft {

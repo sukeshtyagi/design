@@ -35,7 +35,7 @@ function CaDetail() {
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
-              teacherPlaceholder="Search Speciality, Income Tax, GST, VAT....."
+              placeholderProp="Search Speciality, Income Tax, GST, VAT....."
             />
           </div>
           <div className={style.locationFilterPara}>

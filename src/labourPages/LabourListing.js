@@ -70,7 +70,10 @@ function LabourListing() {
       >
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" />
+            <SearchBar
+              userDashboard="true"
+              placeholderProp="Search Speciality, maids, plumber, carpenter....."
+            />
           </div>
           <SpecCards />
         </div>
