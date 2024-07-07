@@ -27,13 +27,6 @@ function CampaignCard() {
                 Empower girls worldwide through education and unlock limitless
                 potential for change.
               </p>
-              {/*
-              <div
-                className={`${style.share} absolute top-[129px] right-[5px]`}
-              >
-                <img src="" alt="" />
-              </div>
-            */}
             </div>
 
             <div className={style.lwrDiv}>

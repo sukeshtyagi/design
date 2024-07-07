@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../styles/Miss.module.css";
 
-function Miss() {
+function Downloadsection() {
   return (
     <div className={style.missContainer}>
       <div className={style.missInnerContainer}>
@@ -28,4 +28,4 @@ function Miss() {
   );
 }
 
-export default Miss;
+export default Downloadsection;

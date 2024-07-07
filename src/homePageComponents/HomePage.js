@@ -1,5 +1,5 @@
 import React from "react";
-import Miss from "./Miss";
+import Downloadsection from "./Downloadsection";
 import Locations from "./Locations";
 import NeedHelp from "./NeedHelp";
 import PreviousEngagements from "./PreviousEngagements";
@@ -16,8 +16,8 @@ function HomePage({ userDashboard }) {
   return (
     <>
       <Header userDashboard={userDashboard} />
-      <Services />
       <Professions />
+      <Services />
       <Campaigns />
       <PreviousEngagements />
       <Searches />
@@ -26,10 +26,9 @@ function HomePage({ userDashboard }) {
       <Locations />
       <NeedHelp />
       <LatestBlogs />
-      <Miss />
+      <Downloadsection />
+
       <Footer />
-      {/*
-       */}
     </>
   );
 }

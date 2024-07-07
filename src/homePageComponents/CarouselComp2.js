@@ -14,7 +14,7 @@ function CarouselComp2() {
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
-    
+
     appendDots: (dots) => (
       <div
         style={{
@@ -44,7 +44,7 @@ function CarouselComp2() {
         </div>
         <div
           className={`${style.childTwo}`}
-          style={{ background: "url(/images/services/abc.svg)" }}
+          style={{ background: "url(/images/services/carouselImage.png)" }}
         ></div>
       </div>
 
@@ -61,7 +61,7 @@ function CarouselComp2() {
         </div>
         <div
           className={`${style.childTwo}`}
-          style={{ background: "url(/images/services/abc.svg)" }}
+          style={{ background: "url(/images/services/carouselImage.png)" }}
         ></div>
       </div>
 
@@ -78,7 +78,7 @@ function CarouselComp2() {
         </div>
         <div
           className={`${style.childTwo}`}
-          style={{ background: "url(/images/services/abc.svg)" }}
+          style={{ background: "url(/images/services/carouselImage.png)" }}
         ></div>
       </div>
 
@@ -95,7 +95,7 @@ function CarouselComp2() {
         </div>
         <div
           className={`${style.childTwo}`}
-          style={{ background: "url(/images/services/abc.svg)" }}
+          style={{ background: "url(/images/services/carouselImage.png)" }}
         ></div>
       </div>
     </Slider>

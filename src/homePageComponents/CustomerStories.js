@@ -93,8 +93,6 @@ function CustomerStories() {
               paraHeight="295px"
             />
           </div>
-          {/*
-           */}
         </div>
       </div>
     </div>

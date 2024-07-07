@@ -67,12 +67,12 @@ function Services() {
         <div className={style.btmDiv}>
           <ServiceCard2
             title1="START FUNDRAISING"
-            img="/images/services/fund.svg"
+            img="/images/services/fund.png"
             bcg="rgba(0, 134, 110, 1)"
           />
           <ServiceCard2A
             title1="DONATE NOW"
-            img="/images/services/donate.svg"
+            img="/images/services/donate.png"
             bcg="rgba(36, 54, 94, 1)"
           />
           <ServicesCard3 />
