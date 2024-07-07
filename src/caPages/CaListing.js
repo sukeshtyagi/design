@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../commonComponents/CommonCard";
+import CommonCard from "../commonComponents/CommonCard";
 import Pagination from "../commonComponents/Pagination";
 import Faq from "../commonComponents/Faq";
 import {
@@ -10,7 +10,7 @@ import {
 } from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
-import { CaFilterCards, SpecCards } from "./CaSpecialityAndFilterCards";
+import { CaFilterCards, CaSpecialityCards } from "./CaSpecialityAndFilterCards";
 function CaListing() {
   const docCardData = [
     {
@@ -71,7 +71,7 @@ function CaListing() {
             />
           </div>
 
-          <SpecCards />
+          <CaSpecialityCards />
         </div>
         <div className={style.bannerContainer}>
           <img src="/images/ca/Banner.png" alt="" />
@@ -90,7 +90,7 @@ function CaListing() {
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
-                <DoctorCard
+                <CommonCard
                   caListing="Book a Consultation"
                   img={data.img}
                   name={data.name}

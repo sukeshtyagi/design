@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../commonComponents/CommonCard";
+import CommonCard from "../commonComponents/CommonCard";
 import Faq from "../commonComponents/Faq";
 import Appointment from "./Appointment";
 import {
@@ -11,7 +11,7 @@ import {
 import Pagination from "../commonComponents/Pagination";
 import {
   DoctorFilterCards,
-  SpecialityCards,
+  DoctorSpecialityCards,
 } from "./DoctorSpecialityAndFilterCards";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
@@ -73,7 +73,7 @@ function DoctorLisiting() {
             />
           </div>
 
-          <SpecialityCards />
+          <DoctorSpecialityCards />
         </div>
 
         <div className={style.bannerContainer}>
@@ -94,7 +94,7 @@ function DoctorLisiting() {
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
-                <DoctorCard
+                <CommonCard
                   doctorListing="Book Appointment"
                   img={data.img}
                   name={data.name}

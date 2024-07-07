@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../commonComponents/CommonCard";
+import CommonCard from "../commonComponents/CommonCard";
 import { AppointCard } from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
@@ -47,7 +47,7 @@ function DoctorDetail() {
             <p className={style.para}>Dr. Ronald Richards</p>
           </div>
 
-          <DoctorCard
+          <CommonCard
             doctorDetail="true"
             doctorListing={doctorListing}
             img={img}

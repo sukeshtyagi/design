@@ -26,6 +26,7 @@
   cursor: pointer;
   user-select: none;
   border: 1px solid transparent;
+  z-index: 10000;
   }
 
 .specOuter2:hover {
@@ -64,6 +65,7 @@
   font-size: 14.5px;
   line-height: 22.5px;
   text-align: center;
+  z-index: 999999999;
 }
 
 .optionDropDown {

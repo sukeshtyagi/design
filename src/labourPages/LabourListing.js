@@ -10,7 +10,10 @@ import {
 import Faq from "../commonComponents/Faq";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
-import { LabourFilterCards, SpecCards } from "./LabourSpecialityAndFilterCards";
+import {
+  LabourFilterCards,
+  LabourSpecialityCards,
+} from "./LabourSpecialityAndFilterCards";
 import LabourCard from "./LabourCard";
 
 function LabourListing() {
@@ -75,7 +78,7 @@ function LabourListing() {
               placeholderProp="Search Speciality, maids, plumber, carpenter....."
             />
           </div>
-          <SpecCards />
+          <LabourSpecialityCards />
         </div>
 
         <div className={style.bannerContainer}>

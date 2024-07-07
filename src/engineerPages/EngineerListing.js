@@ -10,7 +10,10 @@ import {
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import EnginnerCards from "./EngineerCards";
-import { EnggFilterCards, SpecCards } from "./EngineerSpecialityAndFilterCards";
+import {
+  EnginnerFilterCards,
+  EngineerSpecialityCards,
+} from "./EngineerSpecialityAndFilterCards";
 
 function EnggListing() {
   const enggCardData = [
@@ -74,7 +77,7 @@ function EnggListing() {
               placeholderProp="Search Speciality, product, Website....."
             />
           </div>
-          <SpecCards />
+          <EngineerSpecialityCards />
         </div>
 
         <div className={style.bannerContainer}>
@@ -93,7 +96,7 @@ function EnggListing() {
           <h1 className={style.heading}>
             Best Websites IT & Software Engineers in HSR Layout
           </h1>
-          <EnggFilterCards />
+          <EnginnerFilterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {enggCardData.map((data) => (

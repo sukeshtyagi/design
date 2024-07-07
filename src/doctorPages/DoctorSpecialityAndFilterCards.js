@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
-
-export function SpecialityCards() {
+import DropDown from "../commonComponents/DropDown";
+export function DoctorSpecialityCards() {
   const [activeSpec, setActiveSpec] = useState("Dentist");
 
   const handleClick = (index) => {
@@ -43,14 +43,7 @@ export function SpecialityCards() {
 }
 
 export function DoctorFilterCards() {
-  const [arrowImage, setArrowImage] = useState("/images/doctor/downArrow.svg");
   const [filterImage, setFilterImage] = useState("/images/doctor/filter.svg");
-
-  const [activeSpec2, setActiveSpec2] = useState(null);
-
-  const handleClick2 = (index) => {
-    setActiveSpec2(index);
-  };
 
   const filterArray = [
     "Sort By",
@@ -71,43 +64,30 @@ export function DoctorFilterCards() {
         onMouseEnter={() => setFilterImage("/images/doctor/hoverFilter.svg")}
         onMouseLeave={() => setFilterImage("/images/doctor/filter.svg")}
       >
-        <img src={filterImage} alt="" />
+        <img src={filterImage} alt="Filter Icon" />
       </div>
       {filterArray.map((criterion, index) => (
-        <>
-          {criterion !== "Sort By" && criterion !== "Top Rated" && (
-            <div
-              key={index}
-              className={`${style.specOuter2} ${
-                activeSpec2 === criterion ? style.activeSpec2 : ""
-              }`}
-              onClick={() => handleClick2(criterion)}
-            >
-              <p className={style.criterion}>{criterion}</p>
-            </div>
-          )}
-
+        <React.Fragment key={index}>
           {criterion === "Sort By" && (
-            <div
-              key={index}
-              className={style.specOuter3}
-              onMouseEnter={() =>
-                setArrowImage("/images/doctor/hoverDownArrow.svg")
-              }
-              onMouseLeave={() => setArrowImage("/images/doctor/downArrow.svg")}
-            >
-              <p className={style.criterion}>{criterion}</p>
-              <img src={arrowImage} alt="" />
-            </div>
+            <DropDown
+              filterHeading={criterion}
+              option1="abc"
+              option2="def"
+              option3="ghi"
+            />
           )}
-
           {criterion === "Top Rated" && (
-            <div key={index} className={style.specOuter4}>
+            <div className={style.specOuter4}>
               <p className={style.criterion}>{criterion}</p>
-              <img src="/images/doctor/star.svg" alt="" />
+              <img src="/images/doctor/star.svg" alt="Star" />
             </div>
           )}
-        </>
+          {criterion !== "Sort By" && criterion !== "Top Rated" && (
+            <div className={style.specOuter2}>
+              <p className={style.criterion}>{criterion}</p>
+            </div>
+          )}
+        </React.Fragment>
       ))}
     </div>
   );

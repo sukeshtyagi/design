@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
-export function SpecCards() {
+export function TeacherSpecialityCards() {
   const [activeSpec, setActiveSpec] = useState("English");
 
   const handleClick = (index) => {

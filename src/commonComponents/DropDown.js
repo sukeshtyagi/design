@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./DropDown.module.css";
 
-function DropDown({ option1, option2, option3, filterHeading }) {
+function DropDown({ option1, option2, option3,option4,filterHeading }) {
   const [showDropDown, setShowDropDown] = useState(false);
   const [downArrow, setDownArrow] = useState("/images/doctor/downArrow.svg");
   const dropdownRef = useRef(null);
-
+  
+  console.log(showDropDown)
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setShowDropDown(false);
@@ -40,6 +41,7 @@ function DropDown({ option1, option2, option3, filterHeading }) {
           <p className={style.optionDropDown}>{option1}</p>
           <p className={style.optionDropDown}>{option2}</p>
           <p className={style.optionDropDown}>{option3}</p>
+          <p className={style.optionDropDown}>{option4}</p>
         </div>
       )}
     </div>

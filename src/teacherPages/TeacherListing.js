@@ -10,7 +10,7 @@ import {
   AppointCard,
 } from "../commonComponents/LeftOverCommonComponents";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
-import { SpecCards } from "./TeacherSpecCards";
+import { TeacherSpecialityCards } from "./TeacherSpecialityCards";
 import TeacherFiterCards from "./TeacherFilterCards";
 function TeacherListing() {
   const docCardData = [
@@ -72,7 +72,7 @@ function TeacherListing() {
             />
           </div>
 
-          <SpecCards />
+          <TeacherSpecialityCards />
         </div>
 
         <div className={style.bannerContainer}>
