@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import style from "../doctorPages/DoctorListing.module.css";
-import SearchBar from "../commonComponents/SearchBar";
 import { useLocation } from "react-router-dom";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+import SearchBar from "../commonComponents/SearchBar";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+
 import EngineerCards from "./EngineerCards";
 import EngineerDetailAboutSection from "./EngineerDetailAboutSection";
 import EngineerDetailSpecialitiesSection from "./EngineerDetailSpecialitiesSection";

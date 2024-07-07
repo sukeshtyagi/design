@@ -14,6 +14,8 @@ import LabourListing from "./labourPages/LabourListing";
 import LabourDetail from "./labourPages/LabourDetail";
 import EngineerListing from "./engineerPages/EngineerListing";
 import EngineerDetail from "./engineerPages/EngineerDetail";
+import Trial from "./commonComponents/Trial";
+import TeacherFilterCards from "./teacherPages/TeacherFilterCards";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         <Route path="/ca-detail" element={<CaDetail />} />
         <Route path="/labour-detail" element={<LabourDetail />} />
         <Route path="/engineer-detail" element={<EngineerDetail />} />
+
+        <Route path="/trial" element={<TeacherFilterCards/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,12 +1,18 @@
 import React from "react";
-import style from "./DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "./DoctorCard";
+import DoctorCard from "../commonComponents/CommonCard";
 import Faq from "../commonComponents/Faq";
 import Appointment from "./Appointment";
-import { AppointCard, Query } from "./LeftDocComp";
-import Pagination from "./Pagination";
-import { DocFilterCards, SpecCards } from "./DocSpecCards";
+import {
+  AppointCard,
+  Query,
+} from "../commonComponents/LeftOverCommonComponents";
+import Pagination from "../commonComponents/Pagination";
+import {
+  DoctorFilterCards,
+  SpecialityCards,
+} from "./DoctorSpecialityAndFilterCards";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 function DoctorLisiting() {
@@ -67,7 +73,7 @@ function DoctorLisiting() {
             />
           </div>
 
-          <SpecCards />
+          <SpecialityCards />
         </div>
 
         <div className={style.bannerContainer}>
@@ -84,7 +90,7 @@ function DoctorLisiting() {
           </div>
 
           <h1 className={style.heading}>Best Dentists in HSR Layout</h1>
-          <DocFilterCards />
+          <DoctorFilterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (

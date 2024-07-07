@@ -1,5 +1,5 @@
 import React from 'react'
-import style from "../doctorPages/DoctorListing.module.css"
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import EngineerReviews from "./EngineerReviews";
 import { SubmitFeedback } from "../doctorPages/PatientReviews";
 

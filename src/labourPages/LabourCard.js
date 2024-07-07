@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import style from "../doctorPages/DoctorCard.module.css";
+import style from "../commonComponents/CommonCard.module.css";
 
 function LabourCard({
   doctorDetail,

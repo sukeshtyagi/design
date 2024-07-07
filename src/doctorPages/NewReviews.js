@@ -1,4 +1,4 @@
-import style from "../doctorPages/DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 
 export function PatientReviews({
   patientReview,

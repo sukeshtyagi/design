@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import style from "./DoctorCard.module.css";
+import style from "./CommonCard.module.css";
 import { useNavigate } from "react-router-dom";
 
-function DoctorCard({
+function CommonCard({
   doctorListing,
   doctorDetail,
   teacherListing,
@@ -209,4 +209,4 @@ function DoctorCard({
   );
 }
 
-export default DoctorCard;
+export default CommonCard;

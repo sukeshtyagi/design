@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./DoctorDetail.module.css";
+import style from "../doctorPages/DoctorDetail.module.css";
 
 function BookAppointment({divHeading, btnHeading}) {
   const [visibleSection, setVisibleSection] = useState(null);

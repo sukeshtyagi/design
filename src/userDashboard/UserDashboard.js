@@ -1,15 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SearchBar from "../commonComponents/SearchBar";
-import style from "./UserDashboard.module.css";
 import PersonalInfo from "./PersonalInfo";
 import ManageAddress from "./ManageAddress";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import Reviews from "./ReviewsAndRating";
-import { useNavigate } from "react-router-dom";
+import style from "./UserDashboard.module.css";
 
 function UserDashboard() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState("personalInfo");
   const [rightDivOption, setRightDivOption] = useState("personalInfo");
   const [deleteIcon, setDeleteIcon] = useState("/images/blogs/delete.svg");
@@ -17,8 +17,8 @@ function UserDashboard() {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setRightDivOption(option);
-    if(option==="logout"){
-      navigate("/")
+    if (option === "logout") {
+      navigate("/");
     }
   };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import style from "./DoctorListing.module.css";
-export function SpecCards() {
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+
+export function SpecialityCards() {
   const [activeSpec, setActiveSpec] = useState("Dentist");
 
   const handleClick = (index) => {
@@ -41,7 +42,7 @@ export function SpecCards() {
   );
 }
 
-export function DocFilterCards() {
+export function DoctorFilterCards() {
   const [arrowImage, setArrowImage] = useState("/images/doctor/downArrow.svg");
   const [filterImage, setFilterImage] = useState("/images/doctor/filter.svg");
 

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 
 function MostViewed2({ category }) {
   const mostViewedData = {

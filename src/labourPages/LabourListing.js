@@ -1,17 +1,17 @@
 import React from "react";
-import style from "../doctorPages/DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import { LabourFilterCards, SpecCards } from "./LabourSpecCards";
-import Pagination from "../doctorPages/Pagination";
+import Pagination from "../commonComponents/Pagination";
 import {
   Query,
   AppointCard,
   LabourAppointCard,
-} from "../doctorPages/LeftDocComp";
+} from "../commonComponents/LeftOverCommonComponents";
 import Faq from "../commonComponents/Faq";
-import LabourCard from "./LabourCard";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import { LabourFilterCards, SpecCards } from "./LabourSpecialityAndFilterCards";
+import LabourCard from "./LabourCard";
 
 function LabourListing() {
   const docCardData = [

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../teacherPages/TeacherFee.module.css";
+import style from "../commonComponents/FeeStructure.module.css";
 
 function LabourOtherDetail() {
   return (

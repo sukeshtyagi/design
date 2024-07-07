@@ -1,13 +1,16 @@
 import React from "react";
-import style from "../doctorPages/DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import { EnggFilterCards, SpecCards } from "./EngineerSpecCards";
-import Pagination from "../doctorPages/Pagination";
+import Pagination from "../commonComponents/Pagination";
 import Faq from "../commonComponents/Faq";
-import { LabourAppointCard, Query } from "../doctorPages/LeftDocComp";
+import {
+  LabourAppointCard,
+  Query,
+} from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import EnginnerCards from "./EngineerCards";
+import { EnggFilterCards, SpecCards } from "./EngineerSpecialityAndFilterCards";
 
 function EnggListing() {
   const enggCardData = [

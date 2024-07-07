@@ -1,4 +1,4 @@
-import style from "./TeacherFee.module.css";
+import style from "./FeeStructure.module.css";
 function TeacherFee() {
   return (
     <div className={style.feeOuter}>

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./LeftDocComp.module.css";
+import style from "./LeftOverCommonComponents.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 

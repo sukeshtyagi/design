@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import style from "../doctorPages/DoctorListing.module.css";
 import { useLocation } from "react-router-dom";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../doctorPages/DoctorCard";
-import MostViewed2 from "../doctorPages/MostViewed2";
-import { CaFee } from "../teacherPages/TeacherFee";
-import BookAppointment from "../doctorPages/BookAppointment";
-import { AppointCard } from "../doctorPages/LeftDocComp";
+import DoctorCard from "../commonComponents/CommonCard";
+import { AppointCard } from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import BookAppointment from "../commonComponents/BookAppointment";
+import MostViewed2 from "../commonComponents/MostViewed2";
+import { CaFee } from "../commonComponents/FeeStructure";
 import CaDetailAboutSection from "./CaDetailAboutSection";
 import CaDetailReviewsSection from "./CaDetailReviewsSection";
 import CaDetailFeesSection from "./CaDetailFeesSection";
 import CaDetailSpecialitiesSection from "./CaDetailSpecialitiesSection";
-
 function CaDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, qual3, qual4, caListing } =

@@ -1,25 +1,30 @@
 import React, { useState } from "react";
-import style from "../doctorPages/DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 export function SpecCards() {
-  const [activeSpec, setActiveSpec] = useState("Income Tax");
+  const [activeSpec, setActiveSpec] = useState("Maid");
 
   const handleClick = (index) => {
     setActiveSpec(index);
   };
- const specialityArray = [
-   "Income Tax",
-   "Service Tax",
-   "Property Tax",
-   "Capital Gains Tax",
-   "Corporate Tax",
-   "Professional Tax",
-   "GST",
-   "VAT",
-   "Audit",
- ];
+
+  const specialityArray = [
+    "Maid",
+    "Electrician",
+    "Plumber",
+    "Carpenter",
+    "Gardner",
+    "Nursing Care",
+    "Mason",
+    "Pest Control",
+    "Driver",
+    "AC Repair",
+  ];
+
   return (
     <div className={style.specCardWrapper}>
-      <div className={style.specCardContainer}>
+      <div className={style.specCardContainer}
+      style={{gap:"15px"}}
+      >
         {specialityArray.map((speciality, index) => (
           <div
             key={index}
@@ -39,21 +44,20 @@ export function SpecCards() {
   );
 }
 
-export function CaFilterCards() {
+export function LabourFilterCards() {
   const [filterImage, setFilterImage] = useState("/images/doctor/filter.svg");
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-   const filterArray = [
-     "Sort By",
-     "Practice Area",
-     "Gender",
-     "Experience",
-     "State",
-     "City",
-     "Court",
-     "Languages Known",
-     "Top Rated",
-   ];
+  const filterArray = [
+    "Sort By",
+    "Price",
+    "Gender",
+    "Age",
+    "Experience",
+    "Availability",
+    "Type of Service",
+    "Languages Known",
+  ];
 
   return (
     <div className={style.filterCardContainer}>

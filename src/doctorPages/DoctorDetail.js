@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import style from "./DoctorListing.module.css";
-import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "./DoctorCard";
 import { useLocation } from "react-router-dom";
-import { AppointCard } from "./LeftDocComp";
-import BookAppointment from "./BookAppointment";
-import MostViewed2 from "./MostViewed2";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+import SearchBar from "../commonComponents/SearchBar";
+import DoctorCard from "../commonComponents/CommonCard";
+import { AppointCard } from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import DoctorDetailAboutSection from "./DoctorDetailAboutSection";
 import DoctorDetailServiceSection from "./DoctorDetailServiceSection";
 import DoctorDetailReviewsSection from "./DoctorDetailReviewsSection";
 import DoctorDetailAddressSection from "./DoctorDetailAddressSection";
+import BookAppointment from "../commonComponents/BookAppointment";
+import MostViewed2 from "../commonComponents/MostViewed2";
 function DoctorDetail() {
   const location = useLocation();
   const { img, name, title, qual1, qual2, address, doctorListing } =

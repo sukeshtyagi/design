@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../doctorPages/DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 
 function EnggReviews({ enggReview }) {
   const reviews = {
@@ -143,8 +143,7 @@ function EnggReviews({ enggReview }) {
   }*/
 
   return (
-    <div className={style.patientOuter}
-    >
+    <div className={style.patientOuter}>
       <div className={style.upr}>
         <h1 className={style.reviewheading}>{heading}</h1>
         <button className={style.view}>View All</button>

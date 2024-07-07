@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import { Address, SubmitFeedback } from "./PatientReviews";
 import { PatientReviews } from "./NewReviews";
 function DoctorDetailAboutSection() {

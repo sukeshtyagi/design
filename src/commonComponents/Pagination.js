@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "../doctorPages/LeftDocComp.module.css";
+import style from "./LeftOverCommonComponents.module.css";
 
 function Pagination() {
   const [activePage, setActivePage] = useState(1);

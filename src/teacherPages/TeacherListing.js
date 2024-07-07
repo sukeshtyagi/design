@@ -1,13 +1,17 @@
 import React from "react";
-import style from "../doctorPages/DoctorListing.module.css";
-import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../doctorPages/DoctorCard";
-import { Query, AppointCard } from "../doctorPages/LeftDocComp";
-import Faq from "../commonComponents/Faq";
-import Pagination from "../doctorPages/Pagination";
-import { SpecCards, TeacherFilterCards } from "./TeacherSpecCards";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import Faq from "../commonComponents/Faq";
+import SearchBar from "../commonComponents/SearchBar";
+import CommonCard from "../commonComponents/CommonCard";
+import Pagination from "../commonComponents/Pagination";
+import {
+  Query,
+  AppointCard,
+} from "../commonComponents/LeftOverCommonComponents";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+import { SpecCards } from "./TeacherSpecCards";
+import TeacherFiterCards from "./TeacherFilterCards";
 function TeacherListing() {
   const docCardData = [
     {
@@ -85,11 +89,11 @@ function TeacherListing() {
           </div>
 
           <h1 className={style.heading}>Best English Teachers in HSR Layout</h1>
-          <TeacherFilterCards />
+          <TeacherFiterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
-                <DoctorCard
+                <CommonCard
                   teacherListing="Book Trial Lesson"
                   img={data.img}
                   name={data.name}

@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import style from "../doctorPages/DoctorListing.module.css";
 import { useLocation } from "react-router-dom";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../doctorPages/DoctorCard";
-import { AppointCard } from "../doctorPages/LeftDocComp";
-import TeacherFee from "./TeacherFee";
-import BookAppointment from "../doctorPages/BookAppointment";
-import MostViewed2 from "../doctorPages/MostViewed2";
+import DoctorCard from "../commonComponents/CommonCard";
+import { AppointCard } from "../commonComponents/LeftOverCommonComponents";
+import BookAppointment from "../commonComponents/BookAppointment";
+import MostViewed2 from "../commonComponents/MostViewed2";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import TeacherDetailAboutSection from "./TeacherDetailAboutSection";
 import TeacherDetailReviewsSection from "./TeacherDetailReviewsSection";
 import TeacherDetailSpecialitiesSection from "./TeacherDetailSpecilitiesSection";
+import TeacherFee from "../commonComponents/FeeStructure";
 
 function TeacherDetail() {
   const location = useLocation();

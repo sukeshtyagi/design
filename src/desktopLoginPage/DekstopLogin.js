@@ -47,7 +47,7 @@ function DesktopLogin() {
                 initialValues={initialValues}
                 validationSchema={validationSchema1}
                 onSubmit={(values) => {
-                  navigate("/profile");
+                  navigate("/homepage");
                   console.log(values);
                   checkServer(values);
                   localStorage.setItem("userDetails", JSON.stringify(values));

@@ -1,30 +1,26 @@
 import React, { useState } from "react";
-import style from "../doctorPages/DoctorListing.module.css";
+import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 export function SpecCards() {
-  const [activeSpec, setActiveSpec] = useState("Maid");
+  const [activeSpec, setActiveSpec] = useState("Websites IT & Software");
 
   const handleClick = (index) => {
     setActiveSpec(index);
   };
 
   const specialityArray = [
-    "Maid",
-    "Electrician",
-    "Plumber",
-    "Carpenter",
-    "Gardner",
-    "Nursing Care",
-    "Mason",
-    "Pest Control",
-    "Driver",
-    "AC Repair",
+    "Websites IT & Software",
+    "Mobile",
+    "Writing",
+    "Design",
+    "Data Entry",
+    "Sales & Marketing",
+    "Product Sourcing & Manufacturing",
+    "Civil",
   ];
 
   return (
     <div className={style.specCardWrapper}>
-      <div className={style.specCardContainer}
-      style={{gap:"15px"}}
-      >
+      <div className={style.specCardContainer} style={{ gap: "15px" }}>
         {specialityArray.map((speciality, index) => (
           <div
             key={index}
@@ -44,19 +40,19 @@ export function SpecCards() {
   );
 }
 
-export function LabourFilterCards() {
-  const [filterImage, setFilterImage] = useState("/images/doctor/filter.svg");
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+export function EnggFilterCards() {
+   const [filterImage, setFilterImage] = useState("/images/doctor/filter.svg");
+   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const filterArray = [
     "Sort By",
-    "Price",
-    "Gender",
-    "Age",
+    "Skills",
+    "Hourly Rate",
     "Experience",
     "Availability",
     "Type of Service",
     "Languages Known",
+    "Top Rated",
   ];
 
   return (
