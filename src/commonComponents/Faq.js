@@ -1,7 +1,14 @@
 import React from "react";
 import style from "./Faq.module.css";
 
-function Faq({ docListing, teacherListing, caListing, labourListing ,enggListing}) {
+function Faq({
+  docListing,
+  teacherListing,
+  caListing,
+  labourListing,
+  engineerListing,
+  advocateListing
+}) {
   const faqData = {
     docListing: [
       "Which dentist is best for emergency dental care in my area?",
@@ -39,7 +46,7 @@ function Faq({ docListing, teacherListing, caListing, labourListing ,enggListing
       "Which female maid is best in my area?",
       "Which female maid is best in my area?",
     ],
-    enggListing: [
+    engineerListing: [
       "Which Engineer is best in my area?",
       "Which Engineer is best in my area?",
       "Which Engineer is best in my area?",
@@ -47,6 +54,15 @@ function Faq({ docListing, teacherListing, caListing, labourListing ,enggListing
       "Which Engineer is best in my area?",
       "Which Engineer is best in my area?",
       "Which Engineer is best in my area?",
+    ],
+    advocateListing: [
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
     ],
   };
 
@@ -66,7 +82,8 @@ function Faq({ docListing, teacherListing, caListing, labourListing ,enggListing
         {teacherListing && renderFaqItems(faqData.teacherListing)}
         {caListing && renderFaqItems(faqData.caListing)}
         {labourListing && renderFaqItems(faqData.labourListing)}
-        {enggListing && renderFaqItems(faqData.enggListing)}
+        {engineerListing && renderFaqItems(faqData.engineerListing)}
+        {advocateListing&& renderFaqItems(faqData.advocateListing)}
       </div>
     </div>
   );

@@ -1,20 +1,20 @@
 .cardOuter {
   width: 769px;
   height: 280px;
-  padding: 34px 26.5px;
+  padding: 35.5px 31.27px 35.5px 31.5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 80px;
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 10px;
   color: rgba(0, 0, 0, 1);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
-
 }
 
 .cardLeft {
-  width: fit-content;
-  height: fit-content;
+  width: 607px;
+  height: 209px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -50,13 +50,13 @@
 
 .rating,
 .reviews {
+  padding: 0;
+  margin: 0;
   font-family: Poppins;
   font-size: 15px;
   font-weight: 400;
   line-height: 22.5px;
   text-align: left;
-  padding: 0;
-  margin: 0;
 }
 
 .reviews {
@@ -67,8 +67,9 @@
 }
 
 .details {
-  width: fit-content;
-  height: fit-content;
+  width: 447px;
+  height: 188px;
+  margin: 10.5px 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -77,7 +78,6 @@
 .name,
 .title,
 .qual,
-.address,
 .action,
 .action1 {
   width: fit-content;
@@ -91,46 +91,50 @@
 }
 
 .name {
-  width: 300px;
+  width: 177px;
   height: 36px;
   color: rgba(11, 219, 182, 1);
 }
 
-.title,
-.qual {
-  height: 24px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+.title {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
 }
 
-.title2 {
-  font-weight: 500;
-  line-height: 19.2px;
-  color: rgba(0, 0, 0, 1);
+.titleSpan {
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
+  color: rgba(130, 130, 130, 1);
 }
 
 .qual {
   height: 19px;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 19.2px;
-}
-
-.address {
-  font-size: 20px;
-  line-height: 29.93px;
-  margin-top: 5px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
 }
 
 .btnContainer {
-  width: 436px;
+  width: 447px;
   height: 37px;
   display: flex;
-  gap: 27px;
+  gap: 24px;
+  /*gap is reduced from 25 and to keep it 25 chagne width of detial, btncontainer, cardleft*/
   margin-top: 11px;
 }
 
 .call,
-.call1 {
+.call1,
+.call2 {
   width: fit-content;
   padding: 7.5px 15px;
   display: flex;
@@ -142,7 +146,9 @@
   color: rgba(0, 0, 0, 1);
   cursor: pointer;
 }
-.call:hover:not(.clickedAppointment) {
+
+.call:hover:not(.clickedAppointment),
+.call2:hover:not(.clickedAppointment) {
   border: 1px solid rgba(31, 239, 202, 1);
   box-shadow: 0px 2px 4.7px 0px rgba(90, 90, 90, 0.1);
   color: rgba(31, 239, 202, 1);
@@ -162,6 +168,23 @@
 .call1:hover {
   background: rgba(31, 239, 202, 1);
   box-shadow: 0px 2px 4.7px 0px rgba(90, 90, 90, 0.1);
+}
+
+.call2 {
+  width: 186px;
+  height: 37px;
+  padding: 8px 20px 8px 20px;
+  border-radius: 7.5px;
+  border: 0.75px solid rgba(0, 0, 0, 1);
+}
+
+.call {
+  width: 94.5px;
+  height: 37px;
+  padding: 7.5px 15px 7.5px 15px;
+  gap: 7.5px;
+  border-radius: 7.5px;
+  border: 0.75px solid rgba(0, 0, 0, 1);
 }
 
 .action1 {
@@ -207,32 +230,4 @@
 .heartClicked {
   margin: 0;
   padding: 0;
-  /*transition: width 0.5s ease, height 0s ease;*/
-}
-
-.rate,
-.lessons {
-  margin: 0;
-  padding: 0;
-  font-family: Poppins;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 36px;
-  text-align: center;
-  color: rgba(0, 0, 0, 1);
-}
-
-.lessons {
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 19.5px;
-  color: rgba(110, 110, 110, 1);
-  text-align: left;
-}
-
-.customQual4 {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.6px;
-  color: rgba(0, 0, 0, 1);
 }

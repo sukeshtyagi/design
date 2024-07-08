@@ -3,12 +3,12 @@ import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import Pagination from "../commonComponents/Pagination";
 import Faq from "../commonComponents/Faq";
+import Footer from "../commonComponents/Footer";
 import {
   AdvertisementCard,
   Query,
 } from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
-import Footer from "../commonComponents/Footer";
 import EnginnerCards from "./EngineerCards";
 import {
   EnginnerFilterCards,
@@ -120,7 +120,7 @@ function EnggListing() {
           </div>
         </div>
       </div>
-      <Faq enggListing="true" />
+      <Faq engineerListing="true" />
 
       <Footer />
     </>

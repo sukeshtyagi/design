@@ -16,6 +16,7 @@ import EngineerListing from "./engineerPages/EngineerListing";
 import EngineerDetail from "./engineerPages/EngineerDetail";
 import Trial from "./commonComponents/Trial";
 import TeacherFilterCards from "./teacherPages/TeacherFilterCards";
+import AdvocateListing from "./advocatePages/AdvocateListing";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/ca's" element={<CaListing />} />
         <Route path="/labours" element={<LabourListing />} />
         <Route path="/engineers" element={<EngineerListing />} />
+        <Route path="/advocates" element={<AdvocateListing />} />
 
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
@@ -39,7 +41,7 @@ function App() {
         <Route path="/labour-detail" element={<LabourDetail />} />
         <Route path="/engineer-detail" element={<EngineerDetail />} />
 
-        <Route path="/trial" element={<TeacherFilterCards/>} />
+        <Route path="/trial" element={<TeacherFilterCards />} />
       </Routes>
     </BrowserRouter>
   );
