@@ -3,7 +3,7 @@ import style from "./AdvocateCard.module.css";
 import { useNavigate } from "react-router-dom";
 
 function AdvocateCard({
-  doctorDetail,
+  advocateDetail,
   img,
   name,
   title,
@@ -11,6 +11,7 @@ function AdvocateCard({
   qual1,
   qual2,
   qual3,
+  qual4,
 }) {
   const [clicked, setClicked] = useState("");
   const [heartImage, setHeartImage] = useState("/images/doctor/heartIcon.svg");
@@ -38,15 +39,33 @@ function AdvocateCard({
   return (
     <div
       className={`${style.cardOuter} ${
-        doctorDetail ? style.docDetailCardOuter : ""
+        advocateDetail ? style.advocateDetailCardOuter : ""
       }`}
+      onClick={() => {
+        navigate("/advocate-detail", {
+          state: {
+            img,
+            name,
+            title,
+            titleSpan,
+            qual1,
+            qual2,
+            qual3,
+            qual4,
+          },
+        });
+      }}
     >
       <div
         className={`${style.cardLeft} ${
-          doctorDetail ? style.docDetailCardLeft : ""
+          advocateDetail ? style.advocateDetailCardLeft : ""
         }`}
       >
-        <div className={style.imgDiv}>
+        <div
+          className={`${style.imgDiv}   ${
+            advocateDetail ? style.advocateDetailImgDiv : ""
+          }`}
+        >
           <img src={img} alt="" className={style.image} />
 
           <div className={style.ratingContainer}>
@@ -56,10 +75,14 @@ function AdvocateCard({
           <p className={style.reviews}>10 Reviews</p>
         </div>
 
-        <div className={style.details}>
+        <div
+          className={`${style.details} ${
+            advocateDetail ? style.advocateDetails : ""
+          }`}
+        >
           <h1
             className={`${style.name} ${
-              doctorDetail ? style.docDetailName : ""
+              advocateDetail ? style.advocateDetailName : ""
             }`}
           >
             {name}
@@ -68,10 +91,15 @@ function AdvocateCard({
             {title} <span className={style.titleSpan}>{titleSpan}</span>
           </p>
           <p className={style.qual}>{qual1}</p>
+          {qual4 && <p className={style.qual}>{qual4}</p>}
           <p className={style.qual}>{qual2}</p>
           <p className={style.qual}>{qual3}</p>
 
-          <div className={style.btnContainer}>
+          <div
+            className={`${style.btnContainer} ${
+              advocateDetail ? style.advocateDetailBtnContainer : ""
+            }`}
+          >
             <div className={style.call1}>
               <img
                 src="/images/doctor/phoneIcon2.svg"
@@ -89,7 +117,7 @@ function AdvocateCard({
                 setClicked("div2");
               }}
             >
-              <p className={style.action}>Book a Consultation   </p>
+              <p className={style.action}>Book a Consultation </p>
             </div>
             <div
               className={`${style.call} ${

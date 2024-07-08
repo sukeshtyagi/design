@@ -18,7 +18,7 @@ import AdvocateCard from "./AdvocateCard";
 function AdvocateListing() {
   const advocateCardData = [
     {
-      img: "/images/advocate/advocateReview.png",
+      img: "/images/advocate/advocateReview.svg",
       name: "Esther Howard",
       title: "Family Law, Property Law, Criminal Law,",
       titleSpan: "etc",
@@ -27,7 +27,7 @@ function AdvocateListing() {
       qual3: "Licensed for 10 Years",
     },
     {
-      img: "/images/advocate/advocateReview.png",
+      img: "/images/advocate/advocateReview.svg",
       name: "Esther Howard",
       title: "Family Law, Property Law, Criminal Law,",
       titleSpan: "etc",
@@ -36,7 +36,7 @@ function AdvocateListing() {
       qual3: "Licensed for 10 Years",
     },
     {
-      img: "/images/advocate/advocateReview.png",
+      img: "/images/advocate/advocateReview.svg",
       name: "Esther Howard",
       title: "Family Law, Property Law, Criminal Law,",
       titleSpan: "etc",
@@ -45,7 +45,7 @@ function AdvocateListing() {
       qual3: "Licensed for 10 Years",
     },
     {
-      img: "/images/advocate/advocateReview.png",
+      img: "/images/advocate/advocateReview.svg",
       name: "Esther Howard",
       title: "Family Law, Property Law, Criminal Law,",
       titleSpan: "etc",
@@ -54,7 +54,7 @@ function AdvocateListing() {
       qual3: "Licensed for 10 Years",
     },
     {
-      img: "/images/advocate/advocateReview.png",
+      img: "/images/advocate/advocateReview.svg",
       name: "Esther Howard",
       title: "Family Law, Property Law, Criminal Law,",
       titleSpan: "etc",
@@ -71,7 +71,7 @@ function AdvocateListing() {
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
-              placeholderProp="Search doctors, advocates, teachers and many more....."
+              placeholderProp="Search Speciality, Family, divorce....."
             />
           </div>
           <AdvocateSpecialityCards />

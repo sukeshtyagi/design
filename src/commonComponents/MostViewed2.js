@@ -152,7 +152,40 @@ function MostViewed2({ category }) {
         experience: "3 Years of Experience ",
       },
     ],
-    // Add other categories as needed
+    advocates: [
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Family Law",
+        qualification: "LLB, LLM",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Family Law",
+        qualification: "LLB, LLM",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Family Law",
+        qualification: "LLB, LLM",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "Family Law",
+        qualification: "LLB, LLM",
+        Consultations: "911 Consultations",
+        experience: "Licensed for 10 Years",
+      },
+    ],
   };
 
   const selectedCategoryData = mostViewedData[category.toLowerCase()] || [];
@@ -175,6 +208,8 @@ function MostViewed2({ category }) {
                   ? { width: "311px" }
                   : category === "engineers"
                   ? { width: "307.75px" }
+                  : category === "advocates"
+                  ? { width: "301.75px" }
                   : {}
               }
             >
@@ -202,7 +237,6 @@ function MostViewed2({ category }) {
                 </p>
 
                 <p className={style.detail2}>{item.experience}</p>
-                
               </div>
             </div>
           ))}

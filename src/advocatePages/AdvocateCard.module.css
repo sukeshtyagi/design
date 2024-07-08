@@ -12,6 +12,13 @@
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
 }
 
+.advocateDetailCardOuter {
+  width: 1128px;
+  height: 280px;
+  gap: 388px;
+  padding: 28px 10px 31px 31px;
+}
+
 .cardLeft {
   width: 607px;
   height: 209px;
@@ -21,12 +28,24 @@
   gap: 20px;
 }
 
+.advocateDetailCardLeft {
+  width: fit-content;
+  height: fit-content; /*chosse one only*/
+  width: 627px;
+  height: 221px;
+  gap: 30px;
+}
+
 .imgDiv {
   width: 140px;
   height: 209px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.advocateDetailImgDiv {
+  margin: 6px 0;
 }
 
 .image {
@@ -68,11 +87,19 @@
 
 .details {
   width: 447px;
+  width: fit-content;
   height: 188px;
-  margin: 10.5px 0;
+  height: fit-content;
+  margin:10.5px 0;
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.advocateDetails {
+  width: 457px;
+  height: 221px;
+  margin: 0;
 }
 
 .name,
@@ -92,11 +119,20 @@
 
 .name {
   width: 177px;
+  width: fit-content;
   height: 36px;
   color: rgba(11, 219, 182, 1);
 }
 
+.advocateDetailName {
+  height: 45px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 45px;
+}
+
 .title {
+  height: 22px;
   font-family: Poppins;
   font-size: 18px;
   font-weight: 500;
@@ -106,6 +142,7 @@
 }
 
 .titleSpan {
+  height: 22px;
   font-family: Poppins;
   font-size: 10px;
   font-weight: 400;
@@ -130,6 +167,12 @@
   gap: 24px;
   /*gap is reduced from 25 and to keep it 25 chagne width of detial, btncontainer, cardleft*/
   margin-top: 11px;
+}
+
+.advocateDetailBtnContainer {
+  width: 457px;
+  height: 37px;
+  gap: 29px;
 }
 
 .call,
@@ -173,7 +216,7 @@
 .call2 {
   width: 186px;
   height: 37px;
-  padding: 8px 20px 8px 20px;
+  padding: 7.5px 20px 7.5px 20px;
   border-radius: 7.5px;
   border: 0.75px solid rgba(0, 0, 0, 1);
 }
