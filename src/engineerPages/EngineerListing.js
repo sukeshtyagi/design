@@ -66,10 +66,7 @@ function EnggListing() {
   return (
     <>
       <Header userDashboard="true" />
-      <div
-        className={style.listingOuter}
-        style={{ background: "url(/images/Backgrounds.svg)" }}
-      >
+      <div className={style.listingOuter}>
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
             <SearchBar
