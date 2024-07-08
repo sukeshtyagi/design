@@ -5,7 +5,7 @@ import Pagination from "../commonComponents/Pagination";
 import {
   Query,
   AppointCard,
-  LabourAppointCard,
+  AdvertisementCard,
 } from "../commonComponents/LeftOverCommonComponents";
 import Faq from "../commonComponents/Faq";
 import Header from "../commonComponents/Header";
@@ -114,7 +114,7 @@ function LabourListing() {
             </div>
             <div className={style.btmRight}>
               <Query forWhom="Maids" />
-              <LabourAppointCard img="/images/ca/Adv.png" />
+              <AdvertisementCard img="/images/ca/Adv.png" />
             </div>
           </div>
         </div>

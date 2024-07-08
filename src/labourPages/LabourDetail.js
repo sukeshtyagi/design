@@ -4,7 +4,7 @@ import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
-import { LabourAppointCard } from "../commonComponents/LeftOverCommonComponents";
+import { AdvertisementCard } from "../commonComponents/LeftOverCommonComponents";
 
 import LabourOtherDetail from "./LabourOtherDetail";
 import LabourCard from "./LabourCard";
@@ -111,7 +111,7 @@ function LabourDetail() {
             </div>
             <div className={style.rightDetail}>
               <BookAppointment divHeading="Hire Anna" btnHeading="Hire Now" />
-              <LabourAppointCard img="/images/ca/Adv.png" />
+              <AdvertisementCard img="/images/ca/Adv.png" />
             </div>
           </div>
           <MostViewed2 category="maids" />

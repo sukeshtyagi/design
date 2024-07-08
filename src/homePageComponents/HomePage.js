@@ -16,8 +16,8 @@ function HomePage({ userDashboard }) {
   return (
     <>
       <Header userDashboard={userDashboard} />
-      <Professions />
       <Services />
+      <Professions />
       <Campaigns />
       <PreviousEngagements />
       <Searches />
@@ -27,7 +27,7 @@ function HomePage({ userDashboard }) {
       <NeedHelp />
       <LatestBlogs />
       <Downloadsection />
-
+      
       <Footer />
     </>
   );

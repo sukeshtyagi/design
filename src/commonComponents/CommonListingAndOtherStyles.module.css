@@ -651,8 +651,17 @@
   line-height: 21px;
 }
 
+.specialityEngineer {
+  font-weight: 500;
+}
+
 .detail2 {
   line-height: 16.8px;
+}
+
+.specialityEngineerDetail2 {
+  font-size: 16px;
+  line-height: 19.2px;
 }
 
 .imgContainerView {

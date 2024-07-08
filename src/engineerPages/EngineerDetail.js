@@ -4,12 +4,16 @@ import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import MostViewed2 from "../commonComponents/MostViewed2";
+import { AdvertisementCard } from "../commonComponents/LeftOverCommonComponents";
+import BookAppointment from "../commonComponents/BookAppointment";
 
 import EngineerCards from "./EngineerCards";
 import EngineerDetailAboutSection from "./EngineerDetailAboutSection";
 import EngineerDetailSpecialitiesSection from "./EngineerDetailSpecialitiesSection";
 import EngineerDetailReviewsSection from "./EngineerDetailReviewsSection";
 import EngineerDetailPortfolioSection from "./EngineerDetailPortfolioSection";
+import EngineerImagesCarousel from "./EngineerImagesCarousel";
 
 function EnggDetail() {
   const location = useLocation();
@@ -109,7 +113,14 @@ function EnggDetail() {
               {select === "reviews" && <EngineerDetailReviewsSection />}
               {select === "portfolio" && <EngineerDetailPortfolioSection />}
             </div>
+            <div className={style.btmRight} style={{ marginLeft: "-8px" }}>
+              <BookAppointment divHeading="Hire Jacob " btnHeading="Hire Now" />
+
+              <AdvertisementCard img="images/ca/enggAdBanner.png" />
+            </div>
           </div>
+          <MostViewed2 category="engineers" />
+          <EngineerImagesCarousel />
         </div>
       </div>
       <Footer />

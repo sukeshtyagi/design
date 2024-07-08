@@ -137,7 +137,7 @@ export function AppointCard({
   );
 }
 
-export function LabourAppointCard({img}) {
+export function AdvertisementCard({ img }) {
   return (
     <div className={style.appointLabOuter}>
       <img src={img} alt="" />

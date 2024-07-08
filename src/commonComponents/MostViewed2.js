@@ -117,6 +117,41 @@ function MostViewed2({ category }) {
         experience: "3 Years of Experience ",
       },
     ],
+
+    engineers: [
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "ARCHITECTURE",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "ARCHITECTURE",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "ARCHITECTURE",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+      {
+        img: "/images/doctor/mostViewed.svg",
+        name: "Theresa Webb",
+        speciality: "ARCHITECTURE",
+        qualification: "Fluent in Hindi, English",
+        Consultations: "30 Years Old (F)",
+        experience: "3 Years of Experience ",
+      },
+    ],
     // Add other categories as needed
   };
 
@@ -138,16 +173,36 @@ function MostViewed2({ category }) {
                   ? { width: "301.75px" }
                   : category === "maids"
                   ? { width: "311px" }
+                  : category === "engineers"
+                  ? { width: "307.75px" }
                   : {}
               }
             >
               <img src={item.img} alt="" className={style.viewedImg} />
               <div className={style.detailsContainer}>
                 <h1 className={style.detail1}>{item.name}</h1>
-                <p className={style.detail}>{item.speciality}</p>
+                <p
+                  className={`${style.detail}
+                ${category === "engineers" ? style.specialityEngineer : ""}`}
+                >
+                  {item.speciality}
+                </p>
+
                 <p className={style.detail2}>{item.qualification}</p>
-                <p className={style.detail2}>{item.Consultations}</p>
+
+                <p
+                  className={`${style.detail2}
+                ${
+                  category === "engineers"
+                    ? style.specialityEngineerDetail2
+                    : ""
+                }`}
+                >
+                  {item.Consultations}
+                </p>
+
                 <p className={style.detail2}>{item.experience}</p>
+                
               </div>
             </div>
           ))}

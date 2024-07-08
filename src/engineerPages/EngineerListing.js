@@ -4,7 +4,7 @@ import SearchBar from "../commonComponents/SearchBar";
 import Pagination from "../commonComponents/Pagination";
 import Faq from "../commonComponents/Faq";
 import {
-  LabourAppointCard,
+  AdvertisementCard,
   Query,
 } from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
@@ -115,7 +115,7 @@ function EnggListing() {
             </div>
             <div className={style.btmRight} style={{ marginLeft: "-8px" }}>
               <Query forWhom="Websites IT & Software Engineers" />
-              <LabourAppointCard img="images/ca/enggAdBanner.png" />
+              <AdvertisementCard img="images/ca/enggAdBanner.png" />
             </div>
           </div>
         </div>
