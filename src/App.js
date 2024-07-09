@@ -18,6 +18,7 @@ import Trial from "./commonComponents/Trial";
 import TeacherFilterCards from "./teacherPages/TeacherFilterCards";
 import AdvocateListing from "./advocatePages/AdvocateListing";
 import AdvocateDetail from "./advocatePages/AdvocateDetail";
+import OfficersListing from "./officersPages/OfficersListing";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/labours" element={<LabourListing />} />
         <Route path="/engineers" element={<EngineerListing />} />
         <Route path="/advocates" element={<AdvocateListing />} />
+        <Route path="/officers" element={<OfficersListing />} />
 
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />

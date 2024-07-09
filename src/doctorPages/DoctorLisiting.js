@@ -91,7 +91,7 @@ function DoctorLisiting() {
 
           <h1 className={style.heading}>Best Dentists in HSR Layout</h1>
           <DoctorFilterCards />
-          <div className={style.btmContainer}>
+          <div className={style.btmContainer} style={{ marginTop: "10px" }}>
             <div className={style.btmLeft}>
               {docCardData.map((data) => (
                 <CommonCard
