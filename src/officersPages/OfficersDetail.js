@@ -41,7 +41,7 @@ function OfficersDetail() {
             qual1={qual1}
           />
           <Complaints />
-          <SubmitFeedback forWhom="Ms. Esther Howard" officerDetail="true"/>
+          <SubmitFeedback forWhom="Ms. Esther Howard" officerDetail="true"  />
         </div>
       </div>
       <Footer />
