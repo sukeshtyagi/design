@@ -57,8 +57,10 @@ function AdvocateDetail() {
             qual3={qual3}
             qual4="Fluent in Hindi, English"
           />
-          <div className={style.detailBtm}>
-            <div className={style.leftDetail}>
+          <div className={style.detailBtm} style={{ gap: "027px" }}>
+            <div
+              className={style.leftDetail}
+            >
               <div className={style.navOptionDetail}>
                 <p
                   className={`${style.option} ${
@@ -95,7 +97,9 @@ function AdvocateDetail() {
               {select === "practice" && <AdvocateDetailPracticeSection />}
               {select === "reviews" && <AdvocateDetailReviewSection />}
             </div>
-            <div className={style.btmRight} style={{ marginLeft: "-8px" }}>
+            <div
+              className={style.btmRight}
+            >
               <BookAppointment
                 divHeading="Schedule a Consultation"
                 btnHeading="Schedule Now"
