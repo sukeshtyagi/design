@@ -131,16 +131,7 @@ function EnggReviews({ enggReview }) {
   if (enggReview) {
     selectedReviews = reviews.engg;
     heading = "Client Reviews";
-  } /*else if (studentReview) {
-    selectedReviews = reviews.student;
-    heading = "Student Reviews";
-  } else if (clientReview) {
-    selectedReviews = reviews.client;
-    heading = "Client Reviews";
-  } else if (labourReview) {
-    selectedReviews = reviews.labour;
-    heading = "Client Reviews";
-  }*/
+  }
 
   return (
     <div className={style.patientOuter}>

@@ -17,8 +17,7 @@ import EngineerImagesCarousel from "./EngineerImagesCarousel";
 
 function EnggDetail() {
   const location = useLocation();
-  const { img, name, title, qual1, qual2, qual3, qual4, doctorListing } =
-    location.state || {};
+  const { img, name, title, qual1, qual2, qual3, qual4 } = location.state || {};
 
   const [select, setSelect] = useState("about");
   const handleSelect = (value) => {

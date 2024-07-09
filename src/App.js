@@ -19,6 +19,7 @@ import TeacherFilterCards from "./teacherPages/TeacherFilterCards";
 import AdvocateListing from "./advocatePages/AdvocateListing";
 import AdvocateDetail from "./advocatePages/AdvocateDetail";
 import OfficersListing from "./officersPages/OfficersListing";
+import OfficersDetail from "./officersPages/OfficersDetail";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/labour-detail" element={<LabourDetail />} />
         <Route path="/engineer-detail" element={<EngineerDetail />} />
         <Route path="/advocate-detail" element={<AdvocateDetail />} />
+        <Route path="/officer-detail" element={<OfficersDetail />} />
 
         <Route path="/trial" element={<TeacherFilterCards />} />
       </Routes>

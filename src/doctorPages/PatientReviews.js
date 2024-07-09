@@ -1,9 +1,12 @@
 import React from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 
-export function SubmitFeedback({ forWhom }) {
+export function SubmitFeedback({ forWhom, officerDetail }) {
   return (
-    <div className={style.outerSubmit}>
+    <div
+      className={style.outerSubmit}
+      style={officerDetail ? { width: "1128px" } : {}}
+    >
       <p className={style.submitheading}>Submit Feedback</p>
       <div className={style.lwer}>
         <div className={style.leftDiv}>

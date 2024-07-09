@@ -6,8 +6,6 @@ function OfficerCards({ officerDetail, img, name, title, qual1 }) {
   const [clicked, setClicked] = useState("");
   const navigate = useNavigate();
 
-  
-
   return (
     <div
       className={`${style.cardOuter} ${
@@ -72,17 +70,19 @@ function OfficerCards({ officerDetail, img, name, title, qual1 }) {
               <p className={style.action1}>View Complaints</p>
             </div>
 
-            <div
-              className={`${style.raiseComplaint} ${
-                clicked === "div2" ? style.clickedAppointment : ""
-              }`}
-              onClick={(e) => {
-                e.stopPropagation();
-                setClicked("div2");
-              }}
-            >
-              <p className={style.action}>Write a Complaint </p>
-            </div>
+            {!officerDetail && (
+              <div
+                className={`${style.raiseComplaint} ${
+                  clicked === "div2" ? style.clickedAppointment : ""
+                }`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setClicked("div2");
+                }}
+              >
+                <p className={style.action}>Write a Complaint </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
