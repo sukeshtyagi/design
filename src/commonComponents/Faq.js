@@ -7,7 +7,8 @@ function Faq({
   caListing,
   labourListing,
   engineerListing,
-  advocateListing
+  advocateListing,
+  govtOfficesListing,
 }) {
   const faqData = {
     docListing: [
@@ -64,6 +65,15 @@ function Faq({
       "Which Family Law Advocate is best in my area?",
       "Which Family Law Advocate is best in my area?",
     ],
+    govtOfficesListing: [
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+      "Which Family Law Advocate is best in my area?",
+    ],
   };
 
   const renderFaqItems = (faqArray) =>
@@ -83,7 +93,8 @@ function Faq({
         {caListing && renderFaqItems(faqData.caListing)}
         {labourListing && renderFaqItems(faqData.labourListing)}
         {engineerListing && renderFaqItems(faqData.engineerListing)}
-        {advocateListing&& renderFaqItems(faqData.advocateListing)}
+        {advocateListing && renderFaqItems(faqData.advocateListing)}
+        {govtOfficesListing && renderFaqItems(faqData.govtOfficesListing)}
       </div>
     </div>
   );
