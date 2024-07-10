@@ -20,8 +20,6 @@ export function EngineerSpecialityCards() {
     "Civil",
   ];
 
-   
-
   return (
     <div className={style.specCardWrapper}>
       <div className={style.specCardContainer} style={{ gap: "15px" }}>

@@ -21,6 +21,7 @@ import AdvocateDetail from "./advocatePages/AdvocateDetail";
 import OfficersListing from "./officersPages/OfficersListing";
 import OfficersDetail from "./officersPages/OfficersDetail";
 import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
+import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/engineer-detail" element={<EngineerDetail />} />
         <Route path="/advocate-detail" element={<AdvocateDetail />} />
         <Route path="/officer-detail" element={<OfficersDetail />} />
+        <Route path="/govt-offices-detail" element={<GovtOfficesDetail />} />
 
         <Route path="/trial" element={<TeacherFilterCards />} />
       </Routes>

@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import style from "./GovtOfficeCard.module.css";
 function GovtOfficeCard({
   heading,
@@ -8,8 +9,16 @@ function GovtOfficeCard({
   detail4,
   detail5,
 }) {
+  const navigate = useNavigate();
   return (
-    <div className={style.cardOuter}>
+    <div
+      className={style.cardOuter}
+      onClick={() => {
+        navigate("/govt-offices-detail", {
+          state: { detail1, detail2, detail3, detail4, detail5 },
+        });
+      }}
+    >
       <h1 className={style.cardHeading}>{heading}</h1>
       <ul className={style.detailContainer}>
         <li className={style.detail}>{detail1}</li>
