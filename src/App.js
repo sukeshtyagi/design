@@ -15,13 +15,13 @@ import LabourDetail from "./labourPages/LabourDetail";
 import EngineerListing from "./engineerPages/EngineerListing";
 import EngineerDetail from "./engineerPages/EngineerDetail";
 import Trial from "./commonComponents/Trial";
-import TeacherFilterCards from "./teacherPages/TeacherFilterCards";
 import AdvocateListing from "./advocatePages/AdvocateListing";
 import AdvocateDetail from "./advocatePages/AdvocateDetail";
 import OfficersListing from "./officersPages/OfficersListing";
 import OfficersDetail from "./officersPages/OfficersDetail";
 import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
+import Listing from "./listingPages/Listing";
 
 function App() {
   return (
@@ -51,7 +51,9 @@ function App() {
         <Route path="/officer-detail" element={<OfficersDetail />} />
         <Route path="/govt-offices-detail" element={<GovtOfficesDetail />} />
 
-        <Route path="/trial" element={<TeacherFilterCards />} />
+        <Route path="/list-yourself" element={<Listing />} />
+
+        <Route path="/trial" element={<Trial />} />
       </Routes>
     </BrowserRouter>
   );

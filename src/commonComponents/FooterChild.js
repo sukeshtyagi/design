@@ -1,5 +1,6 @@
 import React from "react";
 import style from "../styles/Footer.module.css";
+import { useNavigate } from "react-router-dom";
 
 function FooterChild({
   heading,
@@ -12,6 +13,7 @@ function FooterChild({
   link7,
   link8,
 }) {
+  const navigate = useNavigate();
   return (
     <div className={style.footerChildOuter}>
       <h1 className={style.footerChildheading}>{heading}</h1>
@@ -38,6 +40,11 @@ function FooterChild({
         </p>
         <p
           className={`${style.footerChildPara} hover:text-appGreen cursor-pointer`}
+          onClick={() => {
+            if (link5 === "Free Listing") {
+              navigate("/list-yourself");
+            }
+          }}
         >
           {link5}
         </p>

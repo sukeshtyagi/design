@@ -2,7 +2,7 @@ import React from "react";
 import style from "../styles/Header.module.css";
 import { useNavigate } from "react-router-dom";
 
-function Header({ dekstopLogin, signup, userDashboard }) {
+function Header({ dekstopLogin, signup, userDashboard, professionalListing }) {
   const navigate = useNavigate();
   const handleNavigation = () => {
     const userDetails = localStorage.getItem("userDetails");
@@ -17,11 +17,16 @@ function Header({ dekstopLogin, signup, userDashboard }) {
     <div
       className={`${style.outerContainer}`}
       style={
-        userDashboard
+        (userDashboard
           ? {
               boxShadow: "0px 0px 42px 0px rgba(0, 0, 0, 0.06)",
             }
-          : {}
+          : {},
+        professionalListing
+          ? {
+              boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+            }
+          : {})
       }
     >
       <div className={`${style.headerContainer}`}>
@@ -39,7 +44,7 @@ function Header({ dekstopLogin, signup, userDashboard }) {
           />
         </div>
 
-        <div className={style.rightDiv}>
+        <div className={style.rightDiv} >
           <div className={`${style.optionsContainer} `}>
             <p
               className={`${style.navItem1}  box-border`}
@@ -68,7 +73,7 @@ function Header({ dekstopLogin, signup, userDashboard }) {
                     marginLeft: "86px",
                     gap: "30px",
                   }
-                : {}
+                : {width:"304px"}
             }
           >
             {(dekstopLogin || signup) && (
@@ -114,7 +119,9 @@ function Header({ dekstopLogin, signup, userDashboard }) {
 
             {userDashboard && (
               <div
-              onClick={()=>{navigate("/profile")}}
+                onClick={() => {
+                  navigate("/profile");
+                }}
               >
                 <img
                   src="/images/blogs/user.svg"
