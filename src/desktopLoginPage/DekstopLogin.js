@@ -168,7 +168,7 @@ function DesktopLogin() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer shadow="true" />
     </>
   );
 }

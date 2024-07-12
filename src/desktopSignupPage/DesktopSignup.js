@@ -171,7 +171,7 @@ function DesktopSignup() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer shadow="true" />
     </>
   );
 }

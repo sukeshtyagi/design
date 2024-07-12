@@ -118,7 +118,7 @@ function AdvocateListing() {
       </div>
       <Faq advocateListing="true" />
 
-      <Footer />
+      <Footer shadow="true"/>
     </>
   );
 }

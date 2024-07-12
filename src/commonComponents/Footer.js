@@ -5,9 +5,19 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import FooterChild from "./FooterChild";
 import style from "../styles/Footer.module.css";
 
-function Footer() {
+function Footer({ shadow }) {
   return (
-    <div className={style.outermostSectionContainer}>
+    <div
+      className={style.outermostSectionContainer}
+      style={
+        shadow
+          ? {
+              boxShadow: "0px -1px 12.4px 0px rgba(150, 150, 150, 0.05)",
+              backgroundImage: "url(/images/Bcg.svg)",
+            }
+          : { backgroundImage: "url(/images/Bcg.svg)" }
+      }
+    >
       <div className={style.topDiv}>
         <div className={style.leftDiv}>
           <div className={style.imgContainer}>
@@ -113,9 +123,9 @@ function Footer() {
         </div>
       </div>
 
-        <h1 className={style.headingFooter}>
-          Copyrights 2008-24. All Rights Reserved.
-        </h1>
+      <h1 className={style.headingFooter}>
+        Copyrights 2008-24. All Rights Reserved.
+      </h1>
     </div>
   );
 }

@@ -1,13 +1,10 @@
-
 .upperDiv {
   box-sizing: border-box;
   width: 937px;
   height: 96px;
-  border-radius: 10px 0px 0px 0px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  border-radius: 10px;
 }
 
 .topUpper {
@@ -34,7 +31,6 @@
   box-sizing: border-box;
   width: 937px;
   height: 48px;
-  border: 1px solid rgba(147, 143, 150, 1);
   border-radius: 8px 8px 8px 8px;
   border-right-width: 0px;
   display: flex;
@@ -51,6 +47,7 @@
   display: flex;
   border-radius: 8px 0px 0px 8px;
   border: 1px solid rgba(147, 143, 150, 1);
+  border: 1px solid rgba(11, 219, 182, 1);/**/
   background: rgba(255, 255, 255, 1);
   border-right-width: 1px;
 }
@@ -112,6 +109,7 @@
   gap: 10px;
   background: rgba(255, 255, 255, 1);
   border: 1px solid rgba(147, 143, 150, 1);
+  border: 1px solid rgba(11, 219, 182, 1);/**/
   border-left-width: 0px;
 }
 
@@ -132,12 +130,12 @@
 .rightBtmUpper {
   width: 48px;
   height: 48px;
-  border-radius: 0px 8px 8px 0px;
   background: rgba(11, 219, 182, 1);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: none;
+  border-radius: 0px 8px 8px 0px;
+  border-left: none;
 }
-
-

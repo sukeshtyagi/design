@@ -122,7 +122,7 @@ function TeacherListing() {
         </div>
       </div>
       <Faq teacherListing="true" />
-      <Footer />
+      <Footer shadow="true" />
     </>
   );
 }

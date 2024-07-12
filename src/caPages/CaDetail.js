@@ -30,7 +30,8 @@ function CaDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner}>
+        <div className={style.listingInner}
+        style={{marginBottom:"104px"}}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"

@@ -20,7 +20,7 @@ function OfficersDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner}>
+        <div className={style.listingInner} style={{marginBottom:"100px"}}>
           <div className={style.searchContainer}>
             <SearchBar userDashboard="true" placeholderProp="Search" />
           </div>
@@ -44,7 +44,7 @@ function OfficersDetail() {
           <SubmitFeedback forWhom="Ms. Esther Howard" officerDetail="true"  />
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 }

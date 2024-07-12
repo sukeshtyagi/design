@@ -120,7 +120,7 @@ function CaListing() {
         </div>
       </div>
       <Faq caListing="true" />
-      <Footer />
+      <Footer shadow="true"/>
     </>
   );
 }

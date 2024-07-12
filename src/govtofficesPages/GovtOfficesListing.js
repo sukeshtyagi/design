@@ -120,8 +120,8 @@ function GovtOfficesListing() {
           </div>
         </div>
       </div>
-      <Faq govtOfficesListing="true" />
-      <Footer />
+      <Faq govtOfficesListing="true" marginBtm="true" />
+      <Footer shadow="true" />
     </>
   );
 }

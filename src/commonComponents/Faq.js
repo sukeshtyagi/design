@@ -2,6 +2,7 @@ import React from "react";
 import style from "./Faq.module.css";
 
 function Faq({
+  marginBtm,
   docListing,
   teacherListing,
   caListing,
@@ -85,7 +86,10 @@ function Faq({
     ));
 
   return (
-    <div className={style.faqOuter}>
+    <div
+      className={style.faqOuter}
+      style={marginBtm ? { marginBottom: "100px" } : {}}
+    >
       <div className={style.faqInner}>
         <h1 className={style.headingFaq}>Frequently Asked Questions</h1>
         {docListing && renderFaqItems(faqData.docListing)}

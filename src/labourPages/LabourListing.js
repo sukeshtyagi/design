@@ -67,9 +67,7 @@ function LabourListing() {
   return (
     <>
       <Header userDashboard="true" />
-      <div
-        className={style.listingOuter}
-      >
+      <div className={style.listingOuter}>
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
             <SearchBar
@@ -119,7 +117,7 @@ function LabourListing() {
         </div>
       </div>
       <Faq labourListing="true" />
-      <Footer />
+      <Footer shadow="true" />
     </>
   );
 }

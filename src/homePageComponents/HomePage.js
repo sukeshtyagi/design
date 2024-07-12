@@ -27,7 +27,6 @@ function HomePage({ userDashboard }) {
       <NeedHelp />
       <LatestBlogs />
       <Downloadsection />
-      
       <Footer />
     </>
   );

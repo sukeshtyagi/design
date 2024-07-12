@@ -34,7 +34,10 @@ function Listing() {
           </div>
           <div className={style.detailContainer}>
             <div className={style.detialsHeading}>
-              <h1 className={style.heading}>List yourself as a Professional</h1>
+              <h1 className={style.heading}>
+                List yourself as a{" "}
+                <span className={style.headingSpan}>Professional</span>
+              </h1>
               <p className={style.headingPara}>
                 Join our community of professionals and reach more clients. Fill
                 out the form below to get started.
@@ -160,7 +163,7 @@ function Listing() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer shadow="true" />
     </>
   );
 }

@@ -126,7 +126,7 @@ function DoctorLisiting() {
         </div>
       </div>
       <Faq docListing="true" />
-      <Footer />
+      <Footer shadow="true" />
     </>
   );
 }

@@ -2,10 +2,11 @@
   box-sizing: border-box;
   height: 500px;
   margin: auto;
-  margin-top: 50px; /**/
-  background: rgba(255, 255, 255, 1);
+  margin-top: 0px; /**/
+  background: rgba(248, 255, 254, 1);
   display: flex;
   flex-direction: column;
+  background-position: 75vw 0px;
 }
 
 .topDiv {

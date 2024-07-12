@@ -19,7 +19,7 @@ function GovtOfficesDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner}>
+        <div className={style.listingInner} style={{marginBottom:"100px"}}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
@@ -56,7 +56,7 @@ function GovtOfficesDetail() {
           )}
         </div>
       </div>
-      <Footer />
+      <Footer shadow="true"/>
     </>
   );
 }

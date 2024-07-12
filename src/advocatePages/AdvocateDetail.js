@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import Header from "../commonComponents/Header";
-import SearchBar from "../commonComponents/SearchBar";
 import Footer from "../commonComponents/Footer";
+import SearchBar from "../commonComponents/SearchBar";
 import { AdvertisementCard } from "../commonComponents/LeftOverCommonComponents";
 import MostViewed2 from "../commonComponents/MostViewed2";
 import BookAppointment from "../commonComponents/BookAppointment";
@@ -29,7 +29,7 @@ function AdvocateDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner}>
+        <div className={style.listingInner} style={{marginBottom:"100px"}}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
@@ -110,7 +110,7 @@ function AdvocateDetail() {
           <MostViewed2 category="advocates" />
         </div>
       </div>
-      <Footer />
+      <Footer shadow="true"/>
     </>
   );
 }

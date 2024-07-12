@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./PersonalInfoAndManageAddress.module.css";
 
 function ManageAddress() {
+  const [isAddNewClicked, setIsAddNewClicked] = useState(false);
+
+  const handleAddNewClick = () => {
+    setIsAddNewClicked(true);
+  };
   return (
     <div className={style.addContainer}>
       <div className={style.topDivAdd}>
         <p className={style.manageAdd}>Manage Addresses</p>
-        <button className={style.newAdd}>+ Add a new Address</button>
+        <button
+          className={`${style.newAdd} ${
+            isAddNewClicked ? style.newAddClicked : ""
+          }`}
+          onClick={handleAddNewClick}
+        >
+          + Add a new Address
+        </button>
       </div>
 
       <div className={style.midDivAdd}>
