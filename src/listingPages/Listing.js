@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
@@ -8,17 +8,26 @@ import * as Yup from "yup";
 
 function Listing() {
   const navigate = useNavigate();
+  const [selectedProfession, setSelectedProfession] = useState(null);
+
   const initialValues = {
     fullName: "",
     email: "",
-    password: "",
+    phoneNumber: "",
   };
 
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Required"),
     email: Yup.string().email("Invalid email address").required("Required"),
-    phoneNumber: Yup.string().required("Required").min(8, "Password Too Short"),
+    phoneNumber: Yup.string()
+      .required("Required")
+      .min(8, "Phone Number Too Short"),
   });
+
+  const handleProfessionClick = (profession) => {
+    setSelectedProfession(profession);
+  };
+
   return (
     <>
       <Header professionalListing="true" signup="true" />
@@ -91,27 +100,60 @@ function Listing() {
 
                   <div className={style.professionContainer}>
                     <div className={style.professionContainerRow}>
-                      <div className={style.profession}>
+                      <div
+                        className={`${style.profession} ${
+                          selectedProfession === "doctor"
+                            ? style.professionClicked
+                            : ""
+                        }`}
+                        onClick={() => handleProfessionClick("doctor")}
+                      >
                         <img
-                          src="/images/listingProfessional/doctor.svg"
+                          src={
+                            selectedProfession === "doctor"
+                              ? "/images/listingProfessional/doctorClicked.svg"
+                              : "/images/listingProfessional/doctor.svg"
+                          }
                           alt=""
                           className={style.image}
                         />
                         <p className={style.title}>Doctor</p>
                       </div>
 
-                      <div className={style.profession}>
+                      <div
+                        className={`${style.profession} ${
+                          selectedProfession === "engineer"
+                            ? style.professionClicked
+                            : ""
+                        }`}
+                        onClick={() => handleProfessionClick("engineer")}
+                      >
                         <img
-                          src="/images/listingProfessional/engineer.svg"
+                          src={
+                            selectedProfession === "engineer"
+                              ? "/images/listingProfessional/engineerClicked.svg"
+                              : "/images/listingProfessional/engineer.svg"
+                          }
                           alt=""
                           className={style.image}
                         />
                         <p className={style.title}>Engineer</p>
                       </div>
 
-                      <div className={style.profession}>
+                      <div
+                        className={`${style.profession} ${
+                          selectedProfession === "advocate"
+                            ? style.professionClicked
+                            : ""
+                        }`}
+                        onClick={() => handleProfessionClick("advocate")}
+                      >
                         <img
-                          src="/images/listingProfessional/advocate.svg"
+                          src={
+                            selectedProfession === "advocate"
+                              ? "/images/listingProfessional/advocateClicked.svg"
+                              : "/images/listingProfessional/advocate.svg"
+                          }
                           alt=""
                           className={style.image}
                         />
@@ -120,27 +162,60 @@ function Listing() {
                     </div>
 
                     <div className={style.professionContainerRow}>
-                      <div className={style.profession}>
+                      <div
+                        className={`${style.profession} ${
+                          selectedProfession === "teacher"
+                            ? style.professionClicked
+                            : ""
+                        }`}
+                        onClick={() => handleProfessionClick("teacher")}
+                      >
                         <img
-                          src="/images/listingProfessional/teacher.svg"
+                          src={
+                            selectedProfession === "teacher"
+                              ? "/images/listingProfessional/teacherClicked.svg"
+                              : "/images/listingProfessional/teacher.svg"
+                          }
                           alt=""
                           className={style.image}
                         />
                         <p className={style.title}>Teacher</p>
                       </div>
 
-                      <div className={style.profession}>
+                      <div
+                        className={`${style.profession} ${
+                          selectedProfession === "labour"
+                            ? style.professionClicked
+                            : ""
+                        }`}
+                        onClick={() => handleProfessionClick("labour")}
+                      >
                         <img
-                          src="/images/listingProfessional/labour.svg"
+                          src={
+                            selectedProfession === "labour"
+                              ? "/images/listingProfessional/labourClicked.svg"
+                              : "/images/listingProfessional/labour.svg"
+                          }
                           alt=""
                           className={style.image}
                         />
                         <p className={style.title}>Labour</p>
                       </div>
 
-                      <div className={style.profession}>
+                      <div
+                        className={`${style.profession} ${
+                          selectedProfession === "ca"
+                            ? style.professionClicked
+                            : ""
+                        }`}
+                        onClick={() => handleProfessionClick("ca")}
+                      >
                         <img
-                          src="/images/listingProfessional/ca.svg"
+                          src={
+                            selectedProfession === "ca"
+                              ? "/images/listingProfessional/caClicked.svg"
+                              : "/images/listingProfessional/ca.svg"
+                          }
                           alt=""
                           className={style.image}
                         />
@@ -149,7 +224,13 @@ function Listing() {
                     </div>
                   </div>
 
-                  <button type="submit" className={`${style.buttonSignup}`}>
+                  <button
+                    type="submit"
+                    className={`${style.buttonSignup} ${
+                      !selectedProfession ? style.buttonDisabled : ""
+                    }`}
+                    disabled={!selectedProfession}
+                  >
                     Get Started
                   </button>
                 </div>

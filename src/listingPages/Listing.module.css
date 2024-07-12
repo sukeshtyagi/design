@@ -101,6 +101,12 @@
   text-align: left;
 }
 
+.buttonDisabled{
+  cursor: not-allowed;
+  background-color: rgba(212, 212, 212, 1);
+  color: rgba(150, 150, 150, 1);
+}
+
 .bottomPara {
   height: 20px;
   margin: 0 auto;
@@ -130,7 +136,7 @@
   width: 514px;
   height: 40px;
   display: flex;
-  gap: 40px;
+  gap: 37px;
 }
 
 .profession {
@@ -144,6 +150,14 @@
   border-radius: 8px;
   background: rgba(255, 255, 255, 1);
   cursor: pointer;
+  color: black;
+  border: 0.25px solid rgba(125, 125, 125, 1)
+}
+
+.professionClicked{
+  color: white;
+  background-color: rgba(11, 219, 182, 1);
+  border: 0.25px solid transparent
 }
 
 .title {
@@ -155,5 +169,4 @@
   line-height: 24px;
   letter-spacing: -0.02em;
   text-align: left;
-  color: rgba(0, 0, 0, 1);
 }
