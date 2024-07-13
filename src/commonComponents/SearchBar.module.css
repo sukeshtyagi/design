@@ -125,6 +125,7 @@
   letter-spacing: 0.25px;
   text-align: left;
   color: rgba(147, 143, 150, 1);
+  text-overflow: ellipsis;
 }
 
 .rightBtmUpper {
