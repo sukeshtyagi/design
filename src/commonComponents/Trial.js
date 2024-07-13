@@ -1,133 +1,155 @@
 import React from "react";
-import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
-import SearchBar from "../commonComponents/SearchBar";
-import CommonCard from "../commonComponents/CommonCard";
-import Faq from "../commonComponents/Faq";
-import Appointment from "../doctorPages/Appointment";
-import {
-  AppointCard,
-  Query,
-} from "../commonComponents/LeftOverCommonComponents";
-import Pagination from "../commonComponents/Pagination";
-import {
-  DoctorFilterCards,
-  DoctorSpecialityCards,
-} from "../doctorPages/DoctorSpecialityAndFilterCards";
-import Header from "../commonComponents/Header";
-import Footer from "../commonComponents/Footer";
-function Trial() {
-  const docCardData = [
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-  ];
+import style from "../styles/Header.module.css";
+import { useNavigate } from "react-router-dom";
+
+function Header({ dekstopLogin, signup, userDashboard, professionalListing }) {
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    const userDetails = localStorage.getItem("userDetails");
+    if (userDetails) {
+      navigate("/homepage");
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
-    <>
-      <Header userDashboard="true" />
-      <div
-        className={style.listingOuter}
-        style={{ background: "url(/images/Backgrounds.svg)" }}
-      >
-        <div className={style.listingInner}>
-          <div className={style.searchContainer}>
-            <SearchBar
-              userDashboard="true"
-              placeholderProp="Search doctors, advocates, teachers and many more....."
+    <div
+      className={`${style.outerContainer}`}
+      style={
+        (userDashboard
+          ? {
+              boxShadow: "0px 0px 42px 0px rgba(0, 0, 0, 0.06)",
+            }
+          : {},
+        professionalListing
+          ? {
+              boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+            }
+          : {})
+      }
+    >
+      <div className={`${style.headerContainer}`}>
+        <div
+          className={`${style.leftDiv}`}
+          style={userDashboard ? { cursor: "pointer" } : {}}
+        >
+          <img
+            src="/images/logo.svg"
+            alt="Logo of app"
+            className="box-border w-[194px] h-[30px]"
+            onClick={() => {
+              handleNavigation();
+            }}
+          />
+        </div>
+
+        <div className={style.rightDiv}>
+          <div className={`${style.optionsContainer} `}>
+            <p
+              className={`${style.navItem1}  box-border`}
+              onClick={() => {
+                handleNavigation();
+              }}
+            >
+              Home
+            </p>
+
+            <p className={`${style.navItem2}  box-border`}>Categories</p>
+
+            <p className={`${style.navItem3}  box-border`}>
+              Raise Startup Funds
+            </p>
+
+            <p className={`${style.navItem4}  box-border`}>Investors</p>
+          </div>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className={style.home}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
             />
-          </div>
+          </svg>
 
-          <DoctorSpecialityCards />
-        </div>
+          <div
+            className={`${style.btnDiv}`}
+            style={
+              userDashboard
+                ? {
+                    width: "205px",
+                    marginLeft: "86px",
+                    gap: "30px",
+                  }
+                : { width: "304px" }
+            }
+          >
+            {(dekstopLogin || signup) && (
+              <p className={`${style.noAccountPara}`}>Don't have an account</p>
+            )}
 
-        <div className={style.bannerContainer}>
-          <img src="/images/doctor/banner.svg" alt="" />
-        </div>
+            {!dekstopLogin && !signup && !userDashboard && (
+              <button
+                className={`${style.loginBtn}`}
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Login/Sign Up
+              </button>
+            )}
 
-        <div className={style.listingInner2}>
-          <div className={style.locationFilterPara}>
-            <p className={style.para}>Bangalore</p>
-            <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>Allopathic Doctors in Bangalore</p>
-            <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>Dentists in Bangalore</p>
-          </div>
+            {!dekstopLogin && !signup && (
+              <button className={`${style.donateBtn}`}>Donate Now</button>
+            )}
 
-          <h1 className={style.heading}>Best Dentists in HSR Layout</h1>
-          <DoctorFilterCards />
-          <div className={style.btmContainer} style={{ marginTop: "10px" }}>
-            <div className={style.btmLeft}>
-              {docCardData.map((data) => (
-                <CommonCard
-                  doctorListing="Book Appointment"
-                  img={data.img}
-                  name={data.name}
-                  title={data.title}
-                  qual1={data.qual1}
-                  qual2={data.qual2}
-                  address={data.address}
+            {dekstopLogin && (
+              <button
+                className={`${style.donateBtn}`}
+                onClick={() => {
+                  navigate("/register");
+                }}
+              >
+                SignUp Now
+              </button>
+            )}
+
+            {signup && (
+              <button
+                className={`${style.donateBtn}`}
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                Login
+              </button>
+            )}
+
+            {userDashboard && (
+              <div
+                onClick={() => {
+                  navigate("/profile");
+                }}
+              >
+                <img
+                  src="/images/blogs/user.svg"
+                  alt=""
+                  className={style.userImage}
                 />
-              ))}
-              <Pagination />
-            </div>
-            <div className={style.btmRight}>
-              <Appointment />
-              <Query forWhom="Dentists" />
-              <AppointCard
-                background="linear-gradient(76.05deg, #337f8c 1.21%, #6ab1a5 99.58%)"
-                rightImg="/images/doctor/appointImg.svg"
-                teethImage="/images/doctor/teeth.svg"
-                heading1a="DENTAL"
-                heading2a="Health Clinic"
-                heading3a="Treat your teeth with us"
-                service1="Dental Surgeries"
-                service2="Dental Radiography"
-                service3="Implant Dentistry"
-                service4="Cavity Protection"
-              />
-            </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
-      <Faq docListing="true" />
-      <Footer />
-    </>
+    </div>
   );
 }
-export default Trial;
+
+export default Header;

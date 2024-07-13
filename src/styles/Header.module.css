@@ -1,7 +1,9 @@
 .outerContainer {
   box-sizing: border-box;
   height: 88px;
-  padding-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerContainer {
@@ -20,8 +22,7 @@
   box-sizing: border-box;
   width: 194px;
   height: 30px;
-  padding: 0px 1.99px 0px 2.33px; /*due to this left padding its little offset*/
-  gap: 0px;
+  /*padding: 0px 1.99px 0px 2.33px; due to this left padding its little offset*/
 }
 
 .rightDiv {
@@ -126,4 +127,84 @@
   cursor: pointer;
   transform: scale(1.08);
   transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 750px) {
+  .headerContainer {
+    gap: 0px;
+  }
+
+  .leftDiv {
+    width: 194px;
+    flex-shrink: 0.4;
+  }
+
+  .rightDiv {
+    gap: 5px;
+  }
+
+  .optionsContainer {
+    display: none;
+  }
+
+  .home {
+    box-sizing: border-box;
+    width: 30px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    color: rgba(11, 219, 182, 1);
+  }
+
+  .loginBtn,
+  .donateBtn {
+    width: fit-content;
+  }
+
+  .loginBtn,
+  .donateBtn {
+    width: fit-content;
+    padding: 0 10px;
+  }
+}
+
+/**/
+@media (min-width: 750px) {
+  .home {
+    display: none;
+  }
+}
+
+/**/
+@media (min-width: 750px) and (max-width: 810px) {
+  .headerContainer {
+    gap: 0px;
+  }
+
+  .leftDiv {
+    width: 200px;
+  }
+
+  .rightDiv {
+    width: 606px;
+    gap: 6px;
+    display: flex;
+  }
+
+  .optionsContainer {
+    width: 400px;
+  }
+
+  .navItem1,
+  .navItem2,
+  .navItem3,
+  .navItem4 {
+    font-size: 12px;
+  }
+
+  .loginBtn,
+  .donateBtn {
+    width: fit-content;
+    padding: 0 12px;
+  }
 }
