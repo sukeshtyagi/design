@@ -1,13 +1,16 @@
-import React from 'react'
-import Header from "./Header"
-import Services from "../homePageComponents/Services"
-function Trial() {
+import React from "react";
+import Header from "./Header";
+import Services from "../homePageComponents/Services";
+import Professions from "../homePageComponents/Professions";
+
+function Professions2() {
   return (
- <>
- <Header/>
- <Services/>
- </>
-  )
+    <div style={{overflow:"hidden"}}>
+      <Header />
+      <Services />
+      <Professions />
+    </div>
+  );
 }
 
-export default Trial
+export default Professions2;

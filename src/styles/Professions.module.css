@@ -1,3 +1,5 @@
+/*profession card styles*/
+
 .outerContainer {
   box-sizing: border-box;
   width: 270px !important;
@@ -69,7 +71,7 @@
 /*comp styles*/
 .outermostSectionContainer {
   box-sizing: border-box;
-  height: 546px;
+  height: fit-content;
   padding: 85px 0;
   background: rgba(246, 253, 248, 1);
   margin: 0 auto;
@@ -78,7 +80,7 @@
 .innerContainer2 {
   box-sizing: border-box;
   width: 1128px;
-  height: 376px;
+  height: fit-content;
   margin: auto;
 }
 
@@ -163,7 +165,7 @@
 .btmDiv {
   box-sizing: border-box;
   width: 1128px;
-  height: 248px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -209,4 +211,67 @@
 .rightBtm2,
 .rightBtm3 {
   padding-left: 8px;
+}
+
+@media (max-width: 850px) {
+  .outermostSectionContainer {
+    width: 800px;
+    margin: 0;
+    padding: 85px 0;
+  }
+
+  .innerContainer2 {
+    width: 795px;
+    margin: 0;
+  }
+
+  .topDiv {
+    width: 790px;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .btmDiv {
+    width: 780px;
+    margin: 0 auto;
+  }
+
+  .btm1,
+  .btm2,
+  .btm3 {
+    width: 775px;
+    margin: 0;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .leftBtm1,
+  .leftBtm2,
+  .leftBtm3,
+  .rightBtm1,
+  .rightBtm2,
+  .rightBtm3 {
+    margin: 0;
+    padding: 0;
+    width: 564px;
+    height: 72px;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .leftBtm1,
+  .leftBtm2,
+  .leftBtm3 {
+    padding-right: 0px;
+  }
+
+  .rightBtm1,
+  .rightBtm2,
+  .rightBtm3 {
+    padding-left: 0px;
+  }
 }

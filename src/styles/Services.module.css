@@ -71,12 +71,12 @@
   }
 
   .sectionContainer {
-    width: 100vw;
+    width: 100%;
     margin: 0;
   }
 
   .midDiv {
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     flex-direction: column;
     justify-content: flex-start;
@@ -88,6 +88,7 @@
     width: 800px;
     margin: 0;
     margin-top: 15px;
+    margin-bottom: 50px;
     flex-wrap: wrap;
   }
 }
