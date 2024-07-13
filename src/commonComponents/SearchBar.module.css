@@ -175,7 +175,7 @@
 }
 
 /**/
-@media (min-width: 677px) {
+@media (min-width: 677px) and (max-width: 1128px){
   .upperDiv {
     width: 100vw;
   }

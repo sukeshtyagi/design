@@ -45,18 +45,53 @@
 .btmRight {
   box-sizing: border-box;
   display: flex;
-  justify-content: flex-start;
+  /*justify-content: flex-start;*/
+  justify-content: center;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btmDiv {
   box-sizing: border-box;
-  height: 164px;
+  height: fit-content;
   margin-top: 42px;
   margin-bottom: 50px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 24px;
+  /**/
+ /* justify-content: flex-start;*/
+  justify-content: center;
+}
+
+@media (max-width: 850px) {
+  .sectionContainer {
+    width: 100vw;
+    margin: 0;
+  }
+
+  .midDiv {
+    width: 100vw;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btmDiv{
+    width: 800px;
+    margin: 0 ;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 450px) {
+  .btmDiv{
+    width: 400px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
 }
