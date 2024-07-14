@@ -5,9 +5,11 @@ import Professions from "../homePageComponents/Professions";
 
 function Professions2() {
   return (
-    <div style={{overflow:"hidden"}}>
+    <div style={{ overflow: "hidden" }}>
       <Header />
       <Services />
+      {/*
+       */}
       <Professions />
     </div>
   );

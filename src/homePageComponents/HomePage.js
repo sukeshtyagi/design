@@ -14,7 +14,7 @@ import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 function HomePage({ userDashboard }) {
   return (
-    <>
+    <div style={{ overflow: "hidden" }}>
       <Header userDashboard={userDashboard} />
       <Services />
       <Professions />
@@ -28,7 +28,7 @@ function HomePage({ userDashboard }) {
       <LatestBlogs />
       <Downloadsection />
       <Footer />
-    </>
+    </div>
   );
 }
 
