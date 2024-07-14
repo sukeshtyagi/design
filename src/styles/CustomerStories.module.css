@@ -1,14 +1,16 @@
 .outerContainer {
   box-sizing: border-box;
   height: 970px;
+  height: fit-content;
   background: rgba(246, 253, 248, 1);
   padding: 85px 0px;
 }
 
 .innerContainer {
   box-sizing: border-box;
-  width: 1128px;
+  width: 100vw;
   height: 800px;
+  height: fit-content;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -105,8 +107,9 @@
 
 .btmDiv {
   box-sizing: border-box;
-  width: 1128px;
+  width: 100vw;
   height: 688px;
+  height: fit-content;
   display: flex;
   gap: 18px;
 }
@@ -291,4 +294,58 @@
   box-sizing: border-box;
   display: flex;
   margin-top: 7px;
+}
+
+@media (min-width: 1128px) {
+  .innerContainer {
+    width: 1128px;
+  }
+
+  .btmDiv {
+    width: 1128px;
+  }
+}
+
+@media (max-width: 530px) {
+  .topDiv {
+    width: 100vw;
+    height: fit-content;
+    margin: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 950px) {
+  .topDiv {
+    box-sizing: border-box;
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 20px;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .leftDiv {
+    box-sizing: border-box;
+    width: 418px;
+    height: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .btmDiv {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
