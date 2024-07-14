@@ -23,8 +23,8 @@ function HomePage({ userDashboard }) {
       <Searches />
       <CustomerStories />
       <FAQ />
-      
       <Locations />
+      
       <NeedHelp />
       <LatestBlogs />
       <Downloadsection />
