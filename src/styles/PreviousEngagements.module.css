@@ -147,9 +147,9 @@
 /*comp styles below*/
 .outermostPreviousContainer {
   box-sizing: border-box;
-  height: 649px;
+  height: fit-content;
   background: rgba(246, 253, 248, 1);
-  padding-top: 85px;
+  padding: 85px 0;
   margin: auto;
 }
 
@@ -162,7 +162,7 @@
 .topDiv {
   box-sizing: border-box;
   width: 1128px;
-  height: 62px;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -173,6 +173,7 @@
   box-sizing: border-box;
   width: 764.5;
   height: 62px;
+  height: fit-content;
   margin-left: 363.5px;
   display: flex;
   flex-direction: column;
@@ -250,10 +251,12 @@
 .midDiv {
   box-sizing: border-box;
   height: 50px;
+  height: fit-content;
   margin-top: 35px;
   padding-top: 1px;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .midDivPara {
@@ -295,25 +298,29 @@
   user-select: none;
 }
 
+/*previous engagement child*/
+
 .btmDiv {
   box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
   margin-top: 50px;
-  width: 1128px;
-  height: 281.86px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  flex-direction: column;
 }
 
 .uprDiv,
 .lwrDiv {
   box-sizing: border-box;
-  width: 1128px;
-  height: 128.43px;
+  width: 100%;
+  height: fit-content;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   gap: 24px;
+  flex-wrap: wrap;
 }
 
 .leftTopBtm,
@@ -323,4 +330,47 @@
   box-sizing: border-box;
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  height: fit-content;
+}
+
+@media (max-width: 550px) {
+  .innerPreviousContainer {
+    width: 100%;
+  }
+
+  .topDiv {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .upperDiv {
+    margin: 0;
+    padding: 0;
+  }
+
+  .leftTopBtm,
+  .leftLwrBtm,
+  .rightLwrBtm,
+  .rightTopBtm {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/**/
+@media (min-width: 790px) and (max-width: 1120px) {
+  .innerPreviousContainer {
+    width: 100%;
+  }
+
+  .topDiv {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .upperDiv {
+    margin: 0;
+  }
 }

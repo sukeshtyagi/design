@@ -22,8 +22,8 @@ function PreviousEngagements() {
           <div className={style.upperDiv}>
             <h1 className={style.heading}>
               Previous <span className={style.headingSpan}>Engagements</span>
-              <p className={style.para}>Review your previous interactions</p>
             </h1>
+            <p className={style.para}>Review your previous interactions</p>
           </div>
           <div className={style.rightDiv}>
             <button className={`${style.viewBtn}`}>VIEW ALL</button>
@@ -54,7 +54,7 @@ function PreviousEngagements() {
             </div>
           ))}
         </div>
-        <PreviousEngagementsChild activeCategory={activeCategory}/>
+        <PreviousEngagementsChild activeCategory={activeCategory} />
       </div>
     </div>
   );
