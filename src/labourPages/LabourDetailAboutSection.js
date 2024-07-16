@@ -6,7 +6,7 @@ import { SubmitFeedback } from "../doctorPages/PatientReviews";
 function LabourDetailAboutSection() {
   return (
     <>
-      <div className={style.about} style={{ height: "279px" }}>
+      <div className={style.about} style={{ height: "fit-content" }}>
         <p className={style.information1}>
           My first job was on Saudi Arabia as domestic helper for two years and
           two months I served 5 members of the family two adults and three
@@ -15,12 +15,12 @@ function LabourDetailAboutSection() {
           family 2 adults and 3 children. My job duties are general cleaning,
           cooking food for the children and taking care of them. I am
           trustworthy, patience, honest and loving children.{" "}
-          <span className={style.info1Span2} style={{ marginLeft: "358px" }}>
+          <span className={style.info1Span2} style={{ marginLeft: "55px" }}>
             Read More
           </span>
         </p>
 
-        <div className={style.eduDiv}>
+        <div className={style.eduDiv} style={{ height: "60px" }}>
           <h1 className={style.eduHeading}>Education</h1>
           <ul>
             <li className={style.information2}>

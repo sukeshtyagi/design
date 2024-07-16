@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+import style from "../commonComponents/CommonListingAndDetail.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
@@ -31,7 +31,7 @@ function LabourDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner} style={{marginBottom:"100px"}}>
+        <div className={style.listingInner} style={{paddingBottom:"100px"}}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"

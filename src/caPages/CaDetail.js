@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+import style from "../commonComponents/CommonListingAndDetail.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../commonComponents/CommonCard";
+import CommonCard from "../commonComponents/CommonCard";
 import { AppointCard } from "../commonComponents/LeftOverCommonComponents";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
@@ -30,8 +30,7 @@ function CaDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner}
-        style={{marginBottom:"104px"}}>
+        <div className={style.listingInner} style={{ paddingBottom: "104px" }}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
@@ -47,7 +46,7 @@ function CaDetail() {
             <img src="/images/doctor/rightArrow.svg" alt="" />
             <p className={style.para}>Wade Warren</p>
           </div>
-          <DoctorCard
+          <CommonCard
             caDetail="true"
             caListing={caListing}
             img={img}
@@ -123,7 +122,6 @@ function CaDetail() {
                 margin="true"
               />
             </div>
-            {/* */}
           </div>
           <MostViewed2 category="CAs" />
           <CaFee />

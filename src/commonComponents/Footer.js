@@ -15,7 +15,9 @@ function Footer({ shadow }) {
               boxShadow: "0px -1px 12.4px 0px rgba(150, 150, 150, 0.05)",
               backgroundImage: "url(/images/Bcg.svg)",
             }
-          : { backgroundImage: "url(/images/Bcg.svg)" }
+          : {
+              backgroundImage: "url(/images/Bcg.svg)",
+            }
       }
     >
       <div className={style.topDiv}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import EngineerReviews from "./EngineerReviews";
 import { SubmitFeedback } from "../doctorPages/PatientReviews";
@@ -6,7 +6,7 @@ import { SubmitFeedback } from "../doctorPages/PatientReviews";
 function EngineerDetailAboutSection() {
   return (
     <>
-      <div className={style.about}>
+      <div className={style.about} >
         <p className={style.information1}>
           I am a full-stack software engineer who has strong knowledge of
           software architecture and engineering <br />
@@ -15,11 +15,11 @@ function EngineerDetailAboutSection() {
           <br />I also have a depth of experience working backend using Python
           and Nodejs and forth with designers to flush out good user interface
           experiences. .
-          <span className={style.info1Span2} style={{ marginLeft: "105px" }}>
+          <span className={style.info1Span2} style={{ marginLeft: "245px" }}>
             Read More
           </span>
         </p>
-        <div className={style.eduDiv}>
+        <div className={style.eduDiv} style={{ height: "83px" }}>
           <h1 className={style.eduHeading}>Education</h1>
           <ul style={{ listStyle: "none" }}>
             <li className={style.information2}>
@@ -62,4 +62,4 @@ function EngineerDetailAboutSection() {
   );
 }
 
-export default EngineerDetailAboutSection
+export default EngineerDetailAboutSection;

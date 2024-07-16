@@ -240,6 +240,10 @@
   line-height: 21px;
 }
 
+.action{
+  font-weight: 500;
+}
+
 .icon {
   width: 18px;
   height: 18px;

@@ -7,7 +7,7 @@ function DoctorDetailAboutSection() {
     <>
       <div
         className={style.about}
-        style={{ height: "517px", paddingRight: "20px" }}
+        style={{ height: "fit-content", paddingRight: "20px" }}
       >
         <p className={style.information1}>
           Mr. Warren is a seasoned Chartered Accountant with a proven track
@@ -19,11 +19,11 @@ function DoctorDetailAboutSection() {
           Specializing in providing tailored financial solutions to individuals
           and businesses, Mr. Warren is committed to fostering long-term
           relationships built on trust, integrity, and professionalism.
-          <span className={style.info1Span2} style={{ marginLeft: "407x" }}>
+          <span className={style.info1Span2} style={{ marginLeft: "545px" }}>
             Read More
           </span>
         </p>
-        <div className={style.eduDiv}>
+        <div className={style.eduDiv} style={{height:"165px"}}>
           <h1 className={style.eduHeading}>Education</h1>
           <ul>
             <li className={style.information2}>

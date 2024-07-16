@@ -29,7 +29,7 @@ export default TeacherFee;
 
 export function CaFee() {
   return (
-    <div className={style.caOuter}>
+    <div className={style.caOuter} >
       <h1 className={style.caFeeHeading}>Fee Details*</h1>
       <div className={style.caFeeDetails}>
         <div className={style.type}>

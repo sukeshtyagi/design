@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+import style from "../commonComponents/CommonListingAndDetail.module.css";
 import SearchBar from "../commonComponents/SearchBar";
-import DoctorCard from "../commonComponents/CommonCard";
+import CommonCard from "../commonComponents/CommonCard";
 import { AppointCard } from "../commonComponents/LeftOverCommonComponents";
 import BookAppointment from "../commonComponents/BookAppointment";
 import MostViewed2 from "../commonComponents/MostViewed2";
@@ -47,7 +47,7 @@ function TeacherDetail() {
             <p className={style.para}>Jenny Wilson</p>
           </div>
 
-          <DoctorCard
+          <CommonCard
             teacherDetail="true"
             teacherListing={teacherListing}
             img={img}

@@ -6,18 +6,21 @@ import AdvocateReviews from "./AdvocateReviews";
 function AdvocateDetailAboutSection() {
   return (
     <>
-      <div className={style.about} style={{ paddingRight: "23px" }}>
+      <div
+        className={style.about}
+        style={{ paddingRight: "23px",}}
+      >
         <p className={style.information1}>
           Advocate Sudershani has since been practicing and handling cases
           independently with a result oriented approach, both professionally and
           ethically and has now acquired 8 years of professional experience in
-          providing legal consultancy and advisory services. Read More
-          <span className={style.info1Span2} style={{ marginLeft: "258px" }}>
+          providing legal consultancy and advisory services.{" "}
+          <span className={style.info1Span2} style={{ marginLeft: "50px" }}>
             Read More
           </span>
         </p>
 
-        <div className={style.eduDiv}>
+        <div className={style.eduDiv} style={{ height: "85px" }}>
           <h1 className={style.eduHeading}>Education</h1>
           <ul style={{ listStyle: "disc" }}>
             <li className={style.information2}>
@@ -31,10 +34,7 @@ function AdvocateDetailAboutSection() {
           </ul>
         </div>
       </div>
-      <div
-        className={style.eduDiv2}
-        style={{height: "140px", }}
-      >
+      <div className={style.eduDiv2} style={{ height: "140px" }}>
         <h1 className={style.eduHeading2}>Practice Areas</h1>
         <div className={style.eduInner} style={{ gap: "97px" }}>
           <div>
