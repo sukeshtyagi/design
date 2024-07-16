@@ -5,6 +5,11 @@ import Professions from "../homePageComponents/Professions";
 import Campaigns from "../homePageComponents/Campaigns";
 import PreviousEngagements from "../homePageComponents/PreviousEngagements";
 import Searches from "../homePageComponents/Searches";
+import CustomerStories from "../homePageComponents/CustomerStories";
+import FAQ from "../homePageComponents/FAQ";
+import Locations from "../homePageComponents/Locations";
+import NeedHelp from "../homePageComponents/NeedHelp";
+import LatestBlogs from "../homePageComponents/LatestBlogs";
 
 function Professions2() {
   return (
@@ -15,8 +20,13 @@ function Professions2() {
       <Professions />
       <Campaigns />
       <PreviousEngagements />
-      */}
       <Searches />
+      <CustomerStories />
+      <FAQ />
+      <Locations />
+      <NeedHelp />
+       */}
+      <LatestBlogs />
     </div>
   );
 }

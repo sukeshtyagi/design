@@ -5,7 +5,7 @@ import { PatientReviews } from "./NewReviews";
 function DoctorDetailAboutSection() {
   return (
     <>
-      <div className={style.about} style={{ height: "305px" }}>
+      <div className={style.about} style={{ height: "fit-content" }}>
         <p className={style.information1}>
           Dr. Richards is a dedicated and compassionate dental professional
           committed to providing high-quality oral healthcare to patients of all
@@ -16,7 +16,7 @@ function DoctorDetailAboutSection() {
           dentistry, focusing....{" "}
           <span className={style.info1Span2}>Read More</span>
         </p>
-        <div className={style.eduDiv}>
+        <div className={style.eduDiv} style={{ height: "116px" }}>
           <h1 className={style.eduHeading}>Education</h1>
           <ul>
             <li className={style.information2}>

@@ -24,8 +24,8 @@ function HomePage({ userDashboard }) {
       <CustomerStories />
       <FAQ />
       <Locations />
-      
       <NeedHelp />
+      
       <LatestBlogs />
       <Downloadsection />
       <Footer />

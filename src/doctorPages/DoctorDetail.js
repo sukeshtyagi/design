@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+import style from "../commonComponents/CommonListingAndDetail.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import CommonCard from "../commonComponents/CommonCard";
 import { AppointCard } from "../commonComponents/LeftOverCommonComponents";

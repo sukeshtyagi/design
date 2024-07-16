@@ -11,7 +11,6 @@
   border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 10px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.08);
-
 }
 
 .docDetailCardOuter {
@@ -55,7 +54,7 @@
 .labourDetailCardOuter {
   width: 1128px;
   height: 280px;
-  padding: 28px 60px 31px 31px;/*padding right is changed from 78 to 60 to increase gap*/
+  padding: 28px 60px 31px 31px; /*padding right is changed from 78 to 60 to increase gap*/
   gap: 460px;
 }
 
@@ -82,8 +81,6 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  
-
 }
 
 .image {
@@ -141,7 +138,7 @@
   margin: 0;
   padding: 0;
   font-family: Poppins;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   text-align: left;
@@ -223,6 +220,7 @@
 }
 
 .action1 {
+  font-weight: 600;
   color: rgba(255, 255, 255, 1);
 }
 

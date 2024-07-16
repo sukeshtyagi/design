@@ -136,7 +136,7 @@
 
 .filterCardContainer {
   height: 33.5px;
-  gap: 14.5px;
+  gap: 14.5px; /*reduced from15 to accomodate liked completely*/
 }
 
 .specOuter1,
@@ -198,7 +198,7 @@
 }
 
 .criterion {
-  font-size: 14px;
+  font-size: 14px; /**/
   line-height: 22.5px;
 }
 
@@ -227,7 +227,10 @@
   margin-left: 0px;
 }
 
+/*doctor detail page styles below*/
+
 .detailBtm {
+  margin-top: 20.5px;
   display: flex;
   gap: 25px;
 }
@@ -240,7 +243,7 @@
 
 .navOptionDetail {
   width: 771px;
-  height: 58.5px;
+  height: 52.5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -249,12 +252,12 @@
 .option {
   margin: 0;
   padding: 0;
-  height: 58px;
+  height: 52px;
   padding: 11px 50px 11px 50px;
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 30px;
   text-align: left;
   color: rgba(0, 0, 0, 1);
   cursor: pointer;
@@ -267,7 +270,6 @@
 }
 
 .about {
-  margin-top: 10px;
   width: 766px;
   height: fit-content;
   display: flex;
@@ -283,14 +285,14 @@
   margin: 0;
   padding: 0;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 25.6px;
+  line-height: 32.4px;
   text-align: left;
 }
 
 .info1Span {
-  font-weight: 500;
+  font-weight: 600;
   color: rgba(0, 0, 0, 1);
 }
 
@@ -298,7 +300,7 @@
   font-size: 13px;
   line-height: 23.4px;
   color: rgba(11, 219, 182, 1);
-  margin-left: 322px;
+  margin-left: 580px;
   cursor: pointer;
 }
 
@@ -320,13 +322,13 @@
 .eduHeading,
 .eduHeading2 {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 30px;
 }
 
 .information2,
 .information3 {
-  line-height: 25.6px;
+  line-height: 28.8px;
   list-style-type: disc;
   margin-left: 0px;
 }
@@ -365,7 +367,7 @@
 /*Patient reviews*/
 .patientOuter {
   width: 771px;
-  height: fit-content;
+  height: 787px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -390,7 +392,7 @@
   padding: 0;
   font-family: Poppins;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 32px;
   text-align: left;
   color: rgba(0, 0, 0, 1);
@@ -418,7 +420,7 @@
 
 .cardContainer {
   width: 769px;
-  height: fit-content;
+  height: 735px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -426,7 +428,7 @@
 
 .cardOuter {
   width: 769px;
-  height: fit-content;
+  height: 176.25px;
   padding: 22px;
   display: flex;
   flex-direction: column;
@@ -479,7 +481,7 @@
 .review {
   font-size: 16px;
   font-weight: 400;
-  line-height: 25.6px;
+  line-height: 21.6px;
   color: rgba(1, 22, 18, 1);
 }
 
@@ -499,7 +501,7 @@
   padding: 0;
   font-family: Poppins;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 32px;
   text-align: left;
   color: rgba(0, 0, 0, 1);
@@ -559,7 +561,7 @@
   padding: 0;
   font-family: Poppins;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 32px;
   text-align: left;
   color: rgba(0, 0, 0, 1);
@@ -596,7 +598,7 @@
   padding: 0;
   font-family: Poppins;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 32px;
   text-align: left;
   color: rgba(0, 0, 0, 1);
