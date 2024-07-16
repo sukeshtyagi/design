@@ -32,7 +32,7 @@
   font-family: Poppins;
   font-size: 24px;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 1.5em  ;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -40,7 +40,7 @@
 .subHeading {
   font-size: 15px;
   font-weight: 400;
-  line-height: 22.5px;
+  line-height: 1.5em;
 }
 
 .subHeadingSpan {
@@ -62,7 +62,7 @@
   font-family: Poppins;
   font-size: 10px;
   font-weight: 400;
-  line-height: 15px;
+  line-height: 1.5em;
   text-align: left;
   color: rgba(190, 190, 190, 1);
   outline: none;
@@ -95,7 +95,7 @@
 .paraBtm {
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 1.5em;
   color: rgba(150, 150, 150, 1);
 }
 
@@ -110,7 +110,7 @@
   font-family: Poppins;
   font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.5em;
   text-align: center;
   color: rgb(2, 1, 1);
 }
@@ -167,7 +167,7 @@
   font-family: Archivo Black;
   font-size: 24px;
   font-weight: 400;
-  line-height: 26.04px;
+  line-height: 1.08em;
   letter-spacing: -0.02em;
   text-align: left;
   color: rgba(255, 255, 255, 1);
@@ -177,7 +177,7 @@
 .heading2 {
   font-size: 12px;
   font-weight: 400;
-  line-height: 13.02px;
+  line-height:1.08em;
   letter-spacing: 0.13em;
 }
 
@@ -187,7 +187,7 @@
   font-size: 5px;
   margin-left: 22.5px;
   font-weight: 400;
-  line-height: 5.43px;
+  line-height: 1.08em;
   text-align: left;
 }
 
@@ -208,7 +208,7 @@
   font-family: Archivo;
   font-size: 9.68px;
   font-weight: 400;
-  line-height: 10.53px;
+  line-height: 1.08em;
   text-align: left;
   color: rgba(255, 255, 255, 1);
 }
@@ -222,7 +222,7 @@
   width: 75px;
   font-size: 7.26px;
   font-weight: 400;
-  line-height: 8.45px;
+  line-height: 1.1em;
 }
 
 .btmDivAppoint {
@@ -236,7 +236,7 @@
   font-family: Archivo;
   font-size: 5px;
   font-weight: 400;
-  line-height: 6.65px;
+  line-height: 1.33em;
   text-align: left;
   color: rgba(255, 255, 255, 1);
 }
@@ -260,7 +260,7 @@
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 1.5em;
   color: rgba(0, 0, 0, 1);
   border-radius: 1.13px;
   background: rgba(240, 240, 240, 1);
@@ -341,7 +341,7 @@
   font-family: Archivo;
   font-size: 8px;
   font-weight: 500;
-  line-height: 10.64px;
+  line-height: 1.33em;
   text-align: right;
   color: rgba(0, 0, 0, 1);
 }
@@ -349,7 +349,7 @@
 .labService {
   font-size: 22px;
   font-weight: 400;
-  line-height: 29.26px;
+  line-height: 1.33em;
 }
 
 .serviceSpan {
@@ -360,7 +360,7 @@
   margin-top: 5px;
   font-size: 7px;
   font-weight: 500;
-  line-height: 9.31px;
+  line-height: 1.33em;
   text-align: center;
 }
 

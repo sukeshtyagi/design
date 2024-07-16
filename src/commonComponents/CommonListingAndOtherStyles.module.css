@@ -70,7 +70,7 @@
   font-family: Poppins;
   font-size: 15px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.3em;
   text-align: center;
 }
 
@@ -116,7 +116,7 @@
   font-family: Poppins;
   font-size: 12px;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 1.5em;
   text-align: left;
 }
 
@@ -130,7 +130,7 @@
   font-size: 30px;
   margin-top: -15px;
   font-weight: 500;
-  line-height: 45px;
+  line-height: 1.5em;
   border-bottom: 1px solid rgba(210, 210, 210, 1);
 }
 
@@ -199,7 +199,7 @@
 
 .criterion {
   font-size: 14px;
-  line-height: 22.5px;
+  line-height: 1.6em;
 }
 
 .btmContainer {
@@ -254,7 +254,7 @@
   font-family: Poppins;
   font-size: 24px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 1.5em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
   cursor: pointer;
@@ -283,9 +283,9 @@
   margin: 0;
   padding: 0;
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 25.6px;
+  line-height: 1.7em;
   text-align: left;
 }
 
@@ -296,7 +296,7 @@
 
 .info1Span2 {
   font-size: 13px;
-  line-height: 23.4px;
+  line-height: 1.8em;
   color: rgba(11, 219, 182, 1);
   margin-left: 322px;
   cursor: pointer;
@@ -321,24 +321,24 @@
 .eduHeading2 {
   font-size: 20px;
   font-weight: 500;
-  line-height: 30px;
+  line-height: 1.5em;
 }
 
 .information2,
 .information3 {
-  line-height: 25.6px;
+  font-size: 15px;
+  line-height: 1.7em;
   list-style-type: disc;
   margin-left: 0px;
 }
 
 .information3 {
-  font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.6em;
 }
 
 .eduHeading2 {
-  line-height: 32px;
+  line-height: 1.6em;
 }
 
 .eduInner {
@@ -391,7 +391,7 @@
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1.6em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -407,7 +407,7 @@
   border-radius: 5px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 19.2px;
+  line-height: 1.6em;
 }
 
 .view:hover {
@@ -460,13 +460,13 @@
   height: 30px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 29.93px;
+  line-height: 1.5em;
 }
 
 .time {
   font-size: 12px;
   font-weight: 400;
-  line-height: 17.96px;
+  line-height: 1.5em;
   color: rgba(110, 110, 110, 1);
 }
 
@@ -477,9 +477,9 @@
 }
 
 .review {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 25.6px;
+  line-height: 1.7em;
   color: rgba(1, 22, 18, 1);
 }
 
@@ -500,7 +500,7 @@
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1.6em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -521,15 +521,15 @@
 }
 
 .feedback {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 25.6px;
+  line-height: 1.7em;
 }
 
 .feedback2 {
   font-size: 15px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.6em;
   color: rgba(150, 150, 150, 1);
 }
 
@@ -542,7 +542,7 @@
   font-family: Poppins;
   font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.5em;
   text-align: center;
   color: rgba(255, 255, 255, 1);
 }
@@ -560,15 +560,15 @@
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1.6em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
 
 .addDetail {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 23.94px;
+  line-height: 1.6em;
   margin-top: 20px;
   margin-bottom: 5px;
 }
@@ -594,10 +594,10 @@
 .detail2 {
   margin: 0;
   padding: 0;
-  font-family: Poppins; 
+  font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
-  line-height: 32px;
+  line-height: 1.6em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -639,7 +639,7 @@
 }
 
 .detail1 {
-  line-height: 30px;
+  line-height: 1.5em;
   color: rgba(11, 219, 182, 1);
   margin-bottom: 0px;
 }
@@ -647,7 +647,7 @@
 .detail2 {
   font-size: 14px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 1.5em;
 }
 
 .specialityEngineer {
@@ -655,12 +655,12 @@
 }
 
 .detail2 {
-  line-height: 16.8px;
+  line-height: 1.2em;
 }
 
 .specialityEngineerDetail2 {
   font-size: 16px;
-  line-height: 19.2px;
+  line-height: 1.2em;
 }
 
 .imgContainerView {
