@@ -50,7 +50,7 @@
   font-family: "Poppins";
   font-size: 14px;
   font-weight: 300;
-  line-height: 21px;
+  line-height: 1.5em;
   text-align: left;
   color: rgba(125, 125, 125, 1);
 }
@@ -89,7 +89,7 @@
   font-family: "Poppins";
   font-size: 14.58px;
   font-weight: 500;
-  line-height: 21.87px;
+  line-height: 1.5em;
   text-align: left;
   color: rgba(125, 125, 125, 1);
 }
@@ -118,7 +118,7 @@
   font-family: "Poppins";
   font-size: 14.58px;
   font-weight: 500;
-  line-height: 21.87px;
+  line-height: 1.5em;
   text-align: left;
   color: rgba(125, 125, 125, 1);
 }
@@ -148,7 +148,7 @@
   font-family: "Poppins";
   font-size: 14px;
   font-weight: 500;
-  line-height: 21px;
+  line-height: 1.5em;
   text-align: left;
   color: rgba(125, 125, 125, 1);
 }
@@ -232,7 +232,7 @@
   font-family: "poppins";
   font-size: 19.44px;
   font-weight: 600;
-  line-height: 23.52px;
+  line-height: 1.21em;
   text-align: left;
   color: rgba(11, 219, 182, 1);
 }
@@ -273,7 +273,7 @@
   font-family: "Poppins";
   font-size: 20px;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.4em;
   text-align: left;
   color: rgba(11, 219, 182, 1);
 }
@@ -298,7 +298,7 @@
   padding: 0px;
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.71em;
   letter-spacing: 0.5px;
   text-align: left;
   color: rgba(125, 125, 125, 1);
@@ -316,6 +316,6 @@
   font-size: 12px;
   font-weight: 400;
   text-align: center;
-  line-height: 16px;
+  line-height: 1.33em;
   color: rgba(34, 34, 34, 1);
 }

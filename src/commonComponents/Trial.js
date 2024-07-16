@@ -1,155 +1,135 @@
 import React from "react";
-import style from "../styles/Header.module.css";
-import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import FooterChild from "./FooterChild";
+import style from "../styles/Footer.module.css";
 
-function Header({ dekstopLogin, signup, userDashboard, professionalListing }) {
-  const navigate = useNavigate();
-  const handleNavigation = () => {
-    const userDetails = localStorage.getItem("userDetails");
-    if (userDetails) {
-      navigate("/homepage");
-    } else {
-      navigate("/");
-    }
-  };
-
+function Footer({ shadow }) {
   return (
     <div
-      className={`${style.outerContainer}`}
+      className={style.outermostSectionContainer}
       style={
-        (userDashboard
+        shadow
           ? {
-              boxShadow: "0px 0px 42px 0px rgba(0, 0, 0, 0.06)",
+              boxShadow: "0px -1px 12.4px 0px rgba(150, 150, 150, 0.05)",
+              backgroundImage: "url(/images/Bcg.svg)",
             }
-          : {},
-        professionalListing
-          ? {
-              boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+          : {
+              backgroundImage: "url(/images/Bcg.svg)",
             }
-          : {})
       }
     >
-      <div className={`${style.headerContainer}`}>
-        <div
-          className={`${style.leftDiv}`}
-          style={userDashboard ? { cursor: "pointer" } : {}}
-        >
-          <img
-            src="/images/logo.svg"
-            alt="Logo of app"
-            className="box-border w-[194px] h-[30px]"
-            onClick={() => {
-              handleNavigation();
-            }}
-          />
+      <div className={style.topDiv}>
+        <div className={style.leftDiv}>
+          <div className={style.imgContainer}>
+            <img src="/images/logo.svg" alt="" className={style.logo} />
+            <p className={style.para}>
+              Empowering communities through seamless access to professional
+              services and fundraising opportunities
+            </p>
+          </div>
+
+          <div className={style.infoContainer}>
+            <div className={style.detailAddress}>
+              <FontAwesomeIcon
+                icon={faLocationDot}
+                className={style.locationDot}
+              />
+              <p className="">
+                70 Washington Square South, New York, NY 10012, US
+              </p>
+            </div>
+
+            <div className={style.detailContact}>
+              <FontAwesomeIcon icon={faPhone} className={style.phoneIcon} />
+              <p className="">+91-9876543214</p>
+            </div>
+
+            <div className={style.detailEmail}>
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className={style.envelopeIcon}
+              />
+              <p className="">info@companyname.com</p>
+            </div>
+          </div>
+
+          <div className={style.allIcons}>
+            <img src="/images/fb.svg" alt="" className={style.facebookIcon} />
+            <img
+              src="/images/insta.svg"
+              alt=""
+              className={style.instagramIcon}
+            />
+            <img
+              src="/images/linkedin.svg"
+              alt=""
+              className={style.linkedInIcon}
+            />
+            <img
+              src="/images/youtube.svg"
+              alt=""
+              className={style.youtubeIcon}
+            />
+            <img
+              src="/images/twitter.svg"
+              alt=""
+              className={style.twitterIcon}
+            />
+          </div>
         </div>
 
         <div className={style.rightDiv}>
-          <div className={`${style.optionsContainer} `}>
-            <p
-              className={`${style.navItem1}  box-border`}
-              onClick={() => {
-                handleNavigation();
-              }}
-            >
-              Home
-            </p>
-
-            <p className={`${style.navItem2}  box-border`}>Categories</p>
-
-            <p className={`${style.navItem3}  box-border`}>
-              Raise Startup Funds
-            </p>
-
-            <p className={`${style.navItem4}  box-border`}>Investors</p>
+          <div className={style.rightTopDiv}>
+            <p className="">Locations</p>
+            <FontAwesomeIcon icon={faAngleDown} className={style.arrowIcon} />
           </div>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className={style.home}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          <div className={style.footerChildContainer}>
+            <FooterChild
+              heading="Quick Links"
+              link1="About Us"
+              link2="Investor Relations"
+              link3="We're hiring"
+              link4="Customer Care"
+              link5="Free Listing"
+              link6="What's New"
+              link7="Report A Bug"
+              link8="B2B Sitemap"
             />
-          </svg>
 
-          <div
-            className={`${style.btnDiv}`}
-            style={
-              userDashboard
-                ? {
-                    width: "205px",
-                    marginLeft: "86px",
-                    gap: "30px",
-                  }
-                : { width: "304px" }
-            }
-          >
-            {(dekstopLogin || signup) && (
-              <p className={`${style.noAccountPara}`}>Don't have an account</p>
-            )}
+            <FooterChild
+              heading="Popular Categories"
+              link1="Doctor's"
+              link2="Engineer's"
+              link3="CA's"
+              link4="Advocates"
+              link5="Teachers"
+              link6="Labourers"
+              link7="Officers"
+              link8="Govt. Officials"
+            />
 
-            {!dekstopLogin && !signup && !userDashboard && (
-              <button
-                className={`${style.loginBtn}`}
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Login/Sign Up
-              </button>
-            )}
-
-            {!dekstopLogin && !signup && (
-              <button className={`${style.donateBtn}`}>Donate Now</button>
-            )}
-
-            {dekstopLogin && (
-              <button
-                className={`${style.donateBtn}`}
-                onClick={() => {
-                  navigate("/register");
-                }}
-              >
-                SignUp Now
-              </button>
-            )}
-
-            {signup && (
-              <button
-                className={`${style.donateBtn}`}
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Login
-              </button>
-            )}
-
-            {userDashboard && (
-              <div
-                onClick={() => {
-                  navigate("/profile");
-                }}
-              >
-                <img
-                  src="/images/blogs/user.svg"
-                  alt=""
-                  className={style.userImage}
-                />
-              </div>
-            )}
+            <FooterChild
+              heading="Popular Cities"
+              link1="New Delhi"
+              link2="Pune"
+              link3="Surat"
+              link4="Mumbai"
+              link5="Panaji"
+              link6="Banglore"
+              link7="Chandigarh"
+              link8="Srinagar"
+            />
           </div>
         </div>
       </div>
+
+      <h1 className={style.headingFooter}>
+        Copyrights 2008-24. All Rights Reserved.
+      </h1>
     </div>
   );
 }
 
-export default Header;
+export default Footer;

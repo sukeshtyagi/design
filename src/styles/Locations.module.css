@@ -30,7 +30,7 @@
   font-family: "Poppins";
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5em;
   letter-spacing: 0.5px;
   text-align: left;
   color: rgba(34, 34, 34, 1);
@@ -88,7 +88,7 @@
   font-family: "Poppins";
   font-size: 32px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -107,7 +107,7 @@
   font-family: "Poppins";
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.42em;
   letter-spacing: 0.25px;
   text-align: left;
   word-wrap: break-word;
