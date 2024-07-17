@@ -27,11 +27,11 @@
 .heading {
   box-sizing: border-box;
   width: 359px;
-  height: 28px;
+  height: fit-content;
   font-family: "Poppins";
   font-size: 32px;
   font-weight: 600;
-  line-height: 1.875em;
+  line-height: 0.875em;
   text-align: left;
   color: rgba(11, 219, 182, 1);
 }
@@ -40,7 +40,6 @@
   box-sizing: border-box;
   width: 379.98px;
   height: 40px;
-  margin-top: 10px;
   margin-bottom: 16px;
   font-family: "Poppins";
   font-size: 14px;
