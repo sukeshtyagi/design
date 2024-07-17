@@ -248,11 +248,11 @@
 .footerChildContainer {
   box-sizing: border-box;
   width: fit-content;
-  height: 286px;
+  height: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 0px; /*100*/
+  gap: 30px;
 }
 
 .footerChildOuter {

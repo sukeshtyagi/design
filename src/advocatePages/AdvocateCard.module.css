@@ -74,13 +74,13 @@
   font-family: Poppins;
   font-size: 15px;
   font-weight: 400;
-  line-height: 22.5px;
+  line-height: 1.5em;
   text-align: left;
 }
 
 .reviews {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5em;
   color: rgba(0, 0, 0, 1);
   margin: 0 auto;
 }
@@ -113,7 +113,7 @@
   font-family: Poppins;
   font-weight: 600;
   font-size: 24px;
-  line-height: 36px;
+  line-height:1.5em;
   text-align: left;
 }
 
@@ -128,7 +128,7 @@
   height: 45px;
   font-size: 30px;
   font-weight: 600;
-  line-height: 45px;
+  line-height: 1.5em;
 }
 
 .title {
@@ -136,7 +136,7 @@
   font-family: Poppins;
   font-size: 18px;
   font-weight: 500;
-  line-height: 21.6px;
+  line-height: 1.2em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -146,7 +146,7 @@
   font-family: Poppins;
   font-size: 10px;
   font-weight: 400;
-  line-height: 12px;
+  line-height: 1.2em;
   text-align: left;
   color: rgba(130, 130, 130, 1);
 }
@@ -155,7 +155,7 @@
   height: 19px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 19.2px;
+  line-height: 1.2;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -237,7 +237,7 @@
 .action,
 .action1 {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5em;
 }
 
 .action{

@@ -24,7 +24,7 @@
   font-family: Poppins;
   font-size: 20px;
   font-weight: 600;
-  line-height: 32px;
+  line-height:1.6em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -40,7 +40,7 @@
   border-radius: 5px;
   font-size: 12px;
   font-weight: 500;
-  line-height: 19.2px;
+  line-height: 1.6em;
 }
 
 .view:hover {
@@ -92,13 +92,13 @@
   height: 30px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 29.93px;
+  line-height: 1.5em;
 }
 
 .time {
   font-size: 12px;
   font-weight: 400;
-  line-height: 17.96px;
+  line-height: 1.5em;
   color: rgba(110, 110, 110, 1);
 }
 
@@ -110,7 +110,7 @@
 .review {
   font-size: 16px;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height:1.35em;
   color: rgba(1, 22, 18, 1);
 }
 

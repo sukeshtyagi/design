@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../styles/Miss.module.css";
+import style from "../styles/Miscellaneous.module.css";
 
 function Downloadsection() {
   return (
@@ -17,11 +17,7 @@ function Downloadsection() {
           </div>
         </div>
         <div className={style.rightDiv}>
-          <img
-            src="/images/mobiles.svg"
-            alt=""
-            className={style.rightImage}
-          />
+          <img src="/images/mobiles.svg" alt="" className={style.rightImage} />
         </div>
       </div>
     </div>

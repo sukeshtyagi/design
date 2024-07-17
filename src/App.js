@@ -21,7 +21,7 @@ import OfficersListing from "./officersPages/OfficersListing";
 import OfficersDetail from "./officersPages/OfficersDetail";
 import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
-import Listing from "./listingPages/Listing";
+import FreeListing from "./listingPages/FreeListing";
 
 function App() {
   return (
@@ -51,7 +51,7 @@ function App() {
         <Route path="/officer-detail" element={<OfficersDetail />} />
         <Route path="/govt-offices-detail" element={<GovtOfficesDetail />} />
 
-        <Route path="/list-yourself" element={<Listing />} />
+        <Route path="/list-yourself" element={<FreeListing />} />
 
         <Route path="/trial" element={<Trial />} />
       </Routes>
