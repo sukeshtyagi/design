@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../styles/NeedHelp.module.css";
+
 function NeedHelp() {
+  // Define state for form inputs
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+  // Handle form submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add form submission logic here
+  };
+
   return (
     <div className={style.needHelpOuterContainer}>
       <div className={style.needHelpContainer}>
@@ -27,56 +41,81 @@ function NeedHelp() {
           </div>
         </div>
 
-        <div className={style.rightDiv}>
-          <div className={style.topDiv}>
-            <div className={style.topLeft}>
-              <label htmlFor="" className={style.firstNameLabel}>
-                First Name
-              </label>
-              <input type="text" value="" className={style.firstNameInput} />
+        <div>
+          <form onSubmit={handleSubmit} className={style.rightDiv}>
+            <div className={style.topDiv}>
+              <div className={style.topLeft}>
+                <label htmlFor="firstName" className={style.firstNameLabel}>
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  className={style.firstNameInput}
+                />
+              </div>
+
+              <div className={style.topRight}>
+                <label htmlFor="lastName" className={style.lastNameLabel}>
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  className={style.lastNameInput}
+                />
+              </div>
             </div>
 
-            <div className={style.topRight}>
-              <label htmlFor="" className={style.lastNameLabel}>
-                Last Name
-              </label>
-              <input type="text" value="" className={style.lastNameInput} />
+            <div className={style.middleDiv}>
+              <div className={style.midLeft}>
+                <label htmlFor="email" className={style.emailLabel}>
+                  Email
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className={style.emailInput}
+                />
+              </div>
+
+              <div className={style.midRight}>
+                <label htmlFor="phoneNumber" className={style.numberLabel}>
+                  Phone Number
+                </label>
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className={style.numberInput}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className={style.middleDiv}>
-            <div className={style.midLeft}>
-              <label htmlFor="" className={style.emailLabel}>
-                Email
+            <div className={style.btmDiv}>
+              <label htmlFor="message" className={style.messageLabel}>
+                Message
               </label>
-              <input type="text" value="" className={style.emailInput} />
+              <textarea
+                id="message"
+                rows={8}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className={style.messageInput}
+              />
             </div>
 
-            <div className={style.midRight}>
-              <label htmlFor="" className={style.numberLabel}>
-                Phone Number
-              </label>
-              <input type="text" value="" className={style.numberInput} />
-            </div>
-          </div>
-
-          <div className={style.btmDiv}>
-            <label htmlFor="" className={style.messageLabel}>
-              Message
-            </label>
-            <textarea
-              rows={8}
-              type="text"
-              value=""
-              className={style.messageInput}
-            />
-          </div>
-
-          <button
-            className={`${style.btn}`}
-          >
-            Submit
-          </button>
+            <button type="submit" className={`${style.btn}`}>
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>

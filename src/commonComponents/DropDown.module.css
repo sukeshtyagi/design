@@ -48,7 +48,7 @@
   font-family: Poppins;
   font-weight: 400;
   font-size: 15px;
-  line-height: 22.5px;
+  line-height: 1.5em;
   text-align: left;
 }
 
@@ -65,7 +65,7 @@
   font-family: Poppins;
   font-weight: 400;
   font-size: 14.5px;
-  line-height: 22.5px;
+  line-height: 1.56em;
   text-align: center;
   z-index: 999999999;
 }

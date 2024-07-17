@@ -52,7 +52,7 @@
   font-family: Poppins;
   font-size: 15px;
   font-weight: 400;
-  line-height: 22.5px;
+  line-height: 1.5em;
   text-align: left;
   padding: 0;
   margin: 0;
@@ -60,7 +60,7 @@
 
 .reviews {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5em;
   color: rgba(0, 0, 0, 1);
   margin: 0 auto;
 }
@@ -85,7 +85,7 @@
   font-family: Poppins;
   font-weight: 600;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 1.5em;
   text-align: left;
 }
 
@@ -100,23 +100,23 @@
   height: 24px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.5em;
 }
 
 .title2 {
   font-weight: 500;
-  line-height: 19.2px;
+  line-height: 1.2em;
   color: rgba(0, 0, 0, 1);
 }
 
 .qual {
   height: 19px;
-  line-height: 19.2px;
+  line-height: 1.5em;
 }
 
 .address {
   font-size: 20px;
-  line-height: 29.93px;
+  line-height: 1.5em;
   margin-top: 5px;
 }
 
@@ -170,7 +170,7 @@
 .action,
 .action1 {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5em
 }
 
 .action {
@@ -220,7 +220,7 @@
   font-family: Poppins;
   font-size: 24px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 1.5em;
   text-align: center;
   color: rgba(0, 0, 0, 1);
 }
@@ -228,7 +228,7 @@
 .lessons {
   font-size: 12px;
   font-weight: 300;
-  line-height: 19.5px;
+  line-height: 1.6em;
   color: rgba(110, 110, 110, 1);
   text-align: left;
 }
@@ -236,6 +236,6 @@
 .customQual4 {
   font-size: 18px;
   font-weight: 500;
-  line-height: 21.6px;
+  line-height: 1.2em;
   color: rgba(0, 0, 0, 1);
 }

@@ -6,7 +6,6 @@ function DropDown({ option1, option2, option3,option4,filterHeading }) {
   const [downArrow, setDownArrow] = useState("/images/doctor/downArrow.svg");
   const dropdownRef = useRef(null);
   
-  console.log(showDropDown)
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setShowDropDown(false);

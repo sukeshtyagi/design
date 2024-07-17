@@ -19,7 +19,7 @@
   padding: 0;
   font-size: 30px;
   font-weight: 500;
-  line-height: 45px;
+  line-height: 1.5em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }
@@ -41,7 +41,7 @@
 .ques {
   font-size: 20px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.5em;
 }
 
 .image {

@@ -93,8 +93,9 @@ function DoctorLisiting() {
           <DoctorFilterCards />
           <div className={style.btmContainer} style={{ marginTop: "10px" }}>
             <div className={style.btmLeft}>
-              {docCardData.map((data) => (
+              {docCardData.map((data, index) => (
                 <CommonCard
+                  key={index}
                   doctorListing="Book Appointment"
                   img={data.img}
                   name={data.name}
