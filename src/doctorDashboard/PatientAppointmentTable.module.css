@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: -20px;
 }
 
 .heading {
@@ -38,7 +39,7 @@
 
 .tableContainer {
   width: 766px;
-  height: 376px;
+  height: 324px;
   border-collapse: separate;
   border-spacing: 0 20px;
   border-radius: 10px;

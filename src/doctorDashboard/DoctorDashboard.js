@@ -2,6 +2,7 @@ import React from "react";
 import style from "./DoctorDashboard.module.css";
 import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
+import PatientAppointmentTable from "./PatientAppointmentTable";
 
 function DoctorDashboard() {
   const cardsData = [
@@ -36,6 +37,7 @@ function DoctorDashboard() {
       <DashboardLeftSide />
       <div className={style.rightPart}>
         <SearchBarDashboard />
+
         <div className={style.locationFilterPara}>
           <p className={style.para}>Home</p>
           <img src="/images/doctorDashboard/rightArrow.svg" alt="" />
@@ -123,9 +125,14 @@ function DoctorDashboard() {
               </div>
               <div className="gender"></div>
             </div>
+            <PatientAppointmentTable />
           </div>
+
           <div className="rightArea"></div>
         </div>
+        <p className={style.dashboardFooter}>
+          Copyrights 2008-24. All Rights Reserved.
+        </p>
       </div>
     </div>
   );

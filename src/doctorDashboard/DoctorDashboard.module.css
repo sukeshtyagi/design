@@ -1,3 +1,4 @@
+/*width of main section , width of left div and width of right div, widht of dashboard footer*/
 .doctorDashboardOuter {
   height: fit-content;
   background-color: rgb(212, 17, 17);
@@ -13,7 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid red;
+  border: 1px solid blue;
 }
 
 .locationFilterPara {
@@ -90,7 +91,6 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
-  border: 1px solid rgb(128, 0, 43);
 }
 
 .title,
@@ -264,4 +264,25 @@
 .disease3 {
   background: rgba(227, 225, 255, 1);
   color: rgba(122, 110, 254, 1);
+}
+
+.dashboardFooter {
+  /* width: 100vw;/*reason of horizontal scroll bar*/
+  /*  width: 1175px;*/
+  height: 48px;
+  margin: 0;
+  margin-top: -20px;
+  padding: 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px -1px 4px 0px rgba(200, 200, 200, 0.15);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33em;
+  text-align: left;
+  color: rgba(101, 101, 101, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
 }
