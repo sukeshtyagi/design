@@ -56,7 +56,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid red;
-  gap: 20px;
+  gap: 20px;/**/
 }
 
 .cardsContainer {
@@ -117,6 +117,7 @@
   height: fit-content;
   display: flex;
   gap: 30px;
+
 }
 
 .nextPatientDetail {
@@ -127,6 +128,7 @@
   flex-direction: column;
   gap: 20px;
   border-radius: 10px;
+  background-color: rgba(245, 245, 245, 1);
 }
 
 .heading {
@@ -284,5 +286,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
 }

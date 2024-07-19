@@ -3,6 +3,7 @@ import style from "./DoctorDashboard.module.css";
 import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
 import PatientAppointmentTable from "./PatientAppointmentTable";
+import Gender from "./Gender";
 
 function DoctorDashboard() {
   const cardsData = [
@@ -45,7 +46,9 @@ function DoctorDashboard() {
         </div>
 
         <div className={style.mainSection}>
+
           <div className={style.leftArea}>
+            
             <div className={style.cardsContainer}>
               {cardsData.map((card, index) => (
                 <div key={index} className={style.cardOuter}>
@@ -123,7 +126,9 @@ function DoctorDashboard() {
                   </div>
                 </div>
               </div>
-              <div className="gender"></div>
+              <div className="gender">
+                <Gender />
+              </div>
             </div>
             <PatientAppointmentTable />
           </div>
