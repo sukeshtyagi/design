@@ -90,6 +90,7 @@ function GovtOfficesListing() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search offices, keywords....."
+              suggestionDiv="true"
             />
           </div>
           <GovtOfficesSpecialityCards />

@@ -31,11 +31,12 @@ function LabourDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner} style={{paddingBottom:"100px"}}>
+        <div className={style.listingInner} style={{ paddingBottom: "100px" }}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, maids, plumber, carpenter....."
+              suggestionDiv="true"
             />
           </div>
           <div className={style.locationFilterPara}>

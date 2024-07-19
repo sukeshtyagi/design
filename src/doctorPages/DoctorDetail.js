@@ -34,6 +34,7 @@ function DoctorDetail() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search doctors, advocates, teachers and many more....."
+              suggestionDiv="true"
             />
           </div>
 

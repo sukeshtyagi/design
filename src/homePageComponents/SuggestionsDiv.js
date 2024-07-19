@@ -1,6 +1,6 @@
 import React from "react";
 import style from "../styles/SuggestionDiv.module.css";
-function SuggestionsDiv() {
+function SuggestionsDiv({ suggestionDiv }) {
   const searches = [
     { title: "Criminal Lawyer" },
     { title: "Criminal Lawyer" },
@@ -19,7 +19,10 @@ function SuggestionsDiv() {
     { title: "Criminal Lawyer" },
   ];
   return (
-    <div className={style.suggestionsOutermost}>
+    <div
+      className={style.suggestionsOutermost}
+      style={suggestionDiv ? { top: "50px" } : {}}
+    >
       <div className={style.suggestionsOuter}>
         <div className={style.topDiv}>
           <div className={style.left}>

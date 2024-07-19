@@ -14,7 +14,6 @@ import LabourListing from "./labourPages/LabourListing";
 import LabourDetail from "./labourPages/LabourDetail";
 import EngineerListing from "./engineerPages/EngineerListing";
 import EngineerDetail from "./engineerPages/EngineerDetail";
-import Trial from "./commonComponents/Trial";
 import AdvocateListing from "./advocatePages/AdvocateListing";
 import AdvocateDetail from "./advocatePages/AdvocateDetail";
 import OfficersListing from "./officersPages/OfficersListing";
@@ -22,9 +21,8 @@ import OfficersDetail from "./officersPages/OfficersDetail";
 import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
-import DoctorDashboard from "./doctorDashboard/DoctorDashboard"
-import PatientAppointmentTable from "./doctorDashboard/PatientAppointmentTable";
-import Gender from "./doctorDashboard/Gender";
+import DoctorDashboard from "./doctorDashboard/DoctorDashboard";
+import PatientAppointmentList from "./doctorDashboard/PatientAppointmentList";
 
 function App() {
   return (
@@ -57,7 +55,7 @@ function App() {
         <Route path="/list-yourself" element={<FreeListing />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
 
-        <Route path="/trial" element={<Gender/>} />
+        <Route path="/trial" element={<PatientAppointmentList />} />
       </Routes>
     </BrowserRouter>
   );

@@ -73,6 +73,7 @@ function LabourListing() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, maids, plumber, carpenter....."
+              suggestionDiv="true"
             />
           </div>
           <LabourSpecialityCards />

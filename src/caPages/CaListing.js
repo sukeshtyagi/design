@@ -68,6 +68,7 @@ function CaListing() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, Income Tax, GST, VAT....."
+              suggestionDiv="true"
             />
           </div>
 
@@ -120,7 +121,7 @@ function CaListing() {
         </div>
       </div>
       <Faq caListing="true" />
-      <Footer shadow="true"/>
+      <Footer shadow="true" />
     </>
   );
 }

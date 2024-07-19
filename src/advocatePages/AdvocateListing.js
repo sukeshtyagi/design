@@ -72,6 +72,7 @@ function AdvocateListing() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, Family, divorce....."
+              suggestionDiv="true"
             />
           </div>
           <AdvocateSpecialityCards />
@@ -118,7 +119,7 @@ function AdvocateListing() {
       </div>
       <Faq advocateListing="true" />
 
-      <Footer shadow="true"/>
+      <Footer shadow="true" />
     </>
   );
 }

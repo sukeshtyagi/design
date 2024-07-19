@@ -48,7 +48,11 @@ function OfficersListing() {
       <div className={style.listingOuter}>
         <div className={style.listingInner}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" placeholderProp="Search" />
+            <SearchBar
+              userDashboard="true"
+              placeholderProp="Search"
+              suggestionDiv="true"
+            />
           </div>
           <OfficersSpecialityCards />
         </div>

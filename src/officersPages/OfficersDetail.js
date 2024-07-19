@@ -20,9 +20,13 @@ function OfficersDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner} style={{marginBottom:"100px"}}>
+        <div className={style.listingInner} style={{ marginBottom: "100px" }}>
           <div className={style.searchContainer}>
-            <SearchBar userDashboard="true" placeholderProp="Search" />
+            <SearchBar
+              userDashboard="true"
+              placeholderProp="Search"
+              suggestionDiv="true"
+            />
           </div>
           <div className={style.locationFilterPara}>
             <p className={style.para}>Home</p>
@@ -41,10 +45,10 @@ function OfficersDetail() {
             qual1={qual1}
           />
           <Complaints />
-          <SubmitFeedback forWhom="Ms. Esther Howard" officerDetail="true"  />
+          <SubmitFeedback forWhom="Ms. Esther Howard" officerDetail="true" />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

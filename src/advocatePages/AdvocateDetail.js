@@ -29,11 +29,12 @@ function AdvocateDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner} style={{paddingBottom:"100px"}}>
+        <div className={style.listingInner} style={{ paddingBottom: "100px" }}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, Family, divorce....."
+              suggestionDiv="true"
             />
           </div>
 
@@ -58,9 +59,7 @@ function AdvocateDetail() {
             qual4="Fluent in Hindi, English"
           />
           <div className={style.detailBtm} style={{ gap: "027px" }}>
-            <div
-              className={style.leftDetail}
-            >
+            <div className={style.leftDetail}>
               <div className={style.navOptionDetail}>
                 <p
                   className={`${style.option} ${
@@ -97,9 +96,7 @@ function AdvocateDetail() {
               {select === "practice" && <AdvocateDetailPracticeSection />}
               {select === "reviews" && <AdvocateDetailReviewSection />}
             </div>
-            <div
-              className={style.btmRight}
-            >
+            <div className={style.btmRight}>
               <BookAppointment
                 divHeading="Schedule a Consultation"
                 btnHeading="Schedule Now"
@@ -110,7 +107,7 @@ function AdvocateDetail() {
           <MostViewed2 category="advocates" />
         </div>
       </div>
-      <Footer shadow="true"/>
+      <Footer shadow="true" />
     </>
   );
 }

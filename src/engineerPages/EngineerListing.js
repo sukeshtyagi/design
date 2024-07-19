@@ -72,6 +72,7 @@ function EnggListing() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, product, Website....."
+              suggestionDiv="true"
             />
           </div>
           <EngineerSpecialityCards />
@@ -119,7 +120,7 @@ function EnggListing() {
       </div>
       <Faq engineerListing="true" />
 
-      <Footer shadow="true"/>
+      <Footer shadow="true" />
     </>
   );
 }

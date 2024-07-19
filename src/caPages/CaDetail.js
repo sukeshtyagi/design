@@ -35,6 +35,7 @@ function CaDetail() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, Income Tax, GST, VAT....."
+              suggestionDiv="true"
             />
           </div>
           <div className={style.locationFilterPara}>

@@ -69,6 +69,7 @@ function TeacherListing() {
             <SearchBar
               userDashboard="true"
               placeholderProp="Search Speciality, English, Mathematics, Physics......."
+              suggestionDiv="true"
             />
           </div>
 

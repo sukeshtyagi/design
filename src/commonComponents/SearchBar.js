@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import style from "./SearchBar.module.css";
 import SuggestionsDiv from "../homePageComponents/SuggestionsDiv";
 
-function SearchBar({ userDashboard, placeholderProp }) {
+function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
   const [showSuggestion, setShowSuggestion] = useState(false);
   const searchBarRef = useRef(null);
 
@@ -84,7 +84,7 @@ function SearchBar({ userDashboard, placeholderProp }) {
           <img src="/images/services/Search.svg" alt="" />
         </div>
       </div>
-      {showSuggestion && <SuggestionsDiv />}
+      {showSuggestion && <SuggestionsDiv suggestionDiv={suggestionDiv} />}
     </div>
   );
 }
