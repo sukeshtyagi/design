@@ -22,6 +22,8 @@ import OfficersDetail from "./officersPages/OfficersDetail";
 import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
+import DoctorDashboard from "./doctorDashboard/DoctorDashboard"
+import PatientAppointmentTable from "./doctorDashboard/PatientAppointmentTable";
 
 function App() {
   return (
@@ -52,8 +54,9 @@ function App() {
         <Route path="/govt-offices-detail" element={<GovtOfficesDetail />} />
 
         <Route path="/list-yourself" element={<FreeListing />} />
+        <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
 
-        <Route path="/trial" element={<Trial />} />
+        <Route path="/trial" element={<PatientAppointmentTable/>} />
       </Routes>
     </BrowserRouter>
   );

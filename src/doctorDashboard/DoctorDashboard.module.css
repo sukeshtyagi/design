@@ -1,0 +1,267 @@
+.doctorDashboardOuter {
+  height: fit-content;
+  background-color: rgb(212, 17, 17);
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  gap: 15px;
+}
+
+.rightPart {
+  width: 100%;
+  margin-right: 0;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid red;
+}
+
+.locationFilterPara {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+
+.para,
+.paraSpan {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.paraSpan {
+  color: rgba(11, 219, 182, 1);
+}
+
+.mainSection {
+  width: 100%;
+  width: 1135px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 15px;
+  border: 1px solid green;
+}
+
+.leftArea {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  gap: 20px;
+}
+
+.cardsContainer {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  gap: 10px;
+}
+
+.cardOuter {
+  width: 184px;
+  height: 93px;
+  border-radius: 4px;
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid rgba(249, 249, 249, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconDiv {
+  width: 33px;
+  height: 29px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid rgb(128, 0, 43);
+}
+
+.title,
+.qty {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25em;
+  text-align: center;
+  color: rgba(140, 140, 140, 1);
+}
+
+.qty {
+  font-size: 27px;
+  line-height: 0.93em;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+}
+
+.midSection {
+  width: 738px;
+  height: fit-content;
+  display: flex;
+  gap: 30px;
+}
+
+.nextPatientDetail {
+  width: 354px;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.heading {
+  height: 25px;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.profilePic {
+  width: 210px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.doctorImage {
+  width: 50px;
+  height: 50px;
+}
+
+.nameContainer {
+  margin: 0;
+  padding: 0;
+  height: 43px;
+}
+
+.greet,
+.name {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.56em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.name {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.08em;
+  text-align: left;
+  color: rgba(147, 147, 147, 1);
+}
+
+.detailsContainer {
+  width: 269px;
+  height: fit-content;
+  display: flex;
+  gap: 30px;
+}
+
+.div1 {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.criterion,
+.value {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.08em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.value {
+  color: rgba(147, 147, 147, 1);
+}
+
+.btmDiv {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2.08em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.historyContainer {
+  width: fit-content;
+  height: 25px;
+  display: flex;
+  gap: 17px;
+}
+
+.disease1,
+.disease2,
+.disease3 {
+  margin: 0;
+  padding: 0;
+  padding: 0 20px;
+  border-radius: 3px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.08em;
+  text-align: left;
+}
+
+.disease1 {
+  color: rgba(254, 168, 5, 1);
+  background-color: rgba(255, 238, 205, 1);
+}
+
+.disease2 {
+  background: rgba(198, 233, 255, 1);
+  color: rgba(37, 167, 250, 1);
+}
+
+.disease3 {
+  background: rgba(227, 225, 255, 1);
+  color: rgba(122, 110, 254, 1);
+}

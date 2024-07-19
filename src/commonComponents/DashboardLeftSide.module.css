@@ -1,0 +1,95 @@
+.leftPart {
+  width: 265px;
+  height: fit-content;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 1px 0px 50px 0px rgba(60, 60, 60, 0.15);
+  padding: 40px 0;
+}
+
+.imgDiv {
+  width: 189.69px;
+  height: 30px;
+  margin-left: 36px;
+  object-fit: contain;
+}
+
+.profilePic {
+  margin-top: 60px;
+  margin-left: 8px;
+  width: 257px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.doctorImage {
+  width: 50px;
+  height: 50px;
+}
+
+.greet,
+.name {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.08em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.name {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.56em;
+  text-align: left;
+}
+
+.optionContainer {
+  height: fit-content;
+  margin-top: 40px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option,
+.optionSetting {
+  padding: 15px 0;
+  padding-left: 19px;
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.optionImage {
+  width: 20px;
+  height: 20px;
+}
+
+.optionName {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25em;
+  text-align: left;
+}
+
+.optionSelected {
+  background-color: rgba(11, 219, 182, 1);
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px 0 0 10px;
+}
+
+.optionSetting {
+  margin-top: 365px;
+}

@@ -1,0 +1,159 @@
+.topContainer {
+  width: 766px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.39em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.view {
+  width: 71px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid rgba(11, 219, 182, 1);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* PatientTable.css */
+
+.tableContainer {
+  width: 766px;
+  height: 376px;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(249, 249, 249, 1);
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.tableHeader {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tableHeader p {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.78em;
+  text-align: left;
+  color: rgba(147, 143, 150, 1);
+}
+
+.tableCell {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.patientImg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.patientName,
+.patientDisease {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.92em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.patientDisease {
+  text-align: center;
+}
+
+.statusIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailsContainer {
+  width: fit-content;
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.detailsText {
+  margin: 0;
+}
+
+.tableRow {
+  height: 25px;
+}
+
+.tableRow td {
+  padding-left: 28.5px;
+  padding-right: 28.5px;
+  vertical-align: middle; /* Ensure text is centered vertically */
+}
+
+.tableRow td:first-child {
+  padding-left: 0;
+}
+
+.statusIcon {
+  cursor: pointer;
+}
+
+.updatedStatus {
+  width: 57px;
+  height: 25px;
+  margin: 0;
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.5em; /* Adjust line height to fit content */
+  text-align: center;
+  border-radius: 5px;
+  display: flex; /* Ensure flex container to center content */
+  align-items: center;
+  justify-content: center;
+}
+
+.accepted {
+  color: rgba(11, 219, 182, 1);
+  background-color: rgba(233, 255, 251, 1);
+}
+
+.rejected {
+  color: rgba(215, 80, 80, 1);
+  background-color: rgba(255, 230, 230, 1);
+}
