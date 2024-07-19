@@ -24,6 +24,7 @@ import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
 import DoctorDashboard from "./doctorDashboard/DoctorDashboard"
 import PatientAppointmentTable from "./doctorDashboard/PatientAppointmentTable";
+import Gender from "./doctorDashboard/Gender";
 
 function App() {
   return (
@@ -56,7 +57,7 @@ function App() {
         <Route path="/list-yourself" element={<FreeListing />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
 
-        <Route path="/trial" element={<PatientAppointmentTable/>} />
+        <Route path="/trial" element={<Gender/>} />
       </Routes>
     </BrowserRouter>
   );

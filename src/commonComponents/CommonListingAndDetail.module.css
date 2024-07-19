@@ -253,7 +253,7 @@
   margin: 0;
   padding: 0;
   height: 52px;
-  padding: 11px 50px 11px 50px;
+  padding: 11px 50px;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
@@ -261,6 +261,10 @@
   text-align: left;
   color: rgba(0, 0, 0, 1);
   cursor: pointer;
+
+  height: 45px; /*given by sir*/
+  padding: 9px 50px; /*given by sir*/
+  font-size: 17px; /*given by sir*/
 }
 
 .selected {
@@ -287,7 +291,7 @@
   font-family: Poppins;
   font-size: 18px;
   font-weight: 400;
-  line-height:1.8em;
+  line-height: 1.8em;
   text-align: left;
 }
 
@@ -531,7 +535,7 @@
 .feedback2 {
   font-size: 15px;
   font-weight: 500;
-  line-height:1.6em;
+  line-height: 1.6em;
   color: rgba(150, 150, 150, 1);
 }
 
@@ -544,7 +548,7 @@
   font-family: Poppins;
   font-size: 16px;
   font-weight: 600;
-  line-height:1.5em;
+  line-height: 1.5em;
   text-align: center;
   color: rgba(255, 255, 255, 1);
 }
@@ -570,7 +574,7 @@
 .addDetail {
   font-size: 16px;
   font-weight: 400;
-  line-height:1.5em;
+  line-height: 1.5em;
   margin-top: 20px;
   margin-bottom: 5px;
 }
