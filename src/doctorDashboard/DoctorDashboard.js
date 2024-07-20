@@ -136,6 +136,7 @@ function DoctorDashboard() {
             <PatientAppointmentList />
           </div>
         </div>
+
         <p className={style.dashboardFooter}>
           Copyrights 2008-24. All Rights Reserved.
         </p>

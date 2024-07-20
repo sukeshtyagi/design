@@ -1,10 +1,11 @@
-/*width of main section , width of left div and width of right div, widht of dashboard footer*/
 .doctorDashboardOuter {
-  height: fit-content;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   gap: 15px;
-  overflow-x: hidden;
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
 }
 
 .rightPart {
@@ -15,7 +16,9 @@
   flex-direction: column;
   gap: 20px;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1);
 }
 
 .locationFilterPara {
@@ -267,21 +270,23 @@
 }
 
 .dashboardFooter {
-  /* width: 100vw;/*reason of horizontal scroll bar*/
-  /*  width: 1175px;*/
   height: 48px;
   margin: 0;
   margin-top: -20px;
   padding: 0;
+  padding-left: 450px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px -1px 4px 0px rgba(200, 200, 200, 0.15);
   font-family: Poppins;
   font-size: 12px;
   font-weight: 500;
   line-height: 1.33em;
-  text-align: left;
+  text-align: center;
   color: rgba(101, 101, 101, 1);
   display: flex;
-  justify-content: center;
   align-items: center;
+  position: sticky;
+  width: 100%;
+  left: 0px;
+  bottom: 0;
 }
