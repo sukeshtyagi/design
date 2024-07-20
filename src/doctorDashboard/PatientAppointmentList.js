@@ -24,7 +24,77 @@ function PatientAppointmentList() {
           <p className={style.time}>15:00</p>
           <p className={style.time}>16:00</p>
         </div>
-        <div className={style.cardDiv}></div>
+        <div className={style.cardDiv}>
+          <div className={style.cardouter}>
+            <img
+              src="/images/doctorDashboard/patient1.png"
+              alt=""
+              className={style.patientImage}
+            />
+            <div className={style.nameContainer}>
+              <p className={style.name}>Esther Howard</p>
+              <p className={style.visitTime}>08:00 - 09:00</p>
+            </div>
+          </div>
+
+          <div
+            className={style.cardouter}
+            style={{
+              height: "104px",
+              backgroundColor: "rgba(11, 219, 182, 1)",
+            }}
+          >
+            <img
+              src="/images/doctorDashboard/patient.png"
+              alt=""
+              className={style.patientImage}
+            />
+            <div className={style.nameContainer}>
+              <p className={style.name}>Leslie Alexander</p>
+              <p className={style.visitTime} style={{ color: "rgba(0,0,0,1)" }}>
+                09:30 - 11:00
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={style.cardouter}
+            style={{
+              height: "91px",
+              backgroundImage: "url(/images/doctorDashboard/lunchBreak.png)",
+            }}
+          >
+            <div className={style.nameContainer} style={{ width: "100%" }}>
+              <p className={style.name} style={{ textAlign: "center" }}>
+                Lunch Break
+              </p>
+            </div>
+          </div>
+
+          <div className={style.cardouter}>
+            <img
+              src="/images/doctorDashboard/patient1.png"
+              alt=""
+              className={style.patientImage}
+            />
+            <div className={style.nameContainer}>
+              <p className={style.name}>Esther Howard</p>
+              <p className={style.visitTime}>08:00 - 09:00</p>
+            </div>
+          </div>
+
+          <div className={style.cardouter}>
+            <img
+              src="/images/doctorDashboard/patient1.png"
+              alt=""
+              className={style.patientImage}
+            />
+            <div className={style.nameContainer}>
+              <p className={style.name}>Esther Howard</p>
+              <p className={style.visitTime}>08:00 - 09:00</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

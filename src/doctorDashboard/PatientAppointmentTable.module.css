@@ -42,7 +42,7 @@
   height: 324px;
   border-collapse: separate;
   border-spacing: 0 20px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   border: 1px solid rgba(249, 249, 249, 1);
   background-color: rgba(245, 245, 245, 1);
 }

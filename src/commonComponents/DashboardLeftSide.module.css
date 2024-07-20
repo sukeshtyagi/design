@@ -1,9 +1,13 @@
 .leftPart {
+  position: fixed;
   width: 265px;
   height: fit-content;
+  height: 100vh;
   background: rgba(255, 255, 255, 1);
   box-shadow: 1px 0px 50px 0px rgba(60, 60, 60, 0.15);
   padding: 40px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .imgDiv {
@@ -92,4 +96,5 @@
 
 .optionSetting {
   margin-top: 365px;
+  margin-top: 400px;
 }

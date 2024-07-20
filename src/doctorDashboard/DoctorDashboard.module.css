@@ -1,20 +1,21 @@
 /*width of main section , width of left div and width of right div, widht of dashboard footer*/
 .doctorDashboardOuter {
   height: fit-content;
-  background-color: rgb(212, 17, 17);
   background-color: rgba(255, 255, 255, 1);
   display: flex;
   gap: 15px;
+  overflow-x: hidden;
 }
 
 .rightPart {
-  width: 100%;
-  margin-right: 0;
+  width: 1135px;
+  margin-left: 280px;
   margin-right: 25px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: 1px solid blue;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .locationFilterPara {
@@ -47,7 +48,6 @@
   height: fit-content;
   display: flex;
   gap: 15px;
-  border: 1px solid green;
 }
 
 .leftArea {
@@ -55,8 +55,7 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
-  gap: 20px;/**/
+  gap: 20px; /**/
 }
 
 .cardsContainer {
@@ -117,7 +116,6 @@
   height: fit-content;
   display: flex;
   gap: 30px;
-
 }
 
 .nextPatientDetail {

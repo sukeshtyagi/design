@@ -4,6 +4,7 @@ import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
 import PatientAppointmentTable from "./PatientAppointmentTable";
 import Gender from "./Gender";
+import PatientAppointmentList from "./PatientAppointmentList";
 
 function DoctorDashboard() {
   const cardsData = [
@@ -46,9 +47,7 @@ function DoctorDashboard() {
         </div>
 
         <div className={style.mainSection}>
-
           <div className={style.leftArea}>
-            
             <div className={style.cardsContainer}>
               {cardsData.map((card, index) => (
                 <div key={index} className={style.cardOuter}>
@@ -133,7 +132,9 @@ function DoctorDashboard() {
             <PatientAppointmentTable />
           </div>
 
-          <div className="rightArea"></div>
+          <div className="rightArea">
+            <PatientAppointmentList />
+          </div>
         </div>
         <p className={style.dashboardFooter}>
           Copyrights 2008-24. All Rights Reserved.
