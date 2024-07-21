@@ -2,6 +2,7 @@
   width: 353.5px;
   height: fit-content;
   padding: 25px 1px;
+  padding-top: 27px;
   border-radius: 10px;
   background: rgba(245, 245, 245, 1);
 }
@@ -10,6 +11,7 @@
   width: 305px;
   height: 25px;
   margin: auto;
+  margin-top: 29px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,6 +33,7 @@
   width: 305px;
   margin: auto;
   margin-top: 7px;
+  margin-top: 10px;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.67em;
@@ -39,7 +42,7 @@
 
 .timeAndCard {
   width: 305px;
-  height: 570px;
+  height: fit-content;
   margin: auto;
   margin-top: 29px;
   display: flex;
@@ -70,6 +73,7 @@
 }
 
 .cardouter {
+  position: relative;
   width: 245px;
   height: 78px;
   padding-left: 15px;
@@ -81,6 +85,8 @@
   background: rgba(237, 237, 237, 1);
   border: 1px solid rgba(216, 236, 233, 1);
 }
+
+
 
 .nameContainer {
   display: flex;

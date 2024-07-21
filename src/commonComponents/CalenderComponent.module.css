@@ -1,0 +1,120 @@
+.calendar {
+  width: 351.5px;
+  height: 164px;
+  background: rgba(245, 245, 245, 1);
+  position: relative;
+}
+
+.header {
+  width: 304px;
+  height: 36px;
+  margin: 0 auto;
+  margin-bottom: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header span {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.04em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.dayNames {
+  width: 279px;
+  height: 25px;
+  margin: 0 auto;
+  display: flex;
+  gap: 34px;
+}
+
+.dayName {
+  width: 10px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.dates1 {
+  width: 279px;
+  height: 25px;
+  margin: 0 auto;
+  margin-top: 6px;
+  display: flex;
+  display: flex;
+  gap: 28px;
+  margin-top: 6px;
+}
+
+.date {
+  width: 31px;
+  height: 31px;
+  margin: 0;
+  padding: 0;
+  padding-top: 6px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.04em;
+  text-align: left;
+}
+
+.currentDateWeekView {
+  width: 31px;
+  height: 31px;
+  margin-top: -2px;
+  margin-left: -8px;
+  padding: 6px 12px;
+  padding-left: 8px;
+  padding-top: 8px;
+  color: white;
+  background-color: rgba(11, 219, 182, 1);
+  border-radius: 100%;
+  text-align: left;
+}
+
+.currentDateMonthView {
+  background-color: rgba(11, 219, 182, 1);
+  color: white;
+  border-radius: 50%;
+  text-align: left;
+}
+
+.monthView {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+  background: rgba(245, 245, 245, 1);
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 1000;
+  width: 100%;
+}
+
+.monthViewHeader {
+  margin-bottom: 10px;
+}
+
+.monthViewDates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 100%;
+}
+
+.monthViewDate {
+  text-align: center;
+  padding: 5px;
+}

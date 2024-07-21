@@ -1,9 +1,11 @@
 import React from "react";
 import style from "./PatientAppointmentList.module.css";
+import Calendar from "../commonComponents/CalenderComponent";
 
 function PatientAppointmentList() {
   return (
     <div className={style.outer}>
+      <Calendar />
       <div className={style.appointment}>
         <p className={style.todayAppointment}>Today Appointments</p>
         <img src="/images/doctorDashboard/appointmentDots.svg" alt="" />
@@ -36,6 +38,8 @@ function PatientAppointmentList() {
               <p className={style.visitTime}>08:00 - 09:00</p>
             </div>
           </div>
+
+          
 
           <div
             className={style.cardouter}
