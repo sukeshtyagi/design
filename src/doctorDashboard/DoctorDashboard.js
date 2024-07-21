@@ -35,7 +35,7 @@ function DoctorDashboard() {
   ];
 
   return (
-    <div className={style.doctorDashboardOuter}>
+    <div className={style.doctorDashboardOuter} style={{background:"url(/images/Bcg.svg)"}}>
       <DashboardLeftSide />
       <div className={style.rightPart}>
         <SearchBarDashboard />

@@ -141,10 +141,10 @@
   font-family: Poppins;
   font-size: 10px;
   font-weight: 400;
-  line-height: 1.5em; /* Adjust line height to fit content */
+  line-height: 1.5em;
   text-align: center;
   border-radius: 5px;
-  display: flex; /* Ensure flex container to center content */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
