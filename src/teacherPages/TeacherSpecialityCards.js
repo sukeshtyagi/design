@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
+
 export function TeacherSpecialityCards() {
   const [activeSpec, setActiveSpec] = useState("English");
+  const [startIndex, setStartIndex] = useState(0);
 
-  const handleClick = (index) => {
-    setActiveSpec(index);
-  };
   const specialityArray = [
     "English",
     "Maths",
@@ -17,11 +16,58 @@ export function TeacherSpecialityCards() {
     "Geography",
     "Economics",
     "Political Science",
+    "Sociology",
+    "Philosophy",
+    "Psychology",
+    "Environmental Science",
+    "Statistics",
+    "Computer Science",
+    "Business Studies",
+    "Arts",
+    "Physical Education",
+    "Agriculture",
   ];
+
+  const itemsToShow = 10;
+  const totalItems = specialityArray.length;
+  const endIndex = startIndex + itemsToShow;
+
+  const visibleSpecialities = [
+    ...specialityArray.slice(startIndex, endIndex),
+    ...specialityArray.slice(0, Math.max(0, endIndex - totalItems)),
+  ];
+
+  const handleClick = (speciality) => {
+    setActiveSpec(speciality);
+  };
+
+  const handleArrowClick = () => {
+    setStartIndex((prevIndex) => (prevIndex + 1) % totalItems);
+  };
+
+  const handleArrowClickLeft = () => {
+    setStartIndex((prevIndex) => (prevIndex - 1 + totalItems) % totalItems);
+  };
+
+  const showRightArrow =
+    startIndex + itemsToShow < totalItems || totalItems <= itemsToShow;
+
+  const showLeftArrow = startIndex > 0;
+
   return (
     <div className={style.specCardWrapper}>
+      {showLeftArrow && (
+        <div className={style.arrowContainer2} onClick={handleArrowClickLeft}>
+          <img
+            src="/images/doctor/specArrow.svg"
+            alt="Left Arrow"
+            className={style.arrowImage}
+          />
+        </div>
+      )}
+
       <div className={style.specCardContainer}>
-        {specialityArray.map((speciality, index) => (
+        {visibleSpecialities.map((speciality, index) => (
           <div
             key={index}
             className={`${style.specOuter} ${
@@ -33,9 +79,11 @@ export function TeacherSpecialityCards() {
           </div>
         ))}
       </div>
-      <div className={style.arrowContainer}>
-        <img src="/images/doctor/specArrow.svg" alt="" />
-      </div>
+      {showRightArrow && (
+        <div className={style.arrowContainer} onClick={handleArrowClick}>
+          <img src="/images/doctor/specArrow.svg" alt="Right Arrow" />
+        </div>
+      )}
     </div>
   );
 }

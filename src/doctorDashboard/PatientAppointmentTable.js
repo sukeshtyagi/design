@@ -71,7 +71,6 @@ function PatientAppointmentTable() {
      let aValue = a[key];
      let bValue = b[key];
 
-     // Convert date strings to Date objects for proper comparison
      if (key === "date") {
        aValue = new Date(aValue.split("/").reverse().join("-"));
        bValue = new Date(bValue.split("/").reverse().join("-"));

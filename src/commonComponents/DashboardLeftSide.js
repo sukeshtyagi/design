@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import style from "./DashboardLeftSide.module.css"
+import style from "./DashboardLeftSide.module.css";
+import { useNavigate } from "react-router-dom";
 
 function DashboardLeftSide() {
+  const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState("dashboard");
 
   const handleOptionClick = (option) => {
@@ -14,6 +16,9 @@ function DashboardLeftSide() {
           src="/images/doctorDashboard/logo.png"
           alt=""
           className={style.logoImage}
+          onClick={() => {
+            navigate("/homepage");
+          }}
         />
       </div>
 

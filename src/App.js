@@ -22,7 +22,7 @@ import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
 import DoctorDashboard from "./doctorDashboard/DoctorDashboard";
-import PatientAppointmentList from "./doctorDashboard/PatientAppointmentList";
+import { DoctorSpecialityCards } from "./commonComponents/Trial";
 
 function App() {
   return (
@@ -55,7 +55,7 @@ function App() {
         <Route path="/list-yourself" element={<FreeListing />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
 
-        <Route path="/trial" element={<PatientAppointmentList />} />
+        <Route path="/trial" element={<DoctorSpecialityCards />} />
       </Routes>
     </BrowserRouter>
   );

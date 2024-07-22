@@ -74,7 +74,7 @@
   text-align: center;
 }
 
-.arrowContainer {
+.arrowContainer,.arrowContainer2 {
   position: absolute;
   top: 8px;
   right: -20px;
@@ -86,6 +86,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.arrowContainer2 {
+  left: -20px;
+}
+
+.arrowImage{
+  transform: rotate(-180deg);
 }
 
 .bannerContainer {
