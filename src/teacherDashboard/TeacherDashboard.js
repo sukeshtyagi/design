@@ -115,7 +115,7 @@ function TeacherDashboard() {
                 </div>
               </div>
               <div className="rightArea">
-                <PatientAppointmentList />
+                <PatientAppointmentList heading="Schedules" />
               </div>
             </div>
           </>

@@ -2,16 +2,16 @@ import React from "react";
 import style from "./PatientAppointmentList.module.css";
 import Calendar from "./CalenderComponent";
 
-function PatientAppointmentList() {
+function PatientAppointmentList({heading}) {
   return (
     <div className={style.outer}>
       <Calendar />
       <div className={style.appointment}>
-        <p className={style.todayAppointment}>Today Appointments</p>
+        <p className={style.todayAppointment}>Today {heading}</p>
         <img src="/images/doctorDashboard/appointmentDots.svg" alt="" />
       </div>
 
-      <p className={style.totalAppointment}>4 Appointments</p>
+      <p className={style.totalAppointment}>4 {heading}</p>
 
       <div className={style.timeAndCard}>
         <div className={style.timeDiv}>

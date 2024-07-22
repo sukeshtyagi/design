@@ -154,7 +154,7 @@ function DoctorDashboard() {
               </div>
 
               <div className="rightArea">
-                <PatientAppointmentList />
+                <PatientAppointmentList heading="Appointments" />
               </div>
             </div>
           </>
