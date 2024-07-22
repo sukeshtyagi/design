@@ -1,0 +1,130 @@
+.topSection {
+  width: 756px;
+  height: fit-content;
+  padding: 25px 32px 25px 32px;
+  border-radius: 10px;
+  background: rgba(245, 245, 245, 1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.imgContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(216, 255, 248, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upcomingClassContainer {
+  width: 270px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.totalCount,
+.upcoming,
+.week {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 0.52em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.upcoming {
+  font-size: 24px;
+  line-height: 1.04em;
+}
+
+.week {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.56em;
+  color: rgba(187, 187, 187, 1);
+}
+
+.schedule {
+  width: 145px;
+  height: 49px;
+  margin-left: 155px;
+  padding: 12px 18px 12px 18px;
+  border-radius: 8px;
+  background-color: rgba(11, 219, 182, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.56em;
+  text-align: left;
+}
+
+.midContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardOuter {
+  width: 230px;
+  height: fit-content;
+  padding: 18px 0 18px 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.title,
+.count,
+.percentage {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.56em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.detailsContainer {
+  width: 148px;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+
+.count {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 0.69em;
+  margin-right: 15px;
+}
+
+.percentage {
+  color: rgba(26, 186, 119, 1);
+}
+
+.month {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.56em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}

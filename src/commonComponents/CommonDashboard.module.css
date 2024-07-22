@@ -45,12 +45,8 @@
 }
 
 .mainSection {
-  width: 100%;
-  width: 1135px;
-  width: fit-content;
   height: fit-content;
   display: flex;
-  gap: 15px;
 }
 
 .leftArea {

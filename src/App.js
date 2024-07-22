@@ -22,7 +22,8 @@ import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
 import DoctorDashboard from "./doctorDashboard/DoctorDashboard";
-import { DoctorSpecialityCards } from "./commonComponents/Trial";
+import TeacherDashboard from "./teacherDashboard/TeacherDashboard";
+import DashboardLeftSide from "./commonComponents/Trial";
 
 function App() {
   return (
@@ -54,8 +55,20 @@ function App() {
 
         <Route path="/list-yourself" element={<FreeListing />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
+        <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
 
-        <Route path="/trial" element={<DoctorSpecialityCards />} />
+        <Route
+          path="/trial"
+          element={
+            <DashboardLeftSide
+              menuItem1="Dashboard"
+              menuItem2="Appointments"
+              menuItem3="My Patients"
+              menuItem4="Messages"
+              menuItem5="Payments"
+            />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

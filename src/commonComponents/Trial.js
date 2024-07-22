@@ -1,79 +1,132 @@
 import React, { useState } from "react";
-import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
-import DropDown from "../commonComponents/DropDown";
+import style from "./DashboardLeftSide.module.css";
+import { useNavigate } from "react-router-dom";
 
-export function DoctorSpecialityCards() {
-  const [activeSpec, setActiveSpec] = useState("Dentist");
-  const [startIndex, setStartIndex] = useState(0);
+function DashboardLeftSide({
+  menuItem1,
+  menuItem2,
+  menuItem3,
+  menuItem4,
+  menuItem5,
+}) {
+  const navigate = useNavigate();
+  const [selectedOption, setSelectedOption] = useState(menuItem1);
 
-  const specialityArray = [
-    "Dentist",
-    "Pediatrician",
-    "Cardiologist",
-    "Psychiatrist",
-    "Dermatologist",
-    "Endocrinologist",
-    "Gynecologist",
-    "Neurologist",
-    "Orthopedic",
-    "Ophthalmologist",
-    "Oncologist",
-    "Urologist",
-    "Rheumatologist",
-    "Gastroenterologist",
-    "Hematologist",
-    "chiropractor",
-  ];
-
-  const visibleSpecialities = specialityArray.slice(startIndex, startIndex + 9);
-
-  const handleClick = (speciality) => {
-    setActiveSpec(speciality);
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
   };
-
-  const handleArrowClick = () => {
-    if (startIndex + 9 < specialityArray.length) {
-      setStartIndex((prevIndex) => (prevIndex + 1) % specialityArray.length);
-    }
-  };
-
-  const handleArrowClickLeft = () => {
-    setStartIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + specialityArray.length) % specialityArray.length
-    );
-  };
-
   return (
-    <div className={style.specCardWrapper}>
-      {startIndex > 0 && (
-        <div className={style.arrowContainer2} onClick={handleArrowClickLeft}>
-          <img
-            src="/images/doctor/specArrow.svg"
-            alt="Left Arrow"
-            className={style.arrowImage}
-          />
-        </div>
-      )}
-
-      <div className={style.specCardContainer}>
-        {visibleSpecialities.map((speciality, index) => (
-          <div
-            key={index}
-            className={`${style.specOuter} ${
-              activeSpec === speciality ? style.activeSpec : ""
-            }`}
-            onClick={() => handleClick(speciality)}
-          >
-            <p className={style.title}>{speciality}</p>
-          </div>
-        ))}
+    <div className={style.leftPart}>
+      <div className={style.imgDiv}>
+        <img
+          src="/images/doctorDashboard/logo.png"
+          alt=""
+          className={style.logoImage}
+          onClick={() => {
+            navigate("/homepage");
+          }}
+        />
       </div>
-      {startIndex + 9 < specialityArray.length && (
-        <div className={style.arrowContainer} onClick={handleArrowClick}>
-          <img src="/images/doctor/specArrow.svg" alt="Right Arrow" />
+
+      <div className={style.profilePic}>
+        <img
+          src="/images/doctorDashboard/doctor.png"
+          alt=""
+          className={style.doctorImage}
+        />
+        <div className={style.nameContainer}>
+          <p className={style.greet}>Hello,</p>
+          <p className={style.name}>Dr. Ronald Richards</p>
         </div>
-      )}
+      </div>
+
+      <div className={style.optionContainer}>
+        <div
+          className={`${style.option} ${
+            selectedOption === menuItem1 ? style.optionSelected : ""
+          }`}
+          onClick={() => handleOptionClick(menuItem1)}
+        >
+          <img
+            src="/images/doctorDashboard/dashboard.svg"
+            alt=""
+            className={style.optionImage}
+          />
+          <p className={style.optionName}>{menuItem1}</p>
+        </div>
+
+        <div
+          className={`${style.option} ${
+            selectedOption === menuItem2 ? style.optionSelected : ""
+          }`}
+          onClick={() => handleOptionClick(menuItem2)}
+        >
+          <img
+            src="/images/doctorDashboard/calender.svg"
+            alt=""
+            className={style.optionImage}
+          />
+          <p className={style.optionName}>{menuItem2}</p>
+        </div>
+
+        <div
+          className={`${style.option} ${
+            selectedOption === menuItem3 ? style.optionSelected : ""
+          }`}
+          onClick={() => handleOptionClick(menuItem3)}
+        >
+          <img
+            src="/images/doctorDashboard/patient.svg"
+            alt=""
+            className={style.optionImage}
+          />
+          <p className={style.optionName}>{menuItem3}</p>
+        </div>
+
+        <div
+          className={`${style.option} ${
+            selectedOption === menuItem4 ? style.optionSelected : ""
+          }`}
+          onClick={() => handleOptionClick(menuItem4)}
+        >
+          <img
+            src="/images/doctorDashboard/message.svg"
+            alt=""
+            className={style.optionImage}
+          />
+          <p className={style.optionName}>{menuItem4}</p>
+        </div>
+
+        <div
+          className={`${style.option} ${
+            selectedOption === menuItem5 ? style.optionSelected : ""
+          }`}
+          onClick={() => handleOptionClick(menuItem5)}
+        >
+          <img
+            src="/images/doctorDashboard/payment.svg"
+            alt=""
+            className={style.optionImage}
+          />
+          <p className={style.optionName}>{menuItem5}</p>
+        </div>
+
+        <div
+          className={`${style.optionSetting} ${
+            selectedOption === "settings" ? style.optionSelected : ""
+          }`}
+          onClick={() => handleOptionClick("settings")}
+        >
+          <img
+            src="/images/doctorDashboard/setting.svg"
+            alt=""
+            className={style.optionImage}
+          />
+          <p className={style.optionName}>Settings</p>
+        </div>
+      </div>
     </div>
   );
 }
+
+export default DashboardLeftSide;

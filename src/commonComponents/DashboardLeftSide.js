@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import style from "./DashboardLeftSide.module.css";
 import { useNavigate } from "react-router-dom";
 
-function DashboardLeftSide() {
+function DashboardLeftSide({
+  menuItem1,
+  menuItem2,
+  menuItem3,
+  menuItem4,
+  menuItem5,
+  menuItem6,
+  selectedOption,
+  setSelectedOption,
+}) {
   const navigate = useNavigate();
-  const [selectedOption, setSelectedOption] = useState("dashboard");
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -37,72 +45,88 @@ function DashboardLeftSide() {
       <div className={style.optionContainer}>
         <div
           className={`${style.option} ${
-            selectedOption === "dashboard" ? style.optionSelected : ""
+            selectedOption === menuItem1 ? style.optionSelected : ""
           }`}
-          onClick={() => handleOptionClick("dashboard")}
+          onClick={() => handleOptionClick(menuItem1)}
         >
           <img
             src="/images/doctorDashboard/dashboard.svg"
             alt=""
             className={style.optionImage}
           />
-          <p className={style.optionName}>Dashboard</p>
+          <p className={style.optionName}>{menuItem1}</p>
         </div>
 
         <div
           className={`${style.option} ${
-            selectedOption === "appointments" ? style.optionSelected : ""
+            selectedOption === menuItem2 ? style.optionSelected : ""
           }`}
-          onClick={() => handleOptionClick("appointments")}
+          onClick={() => handleOptionClick(menuItem2)}
         >
           <img
             src="/images/doctorDashboard/calender.svg"
             alt=""
             className={style.optionImage}
           />
-          <p className={style.optionName}>Appointments</p>
+          <p className={style.optionName}>{menuItem2}</p>
         </div>
 
         <div
           className={`${style.option} ${
-            selectedOption === "patients" ? style.optionSelected : ""
+            selectedOption === menuItem3 ? style.optionSelected : ""
           }`}
-          onClick={() => handleOptionClick("patients")}
+          onClick={() => handleOptionClick(menuItem3)}
         >
           <img
             src="/images/doctorDashboard/patient.svg"
             alt=""
             className={style.optionImage}
           />
-          <p className={style.optionName}>My Patients</p>
+          <p className={style.optionName}>{menuItem3}</p>
         </div>
 
         <div
           className={`${style.option} ${
-            selectedOption === "messages" ? style.optionSelected : ""
+            selectedOption === menuItem4 ? style.optionSelected : ""
           }`}
-          onClick={() => handleOptionClick("messages")}
+          onClick={() => handleOptionClick(menuItem4)}
         >
           <img
             src="/images/doctorDashboard/message.svg"
             alt=""
             className={style.optionImage}
           />
-          <p className={style.optionName}>Messages</p>
+          <p className={style.optionName}>{menuItem4}</p>
         </div>
+
+        {menuItem5 && (
+          <div
+            className={`${style.option} ${
+              selectedOption === menuItem5 ? style.optionSelected : ""
+            }`}
+            onClick={() => handleOptionClick(menuItem5)}
+          >
+            <img
+              src="/images/doctorDashboard/assignment.svg"
+              alt=""
+              className={style.optionImage}
+            />
+            <p className={style.optionName}>{menuItem5}</p>
+          </div>
+        )}
 
         <div
           className={`${style.option} ${
-            selectedOption === "payments" ? style.optionSelected : ""
+            selectedOption === menuItem6 ? style.optionSelected : ""
           }`}
-          onClick={() => handleOptionClick("payments")}
+          onClick={() => handleOptionClick(menuItem6)}
         >
           <img
             src="/images/doctorDashboard/payment.svg"
             alt=""
             className={style.optionImage}
           />
-          <p className={style.optionName}>Payments</p>
+          <p className={style.optionName}>{menuItem6}</p>
         </div>
 
         <div

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./PatientAppointmentList.module.css";
-import Calendar from "../commonComponents/CalenderComponent";
+import Calendar from "./CalenderComponent";
 
 function PatientAppointmentList() {
   return (
@@ -38,8 +38,6 @@ function PatientAppointmentList() {
               <p className={style.visitTime}>08:00 - 09:00</p>
             </div>
           </div>
-
-          
 
           <div
             className={style.cardouter}

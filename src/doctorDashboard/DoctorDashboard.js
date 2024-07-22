@@ -1,12 +1,14 @@
-import React from "react";
-import style from "./DoctorDashboard.module.css";
+import React, { useState } from "react";
+import style from "../commonComponents/CommonDashboard.module.css";
 import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
 import PatientAppointmentTable from "./PatientAppointmentTable";
 import Gender from "./Gender";
-import PatientAppointmentList from "./PatientAppointmentList";
-
+import PatientAppointmentList from "../commonComponents/PatientAppointmentList";
+import DashboardFooter from "../commonComponents/DashboardFooter";
 function DoctorDashboard() {
+  const [selectedOption, setSelectedOption] = useState("Dashboard");
+
   const cardsData = [
     {
       title: "Patients",
@@ -35,111 +37,130 @@ function DoctorDashboard() {
   ];
 
   return (
-    <div className={style.doctorDashboardOuter} style={{background:"url(/images/Bcg.svg)"}}>
-      <DashboardLeftSide />
+    <div
+      className={style.doctorDashboardOuter}
+      style={{ background: "url(/images/Bcg.svg)" }}
+    >
+      <DashboardLeftSide
+        menuItem1="Dashboard"
+        menuItem2="Appointments"
+        menuItem3="My Patients"
+        menuItem4="Messages"
+        menuItem6="Payments"
+        selectedOption={selectedOption}
+        setSelectedOption={setSelectedOption}
+      />
       <div className={style.rightPart}>
-        <SearchBarDashboard />
+        <SearchBarDashboard width="1135px" />
 
-        <div className={style.locationFilterPara}>
-          <p className={style.para}>Home</p>
-          <img src="/images/doctorDashboard/rightArrow.svg" alt="" />
-          <p className={style.paraSpan}>Dashboard</p>
-        </div>
-
-        <div className={style.mainSection}>
-          <div className={style.leftArea}>
-            <div className={style.cardsContainer}>
-              {cardsData.map((card, index) => (
-                <div key={index} className={style.cardOuter}>
-                  <div
-                    className={style.iconDiv}
-                    style={{ backgroundColor: card.bgColor }}
-                  >
-                    <img src={card.icon} alt="" />
-                  </div>
-                  <div className={style.detailDiv}>
-                    <p className={style.title}>{card.title}</p>
-                    <p className={style.qty}>{card.qty}</p>
-                  </div>
-                </div>
-              ))}
+        {selectedOption === "Dashboard" && (
+          <>
+            <div className={style.locationFilterPara}>
+              <p className={style.para}>Home</p>
+              <img src="/images/doctorDashboard/rightArrow.svg" alt="" />
+              <p className={style.paraSpan}>Dashboard</p>
             </div>
 
-            <div className={style.midSection}>
-              <div className={style.nextPatientDetail}>
-                <h1 className={style.heading}>Next Patient Details</h1>
-
-                <div className={style.profilePic}>
-                  <img
-                    src="/images/doctorDashboard/patient.png"
-                    alt=""
-                    className={style.doctorImage}
-                  />
-                  <div className={style.nameContainer}>
-                    <p className={style.greet}>Leslie Alexander</p>
-                    <p className={style.name}>Health Checkup</p>
-                  </div>
+            <div
+              className={style.mainSection}
+              style={{
+                width: "1135px",
+                gap: "15px",
+              }}
+            >
+              <div className={style.leftArea}>
+                <div className={style.cardsContainer}>
+                  {cardsData.map((card, index) => (
+                    <div key={index} className={style.cardOuter}>
+                      <div
+                        className={style.iconDiv}
+                        style={{ backgroundColor: card.bgColor }}
+                      >
+                        <img src={card.icon} alt="" />
+                      </div>
+                      <div className={style.detailDiv}>
+                        <p className={style.title}>{card.title}</p>
+                        <p className={style.qty}>{card.qty}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
 
-                <div className={style.detailsContainer}>
-                  <div className={style.div1}>
-                    <div className={style.innerDiv}>
-                      <p className={style.criterion}>D. O. B. </p>
-                      <p className={style.value}>15/01/1992</p>
+                <div className={style.midSection}>
+                  <div className={style.nextPatientDetail}>
+                    <h1 className={style.heading}>Next Patient Details</h1>
+
+                    <div className={style.profilePic}>
+                      <img
+                        src="/images/doctorDashboard/patient.png"
+                        alt=""
+                        className={style.doctorImage}
+                      />
+                      <div className={style.nameContainer}>
+                        <p className={style.greet}>Leslie Alexander</p>
+                        <p className={style.name}>Health Checkup</p>
+                      </div>
                     </div>
-                    <div className={style.innerDiv}>
-                      <p className={style.criterion}>Last Appointment</p>
-                      <p className={style.value}>22/11/2022</p>
+
+                    <div className={style.detailsContainer}>
+                      <div className={style.div1}>
+                        <div className={style.innerDiv}>
+                          <p className={style.criterion}>D. O. B. </p>
+                          <p className={style.value}>15/01/1992</p>
+                        </div>
+                        <div className={style.innerDiv}>
+                          <p className={style.criterion}>Last Appointment</p>
+                          <p className={style.value}>22/11/2022</p>
+                        </div>
+                      </div>
+
+                      <div className={style.div1}>
+                        <div className={style.innerDiv}>
+                          <p className={style.criterion}>Sex</p>
+                          <p className={style.value}>Male</p>
+                        </div>
+                        <div className={style.innerDiv}>
+                          <p className={style.criterion}>Height</p>
+                          <p className={style.value}>172 cm</p>
+                        </div>
+                      </div>
+
+                      <div className={style.div1}>
+                        <div className={style.innerDiv}>
+                          <p className={style.criterion}>Weight</p>
+                          <p className={style.value}>59 Kg</p>
+                        </div>
+                        <div className={style.innerDiv}>
+                          <p className={style.criterion}>Reg. Dat</p>
+                          <p className={style.value}>20/11/2022</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className={style.btmDiv}>
+                      <h1 className={style.history}>Patient History</h1>
+                      <div className={style.historyContainer}>
+                        <p className={style.disease1}>Asthma</p>
+                        <p className={style.disease2}>Hypertension</p>
+                        <p className={style.disease3}>Fever</p>
+                      </div>
                     </div>
                   </div>
-
-                  <div className={style.div1}>
-                    <div className={style.innerDiv}>
-                      <p className={style.criterion}>Sex</p>
-                      <p className={style.value}>Male</p>
-                    </div>
-                    <div className={style.innerDiv}>
-                      <p className={style.criterion}>Height</p>
-                      <p className={style.value}>172 cm</p>
-                    </div>
-                  </div>
-
-                  <div className={style.div1}>
-                    <div className={style.innerDiv}>
-                      <p className={style.criterion}>Weight</p>
-                      <p className={style.value}>59 Kg</p>
-                    </div>
-                    <div className={style.innerDiv}>
-                      <p className={style.criterion}>Reg. Dat</p>
-                      <p className={style.value}>20/11/2022</p>
-                    </div>
+                  <div className="gender">
+                    <Gender />
                   </div>
                 </div>
-
-                <div className={style.btmDiv}>
-                  <h1 className={style.history}>Patient History</h1>
-                  <div className={style.historyContainer}>
-                    <p className={style.disease1}>Asthma</p>
-                    <p className={style.disease2}>Hypertension</p>
-                    <p className={style.disease3}>Fever</p>
-                  </div>
-                </div>
+                <PatientAppointmentTable />
               </div>
-              <div className="gender">
-                <Gender />
+
+              <div className="rightArea">
+                <PatientAppointmentList />
               </div>
             </div>
-            <PatientAppointmentTable />
-          </div>
+          </>
+        )}
 
-          <div className="rightArea">
-            <PatientAppointmentList />
-          </div>
-        </div>
-
-        <p className={style.dashboardFooter}>
-          Copyrights 2008-24. All Rights Reserved.
-        </p>
+        <DashboardFooter />
       </div>
     </div>
   );
