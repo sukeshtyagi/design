@@ -5,6 +5,7 @@ import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import PatientAppointmentList from "../commonComponents/PatientAppointmentList";
 import DashboardFooter from "../commonComponents/DashboardFooter";
+import Calendar from "../commonComponents/CalenderComponent";
 
 const getCurrentMonthAndYear = () => {
   const date = new Date();
@@ -29,6 +30,7 @@ const getCurrentMonthAndYear = () => {
 
 function TeacherDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const currentMonthAndYear = getCurrentMonthAndYear();
 
   const cardDetails = [
@@ -115,7 +117,11 @@ function TeacherDashboard() {
                 </div>
               </div>
               <div className="rightArea">
-                <PatientAppointmentList heading="Schedules" />
+                <PatientAppointmentList
+                  heading="Schedules"
+                  selectedDate={selectedDate}
+                  setSelectedDate={setSelectedDate}
+                />
               </div>
             </div>
           </>

@@ -67,15 +67,16 @@
   font-weight: 400;
   line-height: 1.04em;
   text-align: left;
+  cursor: pointer;
+  user-select: none;
 }
 
-.currentDateWeekView {
+.selectedDateWeekView {
   width: 31px;
   height: 31px;
   margin-top: -2px;
   margin-left: -8px;
-  padding: 6px 12px;
-  padding-left: 8px;
+  padding: 6px;
   padding-top: 8px;
   color: white;
   background-color: rgba(11, 219, 182, 1);
@@ -83,10 +84,13 @@
   text-align: left;
 }
 
-.currentDateMonthView {
-  background-color: rgba(11, 219, 182, 1);
+.selectedDateMonthView {
+  width: 31px;
+  height: 31px;
+  margin-left: 8px;
   color: white;
-  border-radius: 50%;
+  background-color: rgba(11, 219, 182, 1);
+  border-radius: 100%;
   text-align: left;
 }
 

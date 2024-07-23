@@ -9,12 +9,12 @@ import {
 } from "date-fns";
 import styles from "./CalenderComponent.module.css";
 
-const Calendar = () => {
+const Calendar = ({ selectedDate, setSelectedDate }) => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [showMonthView, setShowMonthView] = useState(false);
   const monthViewRef = useRef(null);
 
-  const startOfWeekDate = startOfWeek(currentDate, { weekStartsOn: 1 });
+  const startOfWeekDate = startOfWeek(currentDate, { weekStartsOn: 0 });
   const startOfMonthDate = startOfMonth(currentDate);
   const endOfMonthDate = endOfMonth(currentDate);
 
@@ -31,10 +31,18 @@ const Calendar = () => {
     setShowMonthView(!showMonthView);
   };
 
+  const handleDateClick = (date) => {
+    setSelectedDate(date);
+  };
+
   const dayNames = ["S", "M", "T", "W", "T", "F", "S"];
 
   const isToday = (date) => {
     return format(date, "yyyy-MM-dd") === format(new Date(), "yyyy-MM-dd");
+  };
+
+  const isSelectedDate = (date) => {
+    return format(date, "yyyy-MM-dd") === format(selectedDate, "yyyy-MM-dd");
   };
 
   useEffect(() => {
@@ -59,7 +67,7 @@ const Calendar = () => {
   return (
     <div className={styles.calendar}>
       <div className={styles.header}>
-        <span>{format(startOfWeekDate, "MMMM yyyy")}</span>
+        <span>{format(currentDate, "MMMM yyyy")}</span>
         <div>
           <img
             src="/images/doctorDashboard/calender.svg"
@@ -85,8 +93,11 @@ const Calendar = () => {
             <div
               key={index}
               className={`${styles.date} ${
-                isToday(date) ? styles.currentDateWeekView : ""
-              }`}
+                isToday(date) && !isSelectedDate(date)
+                  ? styles.currentDateWeekView
+                  : ""
+              } ${isSelectedDate(date) ? styles.selectedDateWeekView : ""}`}
+              onClick={() => handleDateClick(date)}
             >
               {format(date, "d")}
             </div>
@@ -96,14 +107,19 @@ const Calendar = () => {
 
       {showMonthView && (
         <div ref={monthViewRef} className={styles.monthView}>
-          <h3 className={styles.monthViewHeader}>July 2024</h3>
+          <h3 className={styles.monthViewHeader}>
+            {format(currentDate, "MMMM yyyy")}
+          </h3>
           <div className={styles.monthViewDates}>
             {daysInMonth.map((date, index) => (
               <div
                 key={index}
                 className={`${styles.monthViewDate} ${
-                  isToday(date) ? styles.currentDateMonthView : ""
-                }`}
+                  isToday(date) && !isSelectedDate(date)
+                    ? styles.currentDateMonthView
+                    : ""
+                } ${isSelectedDate(date) ? styles.selectedDateMonthView : ""}`}
+                onClick={() => handleDateClick(date)}
               >
                 {format(date, "d")}
               </div>
