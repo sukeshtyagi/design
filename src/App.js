@@ -23,8 +23,7 @@ import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
 import DoctorDashboard from "./doctorDashboard/DoctorDashboard";
 import TeacherDashboard from "./teacherDashboard/TeacherDashboard";
-import GraphComponent from "./teacherDashboard/GraphComponent";
-
+import Try from "./commonComponents/Try"
 function App() {
   return (
     <BrowserRouter>
@@ -57,7 +56,7 @@ function App() {
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
 
-        <Route path="/trial" element={<GraphComponent />} />
+        <Route path="/trial" element={<Try/>} />
       </Routes>
     </BrowserRouter>
   );

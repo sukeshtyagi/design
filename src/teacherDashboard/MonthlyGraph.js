@@ -103,7 +103,7 @@ function MontylyGraph() {
   return (
     <div
       style={{
-        width: "704px",
+        width: "702px",
         height: "352px",
         backgroundColor: "rgba(245, 245, 245, 1)",
       }}

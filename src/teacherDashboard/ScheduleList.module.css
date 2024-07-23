@@ -1,5 +1,5 @@
 .outer {
-  width: 353.5px;
+  width: 333px;
   height: fit-content;
   padding: 25px 1px;
   padding-top: 27px;
@@ -8,7 +8,7 @@
 }
 
 .appointment {
-  width: 305px;
+  width: 290px;
   height: 25px;
   margin: auto;
   margin-top: 29px;
@@ -30,7 +30,7 @@
 }
 
 .totalAppointment {
-  width: 305px;
+  width: 290px;
   margin: auto;
   margin-top: 7px;
   margin-top: 10px;
@@ -41,7 +41,7 @@
 }
 
 .timeAndCard {
-  width: 305px;
+  width: 290px;
   height: fit-content;
   margin: auto;
   margin-top: 29px;
@@ -74,7 +74,7 @@
 
 .cardouter {
   position: relative;
-  width: 245px;
+  width: 232px;
   height: 78px;
   padding-left: 15px;
   display: flex;

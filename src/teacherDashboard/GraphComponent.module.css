@@ -1,5 +1,5 @@
 .outer {
-  width: 756px;
+  width: 728px;
   height: fit-content;
   height: 552px;
   padding: 23px 26px 23px 26px;
@@ -20,7 +20,8 @@
 }
 
 .top {
-  width: 704px;
+  width: 100%;
+  padding-right: 26px;
   height: 29px;
   display: flex;
   align-items: center;

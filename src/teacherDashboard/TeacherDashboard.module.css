@@ -1,5 +1,5 @@
 .topSection {
-  width: 756px;
+  width: 728px;
   height: fit-content;
   padding: 25px 32px 25px 32px;
   border-radius: 10px;
@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 25px; /*reduced from 30 t0 25 to reslove horizontal scrolling*/
 }
 
 .imgContainer {
@@ -57,7 +57,7 @@
 .schedule {
   width: 145px;
   height: 49px;
-  margin-left: 155px;
+  margin-left: 135px;
   padding: 12px 18px 12px 18px;
   border-radius: 8px;
   background-color: rgba(11, 219, 182, 1);
@@ -71,11 +71,12 @@
 
 .midContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 23px;
 }
 
 .cardOuter {
-  width: 230px;
+  width: 227px; /*reduced from 230 for resolving horizontal scrolling  */
   height: fit-content;
   padding: 18px 0 18px 23px;
   display: flex;
