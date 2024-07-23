@@ -1,6 +1,13 @@
 import React from "react";
 import style from "./PatientAppointmentList.module.css";
-import Calendar from "./CalenderComponent";
+import Calendar from "../commonComponents/CalenderComponent";
+
+const formatDate = (date) => {
+  return new Intl.DateTimeFormat("en-US", {
+    day: "2-digit",
+    month: "short",
+  }).format(date);
+};
 
 function PatientAppointmentList({ heading, selectedDate, setSelectedDate }) {
   const appointmentsByDate = {
@@ -75,12 +82,11 @@ function PatientAppointmentList({ heading, selectedDate, setSelectedDate }) {
     ],
   };
 
-  const formattedSelectedDate = selectedDate.toLocaleDateString("en-CA");
+  const formattedSelectedDate = formatDate(selectedDate);
+  const formattedFullDate = selectedDate.toLocaleDateString("en-CA");
   const appointments =
-    appointmentsByDate[formattedSelectedDate] ||
-    appointmentsByDate.defaultSchedule;
+    appointmentsByDate[formattedFullDate] || appointmentsByDate.defaultSchedule;
 
-  // Function to ensure Lunch Break is always in the third position
   const ensureLunchBreak = (appointments) => {
     const lunchBreak = {
       name: "Lunch Break",
@@ -90,10 +96,8 @@ function PatientAppointmentList({ heading, selectedDate, setSelectedDate }) {
       textAlign: "center",
     };
 
-    // Check if Lunch Break is already present at index 2
     if (appointments[2]?.name !== "Lunch Break") {
       const updatedAppointments = [...appointments];
-      // Insert Lunch Break at index 2
       updatedAppointments.splice(2, 0, lunchBreak);
       return updatedAppointments;
     }
@@ -103,21 +107,27 @@ function PatientAppointmentList({ heading, selectedDate, setSelectedDate }) {
 
   const finalAppointments = ensureLunchBreak(appointments);
 
+  const realAppointmentsCount = finalAppointments.filter(
+    (appointment) => appointment.name && appointment.name !== "Lunch Break"
+  ).length;
+
+  console.log(realAppointmentsCount);
+
   return (
     <div className={style.outer}>
       <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
       <div className={style.appointment}>
         <p className={style.todayAppointment}>
-          {formattedSelectedDate === "2024-07-23"
+          {formattedSelectedDate === formatDate(new Date("2024-07-23"))
             ? "Today"
-            : selectedDate.toDateString()}{" "}
+            : formattedSelectedDate}{" "}
           {heading}
         </p>
         <img src="/images/doctorDashboard/appointmentDots.svg" alt="" />
       </div>
 
       <p className={style.totalAppointment}>
-        {finalAppointments.length} {heading}
+        {realAppointmentsCount} {heading}
       </p>
 
       <div className={style.timeAndCard}>

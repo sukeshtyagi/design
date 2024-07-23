@@ -3,9 +3,8 @@ import style from "../commonComponents/CommonDashboard.module.css";
 import styles from "./TeacherDashboard.module.css";
 import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
-import PatientAppointmentList from "../commonComponents/PatientAppointmentList";
+import ScheduleList from "./ScheduleList";
 import DashboardFooter from "../commonComponents/DashboardFooter";
-import Calendar from "../commonComponents/CalenderComponent";
 
 const getCurrentMonthAndYear = () => {
   const date = new Date();
@@ -117,7 +116,7 @@ function TeacherDashboard() {
                 </div>
               </div>
               <div className="rightArea">
-                <PatientAppointmentList
+                <ScheduleList
                   heading="Schedules"
                   selectedDate={selectedDate}
                   setSelectedDate={setSelectedDate}

@@ -4,10 +4,12 @@ import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
 import PatientAppointmentTable from "./PatientAppointmentTable";
 import Gender from "./Gender";
-import PatientAppointmentList from "../commonComponents/PatientAppointmentList";
+import PatientAppointmentList from "./PatientAppointmentList";
 import DashboardFooter from "../commonComponents/DashboardFooter";
+
 function DoctorDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
   const cardsData = [
     {
@@ -154,7 +156,11 @@ function DoctorDashboard() {
               </div>
 
               <div className="rightArea">
-                <PatientAppointmentList heading="Appointments" />
+                <PatientAppointmentList
+                  heading="Appointments"
+                  selectedDate={selectedDate}
+                  setSelectedDate={setSelectedDate}
+                />
               </div>
             </div>
           </>
