@@ -112,10 +112,11 @@
 }
 
 .midSection {
-  width: 738px;
+  width: 728px;
   height: fit-content;
   display: flex;
-  gap: 30px;
+  gap: 20px;
+
 }
 
 .nextPatientDetail {

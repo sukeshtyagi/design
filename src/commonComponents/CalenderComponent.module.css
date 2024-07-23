@@ -1,12 +1,13 @@
 .calendar {
-  width: 333px;
+  width: 280px;
+  margin: auto;
   height: 164px;
   background: rgba(245, 245, 245, 1);
   position: relative;
 }
 
 .header {
-  width: 290px;
+  width: 280px;
   height: 36px;
   margin: 0 auto;
   margin-bottom: 47px;

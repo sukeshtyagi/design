@@ -1,5 +1,5 @@
 .topContainer {
-  width: 766px;
+  width: 728px;
   height: 25px;
   display: flex;
   justify-content: space-between;
@@ -38,7 +38,7 @@
 /* PatientTable.css */
 
 .tableContainer {
-  width: 766px;
+  width: 728px;
   height: 324px;
   border-collapse: separate;
   border-spacing: 0 20px;
@@ -123,6 +123,7 @@
 .tableRow td {
   padding-left: 28.5px;
   padding-right: 28.5px;
+  padding: 0;
   vertical-align: middle; /* Ensure text is centered vertically */
 }
 

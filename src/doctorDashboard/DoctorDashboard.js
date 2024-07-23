@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import style from "../commonComponents/CommonDashboard.module.css";
 import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
-import PatientAppointmentTable from "./PatientAppointmentTable";
-import Gender from "./Gender";
-import PatientAppointmentList from "./PatientAppointmentList";
+import Gender from "../doctorDashboard/Gender";
+import PatientAppointmentTable from "../doctorDashboard/PatientAppointmentTable";
+import PatientAppointmentList from "../doctorDashboard/PatientAppointmentList";
 import DashboardFooter from "../commonComponents/DashboardFooter";
 
 function DoctorDashboard() {
@@ -53,7 +53,7 @@ function DoctorDashboard() {
         setSelectedOption={setSelectedOption}
       />
       <div className={style.rightPart}>
-        <SearchBarDashboard width="1135px" />
+        <SearchBarDashboard width="1061px" />
 
         {selectedOption === "Dashboard" && (
           <>
@@ -66,12 +66,22 @@ function DoctorDashboard() {
             <div
               className={style.mainSection}
               style={{
-                width: "1135px",
-                gap: "15px",
+                width: "100%",
+                gap: "10px",
               }}
             >
-              <div className={style.leftArea}>
-                <div className={style.cardsContainer}>
+              <div
+                className={style.leftArea}
+                style={{
+                  width: "728px",
+                }}
+              >
+                <div
+                  className={style.cardsContainer}
+                  style={{
+                    width: "728px",
+                  }}
+                >
                   {cardsData.map((card, index) => (
                     <div key={index} className={style.cardOuter}>
                       <div
@@ -87,7 +97,6 @@ function DoctorDashboard() {
                     </div>
                   ))}
                 </div>
-
                 <div className={style.midSection}>
                   <div className={style.nextPatientDetail}>
                     <h1 className={style.heading}>Next Patient Details</h1>
@@ -165,7 +174,6 @@ function DoctorDashboard() {
             </div>
           </>
         )}
-
         <DashboardFooter />
       </div>
     </div>
