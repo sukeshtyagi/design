@@ -23,7 +23,7 @@ import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
 import DoctorDashboard from "./doctorDashboard/DoctorDashboard";
 import TeacherDashboard from "./teacherDashboard/TeacherDashboard";
-import DashboardLeftSide from "./commonComponents/Trial";
+import GraphComponent from "./teacherDashboard/GraphComponent";
 
 function App() {
   return (
@@ -57,18 +57,7 @@ function App() {
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
 
-        <Route
-          path="/trial"
-          element={
-            <DashboardLeftSide
-              menuItem1="Dashboard"
-              menuItem2="Appointments"
-              menuItem3="My Patients"
-              menuItem4="Messages"
-              menuItem5="Payments"
-            />
-          }
-        />
+        <Route path="/trial" element={<GraphComponent />} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,6 +5,7 @@ import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
 import ScheduleList from "./ScheduleList";
 import DashboardFooter from "../commonComponents/DashboardFooter";
+import GraphComponent from "./GraphComponent";
 
 const getCurrentMonthAndYear = () => {
   const date = new Date();
@@ -112,7 +113,7 @@ function TeacherDashboard() {
                 </div>
 
                 <div className="">
-                  <img src="/images/teacherDashboard/chart.png" alt="" />
+                  <GraphComponent />
                 </div>
               </div>
               <div className="rightArea">
