@@ -10,12 +10,11 @@
 .heading {
   margin: 0;
   padding: 0;
-  height: 25px;
   height: fit-content;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
-  line-height: 2.5em;
+  line-height: 1.25em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
 }

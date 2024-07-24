@@ -23,7 +23,7 @@ import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
 import DoctorDashboard from "./doctorDashboard/DoctorDashboard";
 import TeacherDashboard from "./teacherDashboard/TeacherDashboard";
-import Try from "./commonComponents/Try"
+import Gender from "./doctorDashboard/Gender";
 function App() {
   return (
     <BrowserRouter>
@@ -56,7 +56,7 @@ function App() {
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
 
-        <Route path="/trial" element={<Try/>} />
+        <Route path="/trial" element={<Gender />} />
       </Routes>
     </BrowserRouter>
   );
