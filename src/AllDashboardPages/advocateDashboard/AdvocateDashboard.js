@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "../../commonComponents/CommonDashboard.module.css";
+import style from "./AdvocateDashboard.module.css"
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import AppointmentList from "../../commonComponents/AppointmentList";
