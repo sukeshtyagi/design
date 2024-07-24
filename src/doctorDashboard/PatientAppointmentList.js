@@ -113,15 +113,14 @@ function PatientAppointmentList({ heading, selectedDate, setSelectedDate }) {
 
   console.log(realAppointmentsCount);
 
+  const isToday = formattedSelectedDate === formatDate(new Date());
+
   return (
     <div className={style.outer}>
       <Calendar selectedDate={selectedDate} setSelectedDate={setSelectedDate} />
       <div className={style.appointment}>
         <p className={style.todayAppointment}>
-          {formattedSelectedDate === formatDate(new Date("2024-07-23"))
-            ? "Today"
-            : formattedSelectedDate}{" "}
-          {heading}
+          {isToday ? "Today" : formattedSelectedDate} {heading}
         </p>
         <img src="/images/doctorDashboard/appointmentDots.svg" alt="" />
       </div>
