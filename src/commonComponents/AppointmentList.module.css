@@ -1,5 +1,6 @@
 .outer {
-  width: 325px;
+  width: 324px;
+  width: 100%;
   height: fit-content;
   padding: 25px 1px;
   padding-top: 27px;
@@ -9,6 +10,7 @@
 
 .appointment {
   width: 280px;
+  width: 86%;
   height: 25px;
   margin: auto;
   margin-top: 29px;
@@ -31,6 +33,7 @@
 
 .totalAppointment {
   width: 280px;
+  width: 86%;
   margin: auto;
   margin-top: 7px;
   margin-top: 10px;
@@ -41,12 +44,15 @@
 }
 
 .timeAndCard {
-    width: 290px;
+  width: 290px;
+  width: 86%;
   height: fit-content;
   margin: auto;
   margin-top: 29px;
   display: flex;
+  justify-content: space-between;
   gap: 20px;
+  gap: 6.8%;
 }
 
 .timeDiv {
@@ -85,8 +91,6 @@
   background: rgba(237, 237, 237, 1);
   border: 1px solid rgba(216, 236, 233, 1);
 }
-
-
 
 .nameContainer {
   display: flex;

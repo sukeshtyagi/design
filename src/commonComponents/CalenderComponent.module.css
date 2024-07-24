@@ -1,5 +1,6 @@
 .calendar {
   width: 280px;
+  width: 86%;
   margin: auto;
   height: 164px;
   background: rgba(245, 245, 245, 1);
@@ -7,7 +8,7 @@
 }
 
 .header {
-  width: 280px;
+  width: 100%;
   height: 36px;
   margin: 0 auto;
   margin-bottom: 47px;
@@ -29,70 +30,54 @@
   cursor: pointer;
 }
 
-.dayNames {
-  width: 279px;
-  height: 25px;
-  margin: 0 auto;
+.dayNames,
+.dates1 {
   display: flex;
-  gap: 34px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 91.7%;
 }
 
-.dayName {
-  width: 10px;
+.dayName,
+.date {
+  width: 31px;
+  text-align: center;
   font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.56em;
-  text-align: left;
-  color: rgba(0, 0, 0, 1);
+  line-height: 31px; /* Center the text vertically */
 }
 
-.dates1 {
-  width: 279px;
+.dayNames {
   height: 25px;
-  margin: 0 auto;
-  margin-top: 6px;
-  display: flex;
-  gap: 20px;
+}
+
+
+.dates1 {
+  height: 31px;
   margin-top: 6px;
 }
 
 .date {
-  width: 31px;
-  height: 31px;
-  margin: 0;
-  padding: 0;
-  padding-top: 6px;
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.04em;
-  text-align: left;
   cursor: pointer;
   user-select: none;
+}
+
+.selectedDateWeekView,
+.selectedDateMonthView {
+  color: white;
+  background-color: rgba(11, 219, 182, 1);
+  border-radius: 50%;
 }
 
 .selectedDateWeekView {
   width: 31px;
   height: 31px;
-  margin-top: -2px;
-  margin-left: -8px;
-  padding: 6px;
-  padding-top: 8px;
-  color: white;
-  background-color: rgba(11, 219, 182, 1);
-  border-radius: 100%;
-  text-align: left;
 }
 
 .selectedDateMonthView {
   width: 31px;
   height: 31px;
-  margin-left: 8px;
-  color: white;
-  background-color: rgba(11, 219, 182, 1);
-  border-radius: 100%;
-  text-align: left;
 }
 
 .monthView {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./AdvocateDashboard.module.css"
+import style from "./AdvocateDashboard.module.css";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import AppointmentList from "../../commonComponents/AppointmentList";
@@ -63,7 +63,7 @@ function AdvocateDashboard() {
         setSelectedOption={setSelectedOption}
       />
       <div className={style.rightPart}>
-        <SearchBarDashboard width="1061px" />
+        <SearchBarDashboard width="100%" />
         {selectedOption === "Dashboard" && (
           <>
             <div className={style.locationFilterPara}>
@@ -72,25 +72,9 @@ function AdvocateDashboard() {
               <p className={style.paraSpan}>Dashboard</p>
             </div>
 
-            <div
-              className={style.mainSection}
-              style={{
-                width: "100%",
-                gap: "10px",
-              }}
-            >
-              <div
-                className={style.leftArea}
-                style={{
-                  width: "728px",
-                }}
-              >
-                <div
-                  className={style.cardsContainer}
-                  style={{
-                    width: "728px",
-                  }}
-                >
+            <div className={style.mainSection}>
+              <div className={style.leftArea}>
+                <div className={style.cardsContainer}>
                   {cardsData.map((card, index) => (
                     <div
                       key={index}
@@ -114,7 +98,7 @@ function AdvocateDashboard() {
                 <CaseRequests />
               </div>
 
-              <div className="rightArea">
+              <div className="rightArea" style={{ width: "31.1%" }}>
                 <AppointmentList
                   heading="Appointments"
                   selectedDate={selectedDate}

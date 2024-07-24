@@ -52,6 +52,14 @@ const allCases = [
     opposition: "Robert Brown",
   },
   {
+    date: "2024-07-23",
+    image: "/images/advocateDashboard/client.png",
+    name: "M Johnson",
+    caseCategory: "Family",
+    lastHearing: "2024-07-15",
+    opposition: "Robert Key",
+  },
+  {
     date: "2024-07-24",
     image: "/images/advocateDashboard/client.png",
     name: "Bob Smith",
@@ -59,22 +67,7 @@ const allCases = [
     lastHearing: "2024-07-18",
     opposition: "Sarah Davis",
   },
-  {
-    date: "2024-07-25",
-    image: "/images/advocateDashboard/client.png",
-    name: "Charlie Brown",
-    caseCategory: "Criminal",
-    lastHearing: "2024-07-22",
-    opposition: "Emily Clark",
-  },
-  {
-    date: "2024-07-26",
-    image: "/images/advocateDashboard/client.png",
-    name: "Charlie Brown",
-    caseCategory: "Criminal",
-    lastHearing: "2024-07-22",
-    opposition: "Emily Clark",
-  },
+  
   {
     date: "2024-07-31",
     image: "/images/advocateDashboard/client.png",
@@ -107,7 +100,6 @@ const allCases = [
     lastHearing: "2024-07-31",
     opposition: "J. Anderson",
   },
-  
 ];
 
 function WeeklyCases() {
@@ -115,21 +107,16 @@ function WeeklyCases() {
 
   function getCurrentWeek() {
     const now = new Date();
-    const dayOfWeek = now.getDay(); // Sunday is 0, Monday is 1, ..., Saturday is 6
+    const dayOfWeek = now.getDay();
     const startOfWeek = new Date(now);
-    // Adjust to Monday (subtract dayOfWeek - 1)
     startOfWeek.setDate(now.getDate() - (dayOfWeek === 0 ? 6 : dayOfWeek - 1));
-    startOfWeek.setHours(0, 0, 0, 0); // Ensure the time is set to the start of the day
+    startOfWeek.setHours(0, 0, 0, 0); 
     return startOfWeek;
   }
 
   function getWeekCases(startOfWeek) {
     const endOfWeek = new Date(startOfWeek);
     endOfWeek.setDate(startOfWeek.getDate() + 6);
-
-    // Log for debugging
-    console.log("Start of Week:", startOfWeek.toDateString());
-    console.log("End of Week:", endOfWeek.toDateString());
 
     return allCases.filter((caseItem) => {
       const caseDate = new Date(caseItem.date);
@@ -154,10 +141,6 @@ function WeeklyCases() {
     previousWeek.setDate(previousWeek.getDate() - 7);
     setCurrentWeek(previousWeek);
   }
-
-  // For testing purposes
-  // const testDate = new Date("2024-07-15");
-  // const currentWeek = new Date(testDate.setDate(testDate.getDate() - (testDate.getDay() === 0 ? 6 : testDate.getDay() - 1)));
 
   const cases = getWeekCases(currentWeek);
 
