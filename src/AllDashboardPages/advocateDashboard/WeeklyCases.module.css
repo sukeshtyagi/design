@@ -32,6 +32,7 @@
   display: flex;
   align-items: center;
   background-color: rgba(245, 245, 245, 1);
+  user-select: none;
 }
 
 .back,
