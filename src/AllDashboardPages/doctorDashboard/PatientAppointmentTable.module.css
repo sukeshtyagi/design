@@ -41,6 +41,7 @@
   width: 728px;
   height: 324px;
   border-collapse: separate;
+  overflow-y: hidden;
   border-spacing: 0 20px;
   border-radius: 10px 10px 0 0;
   border: 1px solid rgba(249, 249, 249, 1);
@@ -124,7 +125,7 @@
   padding-left: 28.5px;
   padding-right: 28.5px;
   padding: 0;
-  vertical-align: middle; 
+  vertical-align: middle;
 }
 
 .tableRow td:first-child {
@@ -160,5 +161,4 @@
   color: rgba(215, 80, 80, 1);
   background-color: rgba(255, 230, 230, 1);
   margin-left: 13px;
-
 }

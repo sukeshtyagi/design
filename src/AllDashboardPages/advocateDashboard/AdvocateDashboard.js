@@ -3,7 +3,11 @@ import style from "../../commonComponents/CommonDashboard.module.css";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import AppointmentList from "../../commonComponents/AppointmentList";
+import DashboardFooter from "../../commonComponents/DashboardFooter";
+
 import { getAppointmentsByDate } from "./AppointmentData";
+import CaseRequests from "./CaseRequests";
+import WeeklyCases from "./WeeklyCases";
 
 function AdvocateDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
@@ -106,6 +110,8 @@ function AdvocateDashboard() {
                     </div>
                   ))}
                 </div>
+                <WeeklyCases />
+                <CaseRequests />
               </div>
 
               <div className="rightArea">
@@ -119,6 +125,7 @@ function AdvocateDashboard() {
             </div>
           </>
         )}
+        <DashboardFooter />
       </div>
     </div>
   );
