@@ -3,10 +3,11 @@ import style from "../../commonComponents/CommonDashboard.module.css";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
+import AppointmentList from "../../commonComponents/AppointmentList";
 
 import styles from "../../AllDashboardPages/teacherDashboard/TeacherDashboard.module.css";
 import GraphComponent from "../../AllDashboardPages/teacherDashboard/GraphComponent";
-import ScheduleList from "../../AllDashboardPages/teacherDashboard/ScheduleList";
+import { getAppointmentsByDate } from "./AppointmentData";
 
 const getCurrentMonthAndYear = () => {
   const date = new Date();
@@ -33,6 +34,7 @@ function TeacherDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
   const [selectedDate, setSelectedDate] = useState(new Date());
   const currentMonthAndYear = getCurrentMonthAndYear();
+  const appointmentsByDate = getAppointmentsByDate();
 
   const cardDetails = [
     { title: "Tutoring Hours", count: "242", percentage: "3.15%" },
@@ -117,10 +119,11 @@ function TeacherDashboard() {
                 </div>
               </div>
               <div className="rightArea">
-                <ScheduleList
+                <AppointmentList
                   heading="Schedules"
                   selectedDate={selectedDate}
                   setSelectedDate={setSelectedDate}
+                  appointmentsByDate={appointmentsByDate}
                 />
               </div>
             </div>

@@ -3,14 +3,17 @@ import style from "../../commonComponents/CommonDashboard.module.css";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
+import AppointmentList from "../../commonComponents/AppointmentList";
 
 import Gender from "../doctorDashboard/Gender";
 import PatientAppointmentTable from "../../AllDashboardPages/doctorDashboard/PatientAppointmentTable";
-import PatientAppointmentList from "../../AllDashboardPages/doctorDashboard/PatientAppointmentList";
+import { getAppointmentsByDate } from "./AppointmentData";
+
 
 function DoctorDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const appointmentsByDate = getAppointmentsByDate();
 
   const cardsData = [
     {
@@ -166,10 +169,11 @@ function DoctorDashboard() {
               </div>
 
               <div className="rightArea">
-                <PatientAppointmentList
+                <AppointmentList
                   heading="Appointments"
                   selectedDate={selectedDate}
                   setSelectedDate={setSelectedDate}
+                  appointmentsByDate={appointmentsByDate}
                 />
               </div>
             </div>
