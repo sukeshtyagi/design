@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import style from "../commonComponents/CommonDashboard.module.css";
-import styles from "../teacherDashboard/TeacherDashboard.module.css";
-import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
-import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
-import GraphComponent from "../teacherDashboard/GraphComponent";
-import ScheduleList from "../teacherDashboard/ScheduleList";
-import DashboardFooter from "../commonComponents/DashboardFooter";
+import style from "../../commonComponents/CommonDashboard.module.css";
+import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
+import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
+import DashboardFooter from "../../commonComponents/DashboardFooter";
+
+import styles from "../../AllDashboardPages/teacherDashboard/TeacherDashboard.module.css";
+import GraphComponent from "../../AllDashboardPages/teacherDashboard/GraphComponent";
+import ScheduleList from "../../AllDashboardPages/teacherDashboard/ScheduleList";
 
 const getCurrentMonthAndYear = () => {
   const date = new Date();

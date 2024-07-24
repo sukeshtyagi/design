@@ -1,8 +1,15 @@
 import React from "react";
-import style from "./ScheduleList.module.css";
-import Calendar from "../commonComponents/CalenderComponent";
+import style from "./PatientAppointmentList.module.css";
+import Calendar from "../../commonComponents/CalenderComponent";
 
-function ScheduleList({ heading, selectedDate, setSelectedDate }) {
+const formatDate = (date) => {
+  return new Intl.DateTimeFormat("en-US", {
+    day: "2-digit",
+    month: "short",
+  }).format(date);
+};
+
+function PatientAppointmentList({ heading, selectedDate, setSelectedDate }) {
   const appointmentsByDate = {
     "2024-07-23": [
       {
@@ -75,13 +82,6 @@ function ScheduleList({ heading, selectedDate, setSelectedDate }) {
     ],
   };
 
-  const formatDate = (date) => {
-    return new Intl.DateTimeFormat("en-US", {
-      day: "2-digit",
-      month: "short",
-    }).format(date);
-  };
-
   const formattedSelectedDate = formatDate(selectedDate);
   const formattedFullDate = selectedDate.toLocaleDateString("en-CA");
   const appointments =
@@ -110,6 +110,8 @@ function ScheduleList({ heading, selectedDate, setSelectedDate }) {
   const realAppointmentsCount = finalAppointments.filter(
     (appointment) => appointment.name && appointment.name !== "Lunch Break"
   ).length;
+
+  console.log(realAppointmentsCount);
 
   const isToday = formattedSelectedDate === formatDate(new Date());
 
@@ -183,4 +185,4 @@ function ScheduleList({ heading, selectedDate, setSelectedDate }) {
   );
 }
 
-export default ScheduleList;
+export default PatientAppointmentList;

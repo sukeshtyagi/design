@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import style from "../commonComponents/CommonDashboard.module.css";
-import SearchBarDashboard from "../commonComponents/SearchBarDashboard";
-import DashboardLeftSide from "../commonComponents/DashboardLeftSide";
+import style from "../../commonComponents/CommonDashboard.module.css";
+import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
+import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
+import DashboardFooter from "../../commonComponents/DashboardFooter";
+
 import Gender from "../doctorDashboard/Gender";
-import PatientAppointmentTable from "../doctorDashboard/PatientAppointmentTable";
-import PatientAppointmentList from "../doctorDashboard/PatientAppointmentList";
-import DashboardFooter from "../commonComponents/DashboardFooter";
+import PatientAppointmentTable from "../../AllDashboardPages/doctorDashboard/PatientAppointmentTable";
+import PatientAppointmentList from "../../AllDashboardPages/doctorDashboard/PatientAppointmentList";
 
 function DoctorDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
