@@ -5,6 +5,7 @@ import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
 import AppointmentList from "../../commonComponents/AppointmentList";
+import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar"
 
 import GraphComponent from "../../AllDashboardPages/teacherDashboard/GraphComponent";
 import { getAppointmentsByDate } from "./AppointmentData";
@@ -47,16 +48,32 @@ function TeacherDashboard() {
       className={style.doctorDashboardOuter}
       style={{ background: "url(/images/Bcg.svg)" }}
     >
-      <DashboardLeftSide
-        menuItem1="Dashboard"
-        menuItem2="Schedules"
-        menuItem3="Students"
-        menuItem4="Messages"
-        menuItem5="Assignments"
-        menuItem6="Payments"
-        selectedOption={selectedOption}
-        setSelectedOption={setSelectedOption}
-      />
+      <div className="">
+        <div className="block md2:hidden">
+          <LeftSideMenuBar
+            menuItem1="Dashboard"
+            menuItem2="Schedules"
+            menuItem3="Students"
+            menuItem4="Messages"
+            menuItem5="Assignments"
+            menuItem6="Payments"
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
+        </div>
+        <div className="hidden md2:block">
+          <DashboardLeftSide
+            menuItem1="Dashboard"
+            menuItem2="Schedules"
+            menuItem3="Students"
+            menuItem4="Messages"
+            menuItem5="Assignments"
+            menuItem6="Payments"
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
+        </div>
+      </div>
 
       <div className={style.rightPart}>
         <SearchBarDashboard />
@@ -69,7 +86,7 @@ function TeacherDashboard() {
             </div>
 
             <div className={style.mainSection}>
-              <div className={style.leftArea} style={{}}>
+              <div className={style.leftArea} >
                 <div className={styles.topSectionContainer}>
                   <div className={styles.topSection}>
                     <div className={styles.innerSection}>

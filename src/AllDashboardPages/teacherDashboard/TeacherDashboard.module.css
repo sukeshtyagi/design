@@ -84,6 +84,7 @@
 }
 
 .midContainer {
+  height: fit-content;
   display: flex;
   justify-content: flex-start;
   gap: 23px;
@@ -147,8 +148,6 @@
   color: rgba(0, 0, 0, 1);
 }
 
-
-
 @media (max-width: 1100px) {
   .upcoming {
     font-size: 22px;
@@ -167,4 +166,29 @@
   .upcoming {
     font-size: 20px;
   }
+}
+
+@media (max-width: 600px) {
+  .topSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .innerSection {
+    width: 90%;
+  }
+
+  .midContainer {
+    flex-direction: column;
+    align-items: center;  
+    gap: 20px;
+  }
+
+  .cardOuter{
+  width: 227px;
+  }
+
+
 }
