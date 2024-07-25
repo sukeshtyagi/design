@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import style from "../../commonComponents/CommonDashboard.module.css";
+import styles from "../../AllDashboardPages/teacherDashboard/TeacherDashboard.module.css";
+import style from "../advocateDashboard/AdvocateDashboard.module.css";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
 import AppointmentList from "../../commonComponents/AppointmentList";
 
-import styles from "../../AllDashboardPages/teacherDashboard/TeacherDashboard.module.css";
 import GraphComponent from "../../AllDashboardPages/teacherDashboard/GraphComponent";
 import { getAppointmentsByDate } from "./AppointmentData";
 
@@ -58,7 +58,7 @@ function TeacherDashboard() {
         setSelectedOption={setSelectedOption}
       />
       <div className={style.rightPart}>
-        <SearchBarDashboard width="1061px" />
+        <SearchBarDashboard />
         {selectedOption === "Dashboard" && (
           <>
             <div className={style.locationFilterPara}>
@@ -69,31 +69,30 @@ function TeacherDashboard() {
 
             <div
               className={style.mainSection}
-              style={{
-                width: "100%",
-                gap: "10px",
-              }}
+             
             >
-              <div
-                className={style.leftArea}
-                style={{
-                  width: "728px",
-                }}
-              >
-                <div className={styles.topSection}>
-                  <div className={styles.imgContainer}>
-                    <img src="/images/teacherDashboard/calender.svg" alt="" />
-                  </div>
+              <div className={style.leftArea} style={{}}>
+                <div className={styles.topSectionContainer}>
+                  <div className={styles.topSection}>
+                    <div className={styles.innerSection}>
+                      <div className={styles.imgContainer}>
+                        <img
+                          src="/images/teacherDashboard/calender.svg"
+                          alt=""
+                        />
+                      </div>
 
-                  <div className={styles.upcomingClassContainer}>
-                    <p className={styles.totalCount}>12</p>
-                    <div className={styles.scheduleContainer}>
-                      <p className={styles.upcoming}>Upcoming Class</p>
-                      <p className={styles.week}>This Week</p>
+                      <div className={styles.upcomingClassContainer}>
+                        <p className={styles.totalCount}>12</p>
+                        <div className={styles.scheduleContainer}>
+                          <p className={styles.upcoming}>Upcoming Class</p>
+                          <p className={styles.week}>This Week</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <button className={styles.schedule}>See Schedule</button>
+                    <button className={styles.schedule}>See Schedule</button>
+                  </div>
                 </div>
 
                 <div className={styles.midContainer}>
@@ -118,7 +117,7 @@ function TeacherDashboard() {
                   <GraphComponent />
                 </div>
               </div>
-              <div className="rightArea">
+              <div className="rightArea" style={{ width: "31.1%" }}>
                 <AppointmentList
                   heading="Schedules"
                   selectedDate={selectedDate}

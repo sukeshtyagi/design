@@ -1,13 +1,24 @@
-.topSection {
-  width: 728px;
-  height: fit-content;
-  padding: 25px 32px 25px 32px;
-  border-radius: 10px;
+.topSectionContainer {
+  padding: 25px 0;
   background: rgba(245, 245, 245, 1);
+}
+
+.topSection {
+  width: 90.5%;
+  margin: 0 auto;
+  height: fit-content;
+  border-radius: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 25px; /*reduced from 30 t0 25 to reslove horizontal scrolling*/
+}
+
+.innerSection {
+  box-sizing: border-box;
+  width: 47.6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .imgContainer {
@@ -73,10 +84,12 @@
   display: flex;
   justify-content: flex-start;
   gap: 23px;
+  gap: 4.3%;
 }
 
 .cardOuter {
-  width: 227px; /*reduced from 230 for resolving horizontal scrolling  */
+  width: 227px; 
+  width:30.4%; 
   height: fit-content;
   padding: 18px 0 18px 23px;
   display: flex;

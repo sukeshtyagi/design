@@ -1,5 +1,4 @@
 .outer {
-  width: 728px;
   height: fit-content;
   height: 552px;
   padding: 23px 26px 23px 26px;
@@ -11,7 +10,8 @@
 }
 
 .dataContainer {
-  width: 704px;
+  width: 93.12%;
+  margin: 0 auto;
   height: 94px;
   display: flex;
   flex-direction: column;
@@ -67,15 +67,17 @@
 }
 
 .legendContainer {
+  width: 68%;
   margin: 0;
   padding: 0;
-  width: fit-content;
   height: 25px;
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
+  gap: 5.7%;
+
 }
 
 .legend {

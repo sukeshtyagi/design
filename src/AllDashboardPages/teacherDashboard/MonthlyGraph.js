@@ -64,7 +64,7 @@ const CustomTooltip = ({ point }) => (
       width: "fit-content",
       height: "fit-content",
       padding: "13px 14px",
-      borderRadius:"8px",
+      borderRadius: "8px",
       background: "rgba(11, 219, 182, 1)",
     }}
   >
@@ -103,7 +103,8 @@ function MontylyGraph() {
   return (
     <div
       style={{
-        width: "702px",
+        width: "93.12%",
+        margin: "0 auto",
         height: "352px",
         backgroundColor: "rgba(245, 245, 245, 1)",
       }}
