@@ -1,14 +1,16 @@
 .genderDiv {
   width: 354px;
+  width: 47.44%;
   height: 321px;
   height: fit-content;
-  padding: 026px 20px 22px;
+  padding: 26px 0 22px 0; /* Corrected padding value */
   border-radius: 10px;
   background: rgba(245, 245, 245, 1);
 }
 
 .heading {
-  margin: 0;
+  width: 85.8%;
+  margin: 0 auto;
   padding: 0;
   height: fit-content;
   font-family: Poppins;
@@ -27,35 +29,40 @@
 
 .list1,
 .list2 {
+  width: 85.8%;
   margin: 0 auto;
   margin-top: 23px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   padding: 0;
 }
 
-.list1 > li {
-  position: relative;
+.list2 {
+  margin-top: 2px;
+}
+
+.list1 > li,
+.list2 > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: Poppins;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.56em;
-  text-align: left;
+  text-align: center;
   color: rgba(0, 0, 0, 1);
   padding-left: 20px;
 }
 
 .list1 > li::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  margin-bottom: 5px;
 }
 
 .list1 > li:nth-child(1)::before {
@@ -68,10 +75,4 @@
 
 .list1 > li:nth-child(3)::before {
   background-color: rgba(37, 167, 250, 1);
-}
-
-.list2 {
-  margin: 0;
-  padding: 0;
-  margin-top: 2px;
 }

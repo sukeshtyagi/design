@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "../../commonComponents/CommonDashboard.module.css";
+import style from "../../AllDashboardPages/advocateDashboard/AdvocateDashboard.module.css";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
@@ -8,7 +8,6 @@ import AppointmentList from "../../commonComponents/AppointmentList";
 import Gender from "../doctorDashboard/Gender";
 import PatientAppointmentTable from "../../AllDashboardPages/doctorDashboard/PatientAppointmentTable";
 import { getAppointmentsByDate } from "./AppointmentData";
-
 
 function DoctorDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
@@ -57,7 +56,7 @@ function DoctorDashboard() {
         setSelectedOption={setSelectedOption}
       />
       <div className={style.rightPart}>
-        <SearchBarDashboard width="1061px" />
+        <SearchBarDashboard />
 
         {selectedOption === "Dashboard" && (
           <>
@@ -67,25 +66,9 @@ function DoctorDashboard() {
               <p className={style.paraSpan}>Dashboard</p>
             </div>
 
-            <div
-              className={style.mainSection}
-              style={{
-                width: "100%",
-                gap: "10px",
-              }}
-            >
-              <div
-                className={style.leftArea}
-                style={{
-                  width: "728px",
-                }}
-              >
-                <div
-                  className={style.cardsContainer}
-                  style={{
-                    width: "728px",
-                  }}
-                >
+            <div className={style.mainSection}>
+              <div className={style.leftArea}>
+                <div className={style.cardsContainer}>
                   {cardsData.map((card, index) => (
                     <div key={index} className={style.cardOuter}>
                       <div
@@ -161,14 +144,12 @@ function DoctorDashboard() {
                       </div>
                     </div>
                   </div>
-                  <div className="gender">
                     <Gender />
-                  </div>
                 </div>
                 <PatientAppointmentTable />
               </div>
 
-              <div className="rightArea">
+              <div className="rightArea" style={{ width: "31.1%" }}>
                 <AppointmentList
                   heading="Appointments"
                   selectedDate={selectedDate}
