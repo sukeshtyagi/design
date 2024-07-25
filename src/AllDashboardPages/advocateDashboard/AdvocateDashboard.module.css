@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.rightArea {
+  width: 100%;
+}
+
 .rightPart {
   width: 100%;
   height: 100vh;
@@ -307,10 +311,11 @@
   bottom: 0px;
 }
 
-.rightArea{
-  width: 100%;
+@media (max-width: 780px) {
+  .rightPart {
+    margin-left: 15px;
+  }
 }
-
 @media (max-width: 1100px) {
   .mainSection {
     flex-direction: column;
@@ -320,7 +325,7 @@
     width: 100%;
   }
 
-  .dashboardFooter{
+  .dashboardFooter {
     padding-left: 30%;
   }
 }

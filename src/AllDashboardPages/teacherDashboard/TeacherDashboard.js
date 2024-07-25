@@ -57,7 +57,8 @@ function TeacherDashboard() {
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
       />
-      <div className={style.rightPart}>
+
+      <div className={style.rightPart} >
         <SearchBarDashboard />
         {selectedOption === "Dashboard" && (
           <>
