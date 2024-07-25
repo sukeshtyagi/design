@@ -99,3 +99,23 @@
   height: 15px;
   border-radius: 50%;
 }
+
+@media (max-width: 1100px) {
+  .dataContainer {
+    width: 100%;
+  }
+
+  .top {
+    padding: 0;
+  }
+
+  .chartFilter {
+    width: fit-content;
+    gap: 10px;
+  }
+
+  .legendContainer {
+  width: 100%;
+
+}
+}

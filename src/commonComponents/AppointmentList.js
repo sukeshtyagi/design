@@ -9,7 +9,7 @@ const formatDate = (date) => {
   }).format(date);
 };
 
-function PatientAppointmentList({
+function AppointmentList({
   heading,
   selectedDate,
   setSelectedDate,
@@ -118,4 +118,4 @@ function PatientAppointmentList({
   );
 }
 
-export default PatientAppointmentList;
+export default AppointmentList;

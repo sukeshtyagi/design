@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../commonComponents/CommonDashboard.module.css";
+import style from "../AllDashboardPages/advocateDashboard/AdvocateDashboard.module.css";
 
 function DashboardFooter() {
   return (

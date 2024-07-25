@@ -67,10 +67,7 @@ function TeacherDashboard() {
               <p className={style.paraSpan}>Dashboard</p>
             </div>
 
-            <div
-              className={style.mainSection}
-             
-            >
+            <div className={style.mainSection}>
               <div className={style.leftArea} style={{}}>
                 <div className={styles.topSectionContainer}>
                   <div className={styles.topSection}>
@@ -117,7 +114,7 @@ function TeacherDashboard() {
                   <GraphComponent />
                 </div>
               </div>
-              <div className="rightArea" style={{ width: "31.1%" }}>
+              <div className={style.rightArea}>
                 <AppointmentList
                   heading="Schedules"
                   selectedDate={selectedDate}

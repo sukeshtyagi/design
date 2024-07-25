@@ -1,13 +1,15 @@
 .topSectionContainer {
   padding: 25px 0;
+  border-radius: 10px;
   background: rgba(245, 245, 245, 1);
 }
 
 .topSection {
   width: 90.5%;
+  width: fit-content;
+  width: 95%;
   margin: 0 auto;
   height: fit-content;
-  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +24,7 @@
 }
 
 .imgContainer {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   border-radius: 50%;
   background-color: rgba(216, 255, 248, 1);
@@ -32,7 +34,8 @@
 }
 
 .upcomingClassContainer {
-  width: 270px;
+  min-width: 270px;
+  max-width: 270px;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -68,7 +71,7 @@
 .schedule {
   width: 145px;
   height: 49px;
-  margin-left: 135px;
+  margin-left: 0px;
   padding: 12px 18px 12px 18px;
   border-radius: 8px;
   background-color: rgba(11, 219, 182, 1);
@@ -88,8 +91,8 @@
 }
 
 .cardOuter {
-  width: 227px; 
-  width:30.4%; 
+  width: 227px;
+  width: 30.4%;
   height: fit-content;
   padding: 18px 0 18px 23px;
   display: flex;
@@ -114,6 +117,7 @@
 
 .detailsContainer {
   width: 148px;
+  width: fit-content;
   height: fit-content;
   display: flex;
   justify-content: flex-start;
@@ -141,4 +145,26 @@
   line-height: 1.56em;
   text-align: left;
   color: rgba(0, 0, 0, 1);
+}
+
+
+
+@media (max-width: 1100px) {
+  .upcoming {
+    font-size: 22px;
+  }
+
+  .count {
+    font-size: 25px;
+  }
+
+  .detailsContainer {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 800px) {
+  .upcoming {
+    font-size: 20px;
+  }
 }
