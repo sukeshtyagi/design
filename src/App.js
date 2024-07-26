@@ -21,11 +21,9 @@ import OfficersDetail from "./officersPages/OfficersDetail";
 import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
-import DoctorDashboard from "./AllDashboardPages/doctorDashboard/DoctorDashboard";
-import TeacherDashboard from "./AllDashboardPages/teacherDashboard/TeacherDashboard";
-import AdvocateDashboard from "./AllDashboardPages/advocateDashboard/AdvocateDashboard";
-import LeftSideMenuBar from "./commonComponents/LeftSideMenuBar";
-import Try from "./commonComponents/Try";
+import DoctorDashboard from "./AllDashboardPages/doctorDashboardPages/doctorDashboard/DoctorDashboard"
+import TeacherDashboard from "./AllDashboardPages/teacherDashboardPages/teacherDashboard/TeacherDashboard";
+import AdvocateDashboard from "./AllDashboardPages/advocateDashboardPages/advocateDashboard/AdvocateDashboard";
 function App() {
   return (
     <BrowserRouter>
@@ -59,10 +57,7 @@ function App() {
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
         <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
 
-        <Route
-          path="/trial"
-          element={<Try/>}/>
-           
+        <Route path="/trial" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import style from "../../commonComponents/DashboardPagesCommonStyle.module.css";
-import styles from "./DoctorDashboard.module.css"
-import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
-import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
-import DashboardFooter from "../../commonComponents/DashboardFooter";
-import AppointmentList from "../../commonComponents/AppointmentList";
-import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar";
+import style from "../../../commonComponents/dashboardComponents/DashboardPagesCommonStyle.module.css";
+import styles from "./DoctorDashboard.module.css";
+import SearchBarDashboard from "../../../commonComponents/dashboardComponents/SearchBarDashboard";
+import DashboardLeftSide from "../../../commonComponents/dashboardComponents/DashboardLeftSide";
+import DashboardFooter from "../../../commonComponents/dashboardComponents/DashboardFooter";
+import AppointmentList from "../../../commonComponents/dashboardComponents/AppointmentList";
+import LeftSideMenuBar from "../../../commonComponents/dashboardComponents/LeftSideMenuBar";
 
 import Gender from "../doctorDashboard/Gender";
 import NextPatientDetail from "./NextPatientDetail";
-import PatientAppointmentTable from "../../AllDashboardPages/doctorDashboard/PatientAppointmentTable";
+import PatientAppointmentTable from "../../../AllDashboardPages/doctorDashboardPages/doctorDashboard/PatientAppointmentTable";
 import { getAppointmentsByDate } from "./AppointmentData";
 
 function DoctorDashboard() {
@@ -53,24 +53,24 @@ function DoctorDashboard() {
         <div className="block md2:hidden">
           <LeftSideMenuBar
             menuItem1="Dashboard"
-        menuItem2="Appointments"
-        menuItem3="My Patients"
-        menuItem4="Messages"
-        menuItem6="Payments"
-        selectedOption={selectedOption}
-        setSelectedOption={setSelectedOption}
+            menuItem2="Appointments"
+            menuItem3="My Patients"
+            menuItem4="Messages"
+            menuItem6="Payments"
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
           />
         </div>
         <div className="hidden md2:block">
           <DashboardLeftSide
-        menuItem1="Dashboard"
-        menuItem2="Appointments"
-        menuItem3="My Patients"
-        menuItem4="Messages"
-        menuItem6="Payments"
-        selectedOption={selectedOption}
-        setSelectedOption={setSelectedOption}
-      />
+            menuItem1="Dashboard"
+            menuItem2="Appointments"
+            menuItem3="My Patients"
+            menuItem4="Messages"
+            menuItem6="Payments"
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
         </div>
       </div>
 
@@ -87,7 +87,6 @@ function DoctorDashboard() {
 
             <div className={style.mainSection}>
               <div className={style.leftArea}>
-
                 <div className={styles.cardsContainer}>
                   {cardsData.map((card, index) => (
                     <div key={index} className={styles.cardOuter}>

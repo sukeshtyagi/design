@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import styles from "../../AllDashboardPages/teacherDashboard/TeacherDashboard.module.css";
-import style from "../../commonComponents/DashboardPagesCommonStyle.module.css";
-import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
-import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
-import DashboardFooter from "../../commonComponents/DashboardFooter";
-import AppointmentList from "../../commonComponents/AppointmentList";
-import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar";
+import styles from "../../../AllDashboardPages/teacherDashboardPages/teacherDashboard/TeacherDashboard.module.css";
+import style from "../../../commonComponents/dashboardComponents/DashboardPagesCommonStyle.module.css";
+import DashboardLeftSide from "../../../commonComponents/dashboardComponents/DashboardLeftSide";
+import SearchBarDashboard from "../../../commonComponents/dashboardComponents/SearchBarDashboard";
+import DashboardFooter from "../../../commonComponents/dashboardComponents/DashboardFooter";
+import AppointmentList from "../../../commonComponents/dashboardComponents/AppointmentList";
+import LeftSideMenuBar from "../../../commonComponents/dashboardComponents/LeftSideMenuBar";
 
-import GraphComponent from "../../AllDashboardPages/teacherDashboard/GraphComponent";
+import GraphComponent from "../../../AllDashboardPages/teacherDashboardPages/teacherDashboard/GraphComponent";
 import { getAppointmentsByDate } from "./AppointmentData";
 
 const getCurrentMonthAndYear = () => {

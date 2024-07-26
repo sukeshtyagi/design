@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import style from "../../commonComponents/DashboardPagesCommonStyle.module.css";
-import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
-import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
-import AppointmentList from "../../commonComponents/AppointmentList";
-import DashboardFooter from "../../commonComponents/DashboardFooter";
-import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar";
+import style from "../../../commonComponents/dashboardComponents/DashboardPagesCommonStyle.module.css";
+import DashboardLeftSide from "../../../commonComponents/dashboardComponents/DashboardLeftSide";
+import SearchBarDashboard from "../../../commonComponents/dashboardComponents/SearchBarDashboard";
+import AppointmentList from "../../../commonComponents/dashboardComponents/AppointmentList";
+import DashboardFooter from "../../../commonComponents/dashboardComponents/DashboardFooter";
+import LeftSideMenuBar from "../../../commonComponents/dashboardComponents/LeftSideMenuBar";
 
 import { getAppointmentsByDate } from "./AppointmentData";
 import CaseRequests from "./CaseRequests";
