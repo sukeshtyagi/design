@@ -76,3 +76,11 @@
 .list1 > li:nth-child(3)::before {
   background-color: rgba(37, 167, 250, 1);
 }
+
+
+@media (max-width: 1100px) {
+  .genderDiv {
+    width: 450px;
+   
+  }
+}
