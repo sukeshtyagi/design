@@ -159,15 +159,21 @@
   color: rgba(122, 110, 254, 1);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 515px) {
+  .nextPatientDetail {
+    width: 400px;
+  }
+}
+
+@media (min-width: 515px) and (max-width: 1100px) {
   .nextPatientDetail {
     width: 450px;
   }
 }
 
 @media (min-width: 1100px) and (max-width: 1160px) {
-.btmDiv {
-    gap:0
+  .btmDiv {
+    gap: 0;
   }
 }
 
@@ -175,8 +181,6 @@
   .nextPatientDetail {
     height: 350px;
   }
-
-  
 
   .disease1,
   .disease2,

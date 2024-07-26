@@ -77,8 +77,15 @@
   background-color: rgba(37, 167, 250, 1);
 }
 
+@media (max-width: 515px) {
+  .genderDiv {
+    width: 400px;
 
-@media (max-width: 1100px) {
+  }
+}
+
+
+@media (min-width: 515px) and (max-width: 1100px) {
   .genderDiv {
     width: 450px;
    

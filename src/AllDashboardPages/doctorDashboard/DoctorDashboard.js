@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import style from "../../commonComponents/DashboardPagesCommonStyle.module.css";
+import styles from "./DoctorDashboard.module.css"
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
 import AppointmentList from "../../commonComponents/AppointmentList";
+import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar";
 
 import Gender from "../doctorDashboard/Gender";
+import NextPatientDetail from "./NextPatientDetail";
 import PatientAppointmentTable from "../../AllDashboardPages/doctorDashboard/PatientAppointmentTable";
 import { getAppointmentsByDate } from "./AppointmentData";
-import NextPatientDetail from "./NextPatientDetail";
 
 function DoctorDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
@@ -47,7 +49,20 @@ function DoctorDashboard() {
       className={style.doctorDashboardOuter}
       style={{ background: "url(/images/Bcg.svg)" }}
     >
-      <DashboardLeftSide
+      <div className="">
+        <div className="block md2:hidden">
+          <LeftSideMenuBar
+            menuItem1="Dashboard"
+        menuItem2="Appointments"
+        menuItem3="My Patients"
+        menuItem4="Messages"
+        menuItem6="Payments"
+        selectedOption={selectedOption}
+        setSelectedOption={setSelectedOption}
+          />
+        </div>
+        <div className="hidden md2:block">
+          <DashboardLeftSide
         menuItem1="Dashboard"
         menuItem2="Appointments"
         menuItem3="My Patients"
@@ -56,6 +71,9 @@ function DoctorDashboard() {
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
       />
+        </div>
+      </div>
+
       <div className={style.rightPart}>
         <SearchBarDashboard />
 
@@ -69,24 +87,26 @@ function DoctorDashboard() {
 
             <div className={style.mainSection}>
               <div className={style.leftArea}>
-                <div className={style.cardsContainer}>
+
+                <div className={styles.cardsContainer}>
                   {cardsData.map((card, index) => (
-                    <div key={index} className={style.cardOuter}>
+                    <div key={index} className={styles.cardOuter}>
                       <div
-                        className={style.iconDiv}
+                        className={styles.iconDiv}
                         style={{ backgroundColor: card.bgColor }}
                       >
                         <img src={card.icon} alt="" />
                       </div>
-                      <div className={style.detailDiv}>
-                        <p className={style.title}>{card.title}</p>
-                        <p className={style.qty}>{card.qty}</p>
+                      <div className={styles.detailDiv}>
+                        <p className={styles.title}>{card.title}</p>
+                        <p className={styles.qty}>{card.qty}</p>
                       </div>
                     </div>
                   ))}
                 </div>
+
                 <div className={style.midSection}>
-                  <NextPatientDetail/>
+                  <NextPatientDetail />
                   <Gender />
                 </div>
                 <PatientAppointmentTable />

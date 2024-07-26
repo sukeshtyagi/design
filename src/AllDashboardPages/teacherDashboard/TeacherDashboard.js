@@ -5,7 +5,7 @@ import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
 import AppointmentList from "../../commonComponents/AppointmentList";
-import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar"
+import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar";
 
 import GraphComponent from "../../AllDashboardPages/teacherDashboard/GraphComponent";
 import { getAppointmentsByDate } from "./AppointmentData";
@@ -86,7 +86,7 @@ function TeacherDashboard() {
             </div>
 
             <div className={style.mainSection}>
-              <div className={style.leftArea} >
+              <div className={style.leftArea}>
                 <div className={styles.topSectionContainer}>
                   <div className={styles.topSection}>
                     <div className={styles.innerSection}>

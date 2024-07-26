@@ -161,12 +161,7 @@
   margin-left: 13px;
 }
 
-@media (max-width: 500px) {
-  .tableContainer{
-   /* width: 99%;
-    margin: auto;*/
-  }
-
+@media (max-width: 550px) {
   .hideOnSmall {
     display: none;
   }
