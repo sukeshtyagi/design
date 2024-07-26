@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../AllDashboardPages/teacherDashboard/TeacherDashboard.module.css";
-import style from "../advocateDashboard/AdvocateDashboard.module.css";
+import style from "../../commonComponents/DashboardPagesCommonStyle.module.css";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardFooter from "../../commonComponents/DashboardFooter";

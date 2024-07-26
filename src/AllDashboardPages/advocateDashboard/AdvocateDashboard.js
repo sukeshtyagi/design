@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./AdvocateDashboard.module.css";
+import style from "../../commonComponents/DashboardPagesCommonStyle.module.css";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import AppointmentList from "../../commonComponents/AppointmentList";
@@ -63,7 +63,7 @@ function AdvocateDashboard() {
         setSelectedOption={setSelectedOption}
       />
       <div className={style.rightPart}>
-        <SearchBarDashboard width="100%" />
+        <SearchBarDashboard />
         {selectedOption === "Dashboard" && (
           <>
             <div className={style.locationFilterPara}>
@@ -98,7 +98,7 @@ function AdvocateDashboard() {
                 <CaseRequests />
               </div>
 
-              <div className="rightArea" style={{ width: "31.1%" }}>
+              <div className={style.rightArea}>
                 <AppointmentList
                   heading="Appointments"
                   selectedDate={selectedDate}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "../../AllDashboardPages/advocateDashboard/AdvocateDashboard.module.css";
+import style from "../../commonComponents/DashboardPagesCommonStyle.module.css";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
@@ -144,12 +144,12 @@ function DoctorDashboard() {
                       </div>
                     </div>
                   </div>
-                    <Gender />
+                  <Gender />
                 </div>
                 <PatientAppointmentTable />
               </div>
 
-              <div className="rightArea" style={{ width: "31.1%" }}>
+              <div className={style.rightArea}>
                 <AppointmentList
                   heading="Appointments"
                   selectedDate={selectedDate}
