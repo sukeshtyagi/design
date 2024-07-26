@@ -25,6 +25,7 @@ import DoctorDashboard from "./AllDashboardPages/doctorDashboard/DoctorDashboard
 import TeacherDashboard from "./AllDashboardPages/teacherDashboard/TeacherDashboard";
 import AdvocateDashboard from "./AllDashboardPages/advocateDashboard/AdvocateDashboard";
 import LeftSideMenuBar from "./commonComponents/LeftSideMenuBar";
+import Try from "./commonComponents/Try";
 function App() {
   return (
     <BrowserRouter>
@@ -60,16 +61,8 @@ function App() {
 
         <Route
           path="/trial"
-          element={
-            <LeftSideMenuBar
-              menuItem1="Dashboard"
-              menuItem2="Appointments"
-              menuItem3="My Cases"
-              menuItem4="Messages"
-              menuItem6="Payments"
-            />
-          }
-        />
+          element={<Try/>}/>
+           
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "../doctorDashboard/PatientAppointmentTable.module.css";
+import style from "../AllDashboardPages/doctorDashboard/PatientAppointmentTable.module.css";
 
 function CaseRequests() {
   const initialPatientData = [

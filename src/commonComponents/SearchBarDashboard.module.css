@@ -42,3 +42,9 @@
 .icon {
   cursor: pointer;
 }
+
+@media (max-width: 780px) {
+  .searchOuter {
+    margin-top: 80px;
+  }
+}

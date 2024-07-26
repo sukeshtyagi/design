@@ -317,13 +317,27 @@
   }
 }
 
+@media (max-width: 490px) {
+  .cardsContainer {
+    width: 100%;
+     margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 20px;
+  }
+
+  .cardOuter{
+    width: 184px;
+  }
+}
+
 @media (max-width: 780px) {
   .rightPart {
     margin-left: 15px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (min-width:500px) and (max-width: 1000px) {
   .cardsContainer {
     width: 500px;
     margin: auto;

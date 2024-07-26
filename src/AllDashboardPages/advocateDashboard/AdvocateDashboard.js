@@ -4,6 +4,7 @@ import DashboardLeftSide from "../../commonComponents/DashboardLeftSide";
 import SearchBarDashboard from "../../commonComponents/SearchBarDashboard";
 import AppointmentList from "../../commonComponents/AppointmentList";
 import DashboardFooter from "../../commonComponents/DashboardFooter";
+import LeftSideMenuBar from "../../commonComponents/LeftSideMenuBar";
 
 import { getAppointmentsByDate } from "./AppointmentData";
 import CaseRequests from "./CaseRequests";
@@ -53,15 +54,31 @@ function AdvocateDashboard() {
       className={style.doctorDashboardOuter}
       style={{ background: "url(/images/Bcg.svg)" }}
     >
-      <DashboardLeftSide
-        menuItem1="Dashboard"
-        menuItem2="Appointments"
-        menuItem3="My Cases"
-        menuItem4="Messages"
-        menuItem6="Payments"
-        selectedOption={selectedOption}
-        setSelectedOption={setSelectedOption}
-      />
+      <div className="">
+        <div className="block md2:hidden">
+          <LeftSideMenuBar
+            menuItem1="Dashboard"
+            menuItem2="Appointments"
+            menuItem3="My Cases"
+            menuItem4="Messages"
+            menuItem6="Payments"
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
+        </div>
+        <div className="hidden md2:block">
+          <DashboardLeftSide
+            menuItem1="Dashboard"
+            menuItem2="Appointments"
+            menuItem3="My Cases"
+            menuItem4="Messages"
+            menuItem6="Payments"
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+          />
+        </div>
+      </div>
+
       <div className={style.rightPart}>
         <SearchBarDashboard />
         {selectedOption === "Dashboard" && (
