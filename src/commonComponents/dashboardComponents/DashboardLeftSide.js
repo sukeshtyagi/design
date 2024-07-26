@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./DashboardLeftSide.module.css";
 import { useNavigate } from "react-router-dom";
 
@@ -17,6 +17,13 @@ function DashboardLeftSide({
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };
+
+  const getImageSrc = (option, defaultSrc) => {
+    return selectedOption === option
+      ? `/images/doctorDashboard/${option}Clicked.svg`
+      : defaultSrc;
+  };
+
   return (
     <div className={style.leftPart}>
       <div className={style.imgDiv}>
@@ -50,7 +57,10 @@ function DashboardLeftSide({
           onClick={() => handleOptionClick(menuItem1)}
         >
           <img
-            src="/images/doctorDashboard/dashboard.svg"
+            src={getImageSrc(
+              menuItem1,
+              "/images/doctorDashboard/dashboard.svg"
+            )}
             alt=""
             className={style.optionImage}
           />
@@ -64,7 +74,7 @@ function DashboardLeftSide({
           onClick={() => handleOptionClick(menuItem2)}
         >
           <img
-            src="/images/doctorDashboard/calender.svg"
+            src={getImageSrc(menuItem2, "/images/doctorDashboard/calender.svg")}
             alt=""
             className={style.optionImage}
           />
@@ -78,7 +88,7 @@ function DashboardLeftSide({
           onClick={() => handleOptionClick(menuItem3)}
         >
           <img
-            src="/images/doctorDashboard/patient.svg"
+            src={getImageSrc(menuItem3, "/images/doctorDashboard/patient.svg")}
             alt=""
             className={style.optionImage}
           />
@@ -92,7 +102,7 @@ function DashboardLeftSide({
           onClick={() => handleOptionClick(menuItem4)}
         >
           <img
-            src="/images/doctorDashboard/message.svg"
+            src={getImageSrc(menuItem4, "/images/doctorDashboard/message.svg")}
             alt=""
             className={style.optionImage}
           />
@@ -107,7 +117,10 @@ function DashboardLeftSide({
             onClick={() => handleOptionClick(menuItem5)}
           >
             <img
-              src="/images/doctorDashboard/assignment.svg"
+              src={getImageSrc(
+                menuItem5,
+                "/images/doctorDashboard/assignment.svg"
+              )}
               alt=""
               className={style.optionImage}
             />
@@ -122,7 +135,7 @@ function DashboardLeftSide({
           onClick={() => handleOptionClick(menuItem6)}
         >
           <img
-            src="/images/doctorDashboard/payment.svg"
+            src={getImageSrc(menuItem6, "/images/doctorDashboard/payment.svg")}
             alt=""
             className={style.optionImage}
           />
@@ -136,7 +149,7 @@ function DashboardLeftSide({
           onClick={() => handleOptionClick("settings")}
         >
           <img
-            src="/images/doctorDashboard/setting.svg"
+            src={getImageSrc("settings", "/images/doctorDashboard/setting.svg")}
             alt=""
             className={style.optionImage}
           />

@@ -24,6 +24,12 @@ function LeftSideMenuBar({
     setIsMenuVisible(!isMenuVisible);
   };
 
+  const getImageSrc = (option, defaultSrc) => {
+    return selectedOption === option
+      ? `/images/doctorDashboard/${option}Clicked.svg`
+      : defaultSrc;
+  };
+
   return (
     <div className={style.leftPart}>
       <div className={style.imgDiv}>
@@ -64,6 +70,7 @@ function LeftSideMenuBar({
           <p className={style.name}>Dr. Ronald Richards</p>
         </div>
       </div>
+
       {isMenuVisible && (
         <div className={style.optionContainer}>
           <div
@@ -73,8 +80,11 @@ function LeftSideMenuBar({
             onClick={() => handleOptionClick(menuItem1)}
           >
             <img
-              src="/images/doctorDashboard/dashboard.svg"
-              alt=""
+              src={getImageSrc(
+                menuItem1,
+                "/images/doctorDashboard/dashboard.svg"
+              )}
+              alt="dashboard"
               className={style.optionImage}
             />
             <p className={style.optionName}>{menuItem1}</p>
@@ -87,8 +97,11 @@ function LeftSideMenuBar({
             onClick={() => handleOptionClick(menuItem2)}
           >
             <img
-              src="/images/doctorDashboard/calender.svg"
-              alt=""
+              src={getImageSrc(
+                menuItem2,
+                "/images/doctorDashboard/calender.svg"
+              )}
+              alt="calendar"
               className={style.optionImage}
             />
             <p className={style.optionName}>{menuItem2}</p>
@@ -101,8 +114,11 @@ function LeftSideMenuBar({
             onClick={() => handleOptionClick(menuItem3)}
           >
             <img
-              src="/images/doctorDashboard/patient.svg"
-              alt=""
+              src={getImageSrc(
+                menuItem3,
+                "/images/doctorDashboard/patient.svg"
+              )}
+              alt="patient"
               className={style.optionImage}
             />
             <p className={style.optionName}>{menuItem3}</p>
@@ -115,8 +131,11 @@ function LeftSideMenuBar({
             onClick={() => handleOptionClick(menuItem4)}
           >
             <img
-              src="/images/doctorDashboard/message.svg"
-              alt=""
+              src={getImageSrc(
+                menuItem4,
+                "/images/doctorDashboard/message.svg"
+              )}
+              alt="message"
               className={style.optionImage}
             />
             <p className={style.optionName}>{menuItem4}</p>
@@ -130,8 +149,11 @@ function LeftSideMenuBar({
               onClick={() => handleOptionClick(menuItem5)}
             >
               <img
-                src="/images/doctorDashboard/assignment.svg"
-                alt=""
+                src={getImageSrc(
+                  menuItem5,
+                  "/images/doctorDashboard/assignment.svg"
+                )}
+                alt="assignment"
                 className={style.optionImage}
               />
               <p className={style.optionName}>{menuItem5}</p>
@@ -145,8 +167,11 @@ function LeftSideMenuBar({
             onClick={() => handleOptionClick(menuItem6)}
           >
             <img
-              src="/images/doctorDashboard/payment.svg"
-              alt=""
+              src={getImageSrc(
+                menuItem6,
+                "/images/doctorDashboard/payment.svg"
+              )}
+              alt="payment"
               className={style.optionImage}
             />
             <p className={style.optionName}>{menuItem6}</p>
@@ -159,8 +184,11 @@ function LeftSideMenuBar({
             onClick={() => handleOptionClick("settings")}
           >
             <img
-              src="/images/doctorDashboard/setting.svg"
-              alt=""
+              src={getImageSrc(
+                "settings",
+                "/images/doctorDashboard/setting.svg"
+              )}
+              alt="settings"
               className={style.optionImage}
             />
             <p className={style.optionName}>Settings</p>

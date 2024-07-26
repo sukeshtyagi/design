@@ -11,6 +11,7 @@ import Gender from "../doctorDashboard/Gender";
 import NextPatientDetail from "./NextPatientDetail";
 import PatientAppointmentTable from "../../../AllDashboardPages/doctorDashboardPages/doctorDashboard/PatientAppointmentTable";
 import { getAppointmentsByDate } from "./AppointmentData";
+import DoctorAppointment from "../doctorAppointment/DoctorAppointment";
 
 function DoctorDashboard() {
   const [selectedOption, setSelectedOption] = useState("Dashboard");
@@ -122,6 +123,8 @@ function DoctorDashboard() {
             </div>
           </>
         )}
+
+        {selectedOption === "Appointments" && <DoctorAppointment />}
         <DashboardFooter />
       </div>
     </div>
