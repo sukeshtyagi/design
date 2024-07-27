@@ -1,0 +1,105 @@
+.containerDiv {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  padding: 24px 0;
+  border-radius: 10px;
+  background-color: rgba(245, 245, 245, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.outerDiv {
+  width: 87.2%;
+  height: 95px;
+  margin: 0 auto;
+  padding: 10px 0;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: rgba(237, 237, 237, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topDiv {
+  width: 92.28%;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgDiv {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  width: 30px;
+  height: 30px;
+}
+
+.name,
+.disease,
+.date,
+.time {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2.08em;
+  text-align: right;
+  color: rgba(0, 0, 0, 1);
+}
+
+.btmDiv {
+  width: 86.49%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statusDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20.9%;
+}
+
+.statusIcons {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.statusIcon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.accepted,
+.rejected {
+  width: fit-content;
+  padding: 0 5px;
+  margin: 0;
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 2.5em;
+  text-align: left;
+  color: rgba(11, 219, 182, 1);
+  background-color: rgba(233, 255, 251, 1);
+}
+
+.rejected {
+  color: rgba(215, 80, 80, 1);
+  background-color: rgba(255, 230, 230, 1);
+}

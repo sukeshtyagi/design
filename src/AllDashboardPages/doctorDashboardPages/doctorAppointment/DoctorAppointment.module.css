@@ -1,0 +1,16 @@
+.doctorAppointmentContainer {
+  width: 100%;
+  background-color: red;
+  display: flex;
+  gap: 2.64%;
+}
+
+.doctorAppointmentCalenderContainer {
+  width: 71.19%;
+  background-color: green;
+}
+
+.doctorAppointmentRequestsContainer {
+  width: 26.17%;
+  background-color: orange;
+}
