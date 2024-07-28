@@ -1,5 +1,6 @@
 .outerContainer {
   width: 100%;
+  height: fit-content;
   padding: 20px 0;
   border-radius: 10px;
   background: rgba(245, 245, 245, 1);
@@ -97,16 +98,19 @@
   line-height: 1.3em;
   text-align: center;
   color: rgba(147, 143, 150, 1);
-  cursor: pointer;
   width: fit-content;
   user-select: none;
   border-bottom: 1px solid transparent;
 }
 
-.selectedDate {
+.currentDate {
   border-radius: 2px;
   color: rgba(11, 219, 182, 1);
   border-bottom: 1px solid rgba(11, 219, 182, 1);
+}
+
+.sunday{
+  color: rgba(215, 80, 80, 1);
 }
 
 .appointmentContainer {
@@ -119,7 +123,7 @@
 .timeColumn {
   width: 4.6%;
   height: 568px;
-  margin-top: 26px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 53px;
@@ -154,7 +158,7 @@
 .gridContainer2 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 33px;
+  grid-template-rows: 26px;
   gap: 0px;
 }
 
@@ -188,7 +192,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -202,6 +205,10 @@
 }
 
 .gridContainer > .gridItem:nth-last-child(-n+7) {
+  border: none;
+}
+
+.gridContainer > .gridItem:nth-last-child(-n+14) {
   border-bottom: none;
 }
 

@@ -9,6 +9,7 @@ import {
   eachDayOfInterval,
 } from "date-fns";
 import DropDown from "../../../commonComponents/DropDown";
+import PatientAppointmentCardDetail from "./PatientAppointmentCardDetail";
 
 function WeeklyCalender() {
   const times = [
@@ -23,30 +24,160 @@ function WeeklyCalender() {
     "17:00",
   ];
 
-  const appointments = [
-    {
-      date: "2024-07-22",
-      time: "09:00",
-      title: "App 1",
-    },
-    {
-      date: "2024-07-22",
-      time: "10:00",
-      title: "App 1",
-    },
-    {
-      date: "2024-07-22",
-      time: "11:00",
-      title: "App 1",
-    },
-    {
-      date: "2024-07-23",
-      time: "11:00",
-      title: "App 1",
-    },
+const appointments = [
+  // Previous Week
+  {
+    name: "Alice Johnson",
+    disease: "Consultation",
+    date: "2024-07-15",
+    time: "09:00",
+    timings: "09:00 - 10:00",
+  },
+  {
+    name: "Bob Smith",
+    disease: "Checkup",
+    date: "2024-07-15",
+    time: "10:00",
+    timings: "10:00 - 11:00",
+  },
+  {
+    name: "Charlie Davis",
+    disease: "Follow-up",
+    date: "2024-07-16",
+    time: "11:00",
+    timings: "11:00 - 12:00",
+  },
+  {
+    name: "David Evans",
+    disease: "Scaling",
+    date: "2024-07-17",
+    time: "11:00",
+    timings: "11:00 - 12:00",
+  },
+  {
+    name: "Eva White",
+    disease: "Consultation",
+    date: "2024-07-18",
+    time: "16:00",
+    timings: "16:00 - 17:00",
+  },
+  {
+    name: "Frank Harris",
+    disease: "Emergency",
+    date: "2024-07-19",
+    time: "13:00",
+    timings: "13:00 - 14:00",
+  },
+  {
+    name: "Grace Johnson",
+    disease: "Consultation",
+    date: "2024-07-20",
+    time: "12:00",
+    timings: "12:00 - 13:00",
+  },
 
-    // more appointments
-  ];
+  // Current Week
+  {
+    name: "Wade Warren",
+    disease: "Scaling",
+    date: "2024-07-22",
+    time: "09:00",
+    timings: "09:00 - 10:00",
+  },
+  {
+    name: "Hannah Moore",
+    disease: "Checkup",
+    date: "2024-07-22",
+    time: "10:00",
+    timings: "10:00 - 11:00",
+  },
+  {
+    name: "Irene Lee",
+    disease: "Consultation",
+    date: "2024-07-22",
+    time: "11:00",
+    timings: "11:00 - 12:00",
+  },
+  {
+    name: "Jack Brown",
+    disease: "Follow-up",
+    date: "2024-07-23",
+    time: "11:00",
+    timings: "11:00 - 12:00",
+  },
+  {
+    name: "Kara Clark",
+    disease: "Emergency",
+    date: "2024-07-25",
+    time: "16:00",
+    timings: "16:00 - 17:00",
+  },
+  {
+    name: "Liam Scott",
+    disease: "Checkup",
+    date: "2024-07-27",
+    time: "13:00",
+    timings: "13:00 - 14:00",
+  },
+  {
+    name: "Mia Davis",
+    disease: "Consultation",
+    date: "2024-07-28",
+    time: "12:00",
+    timings: "12:00 - 13:00",
+  },
+
+  // Next Week
+  {
+    name: "Nina Taylor",
+    disease: "Follow-up",
+    date: "2024-07-29",
+    time: "09:00",
+    timings: "09:00 - 10:00",
+  },
+  {
+    name: "Oliver Brown",
+    disease: "Scaling",
+    date: "2024-07-29",
+    time: "10:00",
+    timings: "10:00 - 11:00",
+  },
+  {
+    name: "Paula Martinez",
+    disease: "Consultation",
+    date: "2024-07-29",
+    time: "11:00",
+    timings: "11:00 - 12:00",
+  },
+  {
+    name: "Quinn Anderson",
+    disease: "Emergency",
+    date: "2024-07-30",
+    time: "11:00",
+    timings: "11:00 - 12:00",
+  },
+  {
+    name: "Ryan Wilson",
+    disease: "Checkup",
+    date: "2024-08-01",
+    time: "16:00",
+    timings: "16:00 - 17:00",
+  },
+  {
+    name: "Sophia Martinez",
+    disease: "Follow-up",
+    date: "2024-08-03",
+    time: "13:00",
+    timings: "13:00 - 14:00",
+  },
+  {
+    name: "Tom Clark",
+    disease: "Consultation",
+    date: "2024-08-04",
+    time: "12:00",
+    timings: "12:00 - 13:00",
+  },
+];
 
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(
@@ -77,8 +208,11 @@ function WeeklyCalender() {
   };
 
   const getAppointmentForSlot = (date, time) => {
+    const formattedDate = format(date, "yyyy-MM-dd");
+    console.log("Formatted Date:", formattedDate);
+    console.log("Time:", time);
     return appointments.find((appointment) => {
-      const formattedDate = format(date, "yyyy-MM-dd");
+      console.log("Checking appointment:", appointment);
       return appointment.date === formattedDate && appointment.time === time;
     });
   };
@@ -149,12 +283,11 @@ function WeeklyCalender() {
               <p
                 key={index}
                 className={`${styles.dateItem} ${
-                  selectedDate &&
                   format(day, "yyyy-MM-dd") ===
-                    format(selectedDate, "yyyy-MM-dd")
-                    ? styles.selectedDate
+                  format(currentDate, "yyyy-MM-dd")
+                    ? styles.curentDate
                     : ""
-                }`}
+                } ${format(day, "EEEE") === "Sunday" ? styles.sunday : ""}`}
                 onClick={() => handleDateClick(day)}
               >
                 {format(day, "dd EEE")}
@@ -179,13 +312,22 @@ function WeeklyCalender() {
               </div>
 
               <div className={styles.gridContainer}>
-                {daysOfWeek.map((day, dayIndex) =>
-                  times.map((time, timeIndex) => {
+                {times.map((time, timeIndex) =>
+                  daysOfWeek.map((day, dayIndex) => {
                     const appointment = getAppointmentForSlot(day, time);
                     const cellId = `${format(day, "yyyy-MM-dd")}-${time}`;
+                    console.log("Appointment data:", appointment);
                     return (
                       <div key={cellId} id={cellId} className={styles.gridItem}>
-                        {appointment ? appointment.title : ""}
+                        {appointment ? (
+                          <PatientAppointmentCardDetail
+                            name={appointment.name}
+                            disease={appointment.disease}
+                            timings={appointment.timings}
+                          />
+                        ) : (
+                         <p>- - -</p>
+                        )}
                       </div>
                     );
                   })
