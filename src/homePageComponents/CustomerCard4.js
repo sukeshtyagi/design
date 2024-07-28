@@ -3,6 +3,7 @@ import style from "../styles/CustomerStories.module.css";
 
 function CustomerCard4({
   name,
+  profession,
   img,
   height,
   para,
@@ -22,9 +23,9 @@ function CustomerCard4({
         <div className={style.topLeftDivCard4}>
           <img src={img} alt="" />
         </div>
-        <div className={style.topRightDivCard4}>
+        <div className={style.topRightDivCard4} >
           <h1 className={style.nameBtmDivCard1}>{name}</h1>
-          <h1 className={style.titleBtmDivCard1}>CEO, Avito</h1>
+          <h1 className={style.titleBtmDivCard1}>{profession}</h1>
 
           <div className={style.ratingBtmDivCardDiv4}>
             <img

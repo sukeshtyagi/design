@@ -8,15 +8,21 @@ function CustomerCard1() {
         <img src="/images/miss/card1.svg" alt="" />
       </div>
       <div className={style.midDivCard1}>
-        <p className={style.paraMidDivCard1}>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam consequat sunt nostrud amet.
+        <p
+          className={style.paraMidDivCard1}
+          
+        >
+          As a civil engineer, finding reliable professionals for my projects is
+          crucial. Decatlog has been a game-changer for me. I easily found a
+          highly skilled electrical engineer through the platform who helped
+          streamline our construction project. The process was smooth, and the
+          results were fantastic. Decatlog is now my go-to for any professional
+          needs!
         </p>
       </div>
       <div className={style.btmDivCard1}>
-        <h1 className={style.nameBtmDivCard1}>Sumit Kumar </h1>
-        <h1 className={style.titleBtmDivCard1}>CEO, Avito</h1>
+        <h1 className={style.nameBtmDivCard1}>Priya S. </h1>
+        <h1 className={style.titleBtmDivCard1}>Engineer</h1>
 
         <div className={style.ratingBtmDivCardDiv1}>
           <img

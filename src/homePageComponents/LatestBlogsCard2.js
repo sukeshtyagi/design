@@ -8,13 +8,14 @@ function LatestBlogsCard2({ img }) {
       </div>
       <div className={style.cardLowerDiv2}>
         <h1 className={style.headingCard}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          Top Benefits of Using Decatlog for Finding Professionals
         </h1>
         <p className={style.para}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          finibus arcu ut nibh porta, ac porta diam vehicula. Quisque dignissim
-          ullamcorper mauris sit amet egestas. Pellentesque sed magna ac nisl
-          dapibus
+          In today’s fast-paced world, finding reliable professionals can be
+          challenging. Decatlog simplifies this process by providing a
+          comprehensive platform for connecting with experts across various
+          fields. In this blog, we'll explore the top benefits of using Decatlog
+          for all your professional needs.
           <br />{" "}
           <span className="text-appGreen hover:text-black cursor-pointer">
             Read More...

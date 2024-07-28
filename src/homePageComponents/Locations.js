@@ -15,11 +15,12 @@ function Locations() {
             FEATURES <span className={style.headingSpan}>LOCATIONS</span>
           </h1>
 
-          <p className={style.para}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere
-            condimentum lectus. Etiam dignissim nisl sem, eu laoreet ex
-            vestibulum ac.Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Sed posuere condimentum lectus.
+          <p className={style.para} style={{marginBottom:"10px"}}>
+            Discover trusted professionals across key regions in India with
+            Decatlog. Our extensive network ensures you find the right experts
+            near you, whether you need medical, legal, financial, educational,
+            or technical services. Explore the specialties offered in the
+            following locations:
           </p>
 
           <div className={style.divContainer}>

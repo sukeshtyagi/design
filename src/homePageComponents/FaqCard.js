@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../styles/FAQ.module.css";
 
-function FaqCard({ isExpanded, onClick }) {
+function FaqCard({ isExpanded, onClick, question, answer }) {
   return (
     <div
       className={`${style.cardContainer} hover:bg-gray-100`}
@@ -16,7 +16,7 @@ function FaqCard({ isExpanded, onClick }) {
             alignItems: `${isExpanded ? "center" : "center"}`,
           }}
         >
-          <h1 className={style.heading}>Lorem Ipsum Dolor Sit Amet?</h1>
+          <h1 className={style.heading}>{question}?</h1>
           <div className="showMore" onClick={onClick}>
             {isExpanded ? (
               <img src="/images/close.svg" alt="" className={style.image} />
@@ -27,10 +27,7 @@ function FaqCard({ isExpanded, onClick }) {
         </div>
         {isExpanded && (
           <div className={style.btmDiv}>
-            <p className={style.para}>
-              Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat aute irure dolor
-            </p>
+            <p className={style.para}>{answer}</p>
           </div>
         )}
       </div>

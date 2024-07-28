@@ -8,14 +8,18 @@ function LatestBlogsCard1({ img }) {
       </div>
       <div className={style.cardLowerDiv1}>
         <h1 className={style.headingCard}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          How to Choose the Right Professional for Your Needs
         </h1>
         <p className={style.para}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          finibus arcu ut nibh porta, ac porta diam vehicula. Quisque dignissim
-          ullamcorper mauris sit amet egestas. Pellentesque sed magna ac nisl
-          dapibus
-          <br /> <span className="text-appGreen hover:text-black cursor-pointer">Read More...</span>
+          Choosing the right professional can be a daunting task, whether you
+          need a doctor, engineer, teacher, or lawyer. With so many options
+          available, how do you ensure you're making the best choice? In this
+          blog, we'll provide tips and guidelines to help you find the perfect
+          professional for your needs using Decatlog.
+          <br />{" "}
+          <span className="text-appGreen hover:text-black cursor-pointer">
+            Read More...
+          </span>
         </p>
       </div>
     </div>

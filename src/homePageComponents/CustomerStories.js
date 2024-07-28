@@ -25,15 +25,16 @@ function CustomerStories() {
           <div className={style.btmChild1}>
             <CustomerCard1 />
             <CustomerCard4
-              name="John Walter"
+              name=" Arjun M."
+              profession="Teacher"
               img="/images/miss/card2.svg"
               width="263px"
               height="243px"
               paddingTop="18.23px"
               paddingLeft="9.67px"
-              para="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam"
+              para="I needed a CA to help me with my taxes and financial planning. Decatlog made it incredibly easy to find a trustworthy and experienced Chartered Accountant in my area."
               paraMarginLeft="0px"
-              paraWidth="183px"
+              paraWidth="213px"
               paraHeight="137px"
             />
           </div>
@@ -41,53 +42,57 @@ function CustomerStories() {
           <div className={style.btmChild2}>
             <CustomerCard3 />
             <CustomerCard4
-              name="Mahesh"
+              name="Rajesh K."
+              profession="Lawyer"
               img="/images/miss/card4.svg"
               height="185px"
               width="540px"
               paddingTop="23.03px"
               paddingLeft="47px"
-              para="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+              para="Finding a trustworthy general physician was a priority for my family. Decatlog made the search simple and efficient. We found a compassionate and highly qualified doctor who provided excellent care during a medical emergency."
               paraMarginLeft="0px"
               paraWidth="438.81px"
-              paraHeight="60.49px"
+              paraHeight="80.49px"
             />
             <CustomerCard4
-              name="Sahiba"
+              name="Anjali T."
+              profession="Business Owner "
               img="/images/miss/card5.svg"
               height="215px"
               width="540px"
               paddingTop="23.03px"
               paddingLeft="47px"
-              para="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+              para="Running a business means I often need legal advice. I used Decatlog to find a reputable lawyer who specializes in business law. The lawyer I found through the platform was incredibly knowledgeable and helped me navigate some complex legal issues. Decatlog has become an invaluable resource for my business."
               paraMarginLeft="0px"
               paraWidth="438.81px"
-              paraHeight="60.49px"
+              paraHeight="112.49px"
             />
           </div>
 
           <div className={style.btmChild3}>
             <CustomerCard4
-              name="Alia Sahani"
+              name="Vishal P."
               img="/images/miss/card6.svg"
+              profession=" Government Officer"
               width="289px"
               height="241px"
               paddingTop="13px"
               paddingLeft="15px"
-              para="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt "
+              para="As a government officer, I need assistance from professionals for different projects. Decatlog has made my job easier giving a reliable platform to find and connect with experts!"
               paraMarginLeft="50px"
               paraWidth="200.68px"
               paraHeight="133.47px"
             />
 
             <CustomerCard4
-              name="Alia Sahani"
+              name="Kavita N."
+              profession="Small Business Owner"
               img="/images/miss/card6.svg"
               width="289px"
               height="432px"
               paddingTop="20px"
               paddingLeft="15px"
-              para="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat suntAmet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat suntAmet minim mollit non deserunt ullamco est sit."
+              para="Managing a small business means wearing many hats, and sometimes I need professional help to get things done right. Through Decatlog, I found a lawyer who specializes in small businesses and helped me draft important contracts and navigate legal challenges. The process was straightforward, and the lawyer was incredibly supportive. Decatlog has become an essential tool for my business operations."
               paraMarginLeft="50px"
               paraWidth="201px"
               paraHeight="295px"

@@ -8,13 +8,14 @@ function LatestBlogsCard3({ img }) {
       </div>
       <div className={style.cardLowerDiv3}>
         <h1 className={style.headingCard}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          Success Stories: How Decatlog Connected People with the Right
+          Professionals
         </h1>
         <p className={style.para}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-          finibus arcu ut nibh porta, ac porta diam vehicula. Quisque dignissim
-          ullamcorper mauris sit amet egestas. Pellentesque sed magna ac nisl
-          dapibus
+          At Decatlog, our mission is to connect people with trusted
+          professionals who can make a difference in their lives. In this blog,
+          we share real-life success stories from users who found the perfect
+          professionals through Decatlog.
           <br />{" "}
           <span className="text-appGreen hover:text-black cursor-pointer">
             Read More...

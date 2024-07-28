@@ -10,13 +10,13 @@ function CustomerCard3() {
 
       <div className={style.rightDivCard3}>
         <p className={style.paraMidDivCard1}>
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Velit officia consequat duis enim velit mollit. Exercitation
-          veniam
+          My son was struggling with his math classes, and I wanted to find a
+          private tutor to help him improve. Through Decatlog, I found an
+          amazing math teacher who helped a lot.
         </p>
         <div className={style.btmDivCard3}>
-          <h1 className={style.nameBtmDivCard3}>Krish Chadha </h1>
-          <h1 className={style.titleBtmDivCard1}>CEO, Avito</h1>
+          <h1 className={style.nameBtmDivCard3}>Sneha R. </h1>
+          <h1 className={style.titleBtmDivCard1}>Parent</h1>
 
           <div className={style.ratingBtmDivCardDiv1}>
             <img
