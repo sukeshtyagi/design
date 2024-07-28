@@ -23,7 +23,35 @@ function WeeklyCalender() {
     "17:00",
   ];
 
+  const appointments = [
+    {
+      date: "2024-07-22",
+      time: "09:00",
+      title: "App 1",
+    },
+    {
+      date: "2024-07-22",
+      time: "10:00",
+      title: "App 1",
+    },
+    {
+      date: "2024-07-22",
+      time: "11:00",
+      title: "App 1",
+    },
+    {
+      date: "2024-07-23",
+      time: "11:00",
+      title: "App 1",
+    },
+
+    // more appointments
+  ];
+
   const [currentDate, setCurrentDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(
+    startOfWeek(new Date(), { weekStartsOn: 1 })
+  );
 
   const startWeek = startOfWeek(currentDate, { weekStartsOn: 1 });
   const endWeek = endOfWeek(currentDate, { weekStartsOn: 1 });
@@ -38,6 +66,23 @@ function WeeklyCalender() {
     setCurrentDate(addWeeks(currentDate, 1));
   };
 
+  const handleDateClick = (date) => {
+    setSelectedDate(date);
+  };
+
+  const handleRefresh = () => {
+    const today = new Date();
+    setCurrentDate(today);
+    setSelectedDate(startOfWeek(today, { weekStartsOn: 1 }));
+  };
+
+  const getAppointmentForSlot = (date, time) => {
+    return appointments.find((appointment) => {
+      const formattedDate = format(date, "yyyy-MM-dd");
+      return appointment.date === formattedDate && appointment.time === time;
+    });
+  };
+
   return (
     <div className={styles.outerContainer}>
       <div className={styles.innerContainer}>
@@ -47,15 +92,12 @@ function WeeklyCalender() {
               <img
                 src="/images/doctorAppointmentPatientData/previous.svg"
                 alt="Previous Week"
+                style={{ cursor: "pointer" }}
               />
             </div>
             <div className={styles.currentWeek}>
               <p
-                style={{
-                  margin: "0px",
-                  padding: "0px",
-                  width: "fit-content",
-                }}
+                style={{ margin: "0px", padding: "0px", width: "fit-content" }}
               >
                 {`${format(startWeek, "MMM dd")} - ${format(
                   endWeek,
@@ -67,21 +109,24 @@ function WeeklyCalender() {
               <img
                 src="/images/doctorAppointmentPatientData/next.svg"
                 alt="Next Week"
+                style={{ cursor: "pointer" }}
               />
             </div>
           </div>
 
           <div className={styles.btnContainer}>
-            <div className={styles.refreshDiv}>
+            <div className={styles.refreshDiv} onClick={handleRefresh}>
               <img
                 src="/images/doctorAppointmentPatientData/refresh.svg"
                 alt="Refresh"
+                style={{ cursor: "pointer" }}
               />
             </div>
             <div className={styles.printDiv}>
               <img
                 src="/images/doctorAppointmentPatientData/print.svg"
                 alt="Print"
+                style={{ cursor: "pointer" }}
               />
             </div>
 
@@ -101,7 +146,17 @@ function WeeklyCalender() {
         <div className={styles.dataContainer}>
           <div className={styles.dateContainer}>
             {daysOfWeek.map((day, index) => (
-              <p key={index} className={styles.dateItem}>
+              <p
+                key={index}
+                className={`${styles.dateItem} ${
+                  selectedDate &&
+                  format(day, "yyyy-MM-dd") ===
+                    format(selectedDate, "yyyy-MM-dd")
+                    ? styles.selectedDate
+                    : ""
+                }`}
+                onClick={() => handleDateClick(day)}
+              >
                 {format(day, "dd EEE")}
               </p>
             ))}
@@ -116,18 +171,25 @@ function WeeklyCalender() {
               ))}
             </div>
 
-            {/* */}
             <div className={styles.gridsContainer}>
               <div className={styles.gridContainer2}>
-                {[...Array(7)].map((_, index) => (
+                {daysOfWeek.map((day, index) => (
                   <div key={index} className={styles.gridItem2}></div>
                 ))}
               </div>
 
               <div className={styles.gridContainer}>
-                {[...Array(56)].map((_, index) => (
-                  <div key={index} className={styles.gridItem}></div>
-                ))}
+                {daysOfWeek.map((day, dayIndex) =>
+                  times.map((time, timeIndex) => {
+                    const appointment = getAppointmentForSlot(day, time);
+                    const cellId = `${format(day, "yyyy-MM-dd")}-${time}`;
+                    return (
+                      <div key={cellId} id={cellId} className={styles.gridItem}>
+                        {appointment ? appointment.title : ""}
+                      </div>
+                    );
+                  })
+                )}
               </div>
             </div>
           </div>
