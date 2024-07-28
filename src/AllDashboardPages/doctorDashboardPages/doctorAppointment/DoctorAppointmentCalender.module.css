@@ -1,0 +1,44 @@
+.doctorAppointmentCalenderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.calenderHeadingDiv,
+.allOptions {
+  width: 34.5%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading,
+.option {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.allOptions {
+  width: 44.1%;
+  margin-top: 0px;
+}
+
+.option {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2.08em;
+  color: rgba(147, 143, 150, 1);
+  cursor: pointer;
+}
+
+.optionSelected{
+    color: rgba(11, 219, 182, 1);
+}

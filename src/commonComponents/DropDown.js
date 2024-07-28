@@ -1,11 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./DropDown.module.css";
 
-function DropDown({ option1, option2, option3,option4,filterHeading }) {
+function DropDown({
+  option1,
+  option2,
+  option3,
+  option4,
+  filterHeading,
+  headingBgColor,
+  headingFontSize,
+}) {
   const [showDropDown, setShowDropDown] = useState(false);
   const [downArrow, setDownArrow] = useState("/images/doctor/downArrow.svg");
   const dropdownRef = useRef(null);
-  
+
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setShowDropDown(false);
@@ -31,8 +39,11 @@ function DropDown({ option1, option2, option3,option4,filterHeading }) {
         onMouseEnter={() => setDownArrow("/images/doctor/hoverDownArrow.svg")}
         onMouseLeave={() => setDownArrow("/images/doctor/downArrow.svg")}
         onClick={() => setShowDropDown(!showDropDown)}
+        style={{ backgroundColor: headingBgColor }}
       >
-        <p className={style.criterion}>{filterHeading}</p>
+        <p className={style.criterion} style={{ fontSize: headingFontSize }}>
+          {filterHeading}
+        </p>
         <img src={downArrow} alt="" className={style.downImage} />
       </div>
       {showDropDown && (

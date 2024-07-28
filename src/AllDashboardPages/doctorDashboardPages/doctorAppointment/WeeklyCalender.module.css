@@ -1,0 +1,196 @@
+.outerContainer {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 10px;
+  background: rgba(245, 245, 245, 1);
+}
+
+.innerContainer {
+  width: 95.05%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.topdiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weekContainer {
+  min-width: 223px;
+  width: 29.03%;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.previousWeek,
+.nextWeek,
+.refreshDiv,
+.printDiv {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: rgba(252, 252, 252, 1);
+  border: 1px solid rgba(240, 240, 240, 1);
+  user-select: none;
+}
+
+.currentWeek {
+  width: 64.12%;
+  height: 32px;
+  margin: 0 auto;
+  border-radius: 2px;
+  border: 1px solid rgba(240, 240, 240, 1);
+  background: rgba(252, 252, 252, 1);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 2.08em;
+  text-align: center;
+  color: rgba(147, 143, 150, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.btnContainer {
+  min-width: 178px;
+  width: 23.26%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dataContainer {
+  width: 95.96%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dateContainer {
+  width: 86.97%;
+  height: 17px;
+  margin-left: 9.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateItem {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3em;
+  text-align: center;
+  color: rgba(147, 143, 150, 1);
+  cursor: pointer;
+  width: fit-content;
+}
+
+.appointmentContainer {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.timeColumn {
+  width: 4.6%;
+  height: 568px;
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+  justify-content: space-between;
+}
+
+.timeItem {
+  width: fit-content;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3em;
+  text-align: left;
+  color: rgba(147, 143, 150, 1);
+}
+
+/*grid styles begin*/
+.gridsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.gridContainer2 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 33px;
+  gap: 0px;
+}
+
+.gridItem2 {
+  background-color: rgba(245, 245, 245, 1);
+  border: 1px solid rgba(232, 232, 232, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.gridItem2 {
+  border-bottom: none;
+  border-top: none;
+}
+
+.gridContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 69px);
+  gap: 0px;
+}
+
+.gridItem {
+  background-color: rgba(245, 245, 245, 1);
+  border: 1px solid rgba(232, 232, 232, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.gridItem:not(:nth-child(7n + 1)),
+.gridItem2:not(:nth-child(7n + 1)) {
+  border-left: none;
+}
+
+.gridItem:nth-child(n + 8):nth-child(-n + 56) {
+  border-top: none;
+}
+
+/*grids styles end*/
