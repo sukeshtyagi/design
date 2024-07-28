@@ -31,7 +31,7 @@ function FAQ() {
         "We strive to ensure that all professionals listed on Decatlog are verified and trustworthy. We conduct thorough checks and reviews to maintain the quality and reliability of our listings.",
     },
     {
-      question: "Can I leave a review for a professional I found on Decatlog  ",
+      question: "Can I leave a review for a professional on Decatlog  ",
       answer:
         "Yes, we encourage users to leave reviews for professionals they have interacted with. Your feedback helps other users make informed decisions.",
     },

@@ -84,21 +84,25 @@ function Professions() {
               <ProfessionCard
                 img={"/images/profession/english.svg"}
                 title={"English Teachers"}
+                link="teachers"
               />
               <ProfessionCard
                 img={"/images/profession/dcp.svg"}
                 title={"DCP"}
+                link="govt. officers"
               />
             </div>
             <div className={style.rightBtm3}>
               <ProfessionCard
                 img={"/images/profession/dentists.svg"}
                 title={"Dentists"}
+                link="doctors"
               />
 
               <ProfessionCard
                 img={"/images/profession/physics.svg"}
                 title={"Physics Teachers"}
+                link="teachers"
               />
             </div>
           </div>
