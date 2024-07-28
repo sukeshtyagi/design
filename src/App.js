@@ -21,7 +21,7 @@ import OfficersDetail from "./officersPages/OfficersDetail";
 import GovtOfficesListing from "./govtofficesPages/GovtOfficesListing";
 import GovtOfficesDetail from "./govtofficesPages/GovtOfficesDetail";
 import FreeListing from "./listingPages/FreeListing";
-import DoctorDashboard from "./AllDashboardPages/doctorDashboardPages/doctorDashboard/DoctorDashboard"
+import DoctorDashboard from "./AllDashboardPages/doctorDashboardPages/doctorDashboard/DoctorDashboard";
 import TeacherDashboard from "./AllDashboardPages/teacherDashboardPages/teacherDashboard/TeacherDashboard";
 import AdvocateDashboard from "./AllDashboardPages/advocateDashboardPages/advocateDashboard/AdvocateDashboard";
 function App() {

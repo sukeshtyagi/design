@@ -27,22 +27,26 @@ function Professions() {
               <ProfessionCard
                 img={"/images/profession/ayurvedic1.svg"}
                 title={"Ayurvedic Doctors"}
+                link="doctors"
               />
 
               <ProfessionCard
                 img={"/images/profession/civil1.svg"}
                 title={"Civil Engineers"}
+                link="engineers"
               />
             </div>
             <div className={style.rightBtm1}>
               <ProfessionCard
                 img={"/images/profession/chemistry1.svg"}
                 title={"Chemistry Teachers"}
+                link="teachers"
               />
 
               <ProfessionCard
                 img={"/images/profession/lawyer1.svg"}
                 title={"Criminal Lawyers"}
+                link="advocates"
               />
             </div>
           </div>
@@ -52,21 +56,25 @@ function Professions() {
               <ProfessionCard
                 img={"/images/profession/soft.svg"}
                 title={"Software Engineers"}
+                link="engineers"
               />
               <ProfessionCard
                 img={"/images/profession/child.svg"}
                 title={"Child Specialists"}
+                link="doctors"
               />
             </div>
             <div className={style.rightBtm2}>
               <ProfessionCard
                 img={"/images/profession/auditor.svg"}
                 title={"Auditors"}
+                link="ca's"
               />
 
               <ProfessionCard
                 img={"/images/profession/neuro.svg"}
                 title={"Neurologists"}
+                link="doctors"
               />
             </div>
           </div>
