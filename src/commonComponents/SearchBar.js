@@ -1,19 +1,25 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./SearchBar.module.css";
 import SuggestionsDiv from "../homePageComponents/SuggestionsDiv";
+import { useNavigate } from "react-router-dom";
 
 function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
   const [showSuggestion, setShowSuggestion] = useState(false);
   const searchBarRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleClickOutside = (event) => {
     if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
       setShowSuggestion(false);
     }
   };
+  const handleSearchLocationClick = () => {
+    setShowSuggestion(false);
+  };
 
   const handleSearchIconClick = () => {
     setShowSuggestion(false);
+    navigate("/doctors");
   };
 
   useEffect(() => {
@@ -32,10 +38,10 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
       {!userDashboard && (
         <div className={style.topUpper}>
           <h1 className={style.paraTopUpper}>
-            Lorem Ipsum Dolor Sit Amet,
+            Discover & Search,
             <span className={style.paraSpanTopUpper}>
               {" "}
-              Consectetur Adipiscing Elit
+              Trusted Professionals Near You
             </span>
           </h1>
         </div>
@@ -44,7 +50,7 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
       <div className={`${style.btmUpper}`}>
         <div
           className={`${style.leftBtmUpper}`}
-          onClick={handleSearchIconClick}
+          onClick={handleSearchLocationClick}
         >
           <div className={style.iconDiv}>
             <img src="/images/services/locationIcon.svg" alt="" />
