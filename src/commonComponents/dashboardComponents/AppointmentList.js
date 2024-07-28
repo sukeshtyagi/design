@@ -44,7 +44,6 @@ function AppointmentList({
     (appointment) => appointment.name && appointment.name !== "Lunch Break"
   ).length;
 
-  console.log(realAppointmentsCount);
 
   const isToday = formattedSelectedDate === formatDate(new Date());
 

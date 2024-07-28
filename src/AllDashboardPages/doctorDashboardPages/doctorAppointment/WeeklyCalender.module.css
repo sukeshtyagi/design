@@ -99,6 +99,14 @@
   color: rgba(147, 143, 150, 1);
   cursor: pointer;
   width: fit-content;
+  user-select: none;
+  border-bottom: 1px solid transparent;
+}
+
+.selectedDate {
+  border-radius: 2px;
+  color: rgba(11, 219, 182, 1);
+  border-bottom: 1px solid rgba(11, 219, 182, 1);
 }
 
 .appointmentContainer {
@@ -116,6 +124,7 @@
   flex-direction: column;
   gap: 53px;
   justify-content: space-between;
+  user-select: none;
 }
 
 .timeItem {
@@ -152,7 +161,6 @@
 .gridItem2 {
   background-color: rgba(245, 245, 245, 1);
   border: 1px solid rgba(232, 232, 232, 1);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,6 +199,10 @@
 
 .gridItem:nth-child(n + 8):nth-child(-n + 56) {
   border-top: none;
+}
+
+.gridContainer > .gridItem:nth-last-child(-n+7) {
+  border-bottom: none;
 }
 
 /*grids styles end*/
