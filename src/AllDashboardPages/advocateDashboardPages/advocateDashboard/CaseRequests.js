@@ -6,7 +6,7 @@ function CaseRequests() {
     {
       img: "/images/doctorDashboard/nextPatient.png",
       name: "Wade Warren",
-      disease: "Scaling",
+      disease: "Family",
       date: "8/12/2022",
       time: "10:00 AM",
       status: "",
@@ -14,7 +14,7 @@ function CaseRequests() {
     {
       img: "/images/doctorDashboard/nextPatient.png",
       name: "Wade Warren",
-      disease: "Scaling",
+      disease: "Divorce",
       date: "8/12/2022",
       time: "10:00 AM",
       status: "",
@@ -22,7 +22,7 @@ function CaseRequests() {
     {
       img: "/images/doctorDashboard/nextPatient.png",
       name: "Wade Warren",
-      disease: "Scaling",
+      disease: "Criminal",
       date: "12/12/2022",
       time: "10:00 AM",
       status: "",
@@ -30,7 +30,7 @@ function CaseRequests() {
     {
       img: "/images/doctorDashboard/nextPatient.png",
       name: "Wade Warren",
-      disease: "Scaling",
+      disease: "Civil",
       date: "25/12/2022",
       time: "10:00 AM",
       status: "",

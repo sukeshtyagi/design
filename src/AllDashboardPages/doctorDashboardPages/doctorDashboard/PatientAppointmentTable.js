@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import style from "./PatientAppointmentTable.module.css";
 
-function PatientAppointmentTable() {
+function PatientAppointmentTable({ heading }) {
   const initialPatientData = [
+  
     {
       img: "/images/doctorDashboard/nextPatient.png",
       name: "Wade Warren",
@@ -11,6 +12,15 @@ function PatientAppointmentTable() {
       time: "10:00 AM",
       status: "",
     },
+    {
+      img: "/images/doctorDashboard/nextPatient.png",
+      name: "Wade Warren",
+      disease: "Scaling",
+      date: "8/12/2022",
+      time: "10:00 AM",
+      status: "",
+    },
+
     {
       img: "/images/doctorDashboard/nextPatient.png",
       name: "Wade Warren",
@@ -87,10 +97,10 @@ function PatientAppointmentTable() {
   return (
     <>
       <div className={style.topContainer}>
-        <h1 className={style.heading}>Case Requests</h1>
+        <h1 className={style.heading}>{heading}</h1>
         <button className={style.view}>View All</button>
       </div>
-      <table className={style.tableContainer} style={{ height: "fit-content" }}>
+      <table className={style.tableContainer} style={{ height: "" }}>
         <thead>
           <tr>
             <th onClick={() => handleSort("name")}>

@@ -6,10 +6,12 @@
 
 .calenderHeadingDiv,
 .allOptions {
-  width: 34.5%;
+  width: 279px;
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 21.51%;
+  gap: 60px;
   align-items: center;
 }
 
@@ -28,6 +30,8 @@
 .allOptions {
   width: 44.1%;
   margin-top: 0px;
+  gap: 0;
+  justify-content: space-between;
 }
 
 .option {
@@ -39,6 +43,6 @@
   cursor: pointer;
 }
 
-.optionSelected{
-    color: rgba(11, 219, 182, 1);
+.optionSelected {
+  color: rgba(11, 219, 182, 1);
 }

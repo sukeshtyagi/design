@@ -325,9 +325,7 @@ const appointments = [
                             disease={appointment.disease}
                             timings={appointment.timings}
                           />
-                        ) : (
-                         <p>- - -</p>
-                        )}
+                        ) : ""}
                       </div>
                     );
                   })

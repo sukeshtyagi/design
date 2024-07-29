@@ -1,14 +1,29 @@
 .doctorAppointmentContainer {
   width: 100%;
   display: flex;
+  flex-direction: column;
   gap: 2.64%;
 }
 
 .doctorAppointmentCalenderContainer {
   width: 100%;
-  width: 71.19%;
 }
 
 .doctorAppointmentRequestsContainer {
   width: 26.17%;
+  width: 100%;
+}
+
+@media (min-width: 1250px) {
+  .doctorAppointmentContainer {
+    flex-direction: row;
+  }
+
+  .doctorAppointmentCalenderContainer {
+    width: 71.19%;
+  }
+
+  .doctorAppointmentRequestsContainer {
+    width: 26.17%;
+  }
 }

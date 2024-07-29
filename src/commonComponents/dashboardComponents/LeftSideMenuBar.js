@@ -3,6 +3,7 @@ import style from "./LeftSideMenuBar.module.css";
 import { useNavigate } from "react-router-dom";
 
 function LeftSideMenuBar({
+  name,
   menuItem1,
   menuItem2,
   menuItem3,
@@ -67,7 +68,7 @@ function LeftSideMenuBar({
         />
         <div className={style.nameContainer}>
           <p className={style.greet}>Hello,</p>
-          <p className={style.name}>Dr. Ronald Richards</p>
+          <p className={style.name}>{name}</p>
         </div>
       </div>
 

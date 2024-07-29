@@ -3,6 +3,7 @@ import style from "./DashboardLeftSide.module.css";
 import { useNavigate } from "react-router-dom";
 
 function DashboardLeftSide({
+  name,
   menuItem1,
   menuItem2,
   menuItem3,
@@ -45,7 +46,7 @@ function DashboardLeftSide({
         />
         <div className={style.nameContainer}>
           <p className={style.greet}>Hello,</p>
-          <p className={style.name}>Dr. Ronald Richards</p>
+          <p className={style.name}>{name}</p>
         </div>
       </div>
 

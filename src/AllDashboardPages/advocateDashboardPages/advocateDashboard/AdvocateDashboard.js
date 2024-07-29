@@ -57,6 +57,7 @@ function AdvocateDashboard() {
       <div className="">
         <div className="block md2:hidden">
           <LeftSideMenuBar
+            name="Ronald Richards"
             menuItem1="Dashboard"
             menuItem2="Appointments"
             menuItem3="My Cases"
@@ -68,6 +69,7 @@ function AdvocateDashboard() {
         </div>
         <div className="hidden md2:block">
           <DashboardLeftSide
+            name="Ronald Richards"
             menuItem1="Dashboard"
             menuItem2="Appointments"
             menuItem3="My Cases"

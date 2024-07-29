@@ -53,6 +53,7 @@ function DoctorDashboard() {
       <div className="">
         <div className="block md2:hidden">
           <LeftSideMenuBar
+            name="Dr. Ronald Richards"
             menuItem1="Dashboard"
             menuItem2="Appointments"
             menuItem3="My Patients"
@@ -64,6 +65,7 @@ function DoctorDashboard() {
         </div>
         <div className="hidden md2:block">
           <DashboardLeftSide
+            name="Dr. Ronald Richards"
             menuItem1="Dashboard"
             menuItem2="Appointments"
             menuItem3="My Patients"
@@ -109,7 +111,7 @@ function DoctorDashboard() {
                   <NextPatientDetail />
                   <Gender />
                 </div>
-                <PatientAppointmentTable />
+                <PatientAppointmentTable heading="Appointment Requests" />
               </div>
 
               <div className={style.rightArea}>

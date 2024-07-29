@@ -35,4 +35,11 @@
 .timings {
   color: rgba(155, 155, 155, 1);
   margin-top: auto;
+  font-size: 8px;
+}
+
+@media (min-width: 1045px) {
+  .timings {
+    font-size: 10px;
+  }
 }
