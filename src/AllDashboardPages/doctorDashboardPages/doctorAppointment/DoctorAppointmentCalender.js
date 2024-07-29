@@ -11,7 +11,7 @@ function DoctorAppointmentCalender() {
   };
 
   return (
-    <div className={styles.doctorAppointmentCalenderLeft}>
+    <div className={styles.myPatientsOuter}>
       <div className={style.locationFilterPara}>
         <p className={style.para}>Home</p>
         <img src="/images/doctorDashboard/rightArrow.svg" alt="" />
