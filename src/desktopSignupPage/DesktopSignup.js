@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import { registerUser } from "../axios/Axios";
 function DesktopSignup() {
   const navigate = useNavigate();
   const initialValues = {
@@ -47,10 +48,14 @@ function DesktopSignup() {
               <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={(values) => {
-                  // Handle form submission
-                  console.log(values);
-                  navigate("/enter-otp");
+                onSubmit={async (values) => {
+                  try {
+                    await registerUser(values);
+                    console.log(values);
+                    // navigate("/enter-otp");
+                  } catch (error) {
+                    console.error("Registration failed:", error);
+                  }
                 }}
               >
                 <Form>

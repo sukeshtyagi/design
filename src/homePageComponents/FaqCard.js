@@ -3,12 +3,7 @@ import style from "../styles/FAQ.module.css";
 
 function FaqCard({ isExpanded, onClick, question, answer }) {
   return (
-    <div
-      className={`${style.cardContainer} hover:bg-gray-100`}
-      style={{
-        height: `${isExpanded ? "192px" : ""}`,
-      }}
-    >
+    <div className={`${style.cardContainer} hover:bg-gray-100`}>
       <div className={style.cardInnerContainer}>
         <div
           className={style.topDiv}

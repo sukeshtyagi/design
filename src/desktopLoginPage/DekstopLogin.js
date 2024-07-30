@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "./DesktopLogin.module.css";
-import { userLogin, checkServer } from "../axios/Axios";
+import { loginUser } from "../axios/Axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
@@ -46,11 +46,22 @@ function DesktopLogin() {
               <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema1}
-                onSubmit={(values) => {
-                  navigate("/homepage");
-                  console.log(values);
-                  checkServer(values);
-                  localStorage.setItem("userDetails", JSON.stringify(values));
+                onSubmit={async (values, { setSubmitting }) => {
+                  try {
+                    await loginUser(values);
+                    localStorage.setItem("userDetails", JSON.stringify(values));
+                    navigate("/homepage"); // Navigate after successful login
+                  } catch (error) {
+                    // Log the error for debugging purposes
+                    console.error("Login failed:", error);
+
+                    // Optionally: You can also set an error state or display a toast notification if needed
+                    // Example: setError("An error occurred. Please try again later.");
+
+                    // Continue without showing the error on the UI
+                  } finally {
+                    setSubmitting(false); // Ensure the submitting state is reset
+                  }
                 }}
               >
                 {({ isSubmitting }) => (

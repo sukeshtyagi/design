@@ -1,6 +1,6 @@
 import React from "react";
 import style from "../styles/LatestBlogs.module.css";
-function LatestBlogsCard2({ img }) {
+function  LatestBlogsCard2({ img }) {
   return (
     <div className={`${style.cardOuterDiv2}`}>
       <div className={style.cardTopDiv2}>
