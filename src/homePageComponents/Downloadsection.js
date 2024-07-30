@@ -8,8 +8,8 @@ function Downloadsection() {
         <div className={style.leftDiv}>
           <h1 className={style.heading}>DOWNLOAD OUR APP</h1>
           <p className={style.para}>
-            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum
-            Dolor Sit Amet Lorem Ipsum
+            Experience seamless functionality and exclusive features with our
+            app. Download now to stay connected and enhance your journey!
           </p>
           <div className={style.imgDiv}>
             <img src="/images/playstore.svg" alt="" className={style.image} />

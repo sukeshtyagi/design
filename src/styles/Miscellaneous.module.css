@@ -21,6 +21,7 @@
   box-sizing: border-box;
   width: 379.98px;
   height: 146.37px;
+  height: fit-content;
   margin-top: 181px;
 }
 
@@ -39,7 +40,7 @@
 .para {
   box-sizing: border-box;
   width: 379.98px;
-  height: 40px;
+  height: fit-content;
   margin-bottom: 16px;
   font-family: "Poppins";
   font-size: 14px;
