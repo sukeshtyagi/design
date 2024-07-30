@@ -6,21 +6,37 @@ import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import { registerUser } from "../axios/Axios";
+
+const initialValues = {
+  fullName: "",
+  email: "",
+  password: "",
+};
+
+const validationSchema = Yup.object().shape({
+  fullName: Yup.string().required("Required"),
+  email: Yup.string().email("Invalid email address").required("Required"),
+  password: Yup.string().required("Required").min(8, "Password Too Short"),
+});
+
 function DesktopSignup() {
   const navigate = useNavigate();
-  const initialValues = {
-    fullName: "",
-    email: "",
-    password: "",
-  };
-
-  const validationSchema = Yup.object().shape({
-    fullName: Yup.string().required("Required"),
-    email: Yup.string().email("Invalid email address").required("Required"),
-    password: Yup.string().required("Required").min(8, "Password Too Short"),
-  });
-
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await registerUser(values);
+      if (response.status >= 200 && response.status < 300) {
+        navigate("/enter-otp", { state: { email: values.email } });
+      } else {
+        console.error("Registration failed:", response);
+      }
+    } catch (error) {
+      console.error("Registration failed:", error);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -48,72 +64,68 @@ function DesktopSignup() {
               <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={async (values) => {
-                  try {
-                    await registerUser(values);
-                    console.log(values);
-                    // navigate("/enter-otp");
-                  } catch (error) {
-                    console.error("Registration failed:", error);
-                  }
-                }}
+                onSubmit={handleSubmit}
               >
-                <Form>
-                  <div className={`${style.signupInputDiv} relative`}>
-                    <Field
-                      type="text"
-                      name="fullName"
-                      placeholder="Full Name"
-                      className={`${style.inputNameSignup} outline-none hover:border-appGreen cursor-pointer`}
-                    />
-                    <ErrorMessage
-                      name="fullName"
-                      component="div"
-                      className="error absolute top-[47px] text-center w-full text-red-500"
-                    />
-
-                    <Field
-                      type="text"
-                      name="email"
-                      placeholder="Email Address"
-                      className={`${style.inputEmailSignup} outline-none hover:border-appGreen cursor-pointer`}
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="error absolute top-[122px] text-center w-full text-red-500"
-                    />
-
-                    <div
-                      className={`${style.inputPasswordSignup} flex justify-between outline-none hover:border-appGreen cursor-pointer`}
-                    >
+                {({ isSubmitting }) => (
+                  <Form>
+                    <div className={`${style.signupInputDiv} relative`}>
                       <Field
-                        type={showPassword ? "text" : "password"}
-                        name="password"
-                        placeholder="Password"
-                        className="bg-transparent outline-none"
+                        type="text"
+                        name="fullName"
+                        placeholder="Full Name"
+                        className={`${style.inputNameSignup} outline-none hover:border-appGreen cursor-pointer`}
+                      />
+                      <ErrorMessage
+                        name="fullName"
+                        component="div"
+                        className="error absolute top-[47px] text-center w-full text-red-500"
                       />
 
-                      {!showPassword && (
+                      <Field
+                        type="text"
+                        name="email"
+                        placeholder="Email Address"
+                        className={`${style.inputEmailSignup} outline-none hover:border-appGreen cursor-pointer`}
+                      />
+                      <ErrorMessage
+                        name="email"
+                        component="div"
+                        className="error absolute top-[122px] text-center w-full text-red-500"
+                      />
+
+                      <div
+                        className={`${style.inputPasswordSignup} flex justify-between outline-none hover:border-appGreen cursor-pointer`}
+                      >
+                        <Field
+                          type={showPassword ? "text" : "password"}
+                          name="password"
+                          placeholder="Password"
+                          className="bg-transparent text-[16px] h-full outline-none "
+                        />
                         <img
                           src="/images/miss/password.svg"
                           alt=""
                           onClick={() => setShowPassword(!showPassword)}
-                          className=""
+                          className="w-[20px]"
+                          style={{ display: showPassword ? "none" : "block" }}
                         />
-                      )}
-                    </div>
-                    <ErrorMessage
-                      name="password"
-                      component="div"
-                      className="error absolute top-[200px] text-center  w-full text-red-500"
-                    />
+                      </div>
+                      <ErrorMessage
+                        name="password"
+                        component="div"
+                        className="error absolute top-[200px] text-center  w-full text-red-500"
+                      />
 
-                    <button type="submit" className={`${style.buttonSignup}`}>
-                      Create an Account
-                    </button>
-                  </div>
-                </Form>
+                      <button
+                        type="submit"
+                        className={`${style.buttonSignup}`}
+                        disabled={isSubmitting}
+                      >
+                        Create an Account
+                      </button>
+                    </div>
+                  </Form>
+                )}
               </Formik>
               <div className={style.leftBtmSignup}>
                 <div className={style.segregationDiv}>

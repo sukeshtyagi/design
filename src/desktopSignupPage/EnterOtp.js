@@ -2,7 +2,8 @@ import React from "react";
 import style from "./Desktopsignup.module.css";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { veriyOtp } from "../axios/Axios";
 
 const validationSchema = Yup.object().shape({
   digit1: Yup.string()
@@ -21,7 +22,9 @@ const validationSchema = Yup.object().shape({
 
 function EnterOtp() {
   const navigate = useNavigate();
-
+  const location = useLocation();
+  const email = location.state?.email;
+console.log(email)
   const containsOnlyDigits = (value) => {
     return /^\d+$/.test(value);
   };
@@ -40,10 +43,20 @@ function EnterOtp() {
       <Formik
         initialValues={{ digit1: "", digit2: "", digit3: "", digit4: "" }}
         validationSchema={validationSchema}
-        onSubmit={(values) => {
-          // Handle form submission
-          console.log(values);
-          navigate("/profile");
+        onSubmit={async (values) => {
+          const otp =
+            values.digit1 + values.digit2 + values.digit3 + values.digit4;
+          try {
+            const payload = { "email":email, "otp":otp };
+            console.log(payload)
+            const response = await veriyOtp(payload);
+            if (response.status >= 200 && response.status < 300) {
+              console.log("OTP verified for email:", email);
+              navigate("/profile");
+            }
+          } catch (error) {
+            console.error("Error verifying OTP:", error);
+          }
         }}
       >
         {({ errors, touched, values }) => (
