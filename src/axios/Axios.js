@@ -12,7 +12,6 @@ export async function registerUser(userData) {
   try {
     const dataWithPhone = {
       ...userData,
-      phone: "111111111115",
     };
 
     const response = await instance.post(
