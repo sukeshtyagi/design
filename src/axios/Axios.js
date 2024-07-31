@@ -1,26 +1,32 @@
 import axios from "axios";
 
-const baseUrl = "http://webclickstudio.com:8012";
-
 const instance = axios.create({
-  baseURL: baseUrl,
-  timeout: 300000,
+  baseURL: "http://webclickstudio.com:8012",
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 export async function registerUser(userData) {
   console.log("User Data:", userData);
+  const phonenumber = Math.random() * 10;
   try {
+    console.log("try block");
+    console.log(userData);
     const dataWithPhone = {
-      ...userData,
+      fullName: userData.fullName,
+      email: userData.email,
+      phone: `${phonenumber}`,
+      password: userData.password,
     };
 
-    const response = await instance.post(
-      "/api/users/registerUser",
-      dataWithPhone
-    );
+    const jsonData = JSON.stringify(dataWithPhone);
+    console.log("Json Data:", jsonData);
+
+    const response = await instance.post("/api/users/registerUser", jsonData);
     return response;
   } catch (error) {
-    console.log("Error Message:", error);
+    console.log("Error Message:", error.message);
   }
 }
 
