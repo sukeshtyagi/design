@@ -247,3 +247,13 @@
   text-align: left;
   color: rgba(170, 170, 170, 1);
 }
+
+.errorPara {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: rgba(215, 80, 80, 1);
+}

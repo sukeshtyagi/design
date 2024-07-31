@@ -20,6 +20,7 @@ function DesktopLogin() {
   });
 
   const [showPassword, setShowPassword] = useState(false);
+  const [loginError, setLoginError] = useState(false);
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
@@ -33,6 +34,7 @@ function DesktopLogin() {
       }
     } catch (error) {
       console.error("Login failed:", error);
+      setLoginError(true);
     } finally {
       setSubmitting(false);
     }
@@ -116,6 +118,13 @@ function DesktopLogin() {
                     >
                       {isSubmitting ? "Logging in..." : "Login"}
                     </button>
+                    {
+                      loginError && (
+                        <p className={style.errorPara}>
+                          Invalid email or password. Please try again.
+                        </p>
+                      )
+                    }
                   </Form>
                 )}
               </Formik>

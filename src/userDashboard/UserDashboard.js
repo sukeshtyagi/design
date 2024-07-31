@@ -23,7 +23,6 @@ function UserDashboard() {
       const id = localStorage.getItem("userId");
 
       if (!id) {
-        console.error("User ID is not found in local storage.");
         return;
       }
 
@@ -33,7 +32,7 @@ function UserDashboard() {
         //console.log("Logout response:", response);
         localStorage.removeItem("jwtToken");
         localStorage.removeItem("userId");
-         navigate("/homepage");
+        navigate("/homepage");
       } catch (error) {
         console.error("Logout failed:", error);
       }
