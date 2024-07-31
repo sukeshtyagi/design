@@ -1,5 +1,4 @@
 import axios from "axios";
-
 const instance = axios.create({
   baseURL: "http://webclickstudio.com:8012",
   headers: {
@@ -20,6 +19,13 @@ export async function registerUser(userData) {
     const jsonData = JSON.stringify(dataWithPhone);
 
     const response = await instance.post("/api/users/registerUser", jsonData);
+     if (response.status >= 200 && response.status < 300) {
+      console.log(response.data.user.token);
+      console.log(response.data.user._id);
+      
+       localStorage.setItem("jwtToken", response.data.user.token);
+       localStorage.setItem("userId", response.data.user._id);
+     }
     return response;
   } catch (error) {
     console.log("Error Message:", error.message);
@@ -52,11 +58,25 @@ export async function loginUser(userData) {
 export async function logoutUser(id) {
   console.log(id);
   try {
+    localStorage.removeItem("jwtToken");
+    localStorage.removeItem("userId");
+    //const response = await instance.put(`/api/users/logout/${id}`);
+    //console.log(response);
+    //return response;
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+}
+
+export async function deleteUserAccount(id) {
+  console.log(id);
+  try {
     console.log("try");
-    const response = await instance.put(
-      `/api/users/logout/${id}`
-    );
+    const response = await instance.delete(`/api/users/deleteUser/${id}`);
     console.log(response);
+    localStorage.removeItem("jwtToken");
+    localStorage.removeItem("userId");
     return response;
   } catch (error) {
     console.error("Error:", error);
