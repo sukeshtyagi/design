@@ -1,11 +1,13 @@
 .outerSection {
   box-sizing: border-box;
   background: white;
+  box-shadow: inset 0px 5px 42px 2px rgba(0, 0, 0, 0.06);
 }
 
 .innerSection {
   box-sizing: border-box;
   width: 1128px;
+  padding-top: 19px;
   margin: 0 auto 100px;
 }
 
@@ -13,7 +15,6 @@
   box-sizing: border-box;
   width: 937px;
   margin: 0 auto;
-  margin-top: 19px;
 }
 
 .contentContainer {
