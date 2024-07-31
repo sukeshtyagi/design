@@ -8,11 +8,8 @@ const instance = axios.create({
 });
 
 export async function registerUser(userData) {
-  console.log("User Data:", userData);
   const phonenumber = Math.random() * 10;
   try {
-    console.log("try block");
-    console.log(userData);
     const dataWithPhone = {
       fullName: userData.fullName,
       email: userData.email,
@@ -21,7 +18,6 @@ export async function registerUser(userData) {
     };
 
     const jsonData = JSON.stringify(dataWithPhone);
-    console.log("Json Data:", jsonData);
 
     const response = await instance.post("/api/users/registerUser", jsonData);
     return response;
@@ -44,22 +40,15 @@ export async function loginUser(userData) {
   try {
     console.log("try block executed");
     console.log("Data:", userData);
+    const jsonData = JSON.stringify(userData);
+    console.log("json Data:", jsonData);
 
-    const response = await instance.post("/api/users/loginUser", userData);
+    const response = await instance.post("/api/users/loginUser", jsonData);
 
-    console.log("Response:", response.data);
-    return response.data;
+    console.log("Response:", response);
+    return response;
   } catch (error) {
-    if (error.response) {
-      console.error("Error Response Data:", error.response.data);
-      console.error("Error Response Status:", error.response.status);
-      console.error("Error Response Headers:", error.response.headers);
-    } else if (error.request) {
-      console.error("Error Request:", error.request);
-    } else {
-      console.error("Error Message:", error.message);
-    }
-    console.error("Error Config:", error.config);
+    console.error("Error:", error);
     throw error;
   }
 }

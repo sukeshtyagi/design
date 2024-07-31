@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import style from "./DesktopLogin.module.css";
-import { loginUser } from "../axios/Axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import { loginUser } from "../axios/Axios";
 
 function DesktopLogin() {
   const navigate = useNavigate();
@@ -20,6 +20,21 @@ function DesktopLogin() {
   });
 
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleSubmit = async (values, { setSubmitting }) => {
+    try {
+      const response = await loginUser(values);
+
+      if (response.status >= 200 && response.status < 300) {
+        localStorage.setItem("userDetails", JSON.stringify(values));
+        navigate("/homepage");
+      }
+    } catch (error) {
+      console.error("Login failed:", error);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -46,23 +61,7 @@ function DesktopLogin() {
               <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema1}
-                onSubmit={async (values, { setSubmitting }) => {
-                  try {
-                    await loginUser(values);
-                    localStorage.setItem("userDetails", JSON.stringify(values));
-                    navigate("/homepage"); // Navigate after successful login
-                  } catch (error) {
-                    // Log the error for debugging purposes
-                    console.error("Login failed:", error);
-
-                    // Optionally: You can also set an error state or display a toast notification if needed
-                    // Example: setError("An error occurred. Please try again later.");
-
-                    // Continue without showing the error on the UI
-                  } finally {
-                    setSubmitting(false); // Ensure the submitting state is reset
-                  }
-                }}
+                onSubmit={handleSubmit}
               >
                 {({ isSubmitting }) => (
                   <Form className="relative">
