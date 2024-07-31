@@ -1,41 +1,53 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import style from "./UserDashboard.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import PersonalInfo from "./PersonalInfo";
 import ManageAddress from "./ManageAddress";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import Reviews from "./ReviewsAndRating";
-import style from "./UserDashboard.module.css";
-import { logoutUser } from "../axios/Axios";
+import { logoutUser, deleteUserAccount } from "../axios/Axios";
 
 function UserDashboard() {
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState("personalInfo");
-  const [rightDivOption, setRightDivOption] = useState("personalInfo");
   const [deleteIcon, setDeleteIcon] = useState("/images/blogs/delete.svg");
 
-  const handleOptionClick = async (option) => {
-    setSelectedOption(option);
-    setRightDivOption(option);
-
-    if (option === "logout") {
-      const id = localStorage.getItem("userId");
-
-      if (!id) {
-        return;
-      }
-
+  const handleLogout = async (id) => {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
       try {
         console.log(`Logging out user with ID: ${id}`);
-        // const response = await logoutUser(id);
-        //console.log("Logout response:", response);
-        localStorage.removeItem("jwtToken");
-        localStorage.removeItem("userId");
+        await logoutUser(id);
         navigate("/homepage");
       } catch (error) {
         console.error("Logout failed:", error);
       }
+    }
+  };
+
+  const handleDelete = async (id) => {
+    const confirmLDelete = window.confirm("Are you sure you want to detele your account?");
+    if (confirmLDelete) {
+      try {
+        console.log(`deleting user with ID: ${id}`);
+        await deleteUserAccount(id);
+        navigate("/homepage");
+      } catch (error) {
+        console.error("Logout failed:", error);
+      }
+    }
+  };
+
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+    const id = localStorage.getItem("userId");
+    if (option === "logout") {
+      handleLogout(id);
+    }
+    if (option === "delete") {
+      handleDelete(id);
     }
   };
 
@@ -163,9 +175,9 @@ function UserDashboard() {
               </div>
             </div>
             <div className={style.right}>
-              {rightDivOption === "personalInfo" && <PersonalInfo />}
-              {rightDivOption === "manageAddresses" && <ManageAddress />}
-              {rightDivOption === "reviews" && <Reviews />}
+              {selectedOption === "personalInfo" && <PersonalInfo />}
+              {selectedOption === "manageAddresses" && <ManageAddress />}
+              {selectedOption === "reviews" && <Reviews />}
             </div>
           </div>
         </div>
