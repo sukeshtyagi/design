@@ -2,11 +2,11 @@ import React from "react";
 import style from "../styles/Header.module.css";
 import { useNavigate } from "react-router-dom";
 
-function Header({ dekstopLogin, signup, userDashboard, professionalListing }) {
+function Header({ dekstopLogin, signup, professionalListing }) {
   const navigate = useNavigate();
+  const userDashboard = localStorage.getItem("jwtToken");
   const handleNavigation = () => {
-    const userDetails = localStorage.getItem("userDetails");
-    if (userDetails) {
+    if (userDashboard) {
       navigate("/homepage");
     } else {
       navigate("/");

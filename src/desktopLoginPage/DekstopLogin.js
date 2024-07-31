@@ -73,7 +73,7 @@ function DesktopLogin() {
                       type="text"
                       name="email"
                       placeholder="Email Address"
-                      className={`${style.inputEmail} outline-none hover:border-appGreen cursor-pointer`}
+                      className={`${style.inputEmail} bg-transparent outline-none hover:border-appGreen cursor-pointer`}
                     />
                     <ErrorMessage
                       name="email"
@@ -118,13 +118,11 @@ function DesktopLogin() {
                     >
                       {isSubmitting ? "Logging in..." : "Login"}
                     </button>
-                    {
-                      loginError && (
-                        <p className={style.errorPara}>
-                          Invalid email or password. Please try again.
-                        </p>
-                      )
-                    }
+                    {loginError && (
+                      <p className={style.errorPara}>
+                        Invalid email or password. Please try again.
+                      </p>
+                    )}
                   </Form>
                 )}
               </Formik>

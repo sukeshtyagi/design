@@ -58,9 +58,11 @@ function DoctorLisiting() {
       address: "Sweet Smile Dental Clinic",
     },
   ];
+
   return (
     <>
-      <Header userDashboard="true" />
+      {/*<Header userDashboard="true" />*/}
+      <Header />
       <div
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
