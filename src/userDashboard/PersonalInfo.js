@@ -45,13 +45,19 @@ function PersonalInfo() {
 
       <div className={style.genderDiv}>
         <p className={style.paraGender}>Your Gender</p>
-
         <div className={style.topDiv}>
           <label>
             <input type="radio" name="gender" value="male" disabled /> Male
           </label>
           <label>
-            <input type="radio" name="gender" value="female" checked /> Female
+            <input
+              type="radio"
+              name="gender"
+              value="female"
+              defaultChecked
+              disabled
+            />{" "}
+            Female
           </label>
         </div>
       </div>

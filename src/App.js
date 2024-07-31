@@ -3,7 +3,6 @@ import HomePage from "./homePageComponents/HomePage";
 import DekstopLogin from "./desktopLoginPage/DekstopLogin";
 import DesktopSignup from "./desktopSignupPage/DesktopSignup";
 import EnterOtp from "./desktopSignupPage/EnterOtp";
-import UserDashboard from "./userDashboard/UserDashboard";
 import DoctorLisiting from "./doctorPages/DoctorLisiting";
 import DoctorDetail from "./doctorPages/DoctorDetail";
 import TeacherListing from "./teacherPages/TeacherListing";
@@ -24,16 +23,24 @@ import FreeListing from "./listingPages/FreeListing";
 import DoctorDashboard from "./AllDashboardPages/doctorDashboardPages/doctorDashboard/DoctorDashboard";
 import TeacherDashboard from "./AllDashboardPages/teacherDashboardPages/teacherDashboard/TeacherDashboard";
 import AdvocateDashboard from "./AllDashboardPages/advocateDashboardPages/advocateDashboard/AdvocateDashboard";
+import ProtectedPages from "./protectedPages/ProtectedPages";
+import UserDashboard from "./userDashboard/UserDashboard";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/homepage" element={<HomePage userDashboard="true" />} />
+        <Route
+          path="/homepage"
+          element={<ProtectedPages homepageProp={true} />}
+        />
         <Route path="/login" element={<DekstopLogin />} />
         <Route path="/register" element={<DesktopSignup />} />
         <Route path="/enter-otp" element={<EnterOtp />} />
-        <Route path="/profile" element={<UserDashboard />} />
+        <Route
+          path="/profile"
+          element={<ProtectedPages userDashboardProp={true} />}
+        />
         <Route path="/doctors" element={<DoctorLisiting />} />
         <Route path="/teachers" element={<TeacherListing />} />
         <Route path="/ca's" element={<CaListing />} />
@@ -57,7 +64,7 @@ function App() {
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
         <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
 
-        <Route path="/trial" element={<HomePage />} />
+        <Route path="/trial" element={<UserDashboard />} />
       </Routes>
     </BrowserRouter>
   );

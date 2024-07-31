@@ -38,14 +38,25 @@ export async function veriyOtp(otpPayload) {
 
 export async function loginUser(userData) {
   try {
-    console.log("try block executed");
-    console.log("Data:", userData);
     const jsonData = JSON.stringify(userData);
-    console.log("json Data:", jsonData);
 
     const response = await instance.post("/api/users/loginUser", jsonData);
 
-    console.log("Response:", response);
+    return response;
+  } catch (error) {
+    console.error("Error:", error);
+    throw error;
+  }
+}
+
+export async function logoutUser(id) {
+  console.log(id);
+  try {
+    console.log("try");
+    const response = await instance.put(
+      `/api/users/logout/${id}`
+    );
+    console.log(response);
     return response;
   } catch (error) {
     console.error("Error:", error);

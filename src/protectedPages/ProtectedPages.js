@@ -2,14 +2,17 @@ import React from "react";
 import UserDashboard from "../userDashboard/UserDashboard";
 import HomePage from "../homePageComponents/HomePage";
 
-function ProtectedPages() {
-  const user = localStorage.getItem("userDetails");
-  const homepage = localStorage.getItem("userDetails");
-  return (
-    <>
-      <>{user ? <UserDashboard /> : <HomePage />}</>
-    </>
-  );
+function ProtectedPages({ homepageProp, userDashboardProp }) {
+
+  const jwtToken = localStorage.getItem("jwtToken");
+
+  if (userDashboardProp && jwtToken) {
+    return <UserDashboard />;
+  } else if (homepageProp && jwtToken) {
+    return <HomePage userDashboard="true" />;
+  } else {
+    return <HomePage />;
+  }
 }
 
 export default ProtectedPages;

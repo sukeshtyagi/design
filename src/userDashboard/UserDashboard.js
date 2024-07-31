@@ -7,6 +7,7 @@ import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import Reviews from "./ReviewsAndRating";
 import style from "./UserDashboard.module.css";
+import { logoutUser } from "../axios/Axios";
 
 function UserDashboard() {
   const navigate = useNavigate();
@@ -14,11 +15,28 @@ function UserDashboard() {
   const [rightDivOption, setRightDivOption] = useState("personalInfo");
   const [deleteIcon, setDeleteIcon] = useState("/images/blogs/delete.svg");
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = async (option) => {
     setSelectedOption(option);
     setRightDivOption(option);
+
     if (option === "logout") {
-      navigate("/");
+      const id = localStorage.getItem("userId");
+
+      if (!id) {
+        console.error("User ID is not found in local storage.");
+        return;
+      }
+
+      try {
+        console.log(`Logging out user with ID: ${id}`);
+        // const response = await logoutUser(id);
+        //console.log("Logout response:", response);
+        localStorage.removeItem("jwtToken");
+        localStorage.removeItem("userId");
+         navigate("/homepage");
+      } catch (error) {
+        console.error("Logout failed:", error);
+      }
     }
   };
 
