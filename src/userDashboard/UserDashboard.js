@@ -7,7 +7,11 @@ import ManageAddress from "./ManageAddress";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import Reviews from "./ReviewsAndRating";
-import { logoutUser, deleteUserAccount, geUserDetails } from "../axios/Axios";
+import {
+  logoutUser,
+  deleteUserAccount,
+  geUserDetails,
+} from "../axios/userFunctions/UserFucntions";
 
 function UserDashboard() {
   const navigate = useNavigate();

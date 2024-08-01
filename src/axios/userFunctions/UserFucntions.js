@@ -1,10 +1,4 @@
-import axios from "axios";
-const instance = axios.create({
-  baseURL: "http://webclickstudio.com:8012",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+import instance from "../../commonComponents/axios/AxiosInstance"
 
 export async function registerUser(userData) {
   const phonenumber = Math.floor(Math.random() * 9000000000) + 1000000000;

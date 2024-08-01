@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
-import { loginUser } from "../axios/Axios";
+import { loginUser } from "../axios/userFunctions/UserFucntions";
 
 function DesktopLogin() {
   const navigate = useNavigate();

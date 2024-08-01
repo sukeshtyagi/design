@@ -3,7 +3,7 @@ import style from "./Desktopsignup.module.css";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
-import { veriyOtp } from "../axios/Axios";
+import { veriyOtp } from "../axios/userFunctions/UserFucntions";
 
 const validationSchema = Yup.object().shape({
   digit1: Yup.string()

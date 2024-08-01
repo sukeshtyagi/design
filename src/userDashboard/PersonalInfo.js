@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./PersonalInfoAndManageAddress.module.css";
-import { updateUserDetails } from "../axios/Axios"; 
+import { updateUserDetails } from "../axios/userFunctions/UserFucntions"; 
 
 function PersonalInfo({
   userName = "",

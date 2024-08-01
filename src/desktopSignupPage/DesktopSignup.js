@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
-import { registerUser } from "../axios/Axios";
+import { registerUser } from "../axios/userFunctions/UserFucntions";
 
 const initialValues = {
   fullName: "",
