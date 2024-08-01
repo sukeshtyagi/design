@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./UserDashboard.module.css";
 import SearchBar from "../commonComponents/SearchBar";
@@ -7,12 +7,31 @@ import ManageAddress from "./ManageAddress";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import Reviews from "./ReviewsAndRating";
-import { logoutUser, deleteUserAccount } from "../axios/Axios";
+import { logoutUser, deleteUserAccount, geUserDetails } from "../axios/Axios";
 
 function UserDashboard() {
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState("personalInfo");
   const [deleteIcon, setDeleteIcon] = useState("/images/blogs/delete.svg");
+  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPhone, setUserPhone] = useState("");
+  const userId = localStorage.getItem("userId");
+
+  useEffect(() => {
+    const fetchUserDetails = async () => {
+      try {
+        const response = await geUserDetails(userId);
+        setUserName(response.data.fullName);
+        setUserEmail(response.data.email);
+        setUserPhone(response.data.phone);
+      } catch (error) {
+        console.log("Failed to fetch user details:", error);
+      }
+    };
+
+    fetchUserDetails();
+  }, [userId]);
 
   const handleLogout = async (id) => {
     const confirmLogout = window.confirm("Are you sure you want to logout?");
@@ -28,7 +47,9 @@ function UserDashboard() {
   };
 
   const handleDelete = async (id) => {
-    const confirmLDelete = window.confirm("Are you sure you want to detele your account?");
+    const confirmLDelete = window.confirm(
+      "Are you sure you want to detele your account?"
+    );
     if (confirmLDelete) {
       try {
         console.log(`deleting user with ID: ${id}`);
@@ -72,7 +93,7 @@ function UserDashboard() {
 
                 <div className={style.nameDiv}>
                   <h1 className={style.greeting}>Hello,</h1>
-                  <h1 className={style.name}>Jenny Wilson</h1>
+                  <h1 className={style.name}>{userName}</h1>
                 </div>
               </div>
 
@@ -175,7 +196,13 @@ function UserDashboard() {
               </div>
             </div>
             <div className={style.right}>
-              {selectedOption === "personalInfo" && <PersonalInfo />}
+              {selectedOption === "personalInfo" && (
+                <PersonalInfo
+                  userName={userName}
+                  userEmail={userEmail}
+                  userPhone={userPhone}
+                />
+              )}
               {selectedOption === "manageAddresses" && <ManageAddress />}
               {selectedOption === "reviews" && <Reviews />}
             </div>

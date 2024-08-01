@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import style from "./PersonalInfoAndManageAddress.module.css";
 
-function PersonalInfo() {
+function PersonalInfo({ userName, userEmail, userPhone }) {
   const [isEditable, setIsEditable] = useState({
     name: false,
     email: false,
     mobile: false,
   });
+
+  console.log(userName.split(" ")[0]);
 
   const handleEditClick = (field) => {
     setIsEditable((prev) => ({
@@ -32,12 +34,14 @@ function PersonalInfo() {
             type="text"
             className={style.input1}
             placeholder="Jenny"
+            value={userName.split(" ")[0]}
             readOnly={!isEditable.name}
           />
           <input
             type="text"
             className={style.input1}
             placeholder="Wilson"
+            value={userName.split(" ")[1]}
             readOnly={!isEditable.name}
           />
         </div>
@@ -77,6 +81,7 @@ function PersonalInfo() {
           className={style.input1}
           placeholder="willie.jennings@example.com"
           readOnly={!isEditable.email}
+          value={userEmail}
         />
       </div>
       <div className={style.commonDiv}>
@@ -93,6 +98,7 @@ function PersonalInfo() {
           type="text"
           className={style.input1}
           placeholder="629.555.0129"
+          value={userPhone}
           readOnly={!isEditable.mobile}
         />
       </div>
