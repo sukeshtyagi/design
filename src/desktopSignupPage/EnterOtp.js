@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Desktopsignup.module.css";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { veriyOtp } from "../axios/Axios";
 
 const validationSchema = Yup.object().shape({
@@ -21,10 +21,12 @@ const validationSchema = Yup.object().shape({
 });
 
 function EnterOtp() {
+  const [loading, setLoading] = useState(false);
+  const [showError, setShowError] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation();
-  const email = location.state?.email;
-console.log(email)
+  const email = localStorage.getItem("emailID");
+  console.log(email);
+
   const containsOnlyDigits = (value) => {
     return /^\d+$/.test(value);
   };
@@ -44,18 +46,28 @@ console.log(email)
         initialValues={{ digit1: "", digit2: "", digit3: "", digit4: "" }}
         validationSchema={validationSchema}
         onSubmit={async (values) => {
-          const otp =
-            values.digit1 + values.digit2 + values.digit3 + values.digit4;
           try {
-            const payload = { "email":email, "otp":otp };
-            console.log(payload)
+            setLoading(true);
+            setShowError(false);
+
+            const otp =
+              values.digit1 + values.digit2 + values.digit3 + values.digit4;
+            const payload = { email: email, otp: otp };
+            console.log(payload);
+
             const response = await veriyOtp(payload);
+            console.log(response);
+
             if (response.status >= 200 && response.status < 300) {
               console.log("OTP verified for email:", email);
+              console.log("above navigatge");
               navigate("/profile");
+            } else {
+              console.log("error");
+              setShowError(true);
             }
-          } catch (error) {
-            console.error("Error verifying OTP:", error);
+          } finally {
+            setLoading(false);
           }
         }}
       >
@@ -115,17 +127,23 @@ console.log(email)
                 maxLength="1"
               />
             </div>
+
             <p className={style.noOtpPara}>Didn’t receive OTP?</p>
             <p className={style.resendPara}>Resend OTP</p>
             <button
               type="submit"
               className={`${style.verify} ${
-                allDigitsEntered(values) ? style.activeButton : ""
+                allDigitsEntered(values) && !loading ? style.activeButton : ""
               }`}
-              disabled={!allDigitsEntered(values)}
+              disabled={!allDigitsEntered(values) || loading}
             >
-              Verify
+              {loading ? "Verifying..." : "Verify"}
             </button>
+            {showError && (
+              <p className={style.otpErrorMsg}>
+                Invalid OTP. Please try again.
+              </p>
+            )}
           </Form>
         )}
       </Formik>

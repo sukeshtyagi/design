@@ -29,6 +29,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="*" element={<HomePage />} />
+
         <Route path="/" element={<HomePage />} />
         <Route
           path="/homepage"
@@ -49,7 +51,6 @@ function App() {
         <Route path="/advocates" element={<AdvocateListing />} />
         <Route path="/officers" element={<OfficersListing />} />
         <Route path="/govt. officers" element={<GovtOfficesListing />} />
-
         <Route path="/doctor-detail" element={<DoctorDetail />} />
         <Route path="/teacher-detail" element={<TeacherDetail />} />
         <Route path="/ca-detail" element={<CaDetail />} />
@@ -58,12 +59,10 @@ function App() {
         <Route path="/advocate-detail" element={<AdvocateDetail />} />
         <Route path="/officer-detail" element={<OfficersDetail />} />
         <Route path="/govt-offices-detail" element={<GovtOfficesDetail />} />
-
         <Route path="/list-yourself" element={<FreeListing />} />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
         <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
-
         <Route path="/trial" element={<UserDashboard />} />
       </Routes>
     </BrowserRouter>

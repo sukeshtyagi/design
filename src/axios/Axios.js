@@ -19,33 +19,42 @@ export async function registerUser(userData) {
     const jsonData = JSON.stringify(dataWithPhone);
 
     const response = await instance.post("/api/users/registerUser", jsonData);
-     if (response.status >= 200 && response.status < 300) {
-      console.log(response.data.user.token);
-      console.log(response.data.user._id);
-      
-       localStorage.setItem("jwtToken", response.data.user.token);
-       localStorage.setItem("userId", response.data.user._id);
-     }
+    localStorage.setItem("jwtToken", response.data.user.token);
+    localStorage.setItem("userId", response.data.user._id);
     return response;
   } catch (error) {
-    console.log("Error Message:", error.message);
+    console.log(error.response.data);
+    const status = error.response.status;
+    return status;
   }
 }
 
 export async function veriyOtp(otpPayload) {
   try {
-    const response = await instance.post("/api/users/verify-otp", otpPayload);
-    return response;
+    console.log("try");
+    console.log(otpPayload);
+    const jsonData = JSON.stringify(otpPayload);
+
+    console.log(jsonData);
+    const response = await instance.post("/api/users/verify-otp", jsonData);
+    console.log(response.data.message);
+    if (response.status >= 200 && response.status < 300) {
+      console.log("if executed");
+      console.log(response);
+      //console.log(response.data.user._id);
+      //localStorage.setItem("jwtToken", response.data.user.token);
+      //localStorage.setItem("userId", response.data.user._id);
+      return response;
+    }
   } catch (error) {
-    console.log("error:", error);
-    throw error;
+    console.log(error);
+    return error;
   }
 }
 
 export async function loginUser(userData) {
   try {
     const jsonData = JSON.stringify(userData);
-
     const response = await instance.post("/api/users/loginUser", jsonData);
 
     return response;

@@ -22,17 +22,18 @@ const validationSchema = Yup.object().shape({
 function DesktopSignup() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const [showError, setshowError] = useState(false);
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       const response = await registerUser(values);
       if (response.status >= 200 && response.status < 300) {
-        navigate("/enter-otp", { state: { email: values.email } });
-      } else {
-        console.error("Registration failed:", response);
+        localStorage.setItem("emailID", values.email);
+        navigate("/enter-otp");
       }
-    } catch (error) {
-      console.error("Registration failed:", error);
+      if (response === 400) {
+        setshowError(true);
+      }
     } finally {
       setSubmitting(false);
     }
@@ -123,6 +124,12 @@ function DesktopSignup() {
                       >
                         Create an Account
                       </button>
+                      {showError && (
+                        <div className={style.errorMessage}>
+                          An account with this email already exists. Please use
+                          a different email.
+                        </div>
+                      )}
                     </div>
                   </Form>
                 )}
