@@ -2,17 +2,14 @@ import React, { useState } from "react";
 import style from "../styles/NeedHelp.module.css";
 
 function NeedHelp() {
-  // Define state for form inputs
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
 
-  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here
   };
 
   return (
@@ -23,8 +20,7 @@ function NeedHelp() {
             NEED <span className={style.headingSpan}>HELP & SUPPORT</span>
           </h1>
           <p className={style.para}>
-            Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem Ipsum
-            Dolor
+            Access customer support and find answers to your questions.
           </p>
           <div className={style.detailContainer}>
             <div className={style.envelopIconDiv}>
