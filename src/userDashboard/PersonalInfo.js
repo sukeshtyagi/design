@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import style from "./PersonalInfoAndManageAddress.module.css";
-import { updateUserDetails } from "../axios/Axios"; // Importing the API call function
+import { updateUserDetails } from "../axios/Axios"; 
 
 function PersonalInfo({
   userName = "",
   userEmail,
   userPhone,
-  userGender = "Male",
-  updateUserDetailsParent, // Callback function to update parent component's state
+  userGender = "",
+  updateUserDetailsParent,
 }) {
   const [isEditable, setIsEditable] = useState({
     name: false,
@@ -28,7 +28,7 @@ function PersonalInfo({
     setLastName(nameParts[1] || "");
     setEmail(userEmail);
     setPhone(userPhone);
-    setGender(userGender); // Ensure gender is initialized correctly
+    setGender(userGender); 
   }, [userName, userEmail, userPhone, userGender]);
 
   const handleEditClick = (field) => {
@@ -42,8 +42,8 @@ function PersonalInfo({
 
       updateUserDetails(userId, updatedDetails)
         .then(() => {
-          updateUserDetailsParent(updatedDetails); // Update parent's state
-        })
+          updateUserDetailsParent(updatedDetails);
+          })
         .catch((error) => {
           console.error("Failed to update user details:", error);
         });

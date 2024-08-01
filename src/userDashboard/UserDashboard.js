@@ -16,7 +16,7 @@ function UserDashboard() {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPhone, setUserPhone] = useState("");
-  const [userGender, setUserGender] = useState("Male");
+  const [userGender, setUserGender] = useState("");
   const userId = localStorage.getItem("userId");
 
   const fetchUserDetails = async () => {
