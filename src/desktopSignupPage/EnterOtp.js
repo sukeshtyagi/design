@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import style from "./Desktopsignup.module.css";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
@@ -26,6 +26,8 @@ function EnterOtp() {
   const navigate = useNavigate();
   const email = localStorage.getItem("emailID");
   console.log(email);
+
+  const digitRefs = useRef([]);
 
   const containsOnlyDigits = (value) => {
     return /^\d+$/.test(value);
@@ -79,53 +81,26 @@ function EnterOtp() {
               <span className={style.enterOtpParaSpan}>example@email.com</span>
             </p>
             <div className={`${style.inputContainer} relative`}>
-              <Field
-                type="text"
-                name="digit1"
-                placeholder="-"
-                className={`${style.digit1} placeholder-black ${
-                  touched.digit1 && errors.digit1 ? style.errorBorder : ""
-                } ${
-                  containsOnlyDigits(values.digit1) ? style.greenBorder : ""
-                }`}
-                maxLength="1"
-              />
-
-              <Field
-                type="text"
-                name="digit2"
-                placeholder="-"
-                className={`${style.digit1} placeholder-black ${
-                  touched.digit2 && errors.digit2 ? style.errorBorder : ""
-                } ${
-                  containsOnlyDigits(values.digit2) ? style.greenBorder : ""
-                }`}
-                maxLength="1"
-              />
-
-              <Field
-                type="text"
-                name="digit3"
-                placeholder="-"
-                className={`${style.digit1} placeholder-black ${
-                  touched.digit3 && errors.digit3 ? style.errorBorder : ""
-                } ${
-                  containsOnlyDigits(values.digit3) ? style.greenBorder : ""
-                }`}
-                maxLength="1"
-              />
-
-              <Field
-                type="text"
-                name="digit4"
-                placeholder="-"
-                className={`${style.digit1} placeholder-black relative ${
-                  touched.digit4 && errors.digit4 ? style.errorBorder : ""
-                } ${
-                  containsOnlyDigits(values.digit4) ? style.greenBorder : ""
-                }`}
-                maxLength="1"
-              />
+              {["digit1", "digit2", "digit3", "digit4"].map((name, index) => (
+                <Field
+                  key={name}
+                  type="text"
+                  name={name}
+                  placeholder="-"
+                  innerRef={(el) => (digitRefs.current[index] = el)}
+                  className={`${style.digit1} placeholder-black ${
+                    touched[name] && errors[name] ? style.errorBorder : ""
+                  } ${
+                    containsOnlyDigits(values[name]) ? style.greenBorder : ""
+                  }`}
+                  maxLength="1"
+                  onInput={(e) => {
+                    if (containsOnlyDigits(e.target.value) && index < 3) {
+                      digitRefs.current[index + 1].focus();
+                    }
+                  }}
+                />
+              ))}
             </div>
 
             <p className={style.noOtpPara}>Didn’t receive OTP?</p>
