@@ -95,3 +95,18 @@ export async function geUserDetails(id) {
     throw error;
   }
 }
+
+export async function updateUserDetails(id, payload) {
+  try {
+    const jsonData = JSON.stringify(payload);
+    const response = await instance.put(
+      `/api/users/updateUser/${id}`,
+      jsonData
+    );
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.log("Error:", error);
+    throw error;
+  }
+}

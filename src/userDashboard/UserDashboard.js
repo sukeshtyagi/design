@@ -16,20 +16,21 @@ function UserDashboard() {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPhone, setUserPhone] = useState("");
+  const [userGender, setUserGender] = useState("Male");
   const userId = localStorage.getItem("userId");
 
-  useEffect(() => {
-    const fetchUserDetails = async () => {
-      try {
-        const response = await geUserDetails(userId);
-        setUserName(response.data.fullName);
-        setUserEmail(response.data.email);
-        setUserPhone(response.data.phone);
-      } catch (error) {
-        console.log("Failed to fetch user details:", error);
-      }
-    };
+  const fetchUserDetails = async () => {
+    try {
+      const response = await geUserDetails(userId);
+      setUserName(response.data.fullName);
+      setUserEmail(response.data.email);
+      setUserPhone(response.data.phone);
+    } catch (error) {
+      console.log("Failed to fetch user details:", error);
+    }
+  };
 
+  useEffect(() => {
     fetchUserDetails();
   }, [userId]);
 
@@ -47,16 +48,16 @@ function UserDashboard() {
   };
 
   const handleDelete = async (id) => {
-    const confirmLDelete = window.confirm(
-      "Are you sure you want to detele your account?"
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete your account?"
     );
-    if (confirmLDelete) {
+    if (confirmDelete) {
       try {
-        console.log(`deleting user with ID: ${id}`);
+        console.log(`Deleting user with ID: ${id}`);
         await deleteUserAccount(id);
         navigate("/homepage");
       } catch (error) {
-        console.error("Logout failed:", error);
+        console.error("Delete failed:", error);
       }
     }
   };
@@ -70,6 +71,12 @@ function UserDashboard() {
     if (option === "delete") {
       handleDelete(id);
     }
+  };
+
+  const updateUserDetailsInDashboard = (updatedDetails) => {
+    setUserName(updatedDetails.fullName);
+    setUserEmail(updatedDetails.email);
+    setUserPhone(updatedDetails.phone);
   };
 
   return (
@@ -201,6 +208,7 @@ function UserDashboard() {
                   userName={userName}
                   userEmail={userEmail}
                   userPhone={userPhone}
+                  updateUserDetailsParent={updateUserDetailsInDashboard}
                 />
               )}
               {selectedOption === "manageAddresses" && <ManageAddress />}
