@@ -22,17 +22,26 @@ const validationSchema = Yup.object().shape({
 function DesktopSignup() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  const [showError, setshowError] = useState(false);
+  const [showError, setshowError] = useState("");
 
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       const response = await registerUser(values);
       if (response.status >= 200 && response.status < 300) {
         localStorage.setItem("emailID", values.email);
-        navigate("/enter-otp");
+        console.log(response.data.message);
+        if (
+          response.data.message !==
+          "Account exixts but is not verified. A new OTP has been sent."
+        ) {
+          navigate("/enter-otp");
+        }
       }
-      if (response === 400) {
-        setshowError(true);
+      if (
+        response.data.message ===
+        "Account exixts but is not verified. A new OTP has been sent."
+      ) {
+        setshowError(response.data.message);
       }
     } finally {
       setSubmitting(false);
@@ -125,10 +134,7 @@ function DesktopSignup() {
                         Create an Account
                       </button>
                       {showError && (
-                        <div className={style.errorMessage}>
-                          An account with this email already exists. Please use
-                          a different email.
-                        </div>
+                        <div className={style.errorMessage}>{showError}</div>
                       )}
                     </div>
                   </Form>
