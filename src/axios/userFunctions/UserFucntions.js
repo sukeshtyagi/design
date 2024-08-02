@@ -1,4 +1,4 @@
-import instance from "../../commonComponents/axios/AxiosInstance"
+import instance from "../../commonComponents/axios/AxiosInstance";
 
 export async function registerUser(userData) {
   const phonenumber = Math.floor(Math.random() * 9000000000) + 1000000000;
@@ -12,6 +12,8 @@ export async function registerUser(userData) {
     };
 
     const jsonData = JSON.stringify(dataWithPhone);
+
+    console.log(jsonData);
 
     const response = await instance.post("/api/users/registerUser", jsonData);
     localStorage.setItem("jwtToken", response.data.user.token);

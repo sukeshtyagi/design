@@ -85,8 +85,9 @@ function OfficersListing() {
               className={style.btmLeft}
               style={{ width: "fit-content", height: "fit-content" }}
             >
-              {officerCardData.map((data) => (
+              {officerCardData.map((data, index) => (
                 <OfficerCards
+                  key={index}
                   img={data.img}
                   name={data.name}
                   title={data.title}

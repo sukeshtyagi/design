@@ -1,25 +1,38 @@
-import instance from "../../commonComponents/axios/AxiosInstance"
+import instance from "../../commonComponents/axios/AxiosInstance";
 
-export async function registerUser(userData) {
-  const phonenumber = Math.floor(Math.random() * 9000000000) + 1000000000;
-
+export async function getAllCategories() {
   try {
-    const dataWithPhone = {
-      fullName: userData.fullName,
-      email: userData.email,
-      phone: `${phonenumber}`,
-      password: userData.password,
-    };
+    const response = await instance.get("/api/category/getAllCategories");
+    let ary = response.data;
+    const result=ary.filter((data)=>data.parent===null)
+    console.log(result);
+    // localStorage.setItem("categoryId", response.data.user._id);
+    return result;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 
-    const jsonData = JSON.stringify(dataWithPhone);
-
-    const response = await instance.post("/api/users/registerUser", jsonData);
-    localStorage.setItem("jwtToken", response.data.user.token);
-    localStorage.setItem("userId", response.data.user._id);
+export async function getCarouselData() {
+  try {
+    //need to be modified
+    const response = await instance.get("/api/category/getAllCategories");
+    console.log(response);
+    // localStorage.setItem("categoryId", response.data.user._id);
     return response;
   } catch (error) {
-    console.log(error.response.data);
-    const status = error.response.status;
-    return status;
+    console.log(error.message);
+  }
+}
+
+export async function searchCategory(query) {
+  try {
+    const response = await instance.get(
+      `/api/category/searchCategories?query=${query}`
+    );
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.log(error);
   }
 }

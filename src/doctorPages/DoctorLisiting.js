@@ -15,7 +15,13 @@ import {
 } from "./DoctorSpecialityAndFilterCards";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
+import { useLocation } from "react-router-dom";
+
 function DoctorLisiting() {
+  const location = useLocation();
+  const { categoryId } = location.state || {};
+  console.log(categoryId);
+  
   const docCardData = [
     {
       img: "/images/reviews/reviewImg.svg",
@@ -61,7 +67,6 @@ function DoctorLisiting() {
 
   return (
     <>
-      {/*<Header userDashboard="true" />*/}
       <Header />
       <div
         className={style.listingOuter}

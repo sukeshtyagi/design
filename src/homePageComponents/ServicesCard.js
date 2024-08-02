@@ -2,12 +2,14 @@ import React from "react";
 import style from "../styles/ServicesCard.module.css";
 import { useNavigate } from "react-router-dom";
 
-function ServicesCard({ img, title, bcg }) {
+function ServicesCard({ img, title, bcg, categoryId }) {
   const navigate = useNavigate();
   const handleRouting = (value) => {
-
-    navigate(`/${value.toLowerCase()}`);
+   navigate(`/services/${title.toLowerCase()}`, {
+     state: { categoryId },
+   });
   };
+
   return (
     <div
       className={`${style.cardContainer} flex flex-col justify-end gap-[8px] `}

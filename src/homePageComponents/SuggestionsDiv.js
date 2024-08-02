@@ -43,8 +43,8 @@ function SuggestionsDiv({ suggestionDiv }) {
         <div className={style.btmDiv}>
           <p className={style.trending}>Trending Searches</p>
           <div className={style.cardsContainer}>
-            {searches.map((search) => (
-              <div className={style.cardDiv}>
+            {searches.map((search, index) => (
+              <div className={style.cardDiv} key={index}>
                 <img
                   src="/images/services/trend.svg"
                   alt=""

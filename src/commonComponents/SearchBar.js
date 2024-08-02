@@ -2,9 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import style from "./SearchBar.module.css";
 import SuggestionsDiv from "../homePageComponents/SuggestionsDiv";
 import { useNavigate } from "react-router-dom";
+import { searchCategory } from "../axios/homepageCategories/HomepageCategoriesFunctions";
 
 function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
   const [showSuggestion, setShowSuggestion] = useState(false);
+  const [query, setQuery] = useState("");
+  console.log(query);
   const searchBarRef = useRef(null);
   const navigate = useNavigate();
 
@@ -19,7 +22,8 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
 
   const handleSearchIconClick = () => {
     setShowSuggestion(false);
-    navigate("/doctors");
+    searchCategory(query);
+    //   navigate("/doctors");
   };
 
   useEffect(() => {
@@ -62,7 +66,7 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
               name=""
               id=""
               placeholder="Location"
-              className={`${style.inputBtm} box-border cursor-pointer  outline-none`}
+              className={`${style.inputBtm} box-border text-black cursor-pointer  outline-none`}
             />
             <img
               src="/images/services/downArrow.svg"
@@ -81,8 +85,10 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
             type="text"
             name=""
             id=""
-            className={`${style.input2} cursor-pointer outline-none`}
+            className={`${style.input2} cursor-pointer outline-none text-black`}
             placeholder={placeholderProp}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
           />
         </div>
 
