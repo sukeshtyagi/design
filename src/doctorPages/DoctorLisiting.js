@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import CommonCard from "../commonComponents/CommonCard";
@@ -16,11 +16,21 @@ import {
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import { useLocation } from "react-router-dom";
+import { getSubCategoriesData } from "../axios/homepageCategories/HomepageCategoriesFunctions";
 
 function DoctorLisiting() {
   const location = useLocation();
   const { categoryId } = location.state || {};
   console.log(categoryId);
+  const [doctorCardData, setDoctorCardData] = useState([]);
+
+  useEffect(()=>{
+    async function getData(categoryId){
+      const result=await getSubCategoriesData(categoryId)
+      setDoctorCardData(result)
+    }
+    getData(categoryId)
+  })
   
   const docCardData = [
     {
