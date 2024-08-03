@@ -4,9 +4,8 @@ import { useNavigate } from "react-router-dom";
 
 function ServicesCard({ img, title, bcg, categoryId }) {
   const navigate = useNavigate();
-  console.log(categoryId)
   const handleRouting = (value) => {
-   navigate(`/services/${title.toLowerCase()}`, {
+   navigate(`${title.toLowerCase()}`, {
      state: { categoryId },
    });
   };

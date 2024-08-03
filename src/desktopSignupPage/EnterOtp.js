@@ -25,7 +25,6 @@ function EnterOtp() {
   const [showError, setShowError] = useState(false);
   const navigate = useNavigate();
   const email = localStorage.getItem("emailID");
-  console.log(email);
 
   const digitRefs = useRef([]);
 
@@ -61,8 +60,6 @@ function EnterOtp() {
             console.log(response);
 
             if (response.status >= 200 && response.status < 300) {
-              console.log("OTP verified for email:", email);
-              console.log("above navigatge");
               navigate("/profile");
             } else {
               console.log("error");

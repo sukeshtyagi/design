@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 function Header({ dekstopLogin, signup, professionalListing }) {
   const navigate = useNavigate();
-  const userDashboard = localStorage.getItem("jwtToken");
+  const otpVerifiedStatus = localStorage.getItem("otpVerified");
+  let userDashboard = "";
+  if (otpVerifiedStatus === "true") {
+    userDashboard = localStorage.getItem("jwtToken");
+  }
   const handleNavigation = () => {
     if (userDashboard) {
       navigate("/homepage");

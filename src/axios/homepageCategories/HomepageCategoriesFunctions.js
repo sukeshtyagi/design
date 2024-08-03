@@ -5,7 +5,6 @@ export async function getAllCategories() {
     const response = await instance.get("/api/category/getAllCategories");
     let ary = response.data;
     const result=ary.filter((data)=>data.parent===null)
-    console.log(result);
     // localStorage.setItem("categoryId", response.data.user._id);
     return result;
   } catch (error) {

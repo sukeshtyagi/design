@@ -14,8 +14,15 @@ export async function registerUser(userData) {
     const jsonData = JSON.stringify(dataWithPhone);
 
     const response = await instance.post("/api/users/registerUser", jsonData);
-    // localStorage.setItem("jwtToken", response.data.user.token);
-    // localStorage.setItem("userId", response.data.user._id);
+    console.log(response);
+    if (
+      response.data.message !==
+      "Account exixts but is not verified. A new OTP has been sent."
+    ) {
+      localStorage.setItem("jwtToken", response.data.user.token);
+      localStorage.setItem("userId", response.data.user._id);
+      localStorage.setItem("otpVerified", false);
+    }
     return response;
   } catch (error) {
     console.log(error);
@@ -32,8 +39,7 @@ export async function veriyOtp(otpPayload) {
     console.log(response.data.message);
     if (response.status >= 200 && response.status < 300) {
       console.log(response);
-      //console.log(response.data.user._id);
-      //localStorage.setItem("jwtToken", response.data.user.token);
+      localStorage.setItem("otpVerified", true);
       //localStorage.setItem("userId", response.data.user._id);
       return response;
     }
@@ -47,7 +53,7 @@ export async function loginUser(userData) {
   try {
     const jsonData = JSON.stringify(userData);
     const response = await instance.post("/api/users/loginUser", jsonData);
-
+    localStorage.setItem("otpVerified", true);
     return response;
   } catch (error) {
     console.error("Error:", error);
@@ -59,9 +65,8 @@ export async function logoutUser(id) {
   try {
     localStorage.removeItem("jwtToken");
     localStorage.removeItem("userId");
-    //const response = await instance.put(`/api/users/logout/${id}`);
-    //console.log(response);
-    //return response;
+    localStorage.removeItem("emailID");
+    localStorage.removeItem("otpVerified");
   } catch (error) {
     console.error("Error:", error);
     throw error;
@@ -73,7 +78,8 @@ export async function deleteUserAccount(id) {
     const response = await instance.delete(`/api/users/deleteUser/${id}`);
     localStorage.removeItem("jwtToken");
     localStorage.removeItem("userId");
-    return response;
+    localStorage.removeItem("emailID");
+    localStorage.removeItem("otpVerified");
   } catch (error) {
     console.error("Error:", error);
     throw error;
