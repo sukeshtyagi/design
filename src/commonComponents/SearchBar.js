@@ -7,7 +7,7 @@ import { searchCategory } from "../axios/homepageCategories/HomepageCategoriesFu
 function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [query, setQuery] = useState("");
-  console.log(query);
+//  console.log(query);
   const searchBarRef = useRef(null);
   const navigate = useNavigate();
 

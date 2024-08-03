@@ -2,11 +2,27 @@ import React, { useEffect, useState } from "react";
 import style from "../styles/Services.module.css";
 import ServicesCard from "./ServicesCard";
 import ServiceCard2 from "./ServiceCard2";
-import ServicesCard3 from "./ServicesCard3";
 import ServiceCard2A from "./ServiceCard2A";
+import ServicesCard3 from "./ServicesCard3";
 import CarouselComp2 from "./CarouselComp2";
 import SearchBar from "../commonComponents/SearchBar";
 import { getAllCategories } from "../axios/homepageCategories/HomepageCategoriesFunctions";
+
+const imageMap = {
+  Doctors: "/images/services/doc.svg",
+  Engineers: "/images/services/engg.svg",
+  "CA's": "/images/services/ca.png",
+  Advocates: "/images/services/adv.svg",
+  Teachers: "/images/services/teacher.svg",
+  Labours: "/images/services/lab.svg",
+  Officers: "/images/services/off.svg",
+  "Govt. Officers": "/images/services/govt off.svg",
+};
+
+const getBackgroundColor = (categoryName, categories) => {
+  const category = categories.find((cat) => cat.categoryName === categoryName);
+  return category ? category.backgroundColor : "transparent";
+};
 
 function Services() {
   const [categories, setCategories] = useState([]);
@@ -30,56 +46,30 @@ function Services() {
           </div>
           <div className={style.rightMid}>
             <div className={style.topRight}>
-              <ServicesCard
-                img="/images/services/doc.svg"
-                title="Doctors"
-                categoryId={categoryMap["Doctor"]} 
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, #D7E6F4 63.9%, #A7C7E7 100%)"
-              />
-              <ServicesCard
-                img="/images/services/engg.svg"
-                title="Engineers"
-                categoryId={categoryMap["Engineer"]}
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(254, 152, 50, 0.4) 63.9%, rgba(255, 141, 34, 0.6) 100%)"
-              />
-              <ServicesCard
-                img="/images/services/ca.png"
-                title="CA's"
-                categoryId={categoryMap["Chartered Accountant"]}
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(11, 219, 182, 0.36) 63.9%, rgba(11, 219, 182, 0.9) 100%)"
-              />
-              <ServicesCard
-                img="/images/services/adv.svg"
-                title="Advocates"
-                categoryId={categoryMap["Advocate"]} 
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(189, 178, 255, 0.5) 63.9%, rgba(189, 178, 255, 0.8) 100%)"
-              />
+              {Object.keys(categoryMap)
+                .slice(0, 4)
+                .map((categoryName) => (
+                  <ServicesCard
+                    key={categoryName}
+                    img={imageMap[categoryName]}
+                    title={categoryName}
+                    categoryId={categoryMap[categoryName]}
+                    bcg={getBackgroundColor(categoryName, categories)}
+                  />
+                ))}
             </div>
             <div className={style.btmRight}>
-              <ServicesCard
-                img="/images/services/teacher.svg"
-                title="Teachers"
-                categoryId={categoryMap["Teacher"]} 
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%,rgba(253, 255, 182, 0.5) 63.9%, rgba(253, 255, 182, 0.8) 100%)"
-              />
-              <ServicesCard
-                img="/images/services/lab.svg"
-                title="Labours"
-                categoryId={categoryMap["Labour"]} 
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 173, 173, 0.5) 63.9%, #FFADAD 100%)"
-              />
-              <ServicesCard
-                img="/images/services/off.svg"
-                title="Officers"
-                categoryId={categoryMap["Officer"]} 
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(255, 198, 255, 0.8) 63.9%, #FFC6FF 100%)"
-              />
-              <ServicesCard
-                img="/images/services/govt off.svg"
-                title="Govt. Officers"
-                categoryId={categoryMap["Government Employee"]} 
-                bcg="radial-gradient(50% 52.82% at 50% 50%, #FFFFFF 28.4%, rgba(155, 246, 255, 0.5) 63.9%, rgba(155, 246, 255, 0.8) 100%)"
-              />
+              {Object.keys(categoryMap)
+                .slice(4)
+                .map((categoryName) => (
+                  <ServicesCard
+                    key={categoryName}
+                    img={imageMap[categoryName]}
+                    title={categoryName}
+                    categoryId={categoryMap[categoryName]}
+                    bcg={getBackgroundColor(categoryName, categories)}
+                  />
+                ))}
             </div>
           </div>
         </div>
@@ -100,5 +90,6 @@ function Services() {
     </div>
   );
 }
+
 
 export default Services;

@@ -13,14 +13,12 @@ export async function registerUser(userData) {
 
     const jsonData = JSON.stringify(dataWithPhone);
 
-
     const response = await instance.post("/api/users/registerUser", jsonData);
-   // localStorage.setItem("jwtToken", response.data.user.token);
-   // localStorage.setItem("userId", response.data.user._id);
+    // localStorage.setItem("jwtToken", response.data.user.token);
+    // localStorage.setItem("userId", response.data.user._id);
     return response;
   } catch (error) {
     console.log(error);
-    console.log(error.response.data);
     const status = error.response.status;
     return status;
   }
