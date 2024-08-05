@@ -78,10 +78,10 @@ function TeacherListing() {
                   img="http://webclickstudio.com:8012/assets/images/english.svg"
                   name={data.vendorName}
                   title={data.specialization[0].specializationName}
-                  qual1={data.teacherDetails.teacherEducation[0]}
+                  qual1={data.education[0].qualification}
                   qual2={data.teacherDetails.teachingLanguage[0]}
-                  qual3={data.teacherDetails.totalLessons}
-                  qual4={data.teacherDetails.teachingExperience[0]}
+                  qual3={`${data.teacherDetails.totalLesson} lessons`}
+                  qual4={`${data.teacherDetails.teachingExperience} of experience`}
                 />
               ))}
               <Pagination />

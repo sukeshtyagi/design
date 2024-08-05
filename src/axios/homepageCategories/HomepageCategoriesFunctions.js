@@ -18,7 +18,7 @@ export async function getSubCategoriesData(id) {
     );
     
     const filteredData = response.data.vendors;
-    console.log(filteredData);
+    console.log(filteredData[0]);
     return filteredData;
   } catch (error) {
     console.log(error.message);
