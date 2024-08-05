@@ -10,6 +10,16 @@ import { getAllCategories } from "../axios/homepageCategories/HomepageCategories
 
 function Services() {
   const [categories, setCategories] = useState([]);
+  const allImages = [
+    "doctor.png",
+    "engg.png",
+    "ca.png",
+    "adv.png",
+    "teacher.png",
+    "lab.png",
+    "off.png",
+    "govt off.png",
+  ];
 
   useEffect(() => {
     getAllCategories().then((data) => setCategories(data));
@@ -25,10 +35,10 @@ function Services() {
           </div>
           <div className={style.rightMid}>
             <div className={style.topRight}>
-              {categories.slice(0, 4).map((category) => (
+              {categories.slice(0, 4).map((category, index) => (
                 <ServicesCard
                   key={category._id}
-                  img={`http://webclickstudio.com:8012/assets/images/${category.categoryIcon}`}
+                  img={`/images/services/${allImages[index]}`}
                   title={category.categoryName}
                   categoryId={category._id}
                   backgroundColor={category.backgroundColor}
@@ -36,10 +46,10 @@ function Services() {
               ))}
             </div>
             <div className={style.btmRight}>
-              {categories.slice(4).map((category) => (
+              {categories.slice(4).map((category, index) => (
                 <ServicesCard
                   key={category._id}
-                  img={`http://webclickstudio.com:8012/assets/images/${category.categoryIcon}`}
+                  img={`/images/services/${allImages[index + 4]}`}
                   title={category.categoryName}
                   categoryId={category._id}
                   backgroundColor={category.backgroundColor}

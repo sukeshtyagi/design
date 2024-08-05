@@ -78,8 +78,8 @@ function Faq({
   };
 
   const renderFaqItems = (faqArray) =>
-    faqArray.map((question) => (
-      <div className={style.cardOuter} key={question}>
+    faqArray.map((question,index) => (
+      <div className={style.cardOuter} key={index}>
         <p className={style.ques}>{question}</p>
         <img src="/images/doctor/faqArrow.svg" alt="" className={style.image} />
       </div>

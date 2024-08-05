@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import Faq from "../commonComponents/Faq";
@@ -12,7 +13,13 @@ import {
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import { TeacherSpecialityCards } from "./TeacherSpecialityCards";
 import TeacherFiterCards from "./TeacherFilterCards";
+import { getSubCategoriesData } from "../axios/homepageCategories/HomepageCategoriesFunctions";
+
 function TeacherListing() {
+  const location = useLocation();
+  const { categoryId } = location.state || {};
+  const [teacherCardData, setTeacherCardData] = useState([]);
+  /*
   const docCardData = [
     {
       img: "/images/teacher/eng.svg",
@@ -22,44 +29,15 @@ function TeacherListing() {
       qual2: "Speaks Hindi (Native), English (Proficient)",
       qual3: "290 Lessons",
       qual4: "5 years of experience in speciality",
-    },
-    {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
-    },
-    {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
-    },
-    {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
-    },
-    {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
-    },
-  ];
+    }];
+*/
+  useEffect(() => {
+    async function getData(categoryId) {
+      const result = await getSubCategoriesData(categoryId);
+      setTeacherCardData(result);
+    }
+    getData(categoryId);
+  }, []);
   return (
     <>
       <Header userDashboard="true" />
@@ -93,16 +71,17 @@ function TeacherListing() {
           <TeacherFiterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
-              {docCardData.map((data) => (
+              {teacherCardData.map((data, index) => (
                 <CommonCard
+                  key={index}
                   teacherListing="Book Trial Lesson"
-                  img={data.img}
-                  name={data.name}
-                  title={data.title}
-                  qual1={data.qual1}
-                  qual2={data.qual2}
-                  qual3={data.qual3}
-                  qual4={data.qual4}
+                  img="http://webclickstudio.com:8012/assets/images/english.svg"
+                  name={data.vendorName}
+                  title={data.specialization[0].specializationName}
+                  qual1={data.teacherDetails.teacherEducation[0]}
+                  qual2={data.teacherDetails.teachingLanguage[0]}
+                  qual3={data.teacherDetails.totalLessons}
+                  qual4={data.teacherDetails.teachingExperience[0]}
                 />
               ))}
               <Pagination />

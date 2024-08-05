@@ -2,14 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import style from "./SearchBar.module.css";
 import SuggestionsDiv from "../homePageComponents/SuggestionsDiv";
 import { useNavigate } from "react-router-dom";
-import { searchCategory } from "../axios/homepageCategories/HomepageCategoriesFunctions";
 
 function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [query, setQuery] = useState("");
-  //  console.log(query);
+  const [categoryData, setCategoryData] = useState("");
   const searchBarRef = useRef(null);
   const navigate = useNavigate();
+
+  /* useEffect(() => {
+    async function getData(query) {
+      const result = await searchCategory(query);
+      setCategoryData(result);
+    }
+    getData(query);
+  },[query]);*/
 
   const handleClickOutside = (event) => {
     if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {

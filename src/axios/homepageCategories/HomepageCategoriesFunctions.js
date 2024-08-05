@@ -18,6 +18,7 @@ export async function getSubCategoriesData(id) {
     );
     
     const filteredData = response.data.vendors;
+    console.log(filteredData);
     return filteredData;
   } catch (error) {
     console.log(error.message);
@@ -39,7 +40,7 @@ export async function getCarouselData() {
 export async function searchCategory(query) {
   try {
     const response = await instance.get(
-      `/api/category/searchCategories?query=${query}`
+      `/api/vendordetail/searchVendors?query=${query}`
     );
     console.log(response);
     return response;
