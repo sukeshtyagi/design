@@ -5,7 +5,6 @@ export async function getAllCategories() {
     const response = await instance.get("/api/category/getAllCategories");
     let ary = response.data;
     const result = ary.filter((data) => data.parent === null);
-   // console.log(result)
     return result;
   } catch (error) {
     console.log(error.message);
@@ -14,13 +13,12 @@ export async function getAllCategories() {
 
 export async function getSubCategoriesData(id) {
   try {
-    const response = await instance.get(`/api/category/getCategoryById/${id}`);
-    let ary = response.data.subCategories;
-    console.log(ary);
+    const response = await instance.get(
+      `/api/vendordetail/getVendorsByCategory?categoryId=${id}`
+    );
     
-    const result = ary.filter((data) => data.parent !== null);
-   // console.log(result);
-    return result;
+    const filteredData = response.data.vendors;
+    return filteredData;
   } catch (error) {
     console.log(error.message);
   }

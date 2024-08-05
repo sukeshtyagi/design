@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import CommonCard from "../commonComponents/CommonCard";
@@ -23,47 +23,15 @@ function DoctorLisiting() {
   const { categoryId } = location.state || {};
   const [doctorCardData, setDoctorCardData] = useState([]);
 
-  useEffect(()=>{
-    async function getData(categoryId){
-      const result=await getSubCategoriesData(categoryId)
-      setDoctorCardData(result)
+  useEffect(() => {
+    async function getData(categoryId) {
+      const result = await getSubCategoriesData(categoryId);
+      setDoctorCardData(result);
     }
-    getData(categoryId)
-  })
-  
+    getData(categoryId);
+  });
+
   const docCardData = [
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
-    {
-      img: "/images/reviews/reviewImg.svg",
-      name: "Dr. Ronald Richards",
-      title: "Dental Surgeon",
-      qual1: " BDS, PhD - Orthodontics & Dentofacial Orthopaedics",
-      qual2: "34 years of experience in speciality",
-      address: "Sweet Smile Dental Clinic",
-    },
     {
       img: "/images/reviews/reviewImg.svg",
       name: "Dr. Ronald Richards",
@@ -110,16 +78,16 @@ function DoctorLisiting() {
           <DoctorFilterCards />
           <div className={style.btmContainer} style={{ marginTop: "10px" }}>
             <div className={style.btmLeft}>
-              {docCardData.map((data, index) => (
+              {doctorCardData.map((data, index) => (
                 <CommonCard
                   key={index}
                   doctorListing="Book Appointment"
-                  img={data.img}
-                  name={data.name}
-                  title={data.title}
-                  qual1={data.qual1}
-                  qual2={data.qual2}
-                  address={data.address}
+                  img="http://webclickstudio.com:8012/assets/images/doctorReviewImage.svg"
+                  name={data.vendorName}
+                  title={data.subCategory.categoryName}
+                  qual1={data.doctorDetails.education[0]}
+                  qual2={data.doctorDetails.experience[0]}
+                  address={data.doctorDetails.clinicName}
                 />
               ))}
               <Pagination />
