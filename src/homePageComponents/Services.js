@@ -8,33 +8,12 @@ import CarouselComp2 from "./CarouselComp2";
 import SearchBar from "../commonComponents/SearchBar";
 import { getAllCategories } from "../axios/homepageCategories/HomepageCategoriesFunctions";
 
-const imageMap = {
-  Doctors: "/images/services/doc.svg",
-  Engineers: "/images/services/engg.svg",
-  "CA's": "/images/services/ca.png",
-  Advocates: "/images/services/adv.svg",
-  Teachers: "/images/services/teacher.svg",
-  Labours: "/images/services/lab.svg",
-  Officers: "/images/services/off.svg",
-  "Govt. Officers": "/images/services/govt off.svg",
-};
-
-const getBackgroundColor = (categoryName, categories) => {
-  const category = categories.find((cat) => cat.categoryName === categoryName);
-  return category ? category.backgroundColor : "transparent";
-};
-
 function Services() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     getAllCategories().then((data) => setCategories(data));
   }, []);
-
-  const categoryMap = categories.reduce((acc, category) => {
-    acc[category.categoryName] = category._id;
-    return acc;
-  }, {});
 
   return (
     <div className={`${style.outermostSectionContainer}`}>
@@ -46,30 +25,26 @@ function Services() {
           </div>
           <div className={style.rightMid}>
             <div className={style.topRight}>
-              {Object.keys(categoryMap)
-                .slice(0, 4)
-                .map((categoryName) => (
-                  <ServicesCard
-                    key={categoryName}
-                    img={imageMap[categoryName]}
-                    title={categoryName}
-                    categoryId={categoryMap[categoryName]}
-                    bcg={getBackgroundColor(categoryName, categories)}
-                  />
-                ))}
+              {categories.slice(0, 4).map((category) => (
+                <ServicesCard
+                  key={category._id}
+                  img={`http://webclickstudio.com:8012/assets/images/${category.categoryIcon}`}
+                  title={category.categoryName}
+                  categoryId={category._id}
+                  backgroundColor={category.backgroundColor}
+                />
+              ))}
             </div>
             <div className={style.btmRight}>
-              {Object.keys(categoryMap)
-                .slice(4)
-                .map((categoryName) => (
-                  <ServicesCard
-                    key={categoryName}
-                    img={imageMap[categoryName]}
-                    title={categoryName}
-                    categoryId={categoryMap[categoryName]}
-                    bcg={getBackgroundColor(categoryName, categories)}
-                  />
-                ))}
+              {categories.slice(4).map((category) => (
+                <ServicesCard
+                  key={category._id}
+                  img={`http://webclickstudio.com:8012/assets/images/${category.categoryIcon}`}
+                  title={category.categoryName}
+                  categoryId={category._id}
+                  backgroundColor={category.backgroundColor}
+                />
+              ))}
             </div>
           </div>
         </div>
@@ -90,6 +65,5 @@ function Services() {
     </div>
   );
 }
-
 
 export default Services;

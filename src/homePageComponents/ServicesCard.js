@@ -2,12 +2,13 @@ import React from "react";
 import style from "../styles/ServicesCard.module.css";
 import { useNavigate } from "react-router-dom";
 
-function ServicesCard({ img, title, bcg, categoryId }) {
+function ServicesCard({ img, title, backgroundColor, categoryId }) {
   const navigate = useNavigate();
+  console.log(img);
   const handleRouting = (value) => {
-   navigate(`${title.toLowerCase()}`, {
-     state: { categoryId },
-   });
+    navigate(`${title.toLowerCase()}`, {
+      state: { categoryId },
+    });
   };
 
   return (
@@ -20,7 +21,7 @@ function ServicesCard({ img, title, bcg, categoryId }) {
       <div
         className={`${style.cardBackground}`}
         style={{
-          background: bcg,
+          background: backgroundColor,
         }}
       >
         <div className={`${style.imageHolder} relative bottom-[21px]`}>

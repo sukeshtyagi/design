@@ -21,7 +21,6 @@ import { getSubCategoriesData } from "../axios/homepageCategories/HomepageCatego
 function DoctorLisiting() {
   const location = useLocation();
   const { categoryId } = location.state || {};
-  console.log(categoryId);
   const [doctorCardData, setDoctorCardData] = useState([]);
 
   useEffect(()=>{

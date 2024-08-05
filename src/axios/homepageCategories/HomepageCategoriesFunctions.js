@@ -5,7 +5,7 @@ export async function getAllCategories() {
     const response = await instance.get("/api/category/getAllCategories");
     let ary = response.data;
     const result = ary.filter((data) => data.parent === null);
-    // localStorage.setItem("categoryId", response.data.user._id);
+   // console.log(result)
     return result;
   } catch (error) {
     console.log(error.message);
@@ -16,12 +16,10 @@ export async function getSubCategoriesData(id) {
   try {
     const response = await instance.get(`/api/category/getCategoryById/${id}`);
     let ary = response.data.subCategories;
-    console.log(response);
     console.log(ary);
-
+    
     const result = ary.filter((data) => data.parent !== null);
-    // localStorage.setItem("categoryId", response.data.user._id);
-    console.log(result);
+   // console.log(result);
     return result;
   } catch (error) {
     console.log(error.message);

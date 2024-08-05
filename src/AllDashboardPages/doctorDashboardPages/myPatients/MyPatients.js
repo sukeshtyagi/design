@@ -35,7 +35,7 @@ function MyPatients() {
 
   const patientData = [
     {
-      patientId: "P001",
+      patientId: "1234",
       name: "John Doe",
       date: "12/12/2022",
       gender: "Male",
