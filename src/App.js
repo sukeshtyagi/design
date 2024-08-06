@@ -66,7 +66,7 @@ function App() {
         <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
         <Route path="/trial" element={<UserDashboard />} />
 
-        <Route path="/teacher-vendor-login" element={<MainPage/>} />
+        <Route path="/teacher-vendor-login" element={<MainPage />} />
       </Routes>
     </BrowserRouter>
   );
