@@ -24,6 +24,7 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
     if (query.trim() !== "") {
       setSearchTerm(query);
       setShowSuggestion(true);
+      navigate("/engineers");
     }
   };
 
@@ -32,6 +33,7 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
       setSearchTerm(query);
       setQuery("");
       setShowSuggestion(true);
+      navigate("/engineers");
     }
   };
 
@@ -104,6 +106,8 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
         <SuggestionsDiv
           suggestionDiv={suggestionDiv}
           searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          setQuery={setQuery}
         />
       )}
     </div>

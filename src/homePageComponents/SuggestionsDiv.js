@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import style from "../styles/SuggestionDiv.module.css";
 
-function SuggestionsDiv({ suggestionDiv, searchTerm }) {
+function SuggestionsDiv({
+  suggestionDiv,
+  searchTerm,
+  setSearchTerm,
+  setQuery,
+}) {
   const [recentSearches, setRecentSearches] = useState([
     "Dentist",
     "English Teacher",
@@ -38,6 +43,11 @@ function SuggestionsDiv({ suggestionDiv, searchTerm }) {
     setRecentSearches([]);
   };
 
+  const handleSuggestionClick = (title) => {
+    setQuery(title); // Update the query in the SearchBar input box
+    setRecentSearches((prev) => [title, ...prev].slice(0, 10));
+  };
+
   return (
     <div
       className={style.suggestionsOutermost}
@@ -48,7 +58,11 @@ function SuggestionsDiv({ suggestionDiv, searchTerm }) {
           <div className={style.left}>
             <p className={style.recent}>Recent Searches</p>
             {recentSearches.map((search, index) => (
-              <div className={style.div1} key={index}>
+              <div
+                className={style.div1}
+                key={index}
+                onClick={() => handleSuggestionClick(search)}
+              >
                 <img src="/images/services/search.svg" alt="" />
                 <p className={style.search}>{search}</p>
               </div>
@@ -67,11 +81,7 @@ function SuggestionsDiv({ suggestionDiv, searchTerm }) {
               <div
                 className={style.cardDiv}
                 key={index}
-                onClick={() =>
-                  setRecentSearches((prev) =>
-                    [search.title, ...prev].slice(0, 10)
-                  )
-                }
+                onClick={() => handleSuggestionClick(search.title)}
               >
                 <img
                   src="/images/services/trend.svg"
