@@ -18,7 +18,7 @@ export async function getSubCategoriesData(id) {
     );
     
     const filteredData = response.data.vendors;
-    console.log(filteredData[0]);
+    console.log(filteredData[0].teacherDetails.teachingLanguage);
     return filteredData;
   } catch (error) {
     console.log(error.message);

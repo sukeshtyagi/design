@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import DropDown from "../commonComponents/DropDown";
 
-export function DoctorSpecialityCards() {
-  const [activeSpec, setActiveSpec] = useState("Dentist");
+export function DoctorSpecialityCards({ activeSpec, setActiveSpec }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const specialityArray = [

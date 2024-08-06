@@ -20,6 +20,7 @@ import { getSubCategoriesData } from "../axios/homepageCategories/HomepageCatego
 
 function DoctorLisiting() {
   const location = useLocation();
+  const [activeSpec, setActiveSpec] = useState("Dentist");
   const { categoryId } = location.state || {};
   const [doctorCardData, setDoctorCardData] = useState([]);
 
@@ -58,7 +59,10 @@ function DoctorLisiting() {
             />
           </div>
 
-          <DoctorSpecialityCards />
+          <DoctorSpecialityCards
+            activeSpec={activeSpec}
+            setActiveSpec={setActiveSpec}
+          />
         </div>
 
         <div className={style.bannerContainer}>
@@ -71,10 +75,10 @@ function DoctorLisiting() {
             <img src="/images/doctor/rightArrow.svg" alt="" />
             <p className={style.para}>Allopathic Doctors in Bangalore</p>
             <img src="/images/doctor/rightArrow.svg" alt="" />
-            <p className={style.para}>Dentists in Bangalore</p>
+            <p className={style.para}>{activeSpec} in Bangalore</p>
           </div>
 
-          <h1 className={style.heading}>Best Dentists in HSR Layout</h1>
+          <h1 className={style.heading}>Best {activeSpec} in HSR Layout</h1>
           <DoctorFilterCards />
           <div className={style.btmContainer} style={{ marginTop: "10px" }}>
             <div className={style.btmLeft}>

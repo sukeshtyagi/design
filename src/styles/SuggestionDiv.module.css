@@ -4,15 +4,15 @@
   left: 241px;
   box-sizing: border-box;
   width: 697px;
-  margin-left:  auto;
+  height: fit-content;
+  margin-left: auto;
   margin-top: 10px;
   z-index: 500;
-
 }
 .suggestionsOuter {
   box-sizing: border-box;
   width: 697px;
-  height: 327px;
+  height: fit-content;
   padding: 21px 20px 21px 21px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 1);
@@ -22,7 +22,7 @@
 .topDiv {
   box-sizing: border-box;
   width: 652.09px;
-  height: 70px;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -56,6 +56,7 @@
 .search {
   color: rgba(110, 110, 110, 1);
   margin: 0;
+  cursor: pointer;
 }
 
 .right {
@@ -71,13 +72,14 @@
   letter-spacing: 0.4266666769981384px;
   text-align: center;
   color: rgba(17, 126, 217, 1);
+  cursor: pointer;
 }
 
 .btmDiv {
   box-sizing: border-box;
   margin-top: 20px;
   width: 655px;
-  height: 195px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -100,7 +102,7 @@
 .cardsContainer {
   box-sizing: border-box;
   width: 655px;
-  height: 165px;
+  height: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -111,7 +113,9 @@
 .cardDiv {
   box-sizing: border-box;
   width: 128px;
+  width: fit-content;
   height: 30px;
+  padding: 0 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;

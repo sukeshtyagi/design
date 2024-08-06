@@ -6,30 +6,33 @@ import { useNavigate } from "react-router-dom";
 function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [query, setQuery] = useState("");
-  const [categoryData, setCategoryData] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const searchBarRef = useRef(null);
   const navigate = useNavigate();
-
-  /* useEffect(() => {
-    async function getData(query) {
-      const result = await searchCategory(query);
-      setCategoryData(result);
-    }
-    getData(query);
-  },[query]);*/
 
   const handleClickOutside = (event) => {
     if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
       setShowSuggestion(false);
     }
   };
+
   const handleSearchLocationClick = () => {
     setShowSuggestion(false);
   };
 
   const handleSearchIconClick = () => {
-    setShowSuggestion(false);
-    navigate("/doctors");
+    if (query.trim() !== "") {
+      setSearchTerm(query);
+      setShowSuggestion(true);
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" && query.trim() !== "") {
+      setSearchTerm(query);
+      setQuery("");
+      setShowSuggestion(true);
+    }
   };
 
   useEffect(() => {
@@ -69,8 +72,6 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
           <div className={`${style.inputIconDiv}`}>
             <input
               type="text"
-              name=""
-              id=""
               placeholder="Location"
               className={`${style.inputBtm} box-border text-black cursor-pointer  outline-none`}
             />
@@ -83,18 +84,15 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
         </div>
         <div
           className={`${style.midBtmUpper} relative`}
-          onClick={() => {
-            setShowSuggestion(!showSuggestion);
-          }}
+          onClick={() => setShowSuggestion(!showSuggestion)}
         >
           <input
             type="text"
-            name=""
-            id=""
             className={`${style.input2} cursor-pointer outline-none text-black`}
             placeholder={placeholderProp}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </div>
 
@@ -102,7 +100,12 @@ function SearchBar({ userDashboard, placeholderProp, suggestionDiv }) {
           <img src="/images/services/Search.svg" alt="" />
         </div>
       </div>
-      {showSuggestion && <SuggestionsDiv suggestionDiv={suggestionDiv} />}
+      {showSuggestion && (
+        <SuggestionsDiv
+          suggestionDiv={suggestionDiv}
+          searchTerm={searchTerm}
+        />
+      )}
     </div>
   );
 }

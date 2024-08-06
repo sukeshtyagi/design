@@ -79,9 +79,9 @@ function TeacherListing() {
                   name={data.vendorName}
                   title={data.specialization[0].specializationName}
                   qual1={data.education[0].qualification}
-                  qual2={data.teacherDetails.teachingLanguage[0]}
-                  qual3={`${data.teacherDetails.totalLesson} lessons`}
-                  qual4={`${data.teacherDetails.teachingExperience} of experience`}
+                  qual2={data.teacherDetails.teachingLanguage.join(", ")}
+                  qual3={data.teacherDetails.totalLesson}
+                  qual4={data.teacherDetails.teachingExperience}
                 />
               ))}
               <Pagination />
