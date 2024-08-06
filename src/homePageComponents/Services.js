@@ -11,14 +11,14 @@ import { getAllCategories } from "../axios/homepageCategories/HomepageCategories
 function Services() {
   const [categories, setCategories] = useState([]);
   const allImages = [
-    "doctor2.png",
-    "engg2.png",
-    "ca2.png",
-    "adv2.png",
-    "teacher2.png",
-    "lab2.png",
-    "off2.png",
-    "govt off2.png",
+    "doctor.png",
+    "engineer.png",
+    "ca.png",
+    "advocate.png",
+    "english.png",
+    "labour.png",
+    "officer.png",
+    "govt officer.png",
   ];
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function Services() {
               {categories.slice(0, 4).map((category, index) => (
                 <ServicesCard
                   key={category._id}
-                  img={`/images/services/${allImages[index]}`}
+                  img={`http://webclickstudio.com:8012/assets/images/${allImages[index]}`}
                   title={category.categoryName}
                   categoryId={category._id}
                   backgroundColor={category.backgroundColor}
@@ -49,7 +49,9 @@ function Services() {
               {categories.slice(4).map((category, index) => (
                 <ServicesCard
                   key={category._id}
-                  img={`/images/services/${allImages[index + 4]}`}
+                  img={`http://webclickstudio.com:8012/assets/images/${
+                    allImages[index + 4]
+                  }`}
                   title={category.categoryName}
                   categoryId={category._id}
                   backgroundColor={category.backgroundColor}
