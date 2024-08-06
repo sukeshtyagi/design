@@ -11,14 +11,14 @@ import { getAllCategories } from "../axios/homepageCategories/HomepageCategories
 function Services() {
   const [categories, setCategories] = useState([]);
   const allImages = [
-    "doctor.png",
-    "engg.png",
-    "ca.png",
-    "adv.png",
-    "teacher.png",
-    "lab.png",
-    "off.png",
-    "govt off.png",
+    "doctor2.png",
+    "engg2.png",
+    "ca2.png",
+    "adv2.png",
+    "teacher2.png",
+    "lab2.png",
+    "off2.png",
+    "govt off2.png",
   ];
 
   useEffect(() => {

@@ -26,11 +26,13 @@
   display: inline-block;
   width: auto;
   height: auto;
+  width: 108px;
+  height: 163px;
 }
 
 .serviceProvider:hover {
-transform: scale(1.05);
-transition: transform 0.5s ease-in-out;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
 }
 
 .titleContainer {

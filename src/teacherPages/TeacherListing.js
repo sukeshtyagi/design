@@ -19,18 +19,7 @@ function TeacherListing() {
   const location = useLocation();
   const { categoryId } = location.state || {};
   const [teacherCardData, setTeacherCardData] = useState([]);
-  /*
-  const docCardData = [
-    {
-      img: "/images/teacher/eng.svg",
-      name: "Jenny Wilson",
-      title: "English Teacher (F)",
-      qual1: "BA in English Literature, BEd",
-      qual2: "Speaks Hindi (Native), English (Proficient)",
-      qual3: "290 Lessons",
-      qual4: "5 years of experience in speciality",
-    }];
-*/
+
   useEffect(() => {
     async function getData(categoryId) {
       const result = await getSubCategoriesData(categoryId);

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import style from "../commonComponents/CommonListingAndOtherStyles.module.css";
 import SearchBar from "../commonComponents/SearchBar";
 import Pagination from "../commonComponents/Pagination";
@@ -14,8 +15,21 @@ import {
   EnginnerFilterCards,
   EngineerSpecialityCards,
 } from "./EngineerSpecialityAndFilterCards";
+import { getSubCategoriesData } from "../axios/homepageCategories/HomepageCategoriesFunctions";
 
 function EnggListing() {
+  const location = useLocation();
+  const { categoryId } = location.state || {};
+  const [teacherCardData, setTeacherCardData] = useState([]);
+
+  useEffect(() => {
+    async function getData(categoryId) {
+      const result = await getSubCategoriesData(categoryId);
+      setTeacherCardData(result);
+    }
+    getData(categoryId);
+  }, []);
+
   const enggCardData = [
     {
       img: "/images/ca/engg.png",
@@ -97,8 +111,9 @@ function EnggListing() {
           <EnginnerFilterCards />
           <div className={style.btmContainer}>
             <div className={style.btmLeft}>
-              {enggCardData.map((data) => (
+              {enggCardData.map((data, index) => (
                 <EnginnerCards
+                  key={index}
                   enggListing="true"
                   img={data.img}
                   name={data.name}
