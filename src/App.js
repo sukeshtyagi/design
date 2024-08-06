@@ -25,6 +25,7 @@ import TeacherDashboard from "./AllDashboardPages/teacherDashboardPages/teacherD
 import AdvocateDashboard from "./AllDashboardPages/advocateDashboardPages/advocateDashboard/AdvocateDashboard";
 import ProtectedPages from "./protectedPages/ProtectedPages";
 import UserDashboard from "./userDashboard/UserDashboard";
+import MainPage from "./vendorLogin/teacherLogin/MainPage";
 function App() {
   return (
     <BrowserRouter>
@@ -64,6 +65,8 @@ function App() {
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
         <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
         <Route path="/trial" element={<UserDashboard />} />
+
+        <Route path="/teacher-vendor-login" element={<MainPage/>} />
       </Routes>
     </BrowserRouter>
   );

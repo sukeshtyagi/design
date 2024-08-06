@@ -3,6 +3,9 @@ import style from "./DashboardLeftSide.module.css";
 import { useNavigate } from "react-router-dom";
 
 function DashboardLeftSide({
+  logo,
+  topMargin,
+  background,
   name,
   menuItem1,
   menuItem2,
@@ -26,19 +29,21 @@ function DashboardLeftSide({
   };
 
   return (
-    <div className={style.leftPart}>
-      <div className={style.imgDiv}>
-        <img
-          src="/images/doctorDashboard/logo.png"
-          alt=""
-          className={style.logoImage}
-          onClick={() => {
-            navigate("/homepage");
-          }}
-        />
-      </div>
+    <div className={style.leftPart} style={{ background: background }}>
+      {logo && (
+        <div className={style.imgDiv}>
+          <img
+            src="/images/doctorDashboard/logo.png"
+            alt=""
+            className={style.logoImage}
+            onClick={() => {
+              navigate("/homepage");
+            }}
+          />
+        </div>
+      )}
 
-      <div className={style.profilePic}>
+      <div className={style.profilePic} style={{ marginTop: topMargin }}>
         <img
           src="/images/doctorDashboard/doctor.png"
           alt=""

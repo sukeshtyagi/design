@@ -57,7 +57,9 @@ function Listing() {
               initialValues={initialValues}
               validationSchema={validationSchema}
               onSubmit={(values) => {
-                navigate("/enter-otp");
+                if (selectedProfession === "teacher") {
+                  navigate("/teacher-vendor-login");
+                }
               }}
             >
               <Form>
