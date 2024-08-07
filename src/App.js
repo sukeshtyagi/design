@@ -60,7 +60,11 @@ function App() {
         <Route path="/advocate-detail" element={<AdvocateDetail />} />
         <Route path="/officer-detail" element={<OfficersDetail />} />
         <Route path="/govt-offices-detail" element={<GovtOfficesDetail />} />
-        <Route path="/list-yourself" element={<FreeListing />} />
+
+        <Route
+          path="/list-yourself"
+          element={<ProtectedPages freeListingProp={true} />}
+        />
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
         <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
