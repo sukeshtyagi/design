@@ -4,6 +4,7 @@ import Header from "../../commonComponents/Header";
 import DashboardLeftSide from "../../commonComponents/dashboardComponents/DashboardLeftSide";
 import DescriptionPage from "./DescriptionPage";
 import EnterDetailsPage from "./EnterDetailsPage";
+import TeachingCertification from "./TeachingCertification";
 
 function MainPage() {
   const [activeStep, setActiveStep] = useState(1);
@@ -36,7 +37,9 @@ function MainPage() {
           {activeStep === 2 && (
             <DescriptionPage handleStepChange={handleStepChange} />
           )}
-          {activeStep === 3 && <p>Step 3 content here</p>}
+          {activeStep === 3 && (
+            <TeachingCertification handleStepChange={handleStepChange} />
+          )}
           {activeStep === 4 && <p>Step 4 content here</p>}
           {activeStep === 5 && <p>Step 5 content here</p>}
           {activeStep === 6 && <p>Step 6 content here</p>}

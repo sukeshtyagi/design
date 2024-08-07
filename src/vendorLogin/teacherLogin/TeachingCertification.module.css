@@ -1,0 +1,83 @@
+.form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.teachingCertificate {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.checkBox {
+  position: relative;
+  bottom: 1.5px;
+  width: 18px;
+  height: 18px;
+}
+
+.dateContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fromDate,
+.toDate {
+  width: 47%;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 3px;
+  border: 1px solid rgba(147, 143, 150, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputCity {
+  height: 40px;
+  outline: none;
+}
+
+.chooseFile {
+  width: 88px;
+  height: 34px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5em;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  background: rgba(245, 245, 245, 1);
+  border: 1px solid rgba(170, 170, 170, 1);
+  box-shadow: 0px -1px 2px 0px rgba(56, 56, 56, 0.1) inset,
+    0px -3px 3px 0px rgba(56, 56, 56, 0.08) inset,
+    0px -7px 4px 0px rgba(56, 56, 56, 0.05) inset,
+    0px -12px 5px 0px rgba(56, 56, 56, 0.01) inset,
+    0px -19px 5px 0px rgba(56, 56, 56, 0) inset;
+}
+
+.addNewCertificate {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
