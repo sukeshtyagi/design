@@ -3,6 +3,7 @@ import style from "./EnterDetailsPage.module.css";
 import { registerTeacher } from "../../axios/teacherVendorLogin/VendorLogin";
 
 function EnterDetailsPage({ handleStepChange }) {
+  const [selectedTitle, setSelectedTitle] = useState("");
   const [selectedGender, setSelectedGender] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
@@ -23,6 +24,7 @@ function EnterDetailsPage({ handleStepChange }) {
 
   const handleDropdownToggle = (dropdownName) => {
     setDropdownState((prevState) => ({
+      title: false,
       gender: false,
       city: false,
       location: false,
@@ -37,6 +39,11 @@ function EnterDetailsPage({ handleStepChange }) {
   const vendorPhoneNumber = JSON.parse(
     localStorage.getItem("vendorDetails")
   ).phoneNumber;
+
+  const handleTitleSelect = (title) => {
+    setSelectedTitle(title);
+    setDropdownState((prevState) => ({ ...prevState, gender: false }));
+  };
 
   const handleGenderSelect = (gender) => {
     setSelectedGender(gender);
@@ -83,6 +90,28 @@ function EnterDetailsPage({ handleStepChange }) {
     });
   };
 
+  const collectDetails = () => {
+    const details = {
+      vendorId: vendorId,
+      title: selectedTitle,
+      city: selectedCity,
+      location: selectedLocation,
+      subject: selectedSubject,
+      syllabus: selectedSyllabus,
+      mobileNumber: mobileNumber || vendorPhoneNumber,
+      whatsAppNumber: whatsAppNumber,
+      gender: selectedGender,
+    };
+    console.log(details);
+    return details;
+  };
+
+  const handleContinueClick = () => {
+    const collectedDetails = collectDetails();
+    // Send collectedDetails to backend or proceed to next step
+    handleStepChange(2);
+  };
+
   return (
     <div className={style.contentDiv}>
       <div className={style.topDiv}>
@@ -96,25 +125,42 @@ function EnterDetailsPage({ handleStepChange }) {
       />
 
       <div className={style.form}>
+        {/* Title Input */}
         <div className={style.nameContainer}>
-          <div className={style.titleDiv}>
+          <div
+            className={style.titleDiv}
+            onClick={() => handleDropdownToggle("title")}
+          >
             <input
               type="text"
               placeholder="Title"
               className={style.input2}
-              value="Mr"
+              value={selectedTitle}
+              readOnly
             />
-
-            <img src="/images/vendorLogin/arrow.svg" alt="" className="" />
+            <img
+              src="/images/vendorLogin/arrow.svg"
+              alt=""
+              className="cursor-pointer"
+            />
+            {dropdownState.title && (
+              <div className={style.genderOptions}>
+                <p onClick={() => handleTitleSelect("Mr")}>Mr</p>
+                <p onClick={() => handleTitleSelect("Ms")}>Ms</p>
+                <p onClick={() => handleTitleSelect("Mrs")}>Mrs</p>
+              </div>
+            )}
           </div>
           <input
             type="text"
             placeholder="Name"
             className={style.input}
             value={vendorName}
+            readOnly
           />
         </div>
 
+        {/* Gender Input */}
         <div className={style.genderDiv}>
           <input
             type="text"
@@ -124,14 +170,12 @@ function EnterDetailsPage({ handleStepChange }) {
             readOnly
             onClick={() => handleDropdownToggle("gender")}
           />
-
           <img
             src="/images/vendorLogin/arrow.svg"
             alt=""
             className="cursor-pointer"
             onClick={() => handleDropdownToggle("gender")}
           />
-
           {dropdownState.gender && (
             <div className={style.genderOptions}>
               <p onClick={() => handleGenderSelect("Male")}>Male</p>
@@ -140,6 +184,7 @@ function EnterDetailsPage({ handleStepChange }) {
           )}
         </div>
 
+        {/* Mobile Number Input */}
         <div className={style.mobileNumberContainer}>
           <div className={style.mobileTopDiv}>
             <div className={style.code}>
@@ -150,27 +195,23 @@ function EnterDetailsPage({ handleStepChange }) {
               type="text"
               placeholder="Mobile Number"
               className={style.input}
-              value={vendorPhoneNumber}
+              value={mobileNumber || vendorPhoneNumber}
               onChange={handleMobileNumberChange}
             />
           </div>
           <p className={style.addNewNumber}>+ Add Another Mobile Number</p>
         </div>
 
+        {/* WhatsApp Number Input */}
         <div className={style.whatsAppNumberContainer}>
           <div className={style.mobileTopDiv}>
             <div className={style.code}>
-              <img
-                src="/images/vendorLogin/flag.svg"
-                alt=""
-                className=""
-                value={vendorPhoneNumber}
-              />
+              <img src="/images/vendorLogin/flag.svg" alt="" className="" />
               <input type="text" placeholder="+91" className={style.input3} />
             </div>
             <input
               type="text"
-              placeholder="Whatsapp Number"
+              placeholder="WhatsApp Number"
               className={style.input}
               value={whatsAppNumber}
               onChange={(e) => setWhatsAppNumber(e.target.value)}
@@ -192,6 +233,7 @@ function EnterDetailsPage({ handleStepChange }) {
           </div>
         </div>
 
+        {/* City Input */}
         <div className={style.cityDiv}>
           <input
             type="text"
@@ -216,6 +258,7 @@ function EnterDetailsPage({ handleStepChange }) {
           )}
         </div>
 
+        {/* Location Input */}
         <div className={style.locationDiv}>
           <input
             type="text"
@@ -233,12 +276,14 @@ function EnterDetailsPage({ handleStepChange }) {
           />
           {dropdownState.location && (
             <div className={style.genderOptions}>
-              <p onClick={() => handleLocationSelect("Downtown")}>Downtown</p>
-              <p onClick={() => handleLocationSelect("Suburbs")}>Suburbs</p>
+              <p onClick={() => handleLocationSelect("Borivali")}>Borivali</p>
+              <p onClick={() => handleLocationSelect("Andheri")}>Andheri</p>
+              <p onClick={() => handleLocationSelect("Bandra")}>Bandra</p>
             </div>
           )}
         </div>
 
+        {/* Subject Input */}
         <div className={style.subjectDiv}>
           <input
             type="text"
@@ -256,17 +301,20 @@ function EnterDetailsPage({ handleStepChange }) {
           />
           {dropdownState.subject && (
             <div className={style.genderOptions}>
-              <p onClick={() => handleSubjectSelect("Math")}>Math</p>
-              <p onClick={() => handleSubjectSelect("Science")}>Science</p>
-              <p onClick={() => handleSubjectSelect("English")}>English</p>
+              <p onClick={() => handleSubjectSelect("Physics")}>Physics</p>
+              <p onClick={() => handleSubjectSelect("Mathematics")}>
+                Mathematics
+              </p>
+              <p onClick={() => handleSubjectSelect("Chemistry")}>Chemistry</p>
             </div>
           )}
         </div>
 
+        {/* Syllabus Input */}
         <div className={style.syllabusDiv}>
           <input
             type="text"
-            placeholder="Syllabus Taught"
+            placeholder="Syllabus"
             value={selectedSyllabus}
             className={style.inputCity}
             readOnly
@@ -282,19 +330,13 @@ function EnterDetailsPage({ handleStepChange }) {
             <div className={style.genderOptions}>
               <p onClick={() => handleSyllabusSelect("CBSE")}>CBSE</p>
               <p onClick={() => handleSyllabusSelect("ICSE")}>ICSE</p>
-              <p onClick={() => handleSyllabusSelect("State Board")}>
-                State Board
-              </p>
+              <p onClick={() => handleSyllabusSelect("IB")}>IB</p>
             </div>
           )}
         </div>
       </div>
-      <button
-        className={style.continue}
-        onClick={() => {
-          handleStepChange(2);
-        }}
-      >
+
+      <button className={style.continue} onClick={handleContinueClick}>
         Continue
       </button>
     </div>

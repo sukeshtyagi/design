@@ -100,6 +100,7 @@
   align-items: center;
   border-radius: 3px;
   border: 1px solid rgba(147, 143, 150, 1);
+  position: relative;
 }
 
 .input2 {
