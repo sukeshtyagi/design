@@ -1,0 +1,65 @@
+.form,
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.addNewNumber2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.67em;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
+
+.checkBox {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  border-radius: 2px;
+}
+
+.dayContainer {
+  margin: 0;
+  gap: 20px;
+}
+
+.dateContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fromDate,
+.toDate {
+  width: 49%;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 3px;
+  border: 1px solid rgba(147, 143, 150, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputCity {
+  height: 40px;
+  outline: none;
+}
+
+.timeSlot {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+}
