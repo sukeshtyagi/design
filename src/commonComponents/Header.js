@@ -95,7 +95,7 @@ function Header({ dekstopLogin, signup, professionalListing }) {
                 : { width: "304px" }
             }
           >
-            {(dekstopLogin || signup) && (
+            {(dekstopLogin || signup) && !professionalListing && (
               <p className={`${style.noAccountPara}`}>Don't have an account</p>
             )}
 
@@ -125,7 +125,7 @@ function Header({ dekstopLogin, signup, professionalListing }) {
               </button>
             )}
 
-            {signup && (
+            {signup && !professionalListing && (
               <button
                 className={`${style.donateBtn}`}
                 onClick={() => {

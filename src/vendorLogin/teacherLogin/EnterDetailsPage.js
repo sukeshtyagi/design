@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./EnterDetailsPage.module.css";
+import { registerTeacher } from "../../axios/teacherVendorLogin/VendorLogin";
 
 function EnterDetailsPage({ handleStepChange }) {
   const [selectedGender, setSelectedGender] = useState("");
@@ -31,6 +32,12 @@ function EnterDetailsPage({ handleStepChange }) {
     }));
   };
 
+  const vendorName = JSON.parse(localStorage.getItem("vendorDetails")).fullName;
+  const vendorId = JSON.parse(localStorage.getItem("vendorId"));
+  const vendorPhoneNumber = JSON.parse(
+    localStorage.getItem("vendorDetails")
+  ).phoneNumber;
+
   const handleGenderSelect = (gender) => {
     setSelectedGender(gender);
     setDropdownState((prevState) => ({ ...prevState, gender: false }));
@@ -57,9 +64,10 @@ function EnterDetailsPage({ handleStepChange }) {
   };
 
   const handleMobileNumberChange = (e) => {
-    setMobileNumber(e.target.value);
+    const newValue = e.target.value;
+    setMobileNumber(newValue);
     if (isSameAsMobile) {
-      setWhatsAppNumber(e.target.value);
+      setWhatsAppNumber(newValue);
     }
   };
 
@@ -67,7 +75,7 @@ function EnterDetailsPage({ handleStepChange }) {
     setIsSameAsMobile((prevValue) => {
       const newValue = !prevValue;
       if (newValue) {
-        setWhatsAppNumber(mobileNumber);
+        setWhatsAppNumber(mobileNumber || vendorPhoneNumber);
       } else {
         setWhatsAppNumber("");
       }
@@ -90,10 +98,21 @@ function EnterDetailsPage({ handleStepChange }) {
       <div className={style.form}>
         <div className={style.nameContainer}>
           <div className={style.titleDiv}>
-            <p className={style.title}>Title</p>
+            <input
+              type="text"
+              placeholder="Title"
+              className={style.input2}
+              value="Mr"
+            />
+
             <img src="/images/vendorLogin/arrow.svg" alt="" className="" />
           </div>
-          <input type="text" placeholder="Name" className={style.input} />
+          <input
+            type="text"
+            placeholder="Name"
+            className={style.input}
+            value={vendorName}
+          />
         </div>
 
         <div className={style.genderDiv}>
@@ -131,7 +150,7 @@ function EnterDetailsPage({ handleStepChange }) {
               type="text"
               placeholder="Mobile Number"
               className={style.input}
-              value={mobileNumber}
+              value={vendorPhoneNumber}
               onChange={handleMobileNumberChange}
             />
           </div>
@@ -141,7 +160,12 @@ function EnterDetailsPage({ handleStepChange }) {
         <div className={style.whatsAppNumberContainer}>
           <div className={style.mobileTopDiv}>
             <div className={style.code}>
-              <img src="/images/vendorLogin/flag.svg" alt="" className="" />
+              <img
+                src="/images/vendorLogin/flag.svg"
+                alt=""
+                className=""
+                value={vendorPhoneNumber}
+              />
               <input type="text" placeholder="+91" className={style.input3} />
             </div>
             <input

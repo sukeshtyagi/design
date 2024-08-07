@@ -6,7 +6,6 @@ import FreeListing from "../listingPages/FreeListing";
 function ProtectedPages({ homepageProp, userDashboardProp }) {
   const jwtToken = localStorage.getItem("jwtToken");
   const userId = localStorage.getItem("userId");
-  console.log(userId);
 
   if (userDashboardProp && jwtToken) {
     return <UserDashboard />;

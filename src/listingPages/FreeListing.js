@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
 import style from "./FreeListing.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { getAllUserType } from "../axios/teacherVendorLogin/VendorLogin";
 
 function Listing() {
   const navigate = useNavigate();
   const [selectedProfession, setSelectedProfession] = useState(null);
+
+  const [userTypes, setUserTypes] = useState([]);
+
+  useEffect(() => {
+    const fetchUserTypes = async () => {
+      try {
+        const idArray = await getAllUserType();
+        setUserTypes(idArray);
+        console.log(idArray);
+      } catch (error) {
+        console.error("Error fetching user types:", error);
+      }
+    };
+
+    fetchUserTypes();
+  }, []);
 
   const initialValues = {
     fullName: "",
@@ -24,8 +41,8 @@ function Listing() {
       .min(8, "Phone Number Too Short"),
   });
 
-  const handleProfessionClick = (profession) => {
-    setSelectedProfession(profession);
+  const handleProfessionClick = (profession, index) => {
+    setSelectedProfession({ profession, id: userTypes[index] });
   };
 
   return (
@@ -59,7 +76,12 @@ function Listing() {
               validateOnChange={false}
               validateOnBlur={false}
               onSubmit={(values) => {
-                if (selectedProfession === "teacher") {
+                localStorage.setItem(
+                  "vendorId",
+                  JSON.stringify(selectedProfession.id._id)
+                );
+                localStorage.setItem("vendorDetails", JSON.stringify(values));
+                if (selectedProfession.profession === "teacher") {
                   navigate("/teacher-vendor-login");
                 }
               }}
@@ -106,16 +128,17 @@ function Listing() {
                     <div className={style.professionContainer}>
                       <div className={style.professionContainerRow}>
                         <div
+                          id={userTypes[0]}
                           className={`${style.profession} ${
-                            selectedProfession === "doctor"
+                            selectedProfession?.profession === "doctor"
                               ? style.professionClicked
                               : ""
                           }`}
-                          onClick={() => handleProfessionClick("doctor")}
+                          onClick={() => handleProfessionClick("doctor", 0)}
                         >
                           <img
                             src={
-                              selectedProfession === "doctor"
+                              selectedProfession?.profession === "doctor"
                                 ? "/images/listingProfessional/doctorClicked.svg"
                                 : "/images/listingProfessional/doctor.svg"
                             }
@@ -126,16 +149,17 @@ function Listing() {
                         </div>
 
                         <div
+                          id={userTypes[1]}
                           className={`${style.profession} ${
-                            selectedProfession === "engineer"
+                            selectedProfession?.profession === "engineer"
                               ? style.professionClicked
                               : ""
                           }`}
-                          onClick={() => handleProfessionClick("engineer")}
+                          onClick={() => handleProfessionClick("engineer", 1)}
                         >
                           <img
                             src={
-                              selectedProfession === "engineer"
+                              selectedProfession?.profession === "engineer"
                                 ? "/images/listingProfessional/engineerClicked.svg"
                                 : "/images/listingProfessional/engineer.svg"
                             }
@@ -146,16 +170,17 @@ function Listing() {
                         </div>
 
                         <div
+                          id={userTypes[2]}
                           className={`${style.profession} ${
-                            selectedProfession === "advocate"
+                            selectedProfession?.profession === "advocate"
                               ? style.professionClicked
                               : ""
                           }`}
-                          onClick={() => handleProfessionClick("advocate")}
+                          onClick={() => handleProfessionClick("advocate", 2)}
                         >
                           <img
                             src={
-                              selectedProfession === "advocate"
+                              selectedProfession?.profession === "advocate"
                                 ? "/images/listingProfessional/advocateClicked.svg"
                                 : "/images/listingProfessional/advocate.svg"
                             }
@@ -168,16 +193,17 @@ function Listing() {
 
                       <div className={style.professionContainerRow}>
                         <div
+                          id={userTypes[3]}
                           className={`${style.profession} ${
-                            selectedProfession === "teacher"
+                            selectedProfession?.profession === "teacher"
                               ? style.professionClicked
                               : ""
                           }`}
-                          onClick={() => handleProfessionClick("teacher")}
+                          onClick={() => handleProfessionClick("teacher", 3)}
                         >
                           <img
                             src={
-                              selectedProfession === "teacher"
+                              selectedProfession?.profession === "teacher"
                                 ? "/images/listingProfessional/teacherClicked.svg"
                                 : "/images/listingProfessional/teacher.svg"
                             }
@@ -188,16 +214,17 @@ function Listing() {
                         </div>
 
                         <div
+                          id={userTypes[4]}
                           className={`${style.profession} ${
-                            selectedProfession === "labour"
+                            selectedProfession?.profession === "labour"
                               ? style.professionClicked
                               : ""
                           }`}
-                          onClick={() => handleProfessionClick("labour")}
+                          onClick={() => handleProfessionClick("labour", 4)}
                         >
                           <img
                             src={
-                              selectedProfession === "labour"
+                              selectedProfession?.profession === "labour"
                                 ? "/images/listingProfessional/labourClicked.svg"
                                 : "/images/listingProfessional/labour.svg"
                             }
@@ -208,16 +235,17 @@ function Listing() {
                         </div>
 
                         <div
+                          id={userTypes[5]}
                           className={`${style.profession} ${
-                            selectedProfession === "ca"
+                            selectedProfession?.profession === "ca"
                               ? style.professionClicked
                               : ""
                           }`}
-                          onClick={() => handleProfessionClick("ca")}
+                          onClick={() => handleProfessionClick("ca", 5)}
                         >
                           <img
                             src={
-                              selectedProfession === "ca"
+                              selectedProfession?.profession === "ca"
                                 ? "/images/listingProfessional/caClicked.svg"
                                 : "/images/listingProfessional/ca.svg"
                             }
@@ -252,7 +280,8 @@ function Listing() {
           </div>
         </div>
       </div>
-      <Footer shadow="true" />
+
+      <Footer />
     </>
   );
 }
