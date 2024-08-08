@@ -82,7 +82,7 @@ function Listing() {
                   ...values,
                   vendorType: selectedProfession.id,
                 };
-
+                localStorage.setItem("vendorDetails",JSON.stringify(values));
                 const result = await registerProfessional(formData);
                 localStorage.setItem("vendorId", result.data.vendor._id);
                 if (selectedProfession.profession.toLowerCase() === "teacher") {

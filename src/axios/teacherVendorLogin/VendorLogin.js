@@ -3,7 +3,6 @@ import instance from "../../commonComponents/axios/AxiosInstance";
 export async function getAllUserType() {
   try {
     const response = await instance.get("/api/userType/getAllUserType");
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.log(error.message);
@@ -28,6 +27,18 @@ export async function registerProfessional(data) {
         },
       }
     );
+    return response;
+  } catch (error) {
+    console.log(error.message);
+    throw error;
+  }
+}
+
+export async function getVendorDetail(id) {
+  try {
+    const response = await instance.get(
+      `/api/vendordetail/getByVendorId/${id}`
+    );
     console.log(response);
     return response;
   } catch (error) {
@@ -39,21 +50,26 @@ export async function registerProfessional(data) {
 export async function registerTeacher(data) {
   try {
     const jsonData = JSON.stringify(data);
-    console.log("Data being sent:", jsonData);
+
     const response = await instance.post(
       "/api/vendordetail/registerTeacher",
       jsonData
     );
-    console.log("Response:", response);
   } catch (error) {
-    if (error.response) {
-      console.log("Error Response:", error.response.data);
-      console.log("Error Status:", error.response.status);
-      console.log("Error Headers:", error.response.headers);
-    } else if (error.request) {
-      console.log("Error Request:", error.request);
-    } else {
-      console.log("Error Message:", error.message);
-    }
+    console.log(error);
+  }
+}
+
+export async function addTeacherDescription(data) {
+  try {
+    const jsonData = JSON.stringify(data);
+
+    const response = await instance.post(
+      "/api/teacher/addTeacherDesc",
+      jsonData
+    );
+    console.log(response);
+  } catch (error) {
+    console.log(error);
   }
 }

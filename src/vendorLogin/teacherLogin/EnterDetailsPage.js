@@ -35,7 +35,7 @@ function EnterDetailsPage({ handleStepChange }) {
   };
 
   const vendorName = JSON.parse(localStorage.getItem("vendorDetails")).fullName;
-  const vendorId = JSON.parse(localStorage.getItem("vendorId"));
+  const vendorId = localStorage.getItem("vendorId");
   const vendorPhoneNumber = JSON.parse(
     localStorage.getItem("vendorDetails")
   ).phoneNumber;
@@ -109,7 +109,7 @@ function EnterDetailsPage({ handleStepChange }) {
   const handleContinueClick = async () => {
     const details = collectDetails();
     const response = await registerTeacher(details);
-    // handleStepChange(2);
+     handleStepChange(2);
   };
 
   return (
