@@ -83,7 +83,6 @@
 
 .nameContainer {
   width: 100%;
-  /*border: 1px solid green;*/
   height: 48px;
   display: flex;
   justify-content: flex-start;
@@ -92,7 +91,8 @@
 }
 
 .titleDiv {
-  width: 15.78%;
+  /*width: 15.78%;*/
+  width: 105px;
   height: 48px;
   padding: 0;
   display: flex;
@@ -172,6 +172,7 @@
 
 .code {
   width: 15.78%;
+  width: 100px;
   height: 48px;
   padding: 0 12px;
   display: flex;

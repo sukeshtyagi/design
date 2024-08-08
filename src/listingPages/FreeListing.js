@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from "react";
+import style from "./FreeListing.module.css";
 import { useNavigate } from "react-router-dom";
 import Header from "../commonComponents/Header";
 import Footer from "../commonComponents/Footer";
-import style from "./FreeListing.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { getAllUserType } from "../axios/teacherVendorLogin/VendorLogin";
+import {
+  getAllUserType,
+  registerProfessional,
+} from "../axios/teacherVendorLogin/VendorLogin";
 
 function Listing() {
   const navigate = useNavigate();
   const [selectedProfession, setSelectedProfession] = useState(null);
-
   const [userTypes, setUserTypes] = useState([]);
 
   useEffect(() => {
     const fetchUserTypes = async () => {
       try {
-        const idArray = await getAllUserType();
-        setUserTypes(idArray);
-        console.log(idArray);
+        const array = await getAllUserType();
+        setUserTypes(array);
       } catch (error) {
         console.error("Error fetching user types:", error);
       }
@@ -31,6 +32,7 @@ function Listing() {
     fullName: "",
     email: "",
     phoneNumber: "",
+    vendorType: "",
   };
 
   const validationSchema = Yup.object().shape({
@@ -42,7 +44,7 @@ function Listing() {
   });
 
   const handleProfessionClick = (profession, index) => {
-    setSelectedProfession({ profession, id: userTypes[index] });
+    setSelectedProfession({ profession, id: userTypes[index]._id });
   };
 
   return (
@@ -75,13 +77,15 @@ function Listing() {
               validationSchema={validationSchema}
               validateOnChange={false}
               validateOnBlur={false}
-              onSubmit={(values) => {
-                localStorage.setItem(
-                  "vendorId",
-                  JSON.stringify(selectedProfession.id._id)
-                );
-                localStorage.setItem("vendorDetails", JSON.stringify(values));
-                if (selectedProfession.profession === "teacher") {
+              onSubmit={async (values) => {
+                const formData = {
+                  ...values,
+                  vendorType: selectedProfession.id,
+                };
+
+                const result = await registerProfessional(formData);
+                localStorage.setItem("vendorId", result.data.vendor._id);
+                if (selectedProfession.profession.toLowerCase() === "teacher") {
                   navigate("/teacher-vendor-login");
                 }
               }}
@@ -126,135 +130,31 @@ function Listing() {
                     />
 
                     <div className={style.professionContainer}>
-                      <div className={style.professionContainerRow}>
+                      {userTypes.map((user, index) => (
                         <div
-                          id={userTypes[0]}
+                          key={index}
                           className={`${style.profession} ${
-                            selectedProfession?.profession === "doctor"
+                            selectedProfession?.profession === user.userTypeName
                               ? style.professionClicked
                               : ""
                           }`}
-                          onClick={() => handleProfessionClick("doctor", 0)}
+                          onClick={() =>
+                            handleProfessionClick(user.userTypeName, index)
+                          }
                         >
                           <img
                             src={
-                              selectedProfession?.profession === "doctor"
-                                ? "/images/listingProfessional/doctorClicked.svg"
-                                : "/images/listingProfessional/doctor.svg"
+                              selectedProfession?.profession ===
+                              user.userTypeName
+                                ? `http://webclickstudio.com:8012/assets/images/${user.whiteIcon}`
+                                : `http://webclickstudio.com:8012/assets/images/${user.userTypeIcon}`
                             }
                             alt=""
                             className={style.image}
                           />
-                          <p className={style.title}>Doctor</p>
+                          <p className={style.title}>{user.userTypeName}</p>
                         </div>
-
-                        <div
-                          id={userTypes[1]}
-                          className={`${style.profession} ${
-                            selectedProfession?.profession === "engineer"
-                              ? style.professionClicked
-                              : ""
-                          }`}
-                          onClick={() => handleProfessionClick("engineer", 1)}
-                        >
-                          <img
-                            src={
-                              selectedProfession?.profession === "engineer"
-                                ? "/images/listingProfessional/engineerClicked.svg"
-                                : "/images/listingProfessional/engineer.svg"
-                            }
-                            alt=""
-                            className={style.image}
-                          />
-                          <p className={style.title}>Engineer</p>
-                        </div>
-
-                        <div
-                          id={userTypes[2]}
-                          className={`${style.profession} ${
-                            selectedProfession?.profession === "advocate"
-                              ? style.professionClicked
-                              : ""
-                          }`}
-                          onClick={() => handleProfessionClick("advocate", 2)}
-                        >
-                          <img
-                            src={
-                              selectedProfession?.profession === "advocate"
-                                ? "/images/listingProfessional/advocateClicked.svg"
-                                : "/images/listingProfessional/advocate.svg"
-                            }
-                            alt=""
-                            className={style.image}
-                          />
-                          <p className={style.title}>Advocate</p>
-                        </div>
-                      </div>
-
-                      <div className={style.professionContainerRow}>
-                        <div
-                          id={userTypes[3]}
-                          className={`${style.profession} ${
-                            selectedProfession?.profession === "teacher"
-                              ? style.professionClicked
-                              : ""
-                          }`}
-                          onClick={() => handleProfessionClick("teacher", 3)}
-                        >
-                          <img
-                            src={
-                              selectedProfession?.profession === "teacher"
-                                ? "/images/listingProfessional/teacherClicked.svg"
-                                : "/images/listingProfessional/teacher.svg"
-                            }
-                            alt=""
-                            className={style.image}
-                          />
-                          <p className={style.title}>Teacher</p>
-                        </div>
-
-                        <div
-                          id={userTypes[4]}
-                          className={`${style.profession} ${
-                            selectedProfession?.profession === "labour"
-                              ? style.professionClicked
-                              : ""
-                          }`}
-                          onClick={() => handleProfessionClick("labour", 4)}
-                        >
-                          <img
-                            src={
-                              selectedProfession?.profession === "labour"
-                                ? "/images/listingProfessional/labourClicked.svg"
-                                : "/images/listingProfessional/labour.svg"
-                            }
-                            alt=""
-                            className={style.image}
-                          />
-                          <p className={style.title}>Labour</p>
-                        </div>
-
-                        <div
-                          id={userTypes[5]}
-                          className={`${style.profession} ${
-                            selectedProfession?.profession === "ca"
-                              ? style.professionClicked
-                              : ""
-                          }`}
-                          onClick={() => handleProfessionClick("ca", 5)}
-                        >
-                          <img
-                            src={
-                              selectedProfession?.profession === "ca"
-                                ? "/images/listingProfessional/caClicked.svg"
-                                : "/images/listingProfessional/ca.svg"
-                            }
-                            alt=""
-                            className={style.image}
-                          />
-                          <p className={style.title}>Chartered Accountant</p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
 
                     <button

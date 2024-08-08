@@ -5,7 +5,7 @@
   background-color: rgba(246, 253, 248, 1);
 }
 
-.headingSpan{
+.headingSpan {
   color: rgba(11, 219, 182, 1);
 }
 
@@ -101,7 +101,7 @@
   text-align: left;
 }
 
-.buttonDisabled{
+.buttonDisabled {
   cursor: not-allowed;
   background-color: rgba(212, 212, 212, 1);
   color: rgba(150, 150, 150, 1);
@@ -125,18 +125,10 @@
 }
 
 .professionContainer {
-  width: 514px;
   height: 100px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.professionContainerRow {
-  width: 514px;
-  height: 40px;
-  display: flex;
-  gap: 37px;
+  flex-wrap: wrap;
+  gap: 20px 37px;
 }
 
 .profession {
@@ -151,13 +143,13 @@
   background: rgba(255, 255, 255, 1);
   cursor: pointer;
   color: black;
-  border: 0.25px solid rgba(125, 125, 125, 1)
+  border: 0.25px solid rgba(125, 125, 125, 1);
 }
 
-.professionClicked{
+.professionClicked {
   color: white;
   background-color: rgba(11, 219, 182, 1);
-  border: 0.25px solid transparent
+  border: 0.25px solid transparent;
 }
 
 .title {

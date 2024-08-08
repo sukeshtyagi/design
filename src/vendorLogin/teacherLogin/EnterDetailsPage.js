@@ -94,22 +94,22 @@ function EnterDetailsPage({ handleStepChange }) {
     const details = {
       vendorId: vendorId,
       title: selectedTitle,
+      gender: selectedGender,
+      mobileNumber: [mobileNumber || vendorPhoneNumber],
+      whatsAppNumber: whatsAppNumber,
+      landlineNumber: "",
       city: selectedCity,
       location: selectedLocation,
-      subject: selectedSubject,
-      syllabus: selectedSyllabus,
-      mobileNumber: mobileNumber || vendorPhoneNumber,
-      whatsAppNumber: whatsAppNumber,
-      gender: selectedGender,
+      subject: [selectedSubject],
+      syllabusTaught: [selectedSyllabus],
     };
-    console.log(details);
     return details;
   };
 
-  const handleContinueClick = () => {
-    const collectedDetails = collectDetails();
-    // Send collectedDetails to backend or proceed to next step
-    handleStepChange(2);
+  const handleContinueClick = async () => {
+    const details = collectDetails();
+    const response = await registerTeacher(details);
+    // handleStepChange(2);
   };
 
   return (
@@ -125,7 +125,6 @@ function EnterDetailsPage({ handleStepChange }) {
       />
 
       <div className={style.form}>
-        {/* Title Input */}
         <div className={style.nameContainer}>
           <div
             className={style.titleDiv}
@@ -160,7 +159,6 @@ function EnterDetailsPage({ handleStepChange }) {
           />
         </div>
 
-        {/* Gender Input */}
         <div className={style.genderDiv}>
           <input
             type="text"
@@ -184,7 +182,6 @@ function EnterDetailsPage({ handleStepChange }) {
           )}
         </div>
 
-        {/* Mobile Number Input */}
         <div className={style.mobileNumberContainer}>
           <div className={style.mobileTopDiv}>
             <div className={style.code}>
@@ -202,7 +199,6 @@ function EnterDetailsPage({ handleStepChange }) {
           <p className={style.addNewNumber}>+ Add Another Mobile Number</p>
         </div>
 
-        {/* WhatsApp Number Input */}
         <div className={style.whatsAppNumberContainer}>
           <div className={style.mobileTopDiv}>
             <div className={style.code}>
@@ -233,7 +229,6 @@ function EnterDetailsPage({ handleStepChange }) {
           </div>
         </div>
 
-        {/* City Input */}
         <div className={style.cityDiv}>
           <input
             type="text"
@@ -258,7 +253,6 @@ function EnterDetailsPage({ handleStepChange }) {
           )}
         </div>
 
-        {/* Location Input */}
         <div className={style.locationDiv}>
           <input
             type="text"
@@ -283,7 +277,6 @@ function EnterDetailsPage({ handleStepChange }) {
           )}
         </div>
 
-        {/* Subject Input */}
         <div className={style.subjectDiv}>
           <input
             type="text"
@@ -310,7 +303,6 @@ function EnterDetailsPage({ handleStepChange }) {
           )}
         </div>
 
-        {/* Syllabus Input */}
         <div className={style.syllabusDiv}>
           <input
             type="text"
