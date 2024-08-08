@@ -50,11 +50,11 @@ export async function getVendorDetail(id) {
 export async function registerTeacher(data) {
   try {
     const jsonData = JSON.stringify(data);
-
     const response = await instance.post(
       "/api/vendordetail/registerTeacher",
       jsonData
     );
+    return response;
   } catch (error) {
     console.log(error);
   }
@@ -63,12 +63,11 @@ export async function registerTeacher(data) {
 export async function addTeacherDescription(data) {
   try {
     const jsonData = JSON.stringify(data);
-
     const response = await instance.post(
       "/api/teacher/addTeacherDesc",
       jsonData
     );
-    console.log(response);
+    return response;
   } catch (error) {
     console.log(error);
   }

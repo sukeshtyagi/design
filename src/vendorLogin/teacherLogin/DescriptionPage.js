@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./DescriptionPage.module.css";
-function DescriptionPage({ handleStepChange 
+import { addTeacherDescription } from "../../axios/teacherVendorLogin/VendorLogin";
 
-}) {
+function DescriptionPage({ handleStepChange }) {
+  const [description, setDescription] = useState("");
+  const isDisabled = description.trim() === "";
+  const vendorId = localStorage.getItem("vendorId");
+
+  const handleContinueClick = async () => {
+    const data = {
+      vendorId: vendorId,
+      teacherDesc: description,
+    };
+
+    try {
+      const response = await addTeacherDescription(data);
+      if (response.status === 200) {
+        handleStepChange(3);
+      }
+    } catch (error) {
+      console.error("Failed to add teacher description:", error);
+    }
+  };
   return (
     <div className={style.contentDiv}>
       <div className={style.topDiv}>
@@ -23,6 +42,8 @@ function DescriptionPage({ handleStepChange
         <textarea
           className={style.description}
           placeholder="Write here...."
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
         ></textarea>
       </div>
 
@@ -34,12 +55,13 @@ function DescriptionPage({ handleStepChange
           }}
         >
           Back
-        </button>{" "}
+        </button>
         <button
-          className={style.continueButton}
-          onClick={() => {
-            handleStepChange(3);
-          }}
+          className={`${style.continueButton} ${
+            isDisabled ? style.disabled : ""
+          }`}
+          onClick={() => handleContinueClick()}
+          disabled={isDisabled}
         >
           Continue
         </button>
