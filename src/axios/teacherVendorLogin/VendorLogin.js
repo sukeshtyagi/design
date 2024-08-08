@@ -72,3 +72,21 @@ export async function addTeacherDescription(data) {
     console.log(error);
   }
 }
+
+export async function addTeacherCertification(data) {
+  try {
+    const response = await instance.post(
+      "/api/certification/uploadTeacherCertificate",
+      data,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+    console.log(response);
+    return response;
+  } catch (error) {
+    console.log("Error:", error);
+  }
+}
