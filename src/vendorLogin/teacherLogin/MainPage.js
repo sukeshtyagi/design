@@ -46,7 +46,9 @@ function MainPage() {
           {activeStep === 4 && (
             <Education handleStepChange={handleStepChange} />
           )}
-          {activeStep === 5 &&(<Availability/>)}
+          {activeStep === 5 && (
+            <Availability handleStepChange={handleStepChange} />
+          )}
           {activeStep === 6 && <OtherDetails />}
         </div>
       </div>

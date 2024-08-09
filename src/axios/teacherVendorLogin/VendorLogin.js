@@ -27,7 +27,7 @@ export async function registerProfessional(data) {
         },
       }
     );
-    console.log(response)
+    console.log(response);
     return response;
   } catch (error) {
     console.log(error.message);
@@ -106,5 +106,18 @@ export async function createEducation(data) {
     return response;
   } catch (error) {
     console.log("Error:", error);
+  }
+}
+
+export async function addTeacherAvailability(id, data) {
+  try {
+    const jsonData = JSON.stringify(data);
+    const response = await instance.post(
+      `/api/vendordetail/addOpeningClosingTimes/${id}`,
+      jsonData
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
   }
 }
