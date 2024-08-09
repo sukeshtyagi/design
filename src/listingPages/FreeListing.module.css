@@ -200,6 +200,7 @@
   font-weight: 400;
   line-height: 1.5em;
   text-align: left;
+  cursor: pointer;
 }
 
 .accountSpan {

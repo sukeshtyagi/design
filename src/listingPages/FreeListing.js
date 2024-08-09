@@ -253,7 +253,9 @@ function Listing() {
 
                     <p className={style.account}>
                       Already have an account?
-                      <span className={style.accountSpan}> Login Now</span>
+                      <span className={style.accountSpan}
+                      onClick={()=>{navigate("/login");}}
+                      > Login Now</span>
                     </p>
                   </div>
                 </Form>

@@ -26,6 +26,7 @@ import AdvocateDashboard from "./AllDashboardPages/advocateDashboardPages/advoca
 import ProtectedPages from "./protectedPages/ProtectedPages";
 import UserDashboard from "./userDashboard/UserDashboard";
 import MainPage from "./vendorLogin/teacherLogin/MainPage";
+import DashboardProtection from "./protectedPages/DashboardProtection";
 function App() {
   return (
     <BrowserRouter>
@@ -62,9 +63,18 @@ function App() {
         <Route path="/govt-offices-detail" element={<GovtOfficesDetail />} />
 
         <Route path="/list-yourself" element={<FreeListing />} />
-        <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
-        <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
-        <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
+        <Route
+          path="/doctor-dashboard"
+          element={<DashboardProtection doctorDashboardProp={true} />}
+        />
+        <Route
+          path="/teacher-dashboard"
+          element={<DashboardProtection teacherDashboardProp={true} />}
+        />
+        <Route
+          path="/advocate-dashboard"
+          element={<DashboardProtection advocateDashboardProp={true} />}
+        />
 
         <Route path="/teacher-vendor-login" element={<MainPage />} />
 
@@ -73,5 +83,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;

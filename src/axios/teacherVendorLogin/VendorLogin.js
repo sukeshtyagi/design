@@ -137,6 +137,14 @@ export async function teacherDetail(data) {
   }
 }
 
+export async function vendorLogout(data) {
+  try {
+    localStorage.removeItem("vendorType");
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 /*
 
  //localStorage.setItem("vendorDetails", JSON.stringify(values));

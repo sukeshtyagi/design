@@ -1,7 +1,10 @@
 import React from "react";
 import style from "./SearchBarDashboard.module.css";
+import { vendorLogout } from "../../axios/teacherVendorLogin/VendorLogin";
+import { useNavigate } from "react-router-dom";
 
 function SearchBarDashboard({ width }) {
+  const navigate = useNavigate();
   return (
     <div className={style.searchOuter} style={{ width: width }}>
       <div className={style.lensDiv}>
@@ -18,6 +21,10 @@ function SearchBarDashboard({ width }) {
           src="/images/doctorDashboard/logout.svg"
           alt=""
           className={style.icon}
+          onClick={() => {
+            vendorLogout();
+            navigate("/");
+          }}
         />
       </div>
     </div>

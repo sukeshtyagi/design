@@ -30,6 +30,7 @@ function DesktopLogin() {
       console.log(response);
       if (response.status >= 200 && response.status < 300) {
         if (response.data.vendorType !== null) {
+          localStorage.setItem("vendorType", response.data.vendorType);
           navigate(`/${profession}-dashboard`);
         } else {
           const { token, _id } = response.data;
