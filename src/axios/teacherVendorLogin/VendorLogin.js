@@ -121,3 +121,16 @@ export async function addTeacherAvailability(id, data) {
     console.log(error);
   }
 }
+
+export async function teacherDetail(data) {
+  try {
+    const jsonData = JSON.stringify(data);
+    const response = await instance.post(
+      "/api/teacher/teacherDetail/",
+      jsonData
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+}

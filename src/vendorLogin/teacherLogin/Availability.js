@@ -43,7 +43,6 @@ function Availability({ handleStepChange }) {
   */
 
   const handleContinue = async () => {
-    // Extract selected days and their times
     const days = Object.keys(availability).filter(
       (day) => availability[day].checked
     );
@@ -52,7 +51,6 @@ function Availability({ handleStepChange }) {
       close: availability[day].to,
     }));
 
-    // Prepare data in the format required by the API
     const payload = {
       days,
       times,
