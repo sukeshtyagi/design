@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import style from "./EnterDetailsPage.module.css";
 import styles from "./TeachingCertification.module.css";
 import buttonstyle from "./DescriptionPage.module.css";
+import { createEducation } from "../../axios/teacherVendorLogin/VendorLogin";
 
 function Education({ handleStepChange }) {
   const [fileName, setFileName] = useState("");
@@ -10,6 +11,40 @@ function Education({ handleStepChange }) {
   const [institute, setInstitute] = useState("");
   const [qualification, setQualification] = useState("");
   const [specialization, setSpecialization] = useState("");
+  const [fromDate, setFromDate] = useState("");
+  const [toDate, setToDate] = useState("");
+
+  const handleContinueClick = async () => {
+    const formData = new FormData();
+
+    const vendorId = localStorage.getItem("vendorId");
+    formData.append("vendorId", vendorId);
+
+    formData.append("institution", institute);
+    formData.append("qualification", qualification);
+
+    const specializationIds = specialization.split(",");
+    specializationIds.forEach((id) => {
+      formData.append("specializationId", ["60adf21348c7d001fa41ed32"]);
+    });
+
+    formData.append("fromDate", fromDate);
+    formData.append("toDate", toDate);
+
+    formData.append("educationImage", file);
+
+    try {
+      console.log(...formData);
+
+      const response = await createEducation(formData);
+      if(response.request.status===201){
+        console.log("if")
+       handleStepChange(5);
+      }
+    } catch (error) {
+      console.log("Error submitting education details", error);
+    }
+  };
 
   const handleInstituteSelect = (value) => {
     setInstitute(value);
@@ -30,6 +65,9 @@ function Education({ handleStepChange }) {
       setFile(null);
     }
   };
+
+  const isFormComplete =
+    institute && qualification && specialization && fromDate && toDate && file;
 
   return (
     <div className={style.contentDiv}>
@@ -114,6 +152,8 @@ function Education({ handleStepChange }) {
               type="text"
               placeholder="From"
               className={styles.inputCity}
+              value={fromDate}
+              onChange={(e) => setFromDate(e.target.value)}
             />
             <img
               src="/images/vendorLogin/calender.svg"
@@ -123,7 +163,13 @@ function Education({ handleStepChange }) {
           </div>
 
           <div className={styles.toDate}>
-            <input type="text" placeholder="To" className={styles.inputCity} />
+            <input
+              type="text"
+              placeholder="To"
+              className={styles.inputCity}
+              value={toDate}
+              onChange={(e) => setToDate(e.target.value)}
+            />
             <img
               src="/images/vendorLogin/calender.svg"
               alt=""
@@ -159,10 +205,11 @@ function Education({ handleStepChange }) {
           Back
         </button>{" "}
         <button
-          className={buttonstyle.continueButton}
-          onClick={() => {
-            handleStepChange(5);
-          }}
+          className={`${buttonstyle.continueButton} ${
+            !isFormComplete ? buttonstyle.disabled : ""
+          }`}
+          onClick={handleContinueClick}
+          disabled={!isFormComplete}
         >
           Continue
         </button>

@@ -27,6 +27,7 @@ export async function registerProfessional(data) {
         },
       }
     );
+    console.log(response)
     return response;
   } catch (error) {
     console.log(error.message);
@@ -85,6 +86,23 @@ export async function addTeacherCertification(data) {
       }
     );
     console.log(response);
+    return response;
+  } catch (error) {
+    console.log("Error:", error);
+  }
+}
+
+export async function createEducation(data) {
+  try {
+    const response = await instance.post(
+      "/api/education/createEducation",
+      data,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
     return response;
   } catch (error) {
     console.log("Error:", error);
