@@ -29,7 +29,7 @@ function DoctorDetail() {
         className={style.listingOuter}
         style={{ background: "url(/images/Backgrounds.svg)" }}
       >
-        <div className={style.listingInner}>
+        <div className={style.listingInner} style={{paddingBottom:"109px"}}>
           <div className={style.searchContainer}>
             <SearchBar
               userDashboard="true"

@@ -22,15 +22,21 @@ function DesktopLogin() {
   const [showPassword, setShowPassword] = useState(false);
   const [loginError, setLoginError] = useState(false);
 
+  const profession = localStorage.getItem("profession");
+
   const handleSubmit = async (values, { setSubmitting }) => {
     try {
       const response = await loginUser(values);
-
+      console.log(response);
       if (response.status >= 200 && response.status < 300) {
-        const { token, _id } = response.data;
-        localStorage.setItem("jwtToken", token);
-        localStorage.setItem("userId", _id);
-        navigate("/homepage");
+        if (response.data.vendorType !== null) {
+          navigate(`/${profession}-dashboard`);
+        } else {
+          const { token, _id } = response.data;
+          localStorage.setItem("jwtToken", token);
+          localStorage.setItem("userId", _id);
+          //  navigate("/homepage");
+        }
       }
     } catch (error) {
       console.error("Login failed:", error);

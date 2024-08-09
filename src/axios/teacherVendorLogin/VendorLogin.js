@@ -15,9 +15,11 @@ export async function registerProfessional(data) {
       vendorName: data.fullName || "",
       email: data.email || "",
       mobileNumber: [data.phoneNumber || ""],
+      password: data.password || "",
       vendorType: data.vendorType || "defaultType",
     };
     const jsonData = JSON.stringify(formattedData);
+    console.log(jsonData);
     const response = await instance.post(
       "/api/vendordetail/registerProfessional",
       jsonData,
@@ -134,3 +136,23 @@ export async function teacherDetail(data) {
     console.log(error);
   }
 }
+
+/*
+
+ //localStorage.setItem("vendorDetails", JSON.stringify(values));
+                console.log(formData);
+                const result = await registerProfessional(formData);
+                //localStorage.setItem("vendorId", result.data.vendor._id);
+                /*
+                if (selectedProfession.profession.toLowerCase() === "teacher") {
+                  navigate("/teacher-dashboard");
+                } else if (
+                  selectedProfession.profession.toLowerCase() === "doctor"
+                ) {
+                  navigate("/doctor-dashboard");
+                } else if (
+                  selectedProfession.profession.toLowerCase() === "advocate"
+                ) {
+                  navigate("/advocate-dashboard");
+                }
+                  */

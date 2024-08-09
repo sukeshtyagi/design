@@ -13,7 +13,6 @@ import {
 function Listing() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-
   const [selectedProfession, setSelectedProfession] = useState(null);
   const [userTypes, setUserTypes] = useState([]);
 
@@ -34,6 +33,7 @@ function Listing() {
     fullName: "",
     email: "",
     phoneNumber: "",
+    password: "",
     vendorType: "",
     termsAccepted: false,
   };
@@ -44,6 +44,7 @@ function Listing() {
     phoneNumber: Yup.string()
       .required("Required")
       .min(8, "Phone Number Too Short"),
+    password: Yup.string().required("Required"),
     termsAccepted: Yup.boolean().oneOf(
       [true],
       "You must accept the terms and conditions"
@@ -89,20 +90,33 @@ function Listing() {
                   ...values,
                   vendorType: selectedProfession.id,
                 };
-                localStorage.setItem("vendorDetails", JSON.stringify(values));
+                console.log(formData);
                 const result = await registerProfessional(formData);
-                localStorage.setItem("vendorId", result.data.vendor._id);
-
-                if (selectedProfession.profession.toLowerCase() === "teacher") {
-                  navigate("/teacher-dashboard");
-                } else if (
-                  selectedProfession.profession.toLowerCase() === "doctor"
-                ) {
-                  navigate("/doctor-dashboard");
-                } else if (
-                  selectedProfession.profession.toLowerCase() === "advocate"
-                ) {
-                  navigate("/advocate-dashboard");
+                //localStorage.setItem("vendorId", result.data.vendor._id);
+                localStorage.setItem("emailID", values.email);
+                localStorage.setItem(
+                  "profession",
+                  selectedProfession.profession.toLowerCase()
+                );
+                if (result.status === 201) {
+                  navigate("/enter-otp", {
+                    state: {
+                      profession: selectedProfession.profession.toLowerCase(),
+                    },
+                  });
+                  /*if (
+                    selectedProfession.profession.toLowerCase() === "teacher"
+                  ) {
+                    navigate("/teacher-dashboard");
+                  } else if (
+                    selectedProfession.profession.toLowerCase() === "doctor"
+                  ) {
+                    navigate("/doctor-dashboard");
+                  } else if (
+                    selectedProfession.profession.toLowerCase() === "advocate"
+                  ) {
+                    navigate("/advocate-dashboard");
+                    }*/
                 }
               }}
             >

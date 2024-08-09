@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import style from "./Desktopsignup.module.css";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useLocation
 import { veriyOtp } from "../axios/userFunctions/UserFucntions";
 
 const validationSchema = Yup.object().shape({
@@ -24,6 +24,8 @@ function EnterOtp() {
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const { profession } = location.state || {};
   const email = localStorage.getItem("emailID");
 
   const digitRefs = useRef([]);
@@ -53,14 +55,16 @@ function EnterOtp() {
 
             const otp =
               values.digit1 + values.digit2 + values.digit3 + values.digit4;
-            const payload = { email: email, otp: otp };
+            const payload = { email: email, otp: otp, profession }; // Include profession in payload
             console.log(payload);
 
             const response = await veriyOtp(payload);
             console.log(response);
 
             if (response.status >= 200 && response.status < 300) {
-              navigate("/profile");
+              if (profession) {
+                navigate(`/${profession}-dashboard`);
+              } else navigate("/profile");
             } else {
               console.log("error");
               setShowError(true);
