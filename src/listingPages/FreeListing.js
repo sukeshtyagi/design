@@ -35,6 +35,7 @@ function Listing() {
     email: "",
     phoneNumber: "",
     vendorType: "",
+    termsAccepted: false,
   };
 
   const validationSchema = Yup.object().shape({
@@ -43,6 +44,10 @@ function Listing() {
     phoneNumber: Yup.string()
       .required("Required")
       .min(8, "Phone Number Too Short"),
+    termsAccepted: Yup.boolean().oneOf(
+      [true],
+      "You must accept the terms and conditions"
+    ),
   });
 
   const handleProfessionClick = (profession, index) => {
@@ -87,12 +92,21 @@ function Listing() {
                 localStorage.setItem("vendorDetails", JSON.stringify(values));
                 const result = await registerProfessional(formData);
                 localStorage.setItem("vendorId", result.data.vendor._id);
+
                 if (selectedProfession.profession.toLowerCase() === "teacher") {
-                  navigate("/teacher-vendor-login");
+                  navigate("/teacher-dashboard");
+                } else if (
+                  selectedProfession.profession.toLowerCase() === "doctor"
+                ) {
+                  navigate("/doctor-dashboard");
+                } else if (
+                  selectedProfession.profession.toLowerCase() === "advocate"
+                ) {
+                  navigate("/advocate-dashboard");
                 }
               }}
             >
-              {({ isValid, dirty }) => (
+              {({ isValid, dirty, values }) => (
                 <Form>
                   <div className={`${style.signupInputDiv} relative`}>
                     <Field
@@ -180,14 +194,13 @@ function Listing() {
                     </div>
 
                     <div className={style.checkBoxDiv}>
-                      <input
+                      <Field
                         type="checkbox"
-                        name=""
-                        id=""
+                        name="termsAccepted"
                         className="w-[18px] h-[18px]"
                       />
                       <p className={style.bottomPara}>
-                        By signing , you agree to our
+                        By signing, you agree to our
                         <span className={style.spanPrivacy}>
                           privacy policy
                         </span>
@@ -197,16 +210,29 @@ function Listing() {
                           terms and conditions
                         </span>
                       </p>
+                      <ErrorMessage
+                        name="termsAccepted"
+                        component="div"
+                        className="error text-red-500"
+                      />
                     </div>
 
                     <button
                       type="submit"
                       className={`${style.buttonSignup} ${
-                        !selectedProfession || !isValid || !dirty
+                        !selectedProfession ||
+                        !isValid ||
+                        !dirty ||
+                        !values.termsAccepted
                           ? style.buttonDisabled
                           : ""
                       }`}
-                      disabled={!selectedProfession || !isValid || !dirty}
+                      disabled={
+                        !selectedProfession ||
+                        !isValid ||
+                        !dirty ||
+                        !values.termsAccepted
+                      }
                     >
                       Get Started
                     </button>

@@ -65,9 +65,10 @@ function App() {
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
         <Route path="/advocate-dashboard" element={<AdvocateDashboard />} />
-        <Route path="/trial" element={<UserDashboard />} />
 
         <Route path="/teacher-vendor-login" element={<MainPage />} />
+
+        <Route path="/trial" element={<UserDashboard />} />
       </Routes>
     </BrowserRouter>
   );
