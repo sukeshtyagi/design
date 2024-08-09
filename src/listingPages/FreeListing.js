@@ -15,6 +15,8 @@ function Listing() {
   const [showPassword, setShowPassword] = useState(false);
   const [selectedProfession, setSelectedProfession] = useState(null);
   const [userTypes, setUserTypes] = useState([]);
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const fetchUserTypes = async () => {
@@ -98,6 +100,10 @@ function Listing() {
                   "profession",
                   selectedProfession.profession.toLowerCase()
                 );
+                setErrorMessage(result.response.data.message);
+                if (result.response.status === 400) {
+                  setError(true);
+                }
                 if (result.status === 201) {
                   navigate("/enter-otp", {
                     state: {
@@ -249,13 +255,20 @@ function Listing() {
                       }
                     >
                       Get Started
+                      {error && <p className={style.error}>{errorMessage}</p>}
                     </button>
 
                     <p className={style.account}>
                       Already have an account?
-                      <span className={style.accountSpan}
-                      onClick={()=>{navigate("/login");}}
-                      > Login Now</span>
+                      <span
+                        className={style.accountSpan}
+                        onClick={() => {
+                          navigate("/login");
+                        }}
+                      >
+                        {" "}
+                        Login Now
+                      </span>
                     </p>
                   </div>
                 </Form>

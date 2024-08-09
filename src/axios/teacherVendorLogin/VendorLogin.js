@@ -29,11 +29,10 @@ export async function registerProfessional(data) {
         },
       }
     );
-    console.log(response);
     return response;
   } catch (error) {
-    console.log(error.message);
-    throw error;
+    console.log(error);
+    return error;
   }
 }
 
